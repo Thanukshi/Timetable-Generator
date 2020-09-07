@@ -416,6 +416,7 @@
             this.maxBtn.TabIndex = 11;
             this.maxBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.maxBtn.UseVisualStyleBackColor = true;
+            this.maxBtn.Click += new System.EventHandler(this.maxBtn_Click);
             // 
             // minBtn
             // 

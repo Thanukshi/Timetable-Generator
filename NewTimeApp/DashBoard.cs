@@ -78,5 +78,10 @@ namespace NewTimeApp
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void maxBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
