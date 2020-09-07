@@ -28,6 +28,7 @@ namespace NewTimeApp
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
+            Hide();
             DashBoard dashBoard = new DashBoard();
             dashBoard.ShowDialog();
             titleOfPages.Text = "Home";
