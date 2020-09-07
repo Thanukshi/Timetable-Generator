@@ -53,6 +53,8 @@
             this.studentBtn = new NewTimeApp.CircularButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.maxBtn = new System.Windows.Forms.Button();
+            this.minBtn = new System.Windows.Forms.Button();
             this.panelSider.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -174,6 +176,8 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.panelHeader.Controls.Add(this.minBtn);
+            this.panelHeader.Controls.Add(this.maxBtn);
             this.panelHeader.Controls.Add(this.titleOfPages);
             this.panelHeader.Controls.Add(this.closeBtn);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -399,6 +403,35 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // maxBtn
+            // 
+            this.maxBtn.FlatAppearance.BorderSize = 0;
+            this.maxBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maxBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxBtn.ForeColor = System.Drawing.Color.White;
+            this.maxBtn.Image = ((System.Drawing.Image)(resources.GetObject("maxBtn.Image")));
+            this.maxBtn.Location = new System.Drawing.Point(698, 8);
+            this.maxBtn.Name = "maxBtn";
+            this.maxBtn.Size = new System.Drawing.Size(30, 30);
+            this.maxBtn.TabIndex = 11;
+            this.maxBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.maxBtn.UseVisualStyleBackColor = true;
+            // 
+            // minBtn
+            // 
+            this.minBtn.FlatAppearance.BorderSize = 0;
+            this.minBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minBtn.ForeColor = System.Drawing.Color.White;
+            this.minBtn.Image = ((System.Drawing.Image)(resources.GetObject("minBtn.Image")));
+            this.minBtn.Location = new System.Drawing.Point(662, 8);
+            this.minBtn.Name = "minBtn";
+            this.minBtn.Size = new System.Drawing.Size(30, 30);
+            this.minBtn.TabIndex = 12;
+            this.minBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.minBtn.UseVisualStyleBackColor = true;
+            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
+            // 
             // DashBoard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -447,5 +480,7 @@
         private CircularButton timeBtn;
         private CircularButton workBtn;
         private CircularButton studentBtn;
+        private System.Windows.Forms.Button minBtn;
+        private System.Windows.Forms.Button maxBtn;
     }
 }

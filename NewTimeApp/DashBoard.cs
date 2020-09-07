@@ -73,5 +73,10 @@ namespace NewTimeApp
             MainControler.showControl(studentsUC, panelContainer);
             titleOfPages.Text = "Students";
         }
+
+        private void minBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
