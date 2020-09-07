@@ -73,10 +73,5 @@ namespace NewTimeApp
             MainControler.showControl(studentsUC, panelContainer);
             titleOfPages.Text = "Students";
         }
-
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
