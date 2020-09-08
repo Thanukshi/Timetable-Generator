@@ -217,6 +217,12 @@
     <Compile Include="UserControlers\statisticsUC.Designer.cs">
       <DependentUpon>statisticsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\statLecturersUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\statLecturersUC.Designer.cs">
+      <DependentUpon>statLecturersUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\statStudentUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\statisticsUC.resx">
       <DependentUpon>statisticsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\statLecturersUC.resx">
+      <DependentUpon>statLecturersUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\statStudentUC.resx">
       <DependentUpon>statStudentUC.cs</DependentUpon>
