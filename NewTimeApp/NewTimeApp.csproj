@@ -187,6 +187,12 @@
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\locationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\locationUC.Designer.cs">
+      <DependentUpon>locationUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\locationUC.resx">
+      <DependentUpon>locationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
