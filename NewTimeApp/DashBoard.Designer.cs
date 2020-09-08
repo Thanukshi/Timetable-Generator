@@ -239,7 +239,6 @@
             // 
             this.panelContainer.BackColor = System.Drawing.Color.White;
             this.panelContainer.Controls.Add(this.statBtn);
-            this.panelContainer.Controls.Add(this.statBtn);
             this.panelContainer.Controls.Add(this.tagBtn);
             this.panelContainer.Controls.Add(this.locationBtn);
             this.panelContainer.Controls.Add(this.subBtn);

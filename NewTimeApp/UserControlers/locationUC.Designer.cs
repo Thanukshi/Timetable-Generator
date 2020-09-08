@@ -41,6 +41,7 @@
             // 
             // locationpanel
             // 
+            this.locationpanel.BackColor = System.Drawing.Color.White;
             this.locationpanel.Controls.Add(this.viewroomBrn);
             this.locationpanel.Controls.Add(this.viewbuldBtn);
             this.locationpanel.Controls.Add(this.addroomBtn);
