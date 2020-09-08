@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NewTimeApp.Helpers;
 
 namespace NewTimeApp.UserControlers
 {
@@ -15,6 +16,17 @@ namespace NewTimeApp.UserControlers
         public academicDetails()
         {
             InitializeComponent();
+        }
+
+        private void academicDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            StudentsUC studentsUC = new StudentsUC();
+            MainControler.showControl(studentsUC, acPanel);
         }
     }
 }
