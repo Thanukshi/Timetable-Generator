@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(roomUC));
             this.roompanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +41,14 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.roomBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.roompanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // roompanel
             // 
             this.roompanel.BackColor = System.Drawing.Color.White;
+            this.roompanel.Controls.Add(this.button_WOC1);
             this.roompanel.Controls.Add(this.roomBtn);
             this.roompanel.Controls.Add(this.comboBox3);
             this.roompanel.Controls.Add(this.textBox1);
@@ -60,23 +59,11 @@
             this.roompanel.Controls.Add(this.label3);
             this.roompanel.Controls.Add(this.label2);
             this.roompanel.Controls.Add(this.label1);
-            this.roompanel.Controls.Add(this.pictureBox1);
             this.roompanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roompanel.Location = new System.Drawing.Point(0, 0);
             this.roompanel.Name = "roompanel";
             this.roompanel.Size = new System.Drawing.Size(772, 720);
             this.roompanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -195,18 +182,42 @@
             this.roomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roomBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomBtn.ForeColor = System.Drawing.Color.Black;
-            this.roomBtn.Location = new System.Drawing.Point(305, 518);
+            this.roomBtn.Location = new System.Drawing.Point(322, 508);
             this.roomBtn.Margin = new System.Windows.Forms.Padding(2);
             this.roomBtn.Name = "roomBtn";
             this.roomBtn.OnHoverBorderColor = System.Drawing.Color.White;
             this.roomBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.roomBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.roomBtn.Size = new System.Drawing.Size(154, 54);
+            this.roomBtn.Size = new System.Drawing.Size(178, 54);
             this.roomBtn.TabIndex = 22;
             this.roomBtn.Text = "ADD ROOM";
             this.roomBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.roomBtn.UseVisualStyleBackColor = false;
             this.roomBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BackColor = System.Drawing.Color.White;
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.ForeColor = System.Drawing.Color.Black;
+            this.button_WOC1.Location = new System.Drawing.Point(322, 606);
+            this.button_WOC1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(178, 54);
+            this.button_WOC1.TabIndex = 23;
+            this.button_WOC1.Text = "VIEW ROOMS";
+            this.button_WOC1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_WOC1.UseVisualStyleBackColor = false;
             // 
             // roomUC
             // 
@@ -217,7 +228,6 @@
             this.Size = new System.Drawing.Size(772, 720);
             this.roompanel.ResumeLayout(false);
             this.roompanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,7 +235,6 @@
         #endregion
 
         private System.Windows.Forms.Panel roompanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -237,5 +246,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox comboBox3;
         private ePOSOne.btnProduct.Button_WOC roomBtn;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
     }
 }

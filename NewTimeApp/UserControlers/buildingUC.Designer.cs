@@ -29,42 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buildingUC));
             this.buildingpanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buildingBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.buildingpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buildingpanel
             // 
             this.buildingpanel.BackColor = System.Drawing.Color.White;
+            this.buildingpanel.Controls.Add(this.button_WOC1);
             this.buildingpanel.Controls.Add(this.buildingBtn);
             this.buildingpanel.Controls.Add(this.textBox1);
             this.buildingpanel.Controls.Add(this.label2);
             this.buildingpanel.Controls.Add(this.label1);
-            this.buildingpanel.Controls.Add(this.pictureBox1);
             this.buildingpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buildingpanel.Location = new System.Drawing.Point(0, 0);
             this.buildingpanel.Name = "buildingpanel";
             this.buildingpanel.Size = new System.Drawing.Size(772, 720);
             this.buildingpanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -92,6 +79,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(371, 247);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -115,18 +103,42 @@
             this.buildingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buildingBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildingBtn.ForeColor = System.Drawing.Color.Black;
-            this.buildingBtn.Location = new System.Drawing.Point(311, 384);
+            this.buildingBtn.Location = new System.Drawing.Point(311, 388);
             this.buildingBtn.Margin = new System.Windows.Forms.Padding(2);
             this.buildingBtn.Name = "buildingBtn";
             this.buildingBtn.OnHoverBorderColor = System.Drawing.Color.White;
             this.buildingBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.buildingBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.buildingBtn.Size = new System.Drawing.Size(124, 54);
+            this.buildingBtn.Size = new System.Drawing.Size(237, 54);
             this.buildingBtn.TabIndex = 21;
             this.buildingBtn.Text = "ADD";
             this.buildingBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buildingBtn.UseVisualStyleBackColor = false;
             this.buildingBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BackColor = System.Drawing.Color.White;
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.ForeColor = System.Drawing.Color.Black;
+            this.button_WOC1.Location = new System.Drawing.Point(311, 490);
+            this.button_WOC1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(237, 54);
+            this.button_WOC1.TabIndex = 22;
+            this.button_WOC1.Text = "VIEW BUILDINGS";
+            this.button_WOC1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_WOC1.UseVisualStyleBackColor = false;
             // 
             // buildingUC
             // 
@@ -137,7 +149,6 @@
             this.Size = new System.Drawing.Size(772, 720);
             this.buildingpanel.ResumeLayout(false);
             this.buildingpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,10 +157,10 @@
 
         private System.Windows.Forms.Panel buildingpanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private ePOSOne.btnProduct.Button_WOC buildingBtn;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
     }
 }
