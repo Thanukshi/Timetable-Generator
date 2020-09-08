@@ -178,6 +178,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlers\academicDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\academicDetails.Designer.cs">
+      <DependentUpon>academicDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\Details.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -220,6 +226,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlers\academicDetails.resx">
+      <DependentUpon>academicDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>

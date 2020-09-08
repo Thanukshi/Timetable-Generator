@@ -26,8 +26,8 @@ namespace NewTimeApp.UserControlers
 
         private void accBtn_Click(object sender, EventArgs e)
         {
-            ReportsUC studentsUC = new ReportsUC();
-            MainControler.showControl(studentsUC, studentPanel);
+            academicDetails academicD = new academicDetails();
+            MainControler.showControl(academicD, studentPanel);
         }
     }
 }
