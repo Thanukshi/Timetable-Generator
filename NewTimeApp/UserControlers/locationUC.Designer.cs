@@ -30,21 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(locationUC));
             this.locationpanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grpIdBtn = new NewTimeApp.CircularButton();
-            this.subGroupBrn = new NewTimeApp.CircularButton();
-            this.mainGrpBtn = new NewTimeApp.CircularButton();
+            this.viewroomBrn = new NewTimeApp.CircularButton();
+            this.viewbuldBtn = new NewTimeApp.CircularButton();
             this.addroomBtn = new NewTimeApp.CircularButton();
             this.addBuldBtn = new NewTimeApp.CircularButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.locationpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // locationpanel
             // 
-            this.locationpanel.Controls.Add(this.grpIdBtn);
-            this.locationpanel.Controls.Add(this.subGroupBrn);
-            this.locationpanel.Controls.Add(this.mainGrpBtn);
+            this.locationpanel.Controls.Add(this.viewroomBrn);
+            this.locationpanel.Controls.Add(this.viewbuldBtn);
             this.locationpanel.Controls.Add(this.addroomBtn);
             this.locationpanel.Controls.Add(this.addBuldBtn);
             this.locationpanel.Controls.Add(this.pictureBox1);
@@ -54,70 +52,41 @@
             this.locationpanel.Size = new System.Drawing.Size(772, 720);
             this.locationpanel.TabIndex = 0;
             // 
-            // pictureBox1
+            // viewroomBrn
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.viewroomBrn.BackColor = System.Drawing.Color.Plum;
+            this.viewroomBrn.FlatAppearance.BorderSize = 0;
+            this.viewroomBrn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.viewroomBrn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewroomBrn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewroomBrn.ForeColor = System.Drawing.Color.White;
+            this.viewroomBrn.Image = ((System.Drawing.Image)(resources.GetObject("viewroomBrn.Image")));
+            this.viewroomBrn.Location = new System.Drawing.Point(515, 457);
+            this.viewroomBrn.Name = "viewroomBrn";
+            this.viewroomBrn.Size = new System.Drawing.Size(170, 170);
+            this.viewroomBrn.TabIndex = 35;
+            this.viewroomBrn.Text = "View Rooms Details";
+            this.viewroomBrn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.viewroomBrn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.viewroomBrn.UseVisualStyleBackColor = false;
             // 
-            // grpIdBtn
+            // viewbuldBtn
             // 
-            this.grpIdBtn.BackColor = System.Drawing.Color.Plum;
-            this.grpIdBtn.FlatAppearance.BorderSize = 0;
-            this.grpIdBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.grpIdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpIdBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpIdBtn.ForeColor = System.Drawing.Color.White;
-            this.grpIdBtn.Image = ((System.Drawing.Image)(resources.GetObject("grpIdBtn.Image")));
-            this.grpIdBtn.Location = new System.Drawing.Point(315, 288);
-            this.grpIdBtn.Name = "grpIdBtn";
-            this.grpIdBtn.Size = new System.Drawing.Size(170, 170);
-            this.grpIdBtn.TabIndex = 36;
-            this.grpIdBtn.Text = "Generate Group ID";
-            this.grpIdBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.grpIdBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.grpIdBtn.UseVisualStyleBackColor = false;
-            // 
-            // subGroupBrn
-            // 
-            this.subGroupBrn.BackColor = System.Drawing.Color.Plum;
-            this.subGroupBrn.FlatAppearance.BorderSize = 0;
-            this.subGroupBrn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.subGroupBrn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.subGroupBrn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subGroupBrn.ForeColor = System.Drawing.Color.White;
-            this.subGroupBrn.Image = ((System.Drawing.Image)(resources.GetObject("subGroupBrn.Image")));
-            this.subGroupBrn.Location = new System.Drawing.Point(515, 457);
-            this.subGroupBrn.Name = "subGroupBrn";
-            this.subGroupBrn.Size = new System.Drawing.Size(170, 170);
-            this.subGroupBrn.TabIndex = 35;
-            this.subGroupBrn.Text = "Sub Groups";
-            this.subGroupBrn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.subGroupBrn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.subGroupBrn.UseVisualStyleBackColor = false;
-            // 
-            // mainGrpBtn
-            // 
-            this.mainGrpBtn.BackColor = System.Drawing.Color.Plum;
-            this.mainGrpBtn.FlatAppearance.BorderSize = 0;
-            this.mainGrpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.mainGrpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mainGrpBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainGrpBtn.ForeColor = System.Drawing.Color.White;
-            this.mainGrpBtn.Image = ((System.Drawing.Image)(resources.GetObject("mainGrpBtn.Image")));
-            this.mainGrpBtn.Location = new System.Drawing.Point(87, 457);
-            this.mainGrpBtn.Name = "mainGrpBtn";
-            this.mainGrpBtn.Size = new System.Drawing.Size(170, 170);
-            this.mainGrpBtn.TabIndex = 34;
-            this.mainGrpBtn.Text = "Main Groups";
-            this.mainGrpBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mainGrpBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.mainGrpBtn.UseVisualStyleBackColor = false;
+            this.viewbuldBtn.BackColor = System.Drawing.Color.Plum;
+            this.viewbuldBtn.FlatAppearance.BorderSize = 0;
+            this.viewbuldBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.viewbuldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewbuldBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewbuldBtn.ForeColor = System.Drawing.Color.White;
+            this.viewbuldBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewbuldBtn.Image")));
+            this.viewbuldBtn.Location = new System.Drawing.Point(87, 457);
+            this.viewbuldBtn.Name = "viewbuldBtn";
+            this.viewbuldBtn.Size = new System.Drawing.Size(170, 170);
+            this.viewbuldBtn.TabIndex = 34;
+            this.viewbuldBtn.Text = "View Buildings";
+            this.viewbuldBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.viewbuldBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.viewbuldBtn.UseVisualStyleBackColor = false;
             // 
             // addroomBtn
             // 
@@ -155,6 +124,17 @@
             this.addBuldBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addBuldBtn.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // locationUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,9 +152,8 @@
 
         private System.Windows.Forms.Panel locationpanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private CircularButton grpIdBtn;
-        private CircularButton subGroupBrn;
-        private CircularButton mainGrpBtn;
+        private CircularButton viewroomBrn;
+        private CircularButton viewbuldBtn;
         private CircularButton addroomBtn;
         private CircularButton addBuldBtn;
     }
