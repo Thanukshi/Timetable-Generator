@@ -175,6 +175,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlers\buildingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\buildingUC.Designer.cs">
+      <DependentUpon>buildingUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\Details.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,12 @@
     </Compile>
     <Compile Include="UserControlers\ReportsUC.Designer.cs">
       <DependentUpon>ReportsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\roomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\roomUC.Designer.cs">
+      <DependentUpon>roomUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\SettingsUC.cs">
       <SubType>UserControl</SubType>
@@ -217,11 +229,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlers\buildingUC.resx">
+      <DependentUpon>buildingUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\roomUC.resx">
+      <DependentUpon>roomUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\SettingsUC.resx">
       <DependentUpon>SettingsUC.cs</DependentUpon>
