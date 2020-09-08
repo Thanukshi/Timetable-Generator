@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="subBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="subjectsBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAB4pJREFUeF7dm3HEXlUcxyczMzMzM5mZyczMzGRmkpkkMzOzP5LJzCTJTGZmZsZM
@@ -156,7 +156,7 @@
         Og64SOMH+hoOgA6iOj96lf34+EnmzfsPOVzwUOdF+NAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="lecBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="lecturersBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAABFpJREFUeF7dm19kVmEcx2cyM5nZxS6SJEmSJLvIzKSLmUlmZiZJMtPFZJJ0MWOS
@@ -181,7 +181,7 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="studentBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="studentsBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAByNJREFUeF7tm3/EV1ccx5MkmSSTZJIkyWSmPzIzj2R/TJLJTGYykySTSTIZSWYy

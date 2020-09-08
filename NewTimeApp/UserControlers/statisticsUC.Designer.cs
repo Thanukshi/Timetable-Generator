@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statisticsUC));
             this.statpanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.studentBtn = new NewTimeApp.CircularButton();
-            this.lecBtn = new NewTimeApp.CircularButton();
-            this.subBtn = new NewTimeApp.CircularButton();
+            this.studentsBtn = new NewTimeApp.CircularButton();
+            this.lecturersBtn = new NewTimeApp.CircularButton();
+            this.subjectsBtn = new NewTimeApp.CircularButton();
             this.statpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,9 +41,9 @@
             // statpanel
             // 
             this.statpanel.BackColor = System.Drawing.Color.White;
-            this.statpanel.Controls.Add(this.subBtn);
-            this.statpanel.Controls.Add(this.lecBtn);
-            this.statpanel.Controls.Add(this.studentBtn);
+            this.statpanel.Controls.Add(this.subjectsBtn);
+            this.statpanel.Controls.Add(this.lecturersBtn);
+            this.statpanel.Controls.Add(this.studentsBtn);
             this.statpanel.Controls.Add(this.pictureBox1);
             this.statpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statpanel.Location = new System.Drawing.Point(0, 0);
@@ -62,59 +62,59 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // studentBtn
+            // studentsBtn
             // 
-            this.studentBtn.BackColor = System.Drawing.Color.Plum;
-            this.studentBtn.FlatAppearance.BorderSize = 0;
-            this.studentBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.studentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentBtn.ForeColor = System.Drawing.Color.White;
-            this.studentBtn.Image = ((System.Drawing.Image)(resources.GetObject("studentBtn.Image")));
-            this.studentBtn.Location = new System.Drawing.Point(118, 186);
-            this.studentBtn.Name = "studentBtn";
-            this.studentBtn.Size = new System.Drawing.Size(150, 150);
-            this.studentBtn.TabIndex = 36;
-            this.studentBtn.Text = "Student";
-            this.studentBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.studentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.studentBtn.UseVisualStyleBackColor = false;
+            this.studentsBtn.BackColor = System.Drawing.Color.Plum;
+            this.studentsBtn.FlatAppearance.BorderSize = 0;
+            this.studentsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.studentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.studentsBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentsBtn.ForeColor = System.Drawing.Color.White;
+            this.studentsBtn.Image = ((System.Drawing.Image)(resources.GetObject("studentsBtn.Image")));
+            this.studentsBtn.Location = new System.Drawing.Point(122, 133);
+            this.studentsBtn.Name = "studentsBtn";
+            this.studentsBtn.Size = new System.Drawing.Size(150, 150);
+            this.studentsBtn.TabIndex = 36;
+            this.studentsBtn.Text = "Students";
+            this.studentsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.studentsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.studentsBtn.UseVisualStyleBackColor = false;
             // 
-            // lecBtn
+            // lecturersBtn
             // 
-            this.lecBtn.BackColor = System.Drawing.Color.Plum;
-            this.lecBtn.FlatAppearance.BorderSize = 0;
-            this.lecBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.lecBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lecBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lecBtn.ForeColor = System.Drawing.Color.White;
-            this.lecBtn.Image = ((System.Drawing.Image)(resources.GetObject("lecBtn.Image")));
-            this.lecBtn.Location = new System.Drawing.Point(488, 186);
-            this.lecBtn.Name = "lecBtn";
-            this.lecBtn.Size = new System.Drawing.Size(150, 150);
-            this.lecBtn.TabIndex = 39;
-            this.lecBtn.Text = "Lecturers";
-            this.lecBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lecBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.lecBtn.UseVisualStyleBackColor = false;
+            this.lecturersBtn.BackColor = System.Drawing.Color.Plum;
+            this.lecturersBtn.FlatAppearance.BorderSize = 0;
+            this.lecturersBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.lecturersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lecturersBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lecturersBtn.ForeColor = System.Drawing.Color.White;
+            this.lecturersBtn.Image = ((System.Drawing.Image)(resources.GetObject("lecturersBtn.Image")));
+            this.lecturersBtn.Location = new System.Drawing.Point(491, 133);
+            this.lecturersBtn.Name = "lecturersBtn";
+            this.lecturersBtn.Size = new System.Drawing.Size(150, 150);
+            this.lecturersBtn.TabIndex = 39;
+            this.lecturersBtn.Text = "Lecturers";
+            this.lecturersBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lecturersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.lecturersBtn.UseVisualStyleBackColor = false;
             // 
-            // subBtn
+            // subjectsBtn
             // 
-            this.subBtn.BackColor = System.Drawing.Color.Plum;
-            this.subBtn.FlatAppearance.BorderSize = 0;
-            this.subBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.subBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.subBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subBtn.ForeColor = System.Drawing.Color.White;
-            this.subBtn.Image = ((System.Drawing.Image)(resources.GetObject("subBtn.Image")));
-            this.subBtn.Location = new System.Drawing.Point(319, 491);
-            this.subBtn.Name = "subBtn";
-            this.subBtn.Size = new System.Drawing.Size(150, 150);
-            this.subBtn.TabIndex = 40;
-            this.subBtn.Text = "Subjects";
-            this.subBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.subBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.subBtn.UseVisualStyleBackColor = false;
+            this.subjectsBtn.BackColor = System.Drawing.Color.Plum;
+            this.subjectsBtn.FlatAppearance.BorderSize = 0;
+            this.subjectsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.subjectsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subjectsBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectsBtn.ForeColor = System.Drawing.Color.White;
+            this.subjectsBtn.Image = ((System.Drawing.Image)(resources.GetObject("subjectsBtn.Image")));
+            this.subjectsBtn.Location = new System.Drawing.Point(321, 419);
+            this.subjectsBtn.Name = "subjectsBtn";
+            this.subjectsBtn.Size = new System.Drawing.Size(150, 150);
+            this.subjectsBtn.TabIndex = 40;
+            this.subjectsBtn.Text = "Subjects";
+            this.subjectsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.subjectsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.subjectsBtn.UseVisualStyleBackColor = false;
             // 
             // statisticsUC
             // 
@@ -133,8 +133,8 @@
 
         private System.Windows.Forms.Panel statpanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private CircularButton studentBtn;
-        private CircularButton lecBtn;
-        private CircularButton subBtn;
+        private CircularButton studentsBtn;
+        private CircularButton lecturersBtn;
+        private CircularButton subjectsBtn;
     }
 }
