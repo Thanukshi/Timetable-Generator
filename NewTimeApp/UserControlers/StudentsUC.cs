@@ -29,5 +29,11 @@ namespace NewTimeApp.UserControlers
             academicDetails academicD = new academicDetails();
             MainControler.showControl(academicD, studentPanel);
         }
+
+        private void degreeBtn_Click(object sender, EventArgs e)
+        {
+            DegreeProgramUC degreeProgramUC = new DegreeProgramUC();
+            MainControler.showControl(degreeProgramUC, studentPanel);
+        }
     }
 }

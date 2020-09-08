@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.loginBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.saveAcc = new ePOSOne.btnProduct.Button_WOC();
             this.acPanel = new System.Windows.Forms.Panel();
             this.backBtn = new System.Windows.Forms.Button();
             this.acPanel.SuspendLayout();
@@ -109,34 +109,34 @@
             this.comboBox2.Size = new System.Drawing.Size(417, 46);
             this.comboBox2.TabIndex = 5;
             // 
-            // loginBtn
+            // saveAcc
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.White;
-            this.loginBtn.BorderColor = System.Drawing.Color.Black;
-            this.loginBtn.ButtonColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.Color.Black;
-            this.loginBtn.Location = new System.Drawing.Point(498, 499);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.loginBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.loginBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.loginBtn.Size = new System.Drawing.Size(417, 67);
-            this.loginBtn.TabIndex = 21;
-            this.loginBtn.Text = "Save";
-            this.loginBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.loginBtn.UseVisualStyleBackColor = false;
+            this.saveAcc.BackColor = System.Drawing.Color.White;
+            this.saveAcc.BorderColor = System.Drawing.Color.Black;
+            this.saveAcc.ButtonColor = System.Drawing.Color.White;
+            this.saveAcc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.saveAcc.FlatAppearance.BorderSize = 0;
+            this.saveAcc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.saveAcc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.saveAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveAcc.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveAcc.ForeColor = System.Drawing.Color.Black;
+            this.saveAcc.Location = new System.Drawing.Point(498, 499);
+            this.saveAcc.Name = "saveAcc";
+            this.saveAcc.OnHoverBorderColor = System.Drawing.Color.White;
+            this.saveAcc.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.saveAcc.OnHoverTextColor = System.Drawing.Color.White;
+            this.saveAcc.Size = new System.Drawing.Size(417, 67);
+            this.saveAcc.TabIndex = 21;
+            this.saveAcc.Text = "Save";
+            this.saveAcc.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.saveAcc.UseVisualStyleBackColor = false;
             // 
             // acPanel
             // 
             this.acPanel.BackColor = System.Drawing.Color.White;
             this.acPanel.Controls.Add(this.backBtn);
-            this.acPanel.Controls.Add(this.loginBtn);
+            this.acPanel.Controls.Add(this.saveAcc);
             this.acPanel.Controls.Add(this.comboBox2);
             this.acPanel.Controls.Add(this.comboBox1);
             this.acPanel.Controls.Add(this.label3);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private ePOSOne.btnProduct.Button_WOC loginBtn;
+        private ePOSOne.btnProduct.Button_WOC saveAcc;
         private System.Windows.Forms.Panel acPanel;
         private System.Windows.Forms.Button backBtn;
     }
