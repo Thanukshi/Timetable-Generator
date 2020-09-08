@@ -16,5 +16,10 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
         }
+
+        private void jText_Box1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

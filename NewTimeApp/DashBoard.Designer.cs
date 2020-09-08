@@ -208,7 +208,7 @@
             this.titleOfPages.ForeColor = System.Drawing.Color.White;
             this.titleOfPages.Location = new System.Drawing.Point(4, 2);
             this.titleOfPages.Name = "titleOfPages";
-            this.titleOfPages.Size = new System.Drawing.Size(109, 47);
+            this.titleOfPages.Size = new System.Drawing.Size(88, 38);
             this.titleOfPages.TabIndex = 10;
             this.titleOfPages.Text = "Home";
             // 
@@ -238,6 +238,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.White;
+            this.panelContainer.Controls.Add(this.statBtn);
             this.panelContainer.Controls.Add(this.statBtn);
             this.panelContainer.Controls.Add(this.tagBtn);
             this.panelContainer.Controls.Add(this.locationBtn);
@@ -404,6 +405,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
