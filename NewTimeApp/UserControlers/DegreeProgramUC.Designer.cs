@@ -126,6 +126,7 @@
             // 
             // programNameD
             // 
+            this.programNameD.BackColor = System.Drawing.SystemColors.ControlLight;
             this.programNameD.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.programNameD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.programNameD.Location = new System.Drawing.Point(453, 220);
@@ -136,6 +137,7 @@
             // 
             // preferNameD
             // 
+            this.preferNameD.BackColor = System.Drawing.SystemColors.ControlLight;
             this.preferNameD.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preferNameD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.preferNameD.Location = new System.Drawing.Point(453, 332);
