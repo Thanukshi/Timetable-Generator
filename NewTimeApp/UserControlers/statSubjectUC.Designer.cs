@@ -32,13 +32,15 @@
             this.statSubjectpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
-            this.leclevelBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.subyearBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.subgraphpanel = new System.Windows.Forms.Panel();
             this.statSubjectpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // statSubjectpanel
             // 
-            this.statSubjectpanel.Controls.Add(this.leclevelBtn);
+            this.statSubjectpanel.Controls.Add(this.subgraphpanel);
+            this.statSubjectpanel.Controls.Add(this.subyearBtn);
             this.statSubjectpanel.Controls.Add(this.backBtn);
             this.statSubjectpanel.Controls.Add(this.label1);
             this.statSubjectpanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,29 +73,37 @@
             this.backBtn.TabIndex = 28;
             this.backBtn.UseVisualStyleBackColor = true;
             // 
-            // leclevelBtn
+            // subyearBtn
             // 
-            this.leclevelBtn.BackColor = System.Drawing.Color.White;
-            this.leclevelBtn.BorderColor = System.Drawing.Color.Black;
-            this.leclevelBtn.ButtonColor = System.Drawing.Color.White;
-            this.leclevelBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.leclevelBtn.FlatAppearance.BorderSize = 0;
-            this.leclevelBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.leclevelBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.leclevelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.leclevelBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leclevelBtn.ForeColor = System.Drawing.Color.Black;
-            this.leclevelBtn.Location = new System.Drawing.Point(21, 82);
-            this.leclevelBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.leclevelBtn.Name = "leclevelBtn";
-            this.leclevelBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.leclevelBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.leclevelBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.leclevelBtn.Size = new System.Drawing.Size(329, 54);
-            this.leclevelBtn.TabIndex = 29;
-            this.leclevelBtn.Text = "Level wise Lecturers Count ";
-            this.leclevelBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.leclevelBtn.UseVisualStyleBackColor = false;
+            this.subyearBtn.BackColor = System.Drawing.Color.White;
+            this.subyearBtn.BorderColor = System.Drawing.Color.Black;
+            this.subyearBtn.ButtonColor = System.Drawing.Color.White;
+            this.subyearBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.subyearBtn.FlatAppearance.BorderSize = 0;
+            this.subyearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.subyearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.subyearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subyearBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subyearBtn.ForeColor = System.Drawing.Color.Black;
+            this.subyearBtn.Location = new System.Drawing.Point(210, 85);
+            this.subyearBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.subyearBtn.Name = "subyearBtn";
+            this.subyearBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.subyearBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.subyearBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.subyearBtn.Size = new System.Drawing.Size(329, 54);
+            this.subyearBtn.TabIndex = 29;
+            this.subyearBtn.Text = "Year wise Subjects Count ";
+            this.subyearBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.subyearBtn.UseVisualStyleBackColor = false;
+            // 
+            // subgraphpanel
+            // 
+            this.subgraphpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.subgraphpanel.Location = new System.Drawing.Point(21, 161);
+            this.subgraphpanel.Name = "subgraphpanel";
+            this.subgraphpanel.Size = new System.Drawing.Size(733, 540);
+            this.subgraphpanel.TabIndex = 30;
             // 
             // statSubjectUC
             // 
@@ -114,6 +124,7 @@
         private System.Windows.Forms.Panel statSubjectpanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBtn;
-        private ePOSOne.btnProduct.Button_WOC leclevelBtn;
+        private ePOSOne.btnProduct.Button_WOC subyearBtn;
+        private System.Windows.Forms.Panel subgraphpanel;
     }
 }
