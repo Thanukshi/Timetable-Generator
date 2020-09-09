@@ -247,6 +247,12 @@
     <Compile Include="UserControlers\viewbuildingUC.Designer.cs">
       <DependentUpon>viewbuildingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\viewroomsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\viewroomsUC.Designer.cs">
+      <DependentUpon>viewroomsUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\viewbuildingUC.resx">
       <DependentUpon>viewbuildingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\viewroomsUC.resx">
+      <DependentUpon>viewroomsUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
