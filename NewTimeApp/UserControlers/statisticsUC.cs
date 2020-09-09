@@ -24,5 +24,12 @@ namespace NewTimeApp.UserControlers
             statStudentUC statUC = new statStudentUC();
             MainControler.showControl(statUC, statpanel);
         }
+
+        private void lecturersBtn_Click(object sender, EventArgs e)
+        {
+            statLecturersUC statUC = new statLecturersUC();
+            MainControler.showControl(statUC, statpanel);
+
+        }
     }
 }
