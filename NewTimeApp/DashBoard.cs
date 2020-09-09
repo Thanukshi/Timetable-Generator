@@ -91,5 +91,13 @@ namespace NewTimeApp
             titleOfPages.Text = "Locations";
 
         }
+
+        private void statBtn_Click(object sender, EventArgs e)
+        {
+            statisticsUC statUC = new statisticsUC();
+            MainControler.showControl(statUC, panelContainer);
+            titleOfPages.Text = "Locations";
+
+        }
     }
 }

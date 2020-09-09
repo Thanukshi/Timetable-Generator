@@ -44,6 +44,8 @@
             this.closeBtn = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.statBtn = new NewTimeApp.CircularButton();
             this.tagBtn = new NewTimeApp.CircularButton();
             this.locationBtn = new NewTimeApp.CircularButton();
@@ -52,8 +54,6 @@
             this.timeBtn = new NewTimeApp.CircularButton();
             this.workBtn = new NewTimeApp.CircularButton();
             this.studentBtn = new NewTimeApp.CircularButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSider.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -253,6 +253,26 @@
             this.panelContainer.Size = new System.Drawing.Size(772, 720);
             this.panelContainer.TabIndex = 3;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // statBtn
             // 
             this.statBtn.BackColor = System.Drawing.Color.Plum;
@@ -270,6 +290,7 @@
             this.statBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.statBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.statBtn.UseVisualStyleBackColor = false;
+            this.statBtn.Click += new System.EventHandler(this.statBtn_Click);
             // 
             // tagBtn
             // 
@@ -398,26 +419,6 @@
             this.studentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.studentBtn.UseVisualStyleBackColor = false;
             this.studentBtn.Click += new System.EventHandler(this.studentBtn_Click_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // DashBoard
             // 
