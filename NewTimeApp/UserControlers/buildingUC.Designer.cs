@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buildingUC));
             this.buildingpanel = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
             this.buildingBtn = new ePOSOne.btnProduct.Button_WOC();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.backBtn = new System.Windows.Forms.Button();
             this.buildingpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,19 @@
             this.buildingpanel.Name = "buildingpanel";
             this.buildingpanel.Size = new System.Drawing.Size(772, 720);
             this.buildingpanel.TabIndex = 0;
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(23, 42);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 24;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // buildingBtn
             // 
@@ -116,18 +129,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(23, 42);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 24;
-            this.backBtn.UseVisualStyleBackColor = true;
             // 
             // buildingUC
             // 
