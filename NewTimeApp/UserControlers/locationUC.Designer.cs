@@ -70,6 +70,7 @@
             this.viewroomBrn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.viewroomBrn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.viewroomBrn.UseVisualStyleBackColor = false;
+            this.viewroomBrn.Click += new System.EventHandler(this.viewroomBrn_Click);
             // 
             // viewbuldBtn
             // 
