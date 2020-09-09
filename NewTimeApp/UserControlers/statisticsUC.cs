@@ -34,7 +34,7 @@ namespace NewTimeApp.UserControlers
 
         private void subjectsBtn_Click(object sender, EventArgs e)
         {
-            statStudentUC statUC = new statStudentUC();
+            statSubjectUC statUC = new statSubjectUC();
             MainControler.showControl(statUC, statpanel);
 
         }
