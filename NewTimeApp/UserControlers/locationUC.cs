@@ -25,5 +25,12 @@ namespace NewTimeApp.UserControlers
             buildingUC locatUC = new buildingUC();
             MainControler.showControl(locatUC, locationpanel);
         }
+
+        private void addroomBtn_Click(object sender, EventArgs e)
+        {
+            roomUC locatUC = new roomUC();
+            MainControler.showControl(locatUC, locationpanel);
+
+        }
     }
 }

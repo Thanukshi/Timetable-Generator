@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(locationUC));
             this.locationpanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.viewroomBrn = new NewTimeApp.CircularButton();
             this.viewbuldBtn = new NewTimeApp.CircularButton();
             this.addroomBtn = new NewTimeApp.CircularButton();
             this.addBuldBtn = new NewTimeApp.CircularButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.locationpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,17 @@
             this.locationpanel.Name = "locationpanel";
             this.locationpanel.Size = new System.Drawing.Size(772, 720);
             this.locationpanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // viewroomBrn
             // 
@@ -106,6 +117,7 @@
             this.addroomBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addroomBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addroomBtn.UseVisualStyleBackColor = false;
+            this.addroomBtn.Click += new System.EventHandler(this.addroomBtn_Click);
             // 
             // addBuldBtn
             // 
@@ -125,17 +137,6 @@
             this.addBuldBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addBuldBtn.UseVisualStyleBackColor = false;
             this.addBuldBtn.Click += new System.EventHandler(this.addBuldBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // locationUC
             // 
