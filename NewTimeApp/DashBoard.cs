@@ -96,7 +96,7 @@ namespace NewTimeApp
         {
             statisticsUC statUC = new statisticsUC();
             MainControler.showControl(statUC, panelContainer);
-            titleOfPages.Text = "Locations";
+            titleOfPages.Text = "Statistics";
 
         }
     }
