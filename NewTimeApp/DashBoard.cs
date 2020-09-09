@@ -83,5 +83,13 @@ namespace NewTimeApp
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void locationBtn_Click(object sender, EventArgs e)
+        {
+            locationUC locatUC = new locationUC();
+            MainControler.showControl(locatUC, panelContainer);
+            titleOfPages.Text = "Locations";
+
+        }
     }
 }

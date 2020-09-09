@@ -306,6 +306,7 @@
             this.locationBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.locationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.locationBtn.UseVisualStyleBackColor = false;
+            this.locationBtn.Click += new System.EventHandler(this.locationBtn_Click);
             // 
             // subBtn
             // 
