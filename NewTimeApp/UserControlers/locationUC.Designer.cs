@@ -124,6 +124,7 @@
             this.addBuldBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addBuldBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addBuldBtn.UseVisualStyleBackColor = false;
+            this.addBuldBtn.Click += new System.EventHandler(this.addBuldBtn_Click);
             // 
             // pictureBox1
             // 
