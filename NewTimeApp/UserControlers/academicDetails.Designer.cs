@@ -35,7 +35,7 @@
             this.acYear = new System.Windows.Forms.ComboBox();
             this.saveAcc = new ePOSOne.btnProduct.Button_WOC();
             this.acPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.acSem = new System.Windows.Forms.ComboBox();
             this.backBtn = new System.Windows.Forms.Button();
             this.acPanel.SuspendLayout();
             this.SuspendLayout();
@@ -121,7 +121,7 @@
             // acPanel
             // 
             this.acPanel.BackColor = System.Drawing.Color.White;
-            this.acPanel.Controls.Add(this.comboBox1);
+            this.acPanel.Controls.Add(this.acSem);
             this.acPanel.Controls.Add(this.backBtn);
             this.acPanel.Controls.Add(this.saveAcc);
             this.acPanel.Controls.Add(this.acYear);
@@ -134,20 +134,20 @@
             this.acPanel.Size = new System.Drawing.Size(1000, 790);
             this.acPanel.TabIndex = 0;
             // 
-            // comboBox1
+            // acSem
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.acSem.BackColor = System.Drawing.Color.White;
+            this.acSem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.acSem.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acSem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
+            this.acSem.FormattingEnabled = true;
+            this.acSem.Items.AddRange(new object[] {
             "S1",
             "S2"});
-            this.comboBox1.Location = new System.Drawing.Point(498, 379);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(417, 46);
-            this.comboBox1.TabIndex = 24;
+            this.acSem.Location = new System.Drawing.Point(498, 379);
+            this.acSem.Name = "acSem";
+            this.acSem.Size = new System.Drawing.Size(417, 46);
+            this.acSem.TabIndex = 24;
             // 
             // backBtn
             // 
@@ -184,6 +184,6 @@
         private ePOSOne.btnProduct.Button_WOC saveAcc;
         private System.Windows.Forms.Panel acPanel;
         private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox acSem;
     }
 }

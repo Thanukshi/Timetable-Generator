@@ -30,6 +30,7 @@ namespace NewTimeApp.UserControlers
         private void academicDetails_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -40,7 +41,11 @@ namespace NewTimeApp.UserControlers
 
         private void saveAcc_Click(object sender, EventArgs e)
         {
-
+            if(acYear.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Select Academic Year.");
+            }
+            else if(ac)
         }
     }
 }
