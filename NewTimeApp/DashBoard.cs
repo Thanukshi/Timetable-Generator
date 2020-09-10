@@ -83,5 +83,12 @@ namespace NewTimeApp
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void workBtn_Click(object sender, EventArgs e)
+        {
+            AddWeekDayUC addWeekDayUC = new AddWeekDayUC();
+            MainControler.showControl(addWeekDayUC, panelContainer);
+            titleOfPages.Text = "Weekday";
+        }
     }
 }

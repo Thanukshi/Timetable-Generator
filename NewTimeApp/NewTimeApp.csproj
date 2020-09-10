@@ -145,13 +145,31 @@
       <HintPath>..\packages\Bunifu.UI.WinForms.3.0.2\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
     <Reference Include="FlatButton">
-      <HintPath>..\..\J\JControls\FlatButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\FlatButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JDragControl">
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JDragControl.dll</HintPath>
+    </Reference>
+    <Reference Include="JGradient Panel">
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JGradient Panel.dll</HintPath>
+    </Reference>
+    <Reference Include="JImageButton">
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JMaterialTextbox">
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JMaterialTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="JMetroTextBox">
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JMetroTextBox.dll</HintPath>
     </Reference>
     <Reference Include="JTextBox">
-      <HintPath>..\..\J\JControls\JTextBox.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox2">
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JTextBox2.dll</HintPath>
     </Reference>
     <Reference Include="JThinButton">
-      <HintPath>..\..\J\JControls\JThinButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Timetable-Generator-Chamodya\Timetable-Generator-Chamodya\J\JControls\JThinButton.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -199,6 +217,12 @@
     <Compile Include="UserControlers\academicDetails.Designer.cs">
       <DependentUpon>academicDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\AddWeekDayUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\AddWeekDayUC.Designer.cs">
+      <DependentUpon>AddWeekDayUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\DegreeProgramUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +253,12 @@
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\WorkingDaysAndHoursUC.Designer.cs">
+      <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +280,9 @@
     <EmbeddedResource Include="UserControlers\academicDetails.resx">
       <DependentUpon>academicDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\AddWeekDayUC.resx">
+      <DependentUpon>AddWeekDayUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\DegreeProgramUC.resx">
       <DependentUpon>DegreeProgramUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
+      <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

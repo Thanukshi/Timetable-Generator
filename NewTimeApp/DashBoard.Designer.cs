@@ -208,7 +208,7 @@
             this.titleOfPages.ForeColor = System.Drawing.Color.White;
             this.titleOfPages.Location = new System.Drawing.Point(4, 2);
             this.titleOfPages.Name = "titleOfPages";
-            this.titleOfPages.Size = new System.Drawing.Size(109, 47);
+            this.titleOfPages.Size = new System.Drawing.Size(88, 38);
             this.titleOfPages.TabIndex = 10;
             this.titleOfPages.Text = "Home";
             // 
@@ -378,6 +378,7 @@
             this.workBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.workBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.workBtn.UseVisualStyleBackColor = false;
+            this.workBtn.Click += new System.EventHandler(this.workBtn_Click);
             // 
             // studentBtn
             // 
