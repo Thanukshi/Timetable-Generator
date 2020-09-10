@@ -21,7 +21,7 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
             fillAcDetails();
-            //fillDegreeDetails();
+            fillDegreeDetails();
         }
 
         private void backBtnD_Click(object sender, EventArgs e)
@@ -53,6 +53,31 @@ namespace NewTimeApp.UserControlers
                     acDetails.Items.Add(academicdetails);
                 }
             }catch (SqlException x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
+
+
+        public void fillDegreeDetails()
+        {
+            string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+            sqlCon = new SqlConnection(con);
+            string qry = "SELECT * FROM AcademicDetails";
+            sqlCom = new SqlCommand(qry, sqlCon);
+            SqlDataReader sqlDataReader;
+
+            try
+            {
+                sqlCon.Open();
+                sqlDataReader = sqlCom.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    string academicdetails = sqlDataReader.GetString(1);
+                    acDetails.Items.Add(academicdetails);
+                }
+            }
+            catch (SqlException x)
             {
                 MessageBox.Show(x.Message);
             }
