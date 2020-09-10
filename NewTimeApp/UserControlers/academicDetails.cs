@@ -23,7 +23,7 @@ namespace NewTimeApp.UserControlers
         public academicDetails()
         {
             InitializeComponent();
-            sqlCon = new SqlConnection();
+            sqlCon = new SqlConnection(con);
             sqlCon.Open();
         }
 
@@ -43,11 +43,11 @@ namespace NewTimeApp.UserControlers
         {
             if(acYear.SelectedIndex <= -1)
             {
-                MessageBox.Show("Select Academic Year.");
+                MessageBox.Show("Please select academic Year.", "Academic Year", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if(acSem.SelectedIndex <= -1)
             {
-                MessageBox.Show("Select Academic Semester.");
+                MessageBox.Show("Please select Academic Semester.", "Academic Semester", MessageBoxButtons.OK ,MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -62,8 +62,8 @@ namespace NewTimeApp.UserControlers
                     sqlCom.CommandType = CommandType.StoredProcedure;
                     sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
                     sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
-                    sqlCom.Parameters.AddWithValue("@@AcademicYear", acYear.Text);
-                    sqlCom.Parameters.AddWithValue("@@AcademicSemester", acSem.Text);
+                    sqlCom.Parameters.AddWithValue("@AcademicYear", acYear.Text);
+                    sqlCom.Parameters.AddWithValue("@AcademicSemester", acSem.Text);
         
                     int numRes = sqlCom.ExecuteNonQuery();
                     if (numRes > 0)
