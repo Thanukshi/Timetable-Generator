@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewTimeApp.UserControlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,7 @@ namespace NewTimeApp.Helpers
 
             content.Controls.Add(control);
         }
+
+
     }
 }
