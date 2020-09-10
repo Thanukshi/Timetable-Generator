@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(roomUC));
             this.roompanel = new System.Windows.Forms.Panel();
             this.backBtn = new System.Windows.Forms.Button();
-            this.roomBtn = new ePOSOne.btnProduct.Button_WOC();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -43,14 +42,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.roomAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.roompanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // roompanel
             // 
             this.roompanel.BackColor = System.Drawing.Color.White;
+            this.roompanel.Controls.Add(this.roomAddBtn);
             this.roompanel.Controls.Add(this.backBtn);
-            this.roompanel.Controls.Add(this.roomBtn);
             this.roompanel.Controls.Add(this.comboBox3);
             this.roompanel.Controls.Add(this.textBox1);
             this.roompanel.Controls.Add(this.comboBox2);
@@ -78,31 +78,6 @@
             this.backBtn.TabIndex = 25;
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
-            // roomBtn
-            // 
-            this.roomBtn.BackColor = System.Drawing.Color.White;
-            this.roomBtn.BorderColor = System.Drawing.Color.Black;
-            this.roomBtn.ButtonColor = System.Drawing.Color.White;
-            this.roomBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.roomBtn.FlatAppearance.BorderSize = 0;
-            this.roomBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.roomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.roomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roomBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomBtn.ForeColor = System.Drawing.Color.Black;
-            this.roomBtn.Location = new System.Drawing.Point(322, 508);
-            this.roomBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.roomBtn.Name = "roomBtn";
-            this.roomBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.roomBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.roomBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.roomBtn.Size = new System.Drawing.Size(178, 54);
-            this.roomBtn.TabIndex = 22;
-            this.roomBtn.Text = "ADD ROOM";
-            this.roomBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.roomBtn.UseVisualStyleBackColor = false;
-            this.roomBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // comboBox3
             // 
@@ -209,6 +184,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // roomAddBtn
+            // 
+            this.roomAddBtn.BackColor = System.Drawing.Color.White;
+            this.roomAddBtn.BorderColor = System.Drawing.Color.Black;
+            this.roomAddBtn.ButtonColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.BorderSize = 0;
+            this.roomAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomAddBtn.ForeColor = System.Drawing.Color.Black;
+            this.roomAddBtn.Location = new System.Drawing.Point(317, 470);
+            this.roomAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.roomAddBtn.Name = "roomAddBtn";
+            this.roomAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.roomAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.roomAddBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.roomAddBtn.Size = new System.Drawing.Size(161, 54);
+            this.roomAddBtn.TabIndex = 26;
+            this.roomAddBtn.Text = "ADD ROOM";
+            this.roomAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.roomAddBtn.UseVisualStyleBackColor = false;
+            this.roomAddBtn.Click += new System.EventHandler(this.roomAddBtn_Click);
+            // 
             // roomUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,7 +235,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox comboBox3;
-        private ePOSOne.btnProduct.Button_WOC roomBtn;
         private System.Windows.Forms.Button backBtn;
+        private ePOSOne.btnProduct.Button_WOC roomAddBtn;
     }
 }

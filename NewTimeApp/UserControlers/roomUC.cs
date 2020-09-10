@@ -23,10 +23,7 @@ namespace NewTimeApp.UserControlers
 
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -37,6 +34,11 @@ namespace NewTimeApp.UserControlers
         {
             locationUC locatUC = new locationUC();
             MainControler.showControl(locatUC, roompanel);
+        }
+
+        private void roomAddBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
