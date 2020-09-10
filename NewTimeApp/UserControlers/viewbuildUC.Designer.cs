@@ -69,6 +69,7 @@
             this.backBtn.Size = new System.Drawing.Size(50, 46);
             this.backBtn.TabIndex = 31;
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // showbuildpanel
             // 
