@@ -38,5 +38,10 @@ namespace NewTimeApp.UserControlers
             locationUC locatUC = new locationUC();
             MainControler.showControl(locatUC, buildingpanel);
         }
+
+        private void buldingAddBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,19 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buildingUC));
             this.buildingpanel = new System.Windows.Forms.Panel();
             this.backBtn = new System.Windows.Forms.Button();
-            this.buildingBtn = new ePOSOne.btnProduct.Button_WOC();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.buldingAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.buildingpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // buildingpanel
             // 
             this.buildingpanel.BackColor = System.Drawing.Color.White;
+            this.buildingpanel.Controls.Add(this.buldingAddBtn);
             this.buildingpanel.Controls.Add(this.backBtn);
-            this.buildingpanel.Controls.Add(this.buildingBtn);
             this.buildingpanel.Controls.Add(this.textBox1);
             this.buildingpanel.Controls.Add(this.label2);
             this.buildingpanel.Controls.Add(this.label1);
@@ -66,31 +66,6 @@
             this.backBtn.TabIndex = 24;
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
-            // buildingBtn
-            // 
-            this.buildingBtn.BackColor = System.Drawing.Color.White;
-            this.buildingBtn.BorderColor = System.Drawing.Color.Black;
-            this.buildingBtn.ButtonColor = System.Drawing.Color.White;
-            this.buildingBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buildingBtn.FlatAppearance.BorderSize = 0;
-            this.buildingBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.buildingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.buildingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buildingBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingBtn.ForeColor = System.Drawing.Color.Black;
-            this.buildingBtn.Location = new System.Drawing.Point(290, 428);
-            this.buildingBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.buildingBtn.Name = "buildingBtn";
-            this.buildingBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.buildingBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.buildingBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.buildingBtn.Size = new System.Drawing.Size(237, 54);
-            this.buildingBtn.TabIndex = 21;
-            this.buildingBtn.Text = "ADD";
-            this.buildingBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buildingBtn.UseVisualStyleBackColor = false;
-            this.buildingBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // textBox1
             // 
@@ -130,6 +105,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // buldingAddBtn
+            // 
+            this.buldingAddBtn.BackColor = System.Drawing.Color.White;
+            this.buldingAddBtn.BorderColor = System.Drawing.Color.Black;
+            this.buldingAddBtn.ButtonColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatAppearance.BorderSize = 0;
+            this.buldingAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buldingAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buldingAddBtn.ForeColor = System.Drawing.Color.Black;
+            this.buldingAddBtn.Location = new System.Drawing.Point(328, 398);
+            this.buldingAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.buldingAddBtn.Name = "buldingAddBtn";
+            this.buldingAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.buldingAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buldingAddBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.buldingAddBtn.Size = new System.Drawing.Size(124, 54);
+            this.buldingAddBtn.TabIndex = 25;
+            this.buldingAddBtn.Text = "ADD";
+            this.buldingAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buldingAddBtn.UseVisualStyleBackColor = false;
+            this.buldingAddBtn.Click += new System.EventHandler(this.buldingAddBtn_Click);
+            // 
             // buildingUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +150,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private ePOSOne.btnProduct.Button_WOC buildingBtn;
         private System.Windows.Forms.Button backBtn;
+        private ePOSOne.btnProduct.Button_WOC buldingAddBtn;
     }
 }
