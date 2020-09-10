@@ -8,14 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
+using System.Data.SqlClient;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class buildingUC : UserControl
     {
+
+        string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
+        SqlConnection sqlCon;
+        SqlCommand sqlCom;
+        string buildindID = "";
+
         public buildingUC()
         {
             InitializeComponent();
+            sqlCon = new SqlConnection(con);
+            sqlCon.Open();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,6 +49,11 @@ namespace NewTimeApp.UserControlers
         }
 
         private void buldingAddBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buildingNameTB_TextChanged(object sender, EventArgs e)
         {
 
         }
