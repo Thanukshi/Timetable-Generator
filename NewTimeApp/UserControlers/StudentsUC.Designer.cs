@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsUC));
             this.studentPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpIdBtn = new NewTimeApp.CircularButton();
             this.subGroupBrn = new NewTimeApp.CircularButton();
             this.mainGrpBtn = new NewTimeApp.CircularButton();
             this.degreeBtn = new NewTimeApp.CircularButton();
             this.accBtn = new NewTimeApp.CircularButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.studentBtn = new NewTimeApp.CircularButton();
             this.studentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +56,16 @@
             this.studentPanel.Name = "studentPanel";
             this.studentPanel.Size = new System.Drawing.Size(772, 720);
             this.studentPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // grpIdBtn
             // 
@@ -110,6 +120,7 @@
             this.mainGrpBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.mainGrpBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.mainGrpBtn.UseVisualStyleBackColor = false;
+            this.mainGrpBtn.Click += new System.EventHandler(this.mainGrpBtn_Click);
             // 
             // degreeBtn
             // 
@@ -148,16 +159,6 @@
             this.accBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.accBtn.UseVisualStyleBackColor = false;
             this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // studentBtn
             // 

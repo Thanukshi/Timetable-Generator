@@ -35,5 +35,11 @@ namespace NewTimeApp.UserControlers
             DegreeProgramUC degreeProgramUC = new DegreeProgramUC();
             MainControler.showControl(degreeProgramUC, studentPanel);
         }
+
+        private void mainGrpBtn_Click(object sender, EventArgs e)
+        {
+            MainGroupUC mainGroupUC = new MainGroupUC();
+            MainControler.showControl(mainGroupUC, studentPanel);
+        }
     }
 }
