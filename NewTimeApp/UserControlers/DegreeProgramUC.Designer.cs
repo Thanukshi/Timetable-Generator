@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backBtnD = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.saveDe = new ePOSOne.btnProduct.Button_WOC();
+            this.label1 = new System.Windows.Forms.Label();
             this.degreePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,17 +112,6 @@
             this.backBtnD.UseVisualStyleBackColor = true;
             this.backBtnD.Click += new System.EventHandler(this.backBtnD_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(123, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 41);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Degree Programs";
-            // 
             // saveDe
             // 
             this.saveDe.BackColor = System.Drawing.Color.White;
@@ -145,6 +134,18 @@
             this.saveDe.Text = "Save";
             this.saveDe.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveDe.UseVisualStyleBackColor = false;
+            this.saveDe.Click += new System.EventHandler(this.saveDe_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(123, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(265, 41);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Degree Programs";
             // 
             // DegreeProgramUC
             // 
