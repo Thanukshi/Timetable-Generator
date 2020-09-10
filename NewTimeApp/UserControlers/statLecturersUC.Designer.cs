@@ -82,6 +82,7 @@
             this.lecprogBtn.Text = "Programme wise Lecturers Count ";
             this.lecprogBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lecprogBtn.UseVisualStyleBackColor = false;
+            this.lecprogBtn.Click += new System.EventHandler(this.lecprogBtn_Click);
             // 
             // leclevelBtn
             // 
@@ -106,6 +107,7 @@
             this.leclevelBtn.Text = "Level wise Lecturers Count ";
             this.leclevelBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.leclevelBtn.UseVisualStyleBackColor = false;
+            this.leclevelBtn.Click += new System.EventHandler(this.leclevelBtn_Click);
             // 
             // backBtn
             // 

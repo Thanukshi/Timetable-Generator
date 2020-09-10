@@ -33,5 +33,15 @@ namespace NewTimeApp.UserControlers
             statisticsUC statUC = new statisticsUC();
             MainControler.showControl(statUC, statStudentpanel);
         }
+
+        private void studyearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progStudBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

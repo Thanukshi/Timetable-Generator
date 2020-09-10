@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statStudentUC));
             this.statStudentpanel = new System.Windows.Forms.Panel();
             this.studgraphpanel = new System.Windows.Forms.Panel();
-            this.studprogBtn = new ePOSOne.btnProduct.Button_WOC();
             this.studyearBtn = new ePOSOne.btnProduct.Button_WOC();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.progStudBtn = new ePOSOne.btnProduct.Button_WOC();
             this.statStudentpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // statStudentpanel
             // 
+            this.statStudentpanel.Controls.Add(this.progStudBtn);
             this.statStudentpanel.Controls.Add(this.studgraphpanel);
-            this.statStudentpanel.Controls.Add(this.studprogBtn);
             this.statStudentpanel.Controls.Add(this.studyearBtn);
             this.statStudentpanel.Controls.Add(this.backBtn);
             this.statStudentpanel.Controls.Add(this.label1);
@@ -58,31 +58,6 @@
             this.studgraphpanel.Name = "studgraphpanel";
             this.studgraphpanel.Size = new System.Drawing.Size(736, 537);
             this.studgraphpanel.TabIndex = 29;
-            // 
-            // studprogBtn
-            // 
-            this.studprogBtn.BackColor = System.Drawing.Color.White;
-            this.studprogBtn.BorderColor = System.Drawing.Color.Black;
-            this.studprogBtn.ButtonColor = System.Drawing.Color.White;
-            this.studprogBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.studprogBtn.FlatAppearance.BorderSize = 0;
-            this.studprogBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.studprogBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.studprogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studprogBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studprogBtn.ForeColor = System.Drawing.Color.Black;
-            this.studprogBtn.Location = new System.Drawing.Point(371, 84);
-            this.studprogBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.studprogBtn.Name = "studprogBtn";
-            this.studprogBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.studprogBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.studprogBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.studprogBtn.Size = new System.Drawing.Size(385, 54);
-            this.studprogBtn.TabIndex = 28;
-            this.studprogBtn.Text = "Programme wise Students Count ";
-            this.studprogBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.studprogBtn.UseVisualStyleBackColor = false;
-            this.studprogBtn.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
             // studyearBtn
             // 
@@ -107,6 +82,7 @@
             this.studyearBtn.Text = "Year wise Students Count ";
             this.studyearBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.studyearBtn.UseVisualStyleBackColor = false;
+            this.studyearBtn.Click += new System.EventHandler(this.studyearBtn_Click);
             // 
             // backBtn
             // 
@@ -133,6 +109,31 @@
             this.label1.Text = "Statistics Related to Students";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // progStudBtn
+            // 
+            this.progStudBtn.BackColor = System.Drawing.Color.White;
+            this.progStudBtn.BorderColor = System.Drawing.Color.Black;
+            this.progStudBtn.ButtonColor = System.Drawing.Color.White;
+            this.progStudBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.progStudBtn.FlatAppearance.BorderSize = 0;
+            this.progStudBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.progStudBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.progStudBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.progStudBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progStudBtn.ForeColor = System.Drawing.Color.Black;
+            this.progStudBtn.Location = new System.Drawing.Point(364, 84);
+            this.progStudBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.progStudBtn.Name = "progStudBtn";
+            this.progStudBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.progStudBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.progStudBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.progStudBtn.Size = new System.Drawing.Size(392, 54);
+            this.progStudBtn.TabIndex = 30;
+            this.progStudBtn.Text = "Programme wise Students Count ";
+            this.progStudBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.progStudBtn.UseVisualStyleBackColor = false;
+            this.progStudBtn.Click += new System.EventHandler(this.progStudBtn_Click);
+            // 
             // statStudentUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,8 +153,8 @@
         private System.Windows.Forms.Panel statStudentpanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBtn;
-        private ePOSOne.btnProduct.Button_WOC studprogBtn;
         private ePOSOne.btnProduct.Button_WOC studyearBtn;
         private System.Windows.Forms.Panel studgraphpanel;
+        private ePOSOne.btnProduct.Button_WOC progStudBtn;
     }
 }

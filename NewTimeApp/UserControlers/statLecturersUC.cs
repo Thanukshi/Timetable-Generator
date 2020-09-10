@@ -28,5 +28,15 @@ namespace NewTimeApp.UserControlers
             statisticsUC statUC = new statisticsUC();
             MainControler.showControl(statUC, statLecturerspanel);
         }
+
+        private void leclevelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lecprogBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
