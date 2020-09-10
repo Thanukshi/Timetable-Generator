@@ -14,9 +14,16 @@ namespace NewTimeApp.UserControlers
 {
     public partial class MainGroupUC : UserControl
     {
+        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+        SqlConnection sqlCon;
+        SqlCommand sqlCom;
+        string mainGroupID = "";
+
         public MainGroupUC()
         {
             InitializeComponent();
+            sqlCon = new SqlConnection(con);
+            sqlCon.Open();
         }
 
         private void backBtnD_Click(object sender, EventArgs e)
