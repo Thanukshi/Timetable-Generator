@@ -22,6 +22,7 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
             fillAcDetails();
             fillDegreeDetails();
+
         }
 
         private void backBtnD_Click(object sender, EventArgs e)
@@ -49,8 +50,9 @@ namespace NewTimeApp.UserControlers
                 sqlDataReader = sqlCom.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
-                    string academicdetails = sqlDataReader.GetString(1);
-                    acDetails.Items.Add(academicdetails);
+                    string year = sqlDataReader.GetString(1);
+                    string semester = sqlDataReader.GetString(2);
+                    acDetails.Items.Add(year+"."+semester);
                 }
             }catch (SqlException x)
             {
@@ -63,7 +65,7 @@ namespace NewTimeApp.UserControlers
         {
             string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
             sqlCon = new SqlConnection(con);
-            string qry = "SELECT * FROM AcademicDetails";
+            string qry = "SELECT * FROM DegreeDetails";
             sqlCom = new SqlCommand(qry, sqlCon);
             SqlDataReader sqlDataReader;
 
@@ -73,14 +75,19 @@ namespace NewTimeApp.UserControlers
                 sqlDataReader = sqlCom.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
-                    string academicdetails = sqlDataReader.GetString(1);
-                    acDetails.Items.Add(academicdetails);
+                    string degreedetails = sqlDataReader.GetString(2);
+                    degreeDetailsCombo.Items.Add(degreedetails);
                 }
             }
             catch (SqlException x)
             {
                 MessageBox.Show(x.Message);
             }
+        }
+
+        private void saveMG_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
