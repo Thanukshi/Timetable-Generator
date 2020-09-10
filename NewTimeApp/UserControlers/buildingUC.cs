@@ -18,7 +18,7 @@ namespace NewTimeApp.UserControlers
         string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
-        string buildindID = "";
+        string buildingID = "";
 
         public buildingUC()
         {
@@ -37,10 +37,7 @@ namespace NewTimeApp.UserControlers
 
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void backBtn_Click(object sender, EventArgs e)
         {
@@ -50,6 +47,39 @@ namespace NewTimeApp.UserControlers
 
         private void buldingAddBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(buildingNameTB.Text))
+            {
+                MessageBox.Show("Enter Building Name !!!");
+                buildingNameTB.Select();
+            }
+            else
+            {
+                try
+                {
+                    if (sqlCon.State == ConnectionState.Closed)
+                    {
+                        sqlCon.Open();
+                    }
+                    DataTable dtData = new DataTable();
+                    sqlCom = new SqlCommand("buildDetail", sqlCon);
+                    sqlCom.CommandType = CommandType.StoredProcedure;
+                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                    sqlCom.Parameters.AddWithValue("@buildingID", buildingID);
+                    sqlCom.Parameters.AddWithValue("@buildingName", buildingNameTB.Text);
+                    int numRes = sqlCom.ExecuteNonQuery();
+                    if (numRes > 0)
+                    {
+                        MessageBox.Show("Record Added Successfully !!!");
+                        
+                    }
+                    else
+                        MessageBox.Show("Please Try Again !!!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:- " + ex.Message);
+                }
+            }
 
         }
 
