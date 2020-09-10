@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace NewTimeApp.Helpers
 {
-    class TimeModel
+    class DegreeProgram
     {
-        public string AcademicDetails { get; set; }
-        public string DegreeProgram { get; set; }
+        public string degreeName { get; set; }
+
+        public string shortDegreeName { get; set; }
     }
 }
