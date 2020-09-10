@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewroomsUC));
             this.viewroomspanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backBtn = new System.Windows.Forms.Button();
             this.showroompanel = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.viewroomspanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,16 +47,13 @@
             this.viewroomspanel.Size = new System.Drawing.Size(772, 720);
             this.viewroomspanel.TabIndex = 0;
             // 
-            // label1
+            // showroompanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(100, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 35);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Rooms ";
+            this.showroompanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.showroompanel.Location = new System.Drawing.Point(18, 101);
+            this.showroompanel.Name = "showroompanel";
+            this.showroompanel.Size = new System.Drawing.Size(720, 598);
+            this.showroompanel.TabIndex = 31;
             // 
             // backBtn
             // 
@@ -71,13 +68,16 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // showroompanel
+            // label1
             // 
-            this.showroompanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.showroompanel.Location = new System.Drawing.Point(18, 101);
-            this.showroompanel.Name = "showroompanel";
-            this.showroompanel.Size = new System.Drawing.Size(720, 598);
-            this.showroompanel.TabIndex = 31;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(100, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 35);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Rooms ";
             // 
             // viewroomsUC
             // 
