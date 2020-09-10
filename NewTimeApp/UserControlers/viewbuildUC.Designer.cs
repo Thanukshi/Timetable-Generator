@@ -32,13 +32,13 @@
             this.viewbuildpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.showbuildpanel = new System.Windows.Forms.Panel();
             this.viewbuildpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewbuildpanel
             // 
-            this.viewbuildpanel.Controls.Add(this.panel1);
+            this.viewbuildpanel.Controls.Add(this.showbuildpanel);
             this.viewbuildpanel.Controls.Add(this.backBtn);
             this.viewbuildpanel.Controls.Add(this.label1);
             this.viewbuildpanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -70,13 +70,13 @@
             this.backBtn.TabIndex = 31;
             this.backBtn.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // showbuildpanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel1.Location = new System.Drawing.Point(24, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 598);
-            this.panel1.TabIndex = 32;
+            this.showbuildpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.showbuildpanel.Location = new System.Drawing.Point(24, 102);
+            this.showbuildpanel.Name = "showbuildpanel";
+            this.showbuildpanel.Size = new System.Drawing.Size(720, 598);
+            this.showbuildpanel.TabIndex = 32;
             // 
             // viewbuildUC
             // 
@@ -97,6 +97,6 @@
         private System.Windows.Forms.Panel viewbuildpanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel showbuildpanel;
     }
 }

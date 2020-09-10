@@ -35,7 +35,9 @@ namespace NewTimeApp.UserControlers
 
         private void viewbuldBtn_Click(object sender, EventArgs e)
         {
-            
+            viewbuildUC locatUC = new viewbuildUC();
+            MainControler.showControl(locatUC, locationpanel);
+
         }
 
         private void viewroomBrn_Click(object sender, EventArgs e)
