@@ -36,7 +36,10 @@ namespace NewTimeApp.UserControlers
         {
             try
             {
-
+                sqlCon = new SqlConnection(con);
+                sqlCon.Open();
+                string qry = "SELECT acYear FROM AcademicDetails";
+                SqlDataReader sqlDataReader = new SqlCommand(qry,sqlCon).ExecuteReader();
             }
             catch (SqlException e)
             {
