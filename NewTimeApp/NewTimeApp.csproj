@@ -178,7 +178,9 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AcademicDetails.cs" />
     <Compile Include="Helpers\MainControler.cs" />
+    <Compile Include="Helpers\TimeModel.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
