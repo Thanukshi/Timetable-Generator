@@ -116,6 +116,7 @@
             this.saveAcc.Text = "Save";
             this.saveAcc.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveAcc.UseVisualStyleBackColor = false;
+            this.saveAcc.Click += new System.EventHandler(this.saveAcc_Click);
             // 
             // acPanel
             // 

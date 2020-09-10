@@ -8,14 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
+using System.Data.SqlClient;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class academicDetails : UserControl
     {
+
+        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+        SqlConnection sqlCon;
+        SqlCommand sqlCom;
+        string acedemicID = "";
+
         public academicDetails()
         {
             InitializeComponent();
+            sqlCon = new SqlConnection();
+            sqlCon.Open();
         }
 
         private void academicDetails_Load(object sender, EventArgs e)
@@ -27,6 +36,11 @@ namespace NewTimeApp.UserControlers
         {
             StudentsUC studentsUC = new StudentsUC();
             MainControler.showControl(studentsUC, acPanel);
+        }
+
+        private void saveAcc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
