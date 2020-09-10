@@ -8,8 +8,8 @@ namespace NewTimeApp.Helpers
 {
     class AcademicDetails
     {
-        public string academicYear { get; set; }
+        public string AcademicYear { get; set; }
 
-        public string academicSemester { get; set; }
+        public string AcademicSemester { get; set; }
     }
 }
