@@ -36,6 +36,7 @@ namespace NewTimeApp.UserControlers
         {
             try
             {
+                string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
                 sqlCon = new SqlConnection(con);
                 sqlCon.Open();
                 string qry = "SELECT acYear FROM AcademicDetails";
