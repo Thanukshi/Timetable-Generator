@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
+using System.Data.SqlClient;
 
 namespace NewTimeApp.UserControlers
 {
@@ -22,6 +23,18 @@ namespace NewTimeApp.UserControlers
         {
             StudentsUC studentsUC = new StudentsUC();
             MainControler.showControl(studentsUC, mgPanel);
+        }
+
+        private void acDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }
