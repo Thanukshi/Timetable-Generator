@@ -40,11 +40,16 @@ namespace NewTimeApp.UserControlers
                 sqlCon.Open();
                 string qry = "SELECT acYear FROM AcademicDetails";
                 SqlDataReader sqlDataReader = new SqlCommand(qry,sqlCon).ExecuteReader();
-            }
-            catch (SqlException e)
+                while (sqlDataReader.Read())
+                {
+                    acDetails.Items.Add(sqlDataReader.GetValue(0).ToString());
+                }
+                sqlDataReader.Close();
+            }catch (SqlException x)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(x.Message);
             }
+       
         }
     }
 }
