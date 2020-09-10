@@ -14,16 +14,14 @@ namespace NewTimeApp.UserControlers
 {
     public partial class MainGroupUC : UserControl
     {
-        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
-        string mainGroupID = "";
 
         public MainGroupUC()
         {
             InitializeComponent();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
+            fillAcDetails();
+            //fillDegreeDetails();
         }
 
         private void backBtnD_Click(object sender, EventArgs e)
@@ -34,23 +32,14 @@ namespace NewTimeApp.UserControlers
 
         private void acDetails_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-                sqlCon = new SqlConnection(con);
-                sqlCon.Open();
-                string qry = "SELECT acYear FROM AcademicDetails";
-                SqlDataReader sqlDataReader = new SqlCommand(qry,sqlCon).ExecuteReader();
-                while (sqlDataReader.Read())
-                {
-                    acDetails.Items.Add(sqlDataReader.GetValue(0).ToString());
-                }
-                sqlDataReader.Close();
-            }catch (SqlException x)
-            {
-                MessageBox.Show(x.Message);
-            }
-       
+
+        }
+
+        public void fillAcDetails()
+        {
+            string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+
         }
     }
+
 }
