@@ -35,8 +35,8 @@
             this.acYear = new System.Windows.Forms.ComboBox();
             this.saveAcc = new ePOSOne.btnProduct.Button_WOC();
             this.acPanel = new System.Windows.Forms.Panel();
-            this.backBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.backBtn = new System.Windows.Forms.Button();
             this.acPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(106, 29);
+            this.label1.Location = new System.Drawing.Point(114, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 41);
             this.label1.TabIndex = 1;
@@ -133,18 +133,6 @@
             this.acPanel.Size = new System.Drawing.Size(1000, 790);
             this.acPanel.TabIndex = 0;
             // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(22, 14);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(66, 56);
-            this.backBtn.TabIndex = 23;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.White;
@@ -159,6 +147,18 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(417, 46);
             this.comboBox1.TabIndex = 24;
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(28, 14);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(66, 56);
+            this.backBtn.TabIndex = 23;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // academicDetails
             // 

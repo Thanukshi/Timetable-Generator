@@ -105,7 +105,7 @@
             this.backBtnD.FlatAppearance.BorderSize = 0;
             this.backBtnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnD.Image = ((System.Drawing.Image)(resources.GetObject("backBtnD.Image")));
-            this.backBtnD.Location = new System.Drawing.Point(31, 26);
+            this.backBtnD.Location = new System.Drawing.Point(35, 26);
             this.backBtnD.Name = "backBtnD";
             this.backBtnD.Size = new System.Drawing.Size(66, 56);
             this.backBtnD.TabIndex = 30;
@@ -117,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(115, 41);
+            this.label1.Location = new System.Drawing.Point(123, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(265, 41);
             this.label1.TabIndex = 24;
