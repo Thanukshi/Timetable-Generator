@@ -61,7 +61,7 @@ namespace NewTimeApp.UserControlers
                     int numRes = sqlCom.ExecuteNonQuery();
                     if (numRes > 0)
                     {
-                        MessageBox.Show("Degree Program of" + " " + programNameD.Text + "." + " " + preferNameD.Text);
+                        MessageBox.Show("Degree Program of" + " " + programNameD.Text + "is" + " " + preferNameD.Text);
                     }
                     else
                         MessageBox.Show("Please Try Again !!!");
