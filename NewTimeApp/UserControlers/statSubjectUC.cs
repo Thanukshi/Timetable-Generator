@@ -28,5 +28,10 @@ namespace NewTimeApp.UserControlers
             statisticsUC statUC = new statisticsUC();
             MainControler.showControl(statUC, statSubjectpanel);
         }
+
+        private void subyearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

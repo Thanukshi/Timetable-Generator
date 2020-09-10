@@ -80,6 +80,7 @@
             this.subyearBtn.Text = "Year wise Subjects Count ";
             this.subyearBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.subyearBtn.UseVisualStyleBackColor = false;
+            this.subyearBtn.Click += new System.EventHandler(this.subyearBtn_Click);
             // 
             // backBtn
             // 
