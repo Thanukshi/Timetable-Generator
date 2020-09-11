@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsUC));
             this.studentPanel = new System.Windows.Forms.Panel();
             this.circularButton1 = new NewTimeApp.CircularButton();
-            this.grpIdBtn = new NewTimeApp.CircularButton();
+            this.viewBtn = new NewTimeApp.CircularButton();
             this.subGroupBrn = new NewTimeApp.CircularButton();
             this.mainGrpBtn = new NewTimeApp.CircularButton();
             this.degreeBtn = new NewTimeApp.CircularButton();
@@ -46,7 +46,7 @@
             // 
             this.studentPanel.BackColor = System.Drawing.Color.White;
             this.studentPanel.Controls.Add(this.circularButton1);
-            this.studentPanel.Controls.Add(this.grpIdBtn);
+            this.studentPanel.Controls.Add(this.viewBtn);
             this.studentPanel.Controls.Add(this.subGroupBrn);
             this.studentPanel.Controls.Add(this.mainGrpBtn);
             this.studentPanel.Controls.Add(this.degreeBtn);
@@ -77,23 +77,23 @@
             this.circularButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.circularButton1.UseVisualStyleBackColor = false;
             // 
-            // grpIdBtn
+            // viewBtn
             // 
-            this.grpIdBtn.BackColor = System.Drawing.Color.Plum;
-            this.grpIdBtn.FlatAppearance.BorderSize = 0;
-            this.grpIdBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.grpIdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpIdBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpIdBtn.ForeColor = System.Drawing.Color.White;
-            this.grpIdBtn.Image = ((System.Drawing.Image)(resources.GetObject("grpIdBtn.Image")));
-            this.grpIdBtn.Location = new System.Drawing.Point(72, 535);
-            this.grpIdBtn.Name = "grpIdBtn";
-            this.grpIdBtn.Size = new System.Drawing.Size(170, 170);
-            this.grpIdBtn.TabIndex = 31;
-            this.grpIdBtn.Text = "Generate Group ID";
-            this.grpIdBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.grpIdBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.grpIdBtn.UseVisualStyleBackColor = false;
+            this.viewBtn.BackColor = System.Drawing.Color.Plum;
+            this.viewBtn.FlatAppearance.BorderSize = 0;
+            this.viewBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewBtn.ForeColor = System.Drawing.Color.White;
+            this.viewBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewBtn.Image")));
+            this.viewBtn.Location = new System.Drawing.Point(72, 535);
+            this.viewBtn.Name = "viewBtn";
+            this.viewBtn.Size = new System.Drawing.Size(170, 170);
+            this.viewBtn.TabIndex = 31;
+            this.viewBtn.Text = "View Details";
+            this.viewBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.viewBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.viewBtn.UseVisualStyleBackColor = false;
             // 
             // subGroupBrn
             // 
@@ -221,7 +221,7 @@
         private CircularButton subGroupBrn;
         private CircularButton mainGrpBtn;
         private CircularButton degreeBtn;
-        private CircularButton grpIdBtn;
+        private CircularButton viewBtn;
         private CircularButton circularButton1;
     }
 }
