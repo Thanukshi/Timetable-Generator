@@ -70,8 +70,33 @@ namespace NewTimeApp.UserControlers
             {
                 try
                 {
+                    if (sqlCon.State == ConnectionState.Closed)
+                    {
+                        sqlCon.Open();
+                    }
+                    DataTable dtData = new DataTable();
+                    sqlCom = new SqlCommand("abcSubGroupDetails", sqlCon);
+                    sqlCom.CommandType = CommandType.StoredProcedure;
+                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                    sqlCom.Parameters.AddWithValue("@SubID", subGroupID);
+                    sqlCom.Parameters.AddWithValue("@MainGroupID", mainGroupCombo.Text);
+                    sqlCom.Parameters.AddWithValue("@SubGroupNo", subGroupCombo.Text);
+                   
 
+                    int numRes = sqlCom.ExecuteNonQuery();
+                    if (numRes > 0)
+                    {
+                        MessageBox.Show("Sub Group  ID is " + " " + mainGroupCombo.Text + ". " + subGroupCombo.Text + " is created successfully..");
+                    }
+                    else
+                        MessageBox.Show("Please Try Again !!!");
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:- " + ex.Message);
+                }
+            }
+        }
 
         private void backBtnS_Click(object sender, EventArgs e)
         {
