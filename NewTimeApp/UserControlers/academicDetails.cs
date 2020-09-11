@@ -92,6 +92,11 @@ namespace NewTimeApp.UserControlers
                 }
                     }
                 }
+
+        private void acPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
+    }
     }
 

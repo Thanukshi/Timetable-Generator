@@ -201,6 +201,12 @@
     <Compile Include="UserControlers\academicDetails.Designer.cs">
       <DependentUpon>academicDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\AcademicDetailsViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\AcademicDetailsViewUC.Designer.cs">
+      <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\DataViewUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </Compile>
     <EmbeddedResource Include="UserControlers\academicDetails.resx">
       <DependentUpon>academicDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\AcademicDetailsViewUC.resx">
+      <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\DataViewUC.resx">
       <DependentUpon>DataViewUC.cs</DependentUpon>

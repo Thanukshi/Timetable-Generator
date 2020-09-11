@@ -133,6 +133,7 @@
             this.acPanel.Name = "acPanel";
             this.acPanel.Size = new System.Drawing.Size(1000, 790);
             this.acPanel.TabIndex = 0;
+            this.acPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.acPanel_Paint);
             // 
             // acSem
             // 
