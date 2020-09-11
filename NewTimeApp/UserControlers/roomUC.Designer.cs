@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(roomUC));
             this.roompanel = new System.Windows.Forms.Panel();
+            this.roomAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.backBtn = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.capacityCB = new System.Windows.Forms.ComboBox();
+            this.RoomNameTB = new System.Windows.Forms.TextBox();
+            this.RoomTypeTB = new System.Windows.Forms.ComboBox();
+            this.buildingNameCB = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.roomAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.roompanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,10 +51,10 @@
             this.roompanel.BackColor = System.Drawing.Color.White;
             this.roompanel.Controls.Add(this.roomAddBtn);
             this.roompanel.Controls.Add(this.backBtn);
-            this.roompanel.Controls.Add(this.comboBox3);
-            this.roompanel.Controls.Add(this.textBox1);
-            this.roompanel.Controls.Add(this.comboBox2);
-            this.roompanel.Controls.Add(this.comboBox1);
+            this.roompanel.Controls.Add(this.capacityCB);
+            this.roompanel.Controls.Add(this.RoomNameTB);
+            this.roompanel.Controls.Add(this.RoomTypeTB);
+            this.roompanel.Controls.Add(this.buildingNameCB);
             this.roompanel.Controls.Add(this.label5);
             this.roompanel.Controls.Add(this.label4);
             this.roompanel.Controls.Add(this.label3);
@@ -65,6 +65,31 @@
             this.roompanel.Name = "roompanel";
             this.roompanel.Size = new System.Drawing.Size(772, 720);
             this.roompanel.TabIndex = 0;
+            // 
+            // roomAddBtn
+            // 
+            this.roomAddBtn.BackColor = System.Drawing.Color.White;
+            this.roomAddBtn.BorderColor = System.Drawing.Color.Black;
+            this.roomAddBtn.ButtonColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.BorderSize = 0;
+            this.roomAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomAddBtn.ForeColor = System.Drawing.Color.Black;
+            this.roomAddBtn.Location = new System.Drawing.Point(317, 470);
+            this.roomAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.roomAddBtn.Name = "roomAddBtn";
+            this.roomAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.roomAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.roomAddBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.roomAddBtn.Size = new System.Drawing.Size(161, 54);
+            this.roomAddBtn.TabIndex = 26;
+            this.roomAddBtn.Text = "ADD ROOM";
+            this.roomAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.roomAddBtn.UseVisualStyleBackColor = false;
+            this.roomAddBtn.Click += new System.EventHandler(this.roomAddBtn_Click);
             // 
             // backBtn
             // 
@@ -79,49 +104,49 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // comboBox3
+            // capacityCB
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.capacityCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capacityCB.FormattingEnabled = true;
+            this.capacityCB.Items.AddRange(new object[] {
             "60",
             "120",
             "240"});
-            this.comboBox3.Location = new System.Drawing.Point(305, 389);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(310, 38);
-            this.comboBox3.TabIndex = 9;
+            this.capacityCB.Location = new System.Drawing.Point(305, 389);
+            this.capacityCB.Name = "capacityCB";
+            this.capacityCB.Size = new System.Drawing.Size(310, 38);
+            this.capacityCB.TabIndex = 9;
             // 
-            // textBox1
+            // RoomNameTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(305, 211);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 30);
-            this.textBox1.TabIndex = 8;
+            this.RoomNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomNameTB.Location = new System.Drawing.Point(305, 211);
+            this.RoomNameTB.Multiline = true;
+            this.RoomNameTB.Name = "RoomNameTB";
+            this.RoomNameTB.Size = new System.Drawing.Size(310, 30);
+            this.RoomNameTB.TabIndex = 8;
             // 
-            // comboBox2
+            // RoomTypeTB
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.RoomTypeTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomTypeTB.FormattingEnabled = true;
+            this.RoomTypeTB.Items.AddRange(new object[] {
             "Lecture hall",
             "Lab"});
-            this.comboBox2.Location = new System.Drawing.Point(305, 294);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(310, 38);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.RoomTypeTB.Location = new System.Drawing.Point(305, 294);
+            this.RoomTypeTB.Name = "RoomTypeTB";
+            this.RoomTypeTB.Size = new System.Drawing.Size(310, 38);
+            this.RoomTypeTB.TabIndex = 7;
+            this.RoomTypeTB.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // buildingNameCB
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(305, 129);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(310, 38);
-            this.comboBox1.TabIndex = 6;
+            this.buildingNameCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingNameCB.FormattingEnabled = true;
+            this.buildingNameCB.Location = new System.Drawing.Point(305, 129);
+            this.buildingNameCB.Name = "buildingNameCB";
+            this.buildingNameCB.Size = new System.Drawing.Size(310, 38);
+            this.buildingNameCB.TabIndex = 6;
             // 
             // label5
             // 
@@ -184,31 +209,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // roomAddBtn
-            // 
-            this.roomAddBtn.BackColor = System.Drawing.Color.White;
-            this.roomAddBtn.BorderColor = System.Drawing.Color.Black;
-            this.roomAddBtn.ButtonColor = System.Drawing.Color.White;
-            this.roomAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.roomAddBtn.FlatAppearance.BorderSize = 0;
-            this.roomAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.roomAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.roomAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roomAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomAddBtn.ForeColor = System.Drawing.Color.Black;
-            this.roomAddBtn.Location = new System.Drawing.Point(317, 470);
-            this.roomAddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.roomAddBtn.Name = "roomAddBtn";
-            this.roomAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.roomAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.roomAddBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.roomAddBtn.Size = new System.Drawing.Size(161, 54);
-            this.roomAddBtn.TabIndex = 26;
-            this.roomAddBtn.Text = "ADD ROOM";
-            this.roomAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.roomAddBtn.UseVisualStyleBackColor = false;
-            this.roomAddBtn.Click += new System.EventHandler(this.roomAddBtn_Click);
-            // 
             // roomUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,15 +226,15 @@
 
         private System.Windows.Forms.Panel roompanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox RoomNameTB;
+        private System.Windows.Forms.ComboBox RoomTypeTB;
+        private System.Windows.Forms.ComboBox buildingNameCB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox capacityCB;
         private System.Windows.Forms.Button backBtn;
         private ePOSOne.btnProduct.Button_WOC roomAddBtn;
     }
