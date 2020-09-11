@@ -79,7 +79,7 @@
             this.saveMG.OnHoverTextColor = System.Drawing.Color.White;
             this.saveMG.Size = new System.Drawing.Size(417, 67);
             this.saveMG.TabIndex = 40;
-            this.saveMG.Text = "Save Main Group";
+            this.saveMG.Text = "Generate Main Group ID";
             this.saveMG.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveMG.UseVisualStyleBackColor = false;
             this.saveMG.Click += new System.EventHandler(this.saveMG_Click);
