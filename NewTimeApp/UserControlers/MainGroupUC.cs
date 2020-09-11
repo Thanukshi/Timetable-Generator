@@ -87,8 +87,46 @@ namespace NewTimeApp.UserControlers
 
         private void saveMG_Click(object sender, EventArgs e)
         {
+            if (acDetails.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Please select academic Year and semester.", "Academic Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (acSem.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Please select Academic Semester.", "Academic Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
+                    if (sqlCon.State == ConnectionState.Closed)
+                    {
+                        sqlCon.Open();
+                    }
+                    DataTable dtData = new DataTable();
+                    sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
+                    sqlCom.CommandType = CommandType.StoredProcedure;
+                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                    sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
+                    sqlCom.Parameters.AddWithValue("@AcademicYear", acYear.Text);
+                    sqlCom.Parameters.AddWithValue("@AcademicSemester", acSem.Text);
 
+                    int numRes = sqlCom.ExecuteNonQuery();
+                    if (numRes > 0)
+                    {
+                        MessageBox.Show("Academic Year and Semester is " + " " + acYear.Text + "." + " " + acSem.Text);
+                    }
+                    else
+                        MessageBox.Show("Please Try Again !!!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:- " + ex.Message);
+                }
+            }
         }
+    }
+}
     }
 
 }
