@@ -44,7 +44,7 @@ namespace NewTimeApp.UserControlers
 
         public void fillbuildingDetail()
         {
-            string con = "Data Source = LAPTOP - 7RKTBVG9; Initial Catalog = NewTimeApp; Integrated Security = True";
+            string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
             sqlCon = new SqlConnection(con);
             string qry = "SELECT * FROM roomDetails";
             sqlCom = new SqlCommand(qry, sqlCon);
