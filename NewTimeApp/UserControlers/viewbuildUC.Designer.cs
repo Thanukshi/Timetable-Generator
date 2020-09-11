@@ -30,15 +30,15 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewbuildUC));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewbuildpanel = new System.Windows.Forms.Panel();
             this.buldingAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.buildingDGV = new System.Windows.Forms.DataGridView();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buildingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.biuldingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewbuildpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buildingDGV)).BeginInit();
             this.SuspendLayout();
@@ -124,25 +124,27 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Buildings";
             // 
-            // buildingName
-            // 
-            this.buildingName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.buildingName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.buildingName.HeaderText = "Building Name";
-            this.buildingName.Name = "buildingName";
-            // 
             // biuldingID
             // 
             this.biuldingID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.biuldingID.DataPropertyName = "buildingID";
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             this.biuldingID.DefaultCellStyle = dataGridViewCellStyle2;
             this.biuldingID.HeaderText = "Building ID";
             this.biuldingID.Name = "biuldingID";
+            // 
+            // buildingName
+            // 
+            this.buildingName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingName.DataPropertyName = "buildingName";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.buildingName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.buildingName.HeaderText = "Building Name";
+            this.buildingName.Name = "buildingName";
             // 
             // viewbuildUC
             // 
