@@ -26,8 +26,8 @@ namespace NewTimeApp.UserControlers
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
 
-            academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();
+            /*academicDataGrid.AutoGenerateColumns = false;
+            academicDataGrid.DataSource = FetchAcademicDetails();*/
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace NewTimeApp.UserControlers
         void StyleDataGrid()
         {
             academicDataGrid.BorderStyle = BorderStyle.None;
-            academicDataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(50, 4, 45);
+            academicDataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 190, 247);
             academicDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             academicDataGrid.DefaultCellStyle.SelectionBackColor = Color.Plum;
             academicDataGrid.DefaultCellStyle.ForeColor = Color.Black;
@@ -55,12 +55,14 @@ namespace NewTimeApp.UserControlers
             academicDataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(50, 4, 45);
             academicDataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
+       
+
         }
 
         private void AcademicDetailsViewUC_Load(object sender, EventArgs e)
         {
-            /*academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();*/
+            academicDataGrid.AutoGenerateColumns = false;
+            academicDataGrid.DataSource = FetchAcademicDetails();
 
         }
 

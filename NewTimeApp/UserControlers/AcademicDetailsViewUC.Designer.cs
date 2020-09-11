@@ -37,6 +37,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backBtnS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.viewBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
             this.academicViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.academicDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +46,8 @@
             // academicViewPanel
             // 
             this.academicViewPanel.BackColor = System.Drawing.Color.White;
+            this.academicViewPanel.Controls.Add(this.updateDetailsBtn);
+            this.academicViewPanel.Controls.Add(this.viewBtn);
             this.academicViewPanel.Controls.Add(this.academicDataGrid);
             this.academicViewPanel.Controls.Add(this.backBtnS);
             this.academicViewPanel.Controls.Add(this.label1);
@@ -81,11 +85,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.academicDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.academicDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.academicDataGrid.Location = new System.Drawing.Point(33, 141);
+            this.academicDataGrid.Location = new System.Drawing.Point(33, 211);
             this.academicDataGrid.Name = "academicDataGrid";
             this.academicDataGrid.RowHeadersWidth = 51;
             this.academicDataGrid.RowTemplate.Height = 24;
-            this.academicDataGrid.Size = new System.Drawing.Size(930, 568);
+            this.academicDataGrid.Size = new System.Drawing.Size(917, 498);
             this.academicDataGrid.TabIndex = 49;
             // 
             // Column1
@@ -125,6 +129,52 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Academic Details";
             // 
+            // viewBtn
+            // 
+            this.viewBtn.BackColor = System.Drawing.Color.White;
+            this.viewBtn.BorderColor = System.Drawing.Color.Black;
+            this.viewBtn.ButtonColor = System.Drawing.Color.White;
+            this.viewBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.viewBtn.FlatAppearance.BorderSize = 0;
+            this.viewBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.viewBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewBtn.ForeColor = System.Drawing.Color.Black;
+            this.viewBtn.Location = new System.Drawing.Point(33, 123);
+            this.viewBtn.Name = "viewBtn";
+            this.viewBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.viewBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.viewBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.viewBtn.Size = new System.Drawing.Size(167, 67);
+            this.viewBtn.TabIndex = 50;
+            this.viewBtn.Text = "View";
+            this.viewBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.viewBtn.UseVisualStyleBackColor = false;
+            // 
+            // updateDetailsBtn
+            // 
+            this.updateDetailsBtn.BackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.BorderColor = System.Drawing.Color.Black;
+            this.updateDetailsBtn.ButtonColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.BorderSize = 0;
+            this.updateDetailsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateDetailsBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateDetailsBtn.ForeColor = System.Drawing.Color.Black;
+            this.updateDetailsBtn.Location = new System.Drawing.Point(240, 123);
+            this.updateDetailsBtn.Name = "updateDetailsBtn";
+            this.updateDetailsBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateDetailsBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.Size = new System.Drawing.Size(167, 67);
+            this.updateDetailsBtn.TabIndex = 51;
+            this.updateDetailsBtn.Text = "Update";
+            this.updateDetailsBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.updateDetailsBtn.UseVisualStyleBackColor = false;
+            // 
             // AcademicDetailsViewUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,5 +198,7 @@
         private System.Windows.Forms.DataGridView academicDataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private ePOSOne.btnProduct.Button_WOC updateDetailsBtn;
+        private ePOSOne.btnProduct.Button_WOC viewBtn;
     }
 }
