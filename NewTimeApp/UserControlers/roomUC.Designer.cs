@@ -147,6 +147,7 @@
             this.buildingNameCB.Name = "buildingNameCB";
             this.buildingNameCB.Size = new System.Drawing.Size(310, 38);
             this.buildingNameCB.TabIndex = 6;
+            this.buildingNameCB.SelectedIndexChanged += new System.EventHandler(this.buildingNameCB_SelectedIndexChanged);
             // 
             // label5
             // 
