@@ -16,12 +16,16 @@ namespace NewTimeApp.UserControlers
     {
         SqlConnection sqlCon;
         SqlCommand sqlCom;
+        string mainGroupID = "";
 
         public MainGroupUC()
         {
             InitializeComponent();
             fillAcDetails();
             fillDegreeDetails();
+            string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+            sqlCon = new SqlConnection(con);
+            sqlCon.Open();
 
         }
 
@@ -89,11 +93,16 @@ namespace NewTimeApp.UserControlers
         {
             if (acDetails.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please select academic Year and semester.", "Academic Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please Select Aademic Year And Semester.", "Academic Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (acSem.SelectedIndex <= -1)
+            else if (degreeDetailsCombo.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please select Academic Semester.", "Academic Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please Select Degree Program .", "Degree Program", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (mainGropNo.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Please Select Main Group Number.", "Main Group Number", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
             else
             {
@@ -104,17 +113,18 @@ namespace NewTimeApp.UserControlers
                         sqlCon.Open();
                     }
                     DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
+                    sqlCom = new SqlCommand("abcmainGroup", sqlCon);
                     sqlCom.CommandType = CommandType.StoredProcedure;
                     sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
-                    sqlCom.Parameters.AddWithValue("@AcademicYear", acYear.Text);
-                    sqlCom.Parameters.AddWithValue("@AcademicSemester", acSem.Text);
+                    sqlCom.Parameters.AddWithValue("@MainGroupID", mainGroupID);
+                    sqlCom.Parameters.AddWithValue("@AcademicD", acDetails.Text);
+                    sqlCom.Parameters.AddWithValue("@DegreeD", degreeDetailsCombo.Text);
+                    sqlCom.Parameters.AddWithValue("@MainGroupNu", mainGropNo.Text);
 
                     int numRes = sqlCom.ExecuteNonQuery();
                     if (numRes > 0)
                     {
-                        MessageBox.Show("Academic Year and Semester is " + " " + acYear.Text + "." + " " + acSem.Text);
+                        MessageBox.Show("Main Group " + " " + mainGropNo.Text + " is created successfully.." );
                     }
                     else
                         MessageBox.Show("Please Try Again !!!");
@@ -127,6 +137,6 @@ namespace NewTimeApp.UserControlers
         }
     }
 }
-    }
+    
 
-}
+

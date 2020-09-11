@@ -41,43 +41,57 @@ namespace NewTimeApp.UserControlers
 
         private void saveAcc_Click(object sender, EventArgs e)
         {
-            if(acYear.SelectedIndex <= -1)
+            if (acYear.SelectedIndex <= -1)
             {
                 MessageBox.Show("Please select academic Year.", "Academic Year", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if(acSem.SelectedIndex <= -1)
+            else if (acSem.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please select Academic Semester.", "Academic Semester", MessageBoxButtons.OK ,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please select Academic Semester.", "Academic Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 try
                 {
-                    if (sqlCon.State == ConnectionState.Closed)
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT acYear, acSem FROM AcademicDetails WHERE acYear = '" + acYear.Text + "'AND acSem = '" + acSem.Text + "'", sqlCon);
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+                    if (dataTable.Rows.Count >= 1)
                     {
-                        sqlCon.Open();
+                        MessageBox.Show("Academic Year and Semester is already exist...", "Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
-                    sqlCom.Parameters.AddWithValue("@AcademicYear", acYear.Text);
-                    sqlCom.Parameters.AddWithValue("@AcademicSemester", acSem.Text);
-        
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
-                    {
-                        MessageBox.Show("Academic Year and Semester is " + " " + acYear.Text + "." + " " + acSem.Text);
-                                            }
                     else
-                        MessageBox.Show("Please Try Again !!!");
+                    {
+
+                        if (sqlCon.State == ConnectionState.Closed)
+                        {
+                            sqlCon.Open();
+                        }
+                        DataTable dtData = new DataTable();
+                        sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
+                        sqlCom.CommandType = CommandType.StoredProcedure;
+                        sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                        sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
+                        sqlCom.Parameters.AddWithValue("@AcademicYear", acYear.Text);
+                        sqlCom.Parameters.AddWithValue("@AcademicSemester", acSem.Text);
+
+                        int numRes = sqlCom.ExecuteNonQuery();
+                        if (numRes > 0)
+                        {
+                            MessageBox.Show("Academic Year and Semester is " + " " + acYear.Text + "." + " " + acSem.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please Try Again !!!");
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error:- " + ex.Message);
                 }
-            }
+                    }
+                }
         }
     }
-}
+

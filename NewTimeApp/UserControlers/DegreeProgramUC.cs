@@ -46,25 +46,35 @@ namespace NewTimeApp.UserControlers
             {
                 try
                 {
-                    if (sqlCon.State == ConnectionState.Closed)
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT acYear, acSem FROM AcademicDetails WHERE acYear = '" + acYear.Text + "'AND acSem = '" + acSem.Text + "'", sqlCon);
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+                    if (dataTable.Rows.Count >= 1)
                     {
-                        sqlCon.Open();
-                    }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcDegreeProgram", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@DegreeID", degreeID);
-                    sqlCom.Parameters.AddWithValue("@DegreeName", programNameD.Text);
-                    sqlCom.Parameters.AddWithValue("@ShortDegreeName", preferNameD.Text);
-
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
-                    {
-                        MessageBox.Show("Degree Program of" + " " + programNameD.Text + "is" + " " + preferNameD.Text);
+                        MessageBox.Show("Academic Year and Semester is already exist...", "Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
-                        MessageBox.Show("Please Try Again !!!");
+                    {
+                        if (sqlCon.State == ConnectionState.Closed)
+                        {
+                            sqlCon.Open();
+                        }
+                        DataTable dtData = new DataTable();
+                        sqlCom = new SqlCommand("abcDegreeProgram", sqlCon);
+                        sqlCom.CommandType = CommandType.StoredProcedure;
+                        sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                        sqlCom.Parameters.AddWithValue("@DegreeID", degreeID);
+                        sqlCom.Parameters.AddWithValue("@DegreeName", programNameD.Text);
+                        sqlCom.Parameters.AddWithValue("@ShortDegreeName", preferNameD.Text);
+
+                        int numRes = sqlCom.ExecuteNonQuery();
+                        if (numRes > 0)
+                        {
+                            MessageBox.Show("Degree Program of" + " " + programNameD.Text + "is" + " " + preferNameD.Text);
+                        }
+                        else
+                            MessageBox.Show("Please Try Again !!!");
+                    }
                 }
                 catch (Exception ex)
                 {
