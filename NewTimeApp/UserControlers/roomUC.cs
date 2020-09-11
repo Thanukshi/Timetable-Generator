@@ -22,6 +22,8 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
             fillbuildingDetail();
+            sqlCon = new SqlConnection(con);
+            sqlCon.Open();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
