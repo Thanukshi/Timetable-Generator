@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGroupUC));
             this.mgPanel = new System.Windows.Forms.Panel();
+            this.saveMG = new ePOSOne.btnProduct.Button_WOC();
             this.mainGropNo = new System.Windows.Forms.ComboBox();
             this.degreeDetailsCombo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backBtnD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.saveMG = new ePOSOne.btnProduct.Button_WOC();
             this.mgPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,30 @@
             this.mgPanel.Name = "mgPanel";
             this.mgPanel.Size = new System.Drawing.Size(1000, 790);
             this.mgPanel.TabIndex = 0;
+            // 
+            // saveMG
+            // 
+            this.saveMG.BackColor = System.Drawing.Color.White;
+            this.saveMG.BorderColor = System.Drawing.Color.Black;
+            this.saveMG.ButtonColor = System.Drawing.Color.White;
+            this.saveMG.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.saveMG.FlatAppearance.BorderSize = 0;
+            this.saveMG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.saveMG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.saveMG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveMG.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveMG.ForeColor = System.Drawing.Color.Black;
+            this.saveMG.Location = new System.Drawing.Point(563, 516);
+            this.saveMG.Name = "saveMG";
+            this.saveMG.OnHoverBorderColor = System.Drawing.Color.White;
+            this.saveMG.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.saveMG.OnHoverTextColor = System.Drawing.Color.White;
+            this.saveMG.Size = new System.Drawing.Size(417, 67);
+            this.saveMG.TabIndex = 40;
+            this.saveMG.Text = "Save Main Group";
+            this.saveMG.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.saveMG.UseVisualStyleBackColor = false;
+            this.saveMG.Click += new System.EventHandler(this.saveMG_Click);
             // 
             // mainGropNo
             // 
@@ -172,30 +196,6 @@
             this.label1.Size = new System.Drawing.Size(195, 41);
             this.label1.TabIndex = 31;
             this.label1.Text = "Main Groups";
-            // 
-            // saveMG
-            // 
-            this.saveMG.BackColor = System.Drawing.Color.White;
-            this.saveMG.BorderColor = System.Drawing.Color.Black;
-            this.saveMG.ButtonColor = System.Drawing.Color.White;
-            this.saveMG.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.saveMG.FlatAppearance.BorderSize = 0;
-            this.saveMG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.saveMG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.saveMG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveMG.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveMG.ForeColor = System.Drawing.Color.Black;
-            this.saveMG.Location = new System.Drawing.Point(563, 516);
-            this.saveMG.Name = "saveMG";
-            this.saveMG.OnHoverBorderColor = System.Drawing.Color.White;
-            this.saveMG.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.saveMG.OnHoverTextColor = System.Drawing.Color.White;
-            this.saveMG.Size = new System.Drawing.Size(417, 67);
-            this.saveMG.TabIndex = 40;
-            this.saveMG.Text = "Generate Main Group ID";
-            this.saveMG.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.saveMG.UseVisualStyleBackColor = false;
-            this.saveMG.Click += new System.EventHandler(this.saveMG_Click);
             // 
             // MainGroupUC
             // 

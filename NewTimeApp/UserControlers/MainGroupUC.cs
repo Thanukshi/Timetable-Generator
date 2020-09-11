@@ -108,27 +108,55 @@ namespace NewTimeApp.UserControlers
             {
                 try
                 {
-                    if (sqlCon.State == ConnectionState.Closed)
-                    {
-                        sqlCon.Open();
-                    }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcmainGroup", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@MainGroupID", mainGroupID);
-                    sqlCom.Parameters.AddWithValue("@AcademicD", acDetails.Text);
-                    sqlCom.Parameters.AddWithValue("@DegreeD", degreeDetailsCombo.Text);
-                    sqlCom.Parameters.AddWithValue("@MainGroupNu", mainGropNo.Text);
+                    SqlDataAdapter YearAd = new SqlDataAdapter("SELECT AcademicDetails FROM MainGroup WHERE AcademicDetails = '" + acDetails.Text + "'", sqlCon);
+                    SqlDataAdapter DegreeAd = new SqlDataAdapter("SELECT ShortDegreeName FROM DegreeDetails WHERE ShortDegreeName = '" + degreeDetailsCombo.Text + "'", sqlCon);
+                    SqlDataAdapter GroupAD = new SqlDataAdapter("SELECT ShortDegreeName FROM DegreeDetails WHERE ShortDegreeName = '" + mainGropNo.Text + "'", sqlCon);
 
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
+                    DataTable yearTbl = new DataTable();
+                    DataTable degreeTbl = new DataTable();
+                    DataTable groupTbl = new DataTable();
+
+                    YearAd.Fill(yearTbl);
+                    DegreeAd.Fill(degreeTbl);
+                    GroupAD.Fill(groupTbl);
+
+                    if (yearTbl.Rows.Count >= 1)
                     {
-                        MessageBox.Show("Main Group " + " " + mainGropNo.Text + " is created successfully.." );
+                        MessageBox.Show("Academic Year and Semester is already exist...", "Academic Year and Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (degreeTbl.Rows.Count >= 1)
+                    {
+                        MessageBox.Show("Degree Program is already exist...", "Degree Program", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (groupTbl.Rows.Count >= 1)
+                    {
+                        MessageBox.Show("Main Group is already exist...", "MAin Group", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
-                        MessageBox.Show("Please Try Again !!!");
+                    {
+                        if (sqlCon.State == ConnectionState.Closed)
+                        {
+                            sqlCon.Open();
+                        }
+                        DataTable dtData = new DataTable();
+                        sqlCom = new SqlCommand("abcmainGroup", sqlCon);
+                        sqlCom.CommandType = CommandType.StoredProcedure;
+                        sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                        sqlCom.Parameters.AddWithValue("@MainGroupID", mainGroupID);
+                        sqlCom.Parameters.AddWithValue("@AcademicD", acDetails.Text);
+                        sqlCom.Parameters.AddWithValue("@DegreeD", degreeDetailsCombo.Text);
+                        sqlCom.Parameters.AddWithValue("@MainGroupNu", mainGropNo.Text);
+
+                        int numRes = sqlCom.ExecuteNonQuery();
+                        if (numRes > 0)
+                        {
+                            MessageBox.Show("Main Group " + " " + mainGropNo.Text + " is created successfully..");
+                        }
+                        else
+                            MessageBox.Show("Please Try Again !!!");
+                    }
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error:- " + ex.Message);
