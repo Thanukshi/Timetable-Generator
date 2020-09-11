@@ -66,7 +66,7 @@
             this.subGroupBrn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subGroupBrn.ForeColor = System.Drawing.Color.White;
             this.subGroupBrn.Image = ((System.Drawing.Image)(resources.GetObject("subGroupBrn.Image")));
-            this.subGroupBrn.Location = new System.Drawing.Point(624, 433);
+            this.subGroupBrn.Location = new System.Drawing.Point(624, 512);
             this.subGroupBrn.Name = "subGroupBrn";
             this.subGroupBrn.Size = new System.Drawing.Size(200, 200);
             this.subGroupBrn.TabIndex = 50;
@@ -84,7 +84,7 @@
             this.mainGrpBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainGrpBtn.ForeColor = System.Drawing.Color.White;
             this.mainGrpBtn.Image = ((System.Drawing.Image)(resources.GetObject("mainGrpBtn.Image")));
-            this.mainGrpBtn.Location = new System.Drawing.Point(196, 433);
+            this.mainGrpBtn.Location = new System.Drawing.Point(196, 512);
             this.mainGrpBtn.Name = "mainGrpBtn";
             this.mainGrpBtn.Size = new System.Drawing.Size(200, 200);
             this.mainGrpBtn.TabIndex = 49;
