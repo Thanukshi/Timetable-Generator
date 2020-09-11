@@ -46,12 +46,19 @@ namespace NewTimeApp.UserControlers
             {
                 try
                 {
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT acYear, acSem FROM AcademicDetails WHERE acYear = '" + acYear.Text + "'AND acSem = '" + acSem.Text + "'", sqlCon);
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT DegreeName FROM DegreeDetails WHERE DegreeName = '" + programNameD.Text + "'", sqlCon);
+                    SqlDataAdapter shortName = new SqlDataAdapter("SELECT ShortDegreeName FROM DegreeDetails WHERE ShortDegreeName = '" + preferNameD.Text + "'", sqlCon);
                     DataTable dataTable = new DataTable();
+                    DataTable sData = new DataTable();
                     sqlDataAdapter.Fill(dataTable);
+                    shortName.Fill(sData);
                     if (dataTable.Rows.Count >= 1)
                     {
-                        MessageBox.Show("Academic Year and Semester is already exist...", "Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Degree Full Name is already exist...", "Degree Full Name", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (sData.Rows.Count >= 1)
+                    {
+                        MessageBox.Show("Degree Short Name is already exist...", "Degree Full Name", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
