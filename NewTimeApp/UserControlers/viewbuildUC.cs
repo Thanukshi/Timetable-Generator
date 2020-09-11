@@ -32,10 +32,10 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM bildingDetails",sqlCon);
-                DataTable dtBl = new DataTable();
-                sqlDa.Fill(dtBl);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
 
-                buildingDGV.DataSource = (dtBl);
+                buildingDGV.DataSource = (dtbl);
             }
 
         }
