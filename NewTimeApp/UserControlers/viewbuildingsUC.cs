@@ -11,22 +11,22 @@ using NewTimeApp.Helpers;
 
 namespace NewTimeApp.UserControlers
 {
-    public partial class viewroomsUC : UserControl
+    public partial class viewbuildingsUC : UserControl
     {
-        public viewroomsUC()
+        public viewbuildingsUC()
         {
             InitializeComponent();
-        }
-
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            locationUC locatUC = new locationUC();
-            MainControler.showControl(locatUC, viewroomspanel);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            locationUC locatUC = new locationUC();
+            MainControler.showControl(locatUC, viewbuildingpanel);
         }
     }
 }
