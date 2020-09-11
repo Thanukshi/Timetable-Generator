@@ -25,5 +25,11 @@ namespace NewTimeApp.UserControlers
             WeekdayDetails weekdayDetails = new WeekdayDetails();
             MainControler.showControl(weekdayDetails, panel1);
         }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            EditWeekendUC editWeekendUC = new EditWeekendUC();
+            MainControler.showControl(editWeekendUC, panel1);
+        }
     }
 }

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using NewTimeApp.Helpers;
+using NewTimeApp.UserControlers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,12 @@ namespace NewTimeApp.UserControlers
         public EditWeekendUC()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ViewWeekendDetailsUC viewWeekendDetailsUC = new ViewWeekendDetailsUC();
+            MainControler.showControl(viewWeekendDetailsUC, panel1);
         }
     }
 }

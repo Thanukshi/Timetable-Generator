@@ -82,7 +82,8 @@ namespace NewTimeApp.UserControlers
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-
+            EditWeekdayUC editWeekdayUC = new EditWeekdayUC();
+            MainControler.showControl(editWeekdayUC, panel1);
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)

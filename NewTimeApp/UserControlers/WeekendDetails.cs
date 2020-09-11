@@ -28,7 +28,8 @@ namespace NewTimeApp.UserControlers
 
         private void jFlatButton2_Click(object sender, EventArgs e)
         {
-
+            ViewWeekendDetailsUC viewWeekendDetailsUC = new ViewWeekendDetailsUC();
+            MainControler.showControl(viewWeekendDetailsUC, panel1);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
