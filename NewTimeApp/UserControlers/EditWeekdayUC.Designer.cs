@@ -259,9 +259,9 @@
             this.label1.Location = new System.Drawing.Point(80, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 35);
+            this.label1.Size = new System.Drawing.Size(319, 35);
             this.label1.TabIndex = 24;
-            this.label1.Text = "TimeTable-WeekDayEdit";
+            this.label1.Text = "TimeTable-WeekDay-Edit";
             // 
             // panel2
             // 

@@ -247,6 +247,12 @@
     <Compile Include="UserControlers\EditWeekdayUC.Designer.cs">
       <DependentUpon>EditWeekdayUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\EditWeekendUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\EditWeekendUC.Designer.cs">
+      <DependentUpon>EditWeekendUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\EditWeekdayUC.resx">
       <DependentUpon>EditWeekdayUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\EditWeekendUC.resx">
+      <DependentUpon>EditWeekendUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
