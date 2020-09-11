@@ -44,9 +44,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.backBtn = new System.Windows.Forms.Button();
             this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
             this.addBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.backBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,19 +233,6 @@
             this.label1.Text = "TimeTable-WeekDay-Add";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(15, 17);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 25;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
             // resetBtn
             // 
             this.resetBtn.BackColor = System.Drawing.Color.White;
@@ -293,6 +280,19 @@
             this.addBtn.Text = "Add";
             this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.addBtn.UseVisualStyleBackColor = false;
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(15, 17);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 25;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // AddWeekDayUC
             // 
