@@ -95,7 +95,7 @@
             this.buldingAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buldingAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buldingAddBtn.ForeColor = System.Drawing.Color.Black;
-            this.buldingAddBtn.Location = new System.Drawing.Point(283, 92);
+            this.buldingAddBtn.Location = new System.Drawing.Point(267, 94);
             this.buldingAddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.buldingAddBtn.Name = "buldingAddBtn";
             this.buldingAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
