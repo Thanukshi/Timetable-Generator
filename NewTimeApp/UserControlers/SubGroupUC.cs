@@ -58,8 +58,20 @@ namespace NewTimeApp.UserControlers
 
         private void saveSG_Click(object sender, EventArgs e)
         {
+            if (mainGroupCombo.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Please Select Main Group ID.", "Main Group ID", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (subGroupCombo.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Please Select Sub Group Number.", "Sub Group Number", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
 
-        }
+                }
 
         private void backBtnS_Click(object sender, EventArgs e)
         {
