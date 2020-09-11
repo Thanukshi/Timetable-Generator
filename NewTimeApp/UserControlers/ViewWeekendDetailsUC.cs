@@ -10,31 +10,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace NewTimeApp.UserControlers
 {
-    public partial class WorkingDaysAndHoursUC : UserControl
+    public partial class ViewWeekendDetailsUC : UserControl
     {
-        public WorkingDaysAndHoursUC()
+        public ViewWeekendDetailsUC()
         {
             InitializeComponent();
         }
 
-        private void dayBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             WeekdayDetails weekdayDetails = new WeekdayDetails();
             MainControler.showControl(weekdayDetails, panel1);
-           
-        }
-
-        private void endBtn_Click(object sender, EventArgs e)
-        {
-            WeekendDetails weekdayDetails = new WeekendDetails();
-            MainControler.showControl(weekdayDetails, panel1);
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

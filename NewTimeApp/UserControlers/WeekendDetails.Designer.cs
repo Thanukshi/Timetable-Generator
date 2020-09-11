@@ -1,6 +1,6 @@
 ﻿namespace NewTimeApp.UserControlers
 {
-    partial class WeekdayDetails
+    partial class WeekendDetails
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeekdayDetails));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeekendDetails));
             this.panel1 = new System.Windows.Forms.Panel();
             this.jFlatButton2 = new FlatButton.JFlatButton();
             this.jFlatButton1 = new FlatButton.JFlatButton();
@@ -66,7 +66,7 @@
             this.jFlatButton2.ImageLeft = global::NewTimeApp.Properties.Resources.list_view_64;
             this.jFlatButton2.ImageRight = null;
             this.jFlatButton2.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton2.Location = new System.Drawing.Point(218, 334);
+            this.jFlatButton2.Location = new System.Drawing.Point(218, 405);
             this.jFlatButton2.Name = "jFlatButton2";
             this.jFlatButton2.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton2.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -74,8 +74,8 @@
             this.jFlatButton2.Size = new System.Drawing.Size(277, 77);
             this.jFlatButton2.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jFlatButton2.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.jFlatButton2.TabIndex = 38;
-            this.jFlatButton2.Click += new System.EventHandler(this.jFlatButton2_Click);
+            this.jFlatButton2.TabIndex = 44;
+            this.jFlatButton2.Click += new System.EventHandler(this.jFlatButton2_Click_1);
             // 
             // jFlatButton1
             // 
@@ -93,7 +93,7 @@
             this.jFlatButton1.ImageLeft = global::NewTimeApp.Properties.Resources.add_list_64;
             this.jFlatButton1.ImageRight = null;
             this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Location = new System.Drawing.Point(218, 176);
+            this.jFlatButton1.Location = new System.Drawing.Point(218, 216);
             this.jFlatButton1.Name = "jFlatButton1";
             this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -101,40 +101,40 @@
             this.jFlatButton1.Size = new System.Drawing.Size(277, 77);
             this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.jFlatButton1.TabIndex = 37;
-            this.jFlatButton1.Click += new System.EventHandler(this.jFlatButton1_Click);
+            this.jFlatButton1.TabIndex = 43;
+            this.jFlatButton1.Click += new System.EventHandler(this.jFlatButton1_Click_1);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImage = global::NewTimeApp.Properties.Resources.back1;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::NewTimeApp.Properties.Resources.back1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(750, 642);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // backBtn
             // 
             this.backBtn.FlatAppearance.BorderSize = 0;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(19, 22);
+            this.backBtn.Location = new System.Drawing.Point(25, 31);
             this.backBtn.Margin = new System.Windows.Forms.Padding(2);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 39;
+            this.backBtn.TabIndex = 45;
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // WeekdayDetails
+            // WeekendDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "WeekdayDetails";
+            this.Name = "WeekendDetails";
             this.Size = new System.Drawing.Size(750, 642);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -145,9 +145,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private FlatButton.JFlatButton jFlatButton2;
         private FlatButton.JFlatButton jFlatButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button backBtn;
     }
 }

@@ -223,6 +223,12 @@
     <Compile Include="UserControlers\AddWeekDayUC.Designer.cs">
       <DependentUpon>AddWeekDayUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\AddWeekEndUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\AddWeekEndUC.Designer.cs">
+      <DependentUpon>AddWeekEndUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\DegreeProgramUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +240,12 @@
     </Compile>
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\EditWeekdayUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\EditWeekdayUC.Designer.cs">
+      <DependentUpon>EditWeekdayUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
@@ -259,11 +271,23 @@
     <Compile Include="UserControlers\ViewWeekdayDetailsUC.Designer.cs">
       <DependentUpon>ViewWeekdayDetailsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\ViewWeekendDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\ViewWeekendDetailsUC.Designer.cs">
+      <DependentUpon>ViewWeekendDetailsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\WeekdayDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\WeekdayDetails.Designer.cs">
       <DependentUpon>WeekdayDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\WeekendDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\WeekendDetails.Designer.cs">
+      <DependentUpon>WeekendDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
       <SubType>UserControl</SubType>
@@ -296,11 +320,17 @@
     <EmbeddedResource Include="UserControlers\AddWeekDayUC.resx">
       <DependentUpon>AddWeekDayUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\AddWeekEndUC.resx">
+      <DependentUpon>AddWeekEndUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\DegreeProgramUC.resx">
       <DependentUpon>DegreeProgramUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\EditWeekdayUC.resx">
+      <DependentUpon>EditWeekdayUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
@@ -314,8 +344,14 @@
     <EmbeddedResource Include="UserControlers\ViewWeekdayDetailsUC.resx">
       <DependentUpon>ViewWeekdayDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\ViewWeekendDetailsUC.resx">
+      <DependentUpon>ViewWeekendDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\WeekdayDetails.resx">
       <DependentUpon>WeekdayDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\WeekendDetails.resx">
+      <DependentUpon>WeekendDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
       <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
