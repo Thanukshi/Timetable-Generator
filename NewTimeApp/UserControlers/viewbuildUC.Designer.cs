@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewbuildUC));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewbuildpanel = new System.Windows.Forms.Panel();
+            this.buldingAddBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.buildingDGV = new System.Windows.Forms.DataGridView();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buldingAddBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.biuldingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewbuildpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // viewbuildpanel
             // 
             this.viewbuildpanel.Controls.Add(this.buldingAddBtn);
-            this.viewbuildpanel.Controls.Add(this.dataGridView1);
+            this.viewbuildpanel.Controls.Add(this.buildingDGV);
             this.viewbuildpanel.Controls.Add(this.backBtn);
             this.viewbuildpanel.Controls.Add(this.label1);
             this.viewbuildpanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -49,6 +54,51 @@
             this.viewbuildpanel.Name = "viewbuildpanel";
             this.viewbuildpanel.Size = new System.Drawing.Size(772, 720);
             this.viewbuildpanel.TabIndex = 0;
+            // 
+            // buldingAddBtn
+            // 
+            this.buldingAddBtn.BackColor = System.Drawing.Color.White;
+            this.buldingAddBtn.BorderColor = System.Drawing.Color.Black;
+            this.buldingAddBtn.ButtonColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatAppearance.BorderSize = 0;
+            this.buldingAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buldingAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buldingAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buldingAddBtn.ForeColor = System.Drawing.Color.Black;
+            this.buldingAddBtn.Location = new System.Drawing.Point(267, 94);
+            this.buldingAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.buldingAddBtn.Name = "buldingAddBtn";
+            this.buldingAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.buldingAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buldingAddBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.buldingAddBtn.Size = new System.Drawing.Size(227, 54);
+            this.buldingAddBtn.TabIndex = 33;
+            this.buldingAddBtn.Text = "VIEW BUILDING";
+            this.buldingAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buldingAddBtn.UseVisualStyleBackColor = false;
+            this.buldingAddBtn.Click += new System.EventHandler(this.buldingAddBtn_Click);
+            // 
+            // buildingDGV
+            // 
+            this.buildingDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.buildingDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.buildingDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buildingDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.biuldingID,
+            this.buildingName});
+            this.buildingDGV.Location = new System.Drawing.Point(24, 168);
+            this.buildingDGV.Name = "buildingDGV";
+            this.buildingDGV.Size = new System.Drawing.Size(722, 373);
+            this.buildingDGV.TabIndex = 32;
             // 
             // backBtn
             // 
@@ -74,38 +124,25 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Buildings";
             // 
-            // dataGridView1
+            // biuldingID
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 168);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(722, 373);
-            this.dataGridView1.TabIndex = 32;
+            this.biuldingID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.biuldingID.DefaultCellStyle = dataGridViewCellStyle2;
+            this.biuldingID.HeaderText = "Building ID";
+            this.biuldingID.Name = "biuldingID";
             // 
-            // buldingAddBtn
+            // buildingName
             // 
-            this.buldingAddBtn.BackColor = System.Drawing.Color.White;
-            this.buldingAddBtn.BorderColor = System.Drawing.Color.Black;
-            this.buldingAddBtn.ButtonColor = System.Drawing.Color.White;
-            this.buldingAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buldingAddBtn.FlatAppearance.BorderSize = 0;
-            this.buldingAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.buldingAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.buldingAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buldingAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buldingAddBtn.ForeColor = System.Drawing.Color.Black;
-            this.buldingAddBtn.Location = new System.Drawing.Point(267, 94);
-            this.buldingAddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.buldingAddBtn.Name = "buldingAddBtn";
-            this.buldingAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.buldingAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.buldingAddBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.buldingAddBtn.Size = new System.Drawing.Size(227, 54);
-            this.buldingAddBtn.TabIndex = 33;
-            this.buldingAddBtn.Text = "VIEW BUILDING";
-            this.buldingAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buldingAddBtn.UseVisualStyleBackColor = false;
+            this.buildingName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.buildingName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.buildingName.HeaderText = "Building Name";
+            this.buildingName.Name = "buildingName";
             // 
             // viewbuildUC
             // 
@@ -117,7 +154,7 @@
             this.Size = new System.Drawing.Size(772, 720);
             this.viewbuildpanel.ResumeLayout(false);
             this.viewbuildpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,7 +164,9 @@
         private System.Windows.Forms.Panel viewbuildpanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView buildingDGV;
         private ePOSOne.btnProduct.Button_WOC buldingAddBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn biuldingID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buildingName;
     }
 }
