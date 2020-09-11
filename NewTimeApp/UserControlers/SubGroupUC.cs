@@ -15,6 +15,16 @@ namespace NewTimeApp.UserControlers
         public SubGroupUC()
         {
             InitializeComponent();
+            fillAcDetails();
+            fillDegreeDetails();
+            string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+            sqlCon = new SqlConnection(con);
+            sqlCon.Open();
+        }
+
+        private void saveSG_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -78,6 +78,7 @@
             this.saveSG.Text = "Generate Sub Group ID";
             this.saveSG.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveSG.UseVisualStyleBackColor = false;
+            this.saveSG.Click += new System.EventHandler(this.saveSG_Click);
             // 
             // subGroupCombo
             // 
