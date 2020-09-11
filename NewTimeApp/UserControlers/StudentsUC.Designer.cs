@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsUC));
             this.studentPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpIdBtn = new NewTimeApp.CircularButton();
             this.subGroupBrn = new NewTimeApp.CircularButton();
             this.mainGrpBtn = new NewTimeApp.CircularButton();
             this.degreeBtn = new NewTimeApp.CircularButton();
             this.accBtn = new NewTimeApp.CircularButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.studentBtn = new NewTimeApp.CircularButton();
+            this.circularButton1 = new NewTimeApp.CircularButton();
             this.studentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             // studentPanel
             // 
             this.studentPanel.BackColor = System.Drawing.Color.White;
+            this.studentPanel.Controls.Add(this.circularButton1);
             this.studentPanel.Controls.Add(this.grpIdBtn);
             this.studentPanel.Controls.Add(this.subGroupBrn);
             this.studentPanel.Controls.Add(this.mainGrpBtn);
@@ -57,16 +59,6 @@
             this.studentPanel.Size = new System.Drawing.Size(772, 720);
             this.studentPanel.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            // 
             // grpIdBtn
             // 
             this.grpIdBtn.BackColor = System.Drawing.Color.Plum;
@@ -76,7 +68,7 @@
             this.grpIdBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpIdBtn.ForeColor = System.Drawing.Color.White;
             this.grpIdBtn.Image = ((System.Drawing.Image)(resources.GetObject("grpIdBtn.Image")));
-            this.grpIdBtn.Location = new System.Drawing.Point(300, 271);
+            this.grpIdBtn.Location = new System.Drawing.Point(72, 535);
             this.grpIdBtn.Name = "grpIdBtn";
             this.grpIdBtn.Size = new System.Drawing.Size(170, 170);
             this.grpIdBtn.TabIndex = 31;
@@ -94,7 +86,7 @@
             this.subGroupBrn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subGroupBrn.ForeColor = System.Drawing.Color.White;
             this.subGroupBrn.Image = ((System.Drawing.Image)(resources.GetObject("subGroupBrn.Image")));
-            this.subGroupBrn.Location = new System.Drawing.Point(500, 440);
+            this.subGroupBrn.Location = new System.Drawing.Point(500, 323);
             this.subGroupBrn.Name = "subGroupBrn";
             this.subGroupBrn.Size = new System.Drawing.Size(170, 170);
             this.subGroupBrn.TabIndex = 30;
@@ -112,7 +104,7 @@
             this.mainGrpBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainGrpBtn.ForeColor = System.Drawing.Color.White;
             this.mainGrpBtn.Image = ((System.Drawing.Image)(resources.GetObject("mainGrpBtn.Image")));
-            this.mainGrpBtn.Location = new System.Drawing.Point(72, 440);
+            this.mainGrpBtn.Location = new System.Drawing.Point(72, 323);
             this.mainGrpBtn.Name = "mainGrpBtn";
             this.mainGrpBtn.Size = new System.Drawing.Size(170, 170);
             this.mainGrpBtn.TabIndex = 29;
@@ -160,6 +152,16 @@
             this.accBtn.UseVisualStyleBackColor = false;
             this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // studentBtn
             // 
             this.studentBtn.BackColor = System.Drawing.Color.Plum;
@@ -178,6 +180,24 @@
             this.studentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.studentBtn.UseVisualStyleBackColor = false;
             this.studentBtn.Click += new System.EventHandler(this.studentBtn_Click_1);
+            // 
+            // circularButton1
+            // 
+            this.circularButton1.BackColor = System.Drawing.Color.Plum;
+            this.circularButton1.FlatAppearance.BorderSize = 0;
+            this.circularButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton1.ForeColor = System.Drawing.Color.White;
+            this.circularButton1.Image = ((System.Drawing.Image)(resources.GetObject("circularButton1.Image")));
+            this.circularButton1.Location = new System.Drawing.Point(500, 535);
+            this.circularButton1.Name = "circularButton1";
+            this.circularButton1.Size = new System.Drawing.Size(170, 170);
+            this.circularButton1.TabIndex = 32;
+            this.circularButton1.Text = "Generate Group ID";
+            this.circularButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.circularButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.circularButton1.UseVisualStyleBackColor = false;
             // 
             // StudentsUC
             // 
@@ -201,5 +221,6 @@
         private CircularButton mainGrpBtn;
         private CircularButton degreeBtn;
         private CircularButton grpIdBtn;
+        private CircularButton circularButton1;
     }
 }
