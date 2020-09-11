@@ -32,7 +32,7 @@ namespace NewTimeApp.UserControlers
         {
             string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
             sqlCon = new SqlConnection(con);
-            string qry = "SELECT * FROM AcademicDetails";
+            string qry = "SELECT * FROM MainGroup";
             sqlCom = new SqlCommand(qry, sqlCon);
             SqlDataReader sqlDataReader;
 
@@ -42,9 +42,12 @@ namespace NewTimeApp.UserControlers
                 sqlDataReader = sqlCom.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
-                    string year = sqlDataReader.GetString(1);
-                    string semester = sqlDataReader.GetString(2);
-                    acDetails.Items.Add(year + "." + semester);
+
+                    string academic = sqlDataReader.GetString(1);
+                    string degree = sqlDataReader.GetString(2);
+                    string MainGroupNo = sqlDataReader.GetString(3);
+
+                    mainGroupCombo.Items.Add(academic+"."+degree+"."+MainGroupNo);
                 }
             }
             catch (SqlException x)

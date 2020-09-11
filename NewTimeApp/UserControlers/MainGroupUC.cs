@@ -150,7 +150,7 @@ namespace NewTimeApp.UserControlers
                         int numRes = sqlCom.ExecuteNonQuery();
                         if (numRes > 0)
                         {
-                            MessageBox.Show("Main Group " + " " + mainGropNo.Text + " is created successfully..");
+                            MessageBox.Show("Main Group  ID is " + " " + acDetails.Text +". " +degreeDetailsCombo.Text + ". " +mainGropNo.Text + " is created successfully..");
                         }
                         else
                             MessageBox.Show("Please Try Again !!!");
