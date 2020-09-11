@@ -16,6 +16,7 @@ namespace NewTimeApp.UserControlers
     {
         SqlConnection sqlCon;
         SqlCommand sqlCom;
+        string roomID = "";
 
         public roomUC()
         {
@@ -68,7 +69,57 @@ namespace NewTimeApp.UserControlers
 
         private void roomAddBtn_Click(object sender, EventArgs e)
         {
-
+            if (buildingNameCB.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Select Building Name !!!");
+                buildingNameCB.Select();
+            }
+            else if (string.IsNullOrWhiteSpace(RoomNameTB.Text))
+            {
+                MessageBox.Show("Enter Room Name !!!");
+                RoomNameTB.Select();
+            }
+            else if (RoomTypeTB.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Select Room Type !!!");
+                RoomTypeTB.Select();
+            }
+            else if (capacityCB.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Select Room Capacity !!!");
+                capacityCB.Select();
+            }
+            else
+            {
+                try
+                {
+                    if (sqlCon.State == ConnectionState.Closed)
+                    {
+                        sqlCon.Open();
+                    }
+                    DataTable dtData = new DataTable();
+                    sqlCom = new SqlCommand("spRoomDetail", sqlCon);
+                    sqlCom.CommandType = CommandType.StoredProcedure;
+                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
+                    sqlCom.Parameters.AddWithValue("@roomID", roomID);
+                    sqlCom.Parameters.AddWithValue("@buildingName", buildingNameCB.Text);
+                    sqlCom.Parameters.AddWithValue("@roomName", RoomNameTB.Text);
+                    sqlCom.Parameters.AddWithValue("@roomType", RoomNameTB.Text);
+                    sqlCom.Parameters.AddWithValue("@capacity", capacityCB.Text);
+                    int numRes = sqlCom.ExecuteNonQuery();
+                    if (numRes > 0)
+                    {
+                        MessageBox.Show("Record Saved Successfully !!!");
+                   
+                    }
+                    else
+                        MessageBox.Show("Please Try Again !!!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:- " + ex.Message);
+                }
+            }
         }
 
         private void buildingNameCB_SelectedIndexChanged(object sender, EventArgs e)
