@@ -86,7 +86,7 @@ namespace NewTimeApp.UserControlers
                     int numRes = sqlCom.ExecuteNonQuery();
                     if (numRes > 0)
                     {
-                        MessageBox.Show("Sub Group  ID is " + " " + mainGroupCombo.Text + ". " + subGroupCombo.Text + " is created successfully..");
+                        MessageBox.Show("Sub Group  ID is " + " " + mainGroupCombo.Text + "." + "" + subGroupCombo.Text + " is created successfully..");
                     }
                     else
                         MessageBox.Show("Please Try Again !!!");
