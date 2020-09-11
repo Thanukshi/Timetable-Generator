@@ -35,7 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.mainGroupCombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.backBtnD = new System.Windows.Forms.Button();
+            this.backBtnS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.subPanel.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.subPanel.Controls.Add(this.label4);
             this.subPanel.Controls.Add(this.mainGroupCombo);
             this.subPanel.Controls.Add(this.label2);
-            this.subPanel.Controls.Add(this.backBtnD);
+            this.subPanel.Controls.Add(this.backBtnS);
             this.subPanel.Controls.Add(this.label1);
             this.subPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subPanel.Location = new System.Drawing.Point(0, 0);
@@ -146,16 +146,17 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Main Group ID";
             // 
-            // backBtnD
+            // backBtnS
             // 
-            this.backBtnD.FlatAppearance.BorderSize = 0;
-            this.backBtnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnD.Image = ((System.Drawing.Image)(resources.GetObject("backBtnD.Image")));
-            this.backBtnD.Location = new System.Drawing.Point(20, 32);
-            this.backBtnD.Name = "backBtnD";
-            this.backBtnD.Size = new System.Drawing.Size(66, 56);
-            this.backBtnD.TabIndex = 42;
-            this.backBtnD.UseVisualStyleBackColor = true;
+            this.backBtnS.FlatAppearance.BorderSize = 0;
+            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
+            this.backBtnS.Location = new System.Drawing.Point(20, 32);
+            this.backBtnS.Name = "backBtnS";
+            this.backBtnS.Size = new System.Drawing.Size(66, 56);
+            this.backBtnS.TabIndex = 42;
+            this.backBtnS.UseVisualStyleBackColor = true;
+            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
             // 
             // label1
             // 
@@ -189,7 +190,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox mainGroupCombo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button backBtnD;
+        private System.Windows.Forms.Button backBtnS;
         private System.Windows.Forms.Label label1;
     }
 }

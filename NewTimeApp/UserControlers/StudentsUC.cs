@@ -41,5 +41,11 @@ namespace NewTimeApp.UserControlers
             MainGroupUC mainGroupUC = new MainGroupUC();
             MainControler.showControl(mainGroupUC, studentPanel);
         }
+
+        private void subGroupBrn_Click(object sender, EventArgs e)
+        {
+            SubGroupUC subGroupUC = new SubGroupUC();
+            MainControler.showControl(subGroupUC, studentPanel);
+        }
     }
 }

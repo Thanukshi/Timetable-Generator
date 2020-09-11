@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using NewTimeApp.Helpers;
 
 namespace NewTimeApp.UserControlers
 {
@@ -55,6 +56,12 @@ namespace NewTimeApp.UserControlers
         private void saveSG_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void backBtnS_Click(object sender, EventArgs e)
+        {
+            StudentsUC studentsUC = new StudentsUC();
+            MainControler.showControl(studentsUC, subPanel);
         }
     }
 }
