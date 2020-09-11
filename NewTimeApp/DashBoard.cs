@@ -21,6 +21,7 @@ namespace NewTimeApp
             titleOfPages.Text = "Home";
         }
 
+
         private void closeBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -86,9 +87,9 @@ namespace NewTimeApp
 
         private void workBtn_Click(object sender, EventArgs e)
         {
-            AddWeekDayUC addWeekDayUC = new AddWeekDayUC();
-            MainControler.showControl(addWeekDayUC, panelContainer);
-            titleOfPages.Text = "Weekday";
+            WorkingDaysAndHoursUC workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
+            MainControler.showControl(workingDaysAndHoursUC, panelContainer);
+            titleOfPages.Text = "Working Days And Hours";
         }
     }
 }

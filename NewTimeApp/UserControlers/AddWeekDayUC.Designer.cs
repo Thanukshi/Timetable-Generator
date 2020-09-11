@@ -30,27 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWeekDayUC));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.addBtn = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.resetBtn);
+            this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
@@ -73,41 +77,122 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // backBtn
+            // textBox1
             // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(15, 17);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 25;
-            this.backBtn.UseVisualStyleBackColor = true;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(261, 343);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 29);
+            this.textBox1.TabIndex = 38;
             // 
-            // label1
+            // radioButton2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(80, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 35);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "TimeTable-WeekDay ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(261, 425);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(150, 28);
+            this.radioButton2.TabIndex = 37;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Thirty minutes ";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // radioButton1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 25);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "No Of WoringDays";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(261, 391);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(112, 28);
+            this.radioButton1.TabIndex = 36;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "One Hour";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 391);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 25);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Time Slot";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(52, 343);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 25);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Working Hours";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Location = new System.Drawing.Point(261, 300);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(81, 28);
+            this.checkBox5.TabIndex = 33;
+            this.checkBox5.Text = "Friday";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(261, 266);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(108, 28);
+            this.checkBox4.TabIndex = 32;
+            this.checkBox4.Text = "Thursday";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(261, 232);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(130, 28);
+            this.checkBox3.TabIndex = 31;
+            this.checkBox3.Text = "Wednesday";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(261, 198);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(102, 28);
+            this.checkBox2.TabIndex = 30;
+            this.checkBox2.Text = "Tuesday";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(261, 164);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(97, 28);
+            this.checkBox1.TabIndex = 29;
+            this.checkBox1.Text = "Monday";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 25);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Select Days";
             // 
             // comboBox1
             // 
@@ -119,127 +204,95 @@
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(261, 127);
+            this.comboBox1.Location = new System.Drawing.Point(261, 114);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 32);
             this.comboBox1.TabIndex = 27;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 25);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Select Days";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 25);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "No Of WoringDays";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // checkBox1
+            // label1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(261, 181);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 28);
-            this.checkBox1.TabIndex = 29;
-            this.checkBox1.Text = "Monday";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(80, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(318, 35);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "TimeTable-WeekDay-Add";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // checkBox2
+            // backBtn
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(261, 215);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 28);
-            this.checkBox2.TabIndex = 30;
-            this.checkBox2.Text = "Tuesday";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(15, 17);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 25;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // checkBox3
+            // resetBtn
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(261, 249);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(130, 28);
-            this.checkBox3.TabIndex = 31;
-            this.checkBox3.Text = "Wednesday";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.resetBtn.BackColor = System.Drawing.Color.White;
+            this.resetBtn.BorderColor = System.Drawing.Color.Black;
+            this.resetBtn.ButtonColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.BorderSize = 0;
+            this.resetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetBtn.ForeColor = System.Drawing.Color.Black;
+            this.resetBtn.Location = new System.Drawing.Point(378, 506);
+            this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.resetBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.resetBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.resetBtn.Size = new System.Drawing.Size(124, 54);
+            this.resetBtn.TabIndex = 40;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.resetBtn.UseVisualStyleBackColor = false;
             // 
-            // checkBox4
+            // addBtn
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(261, 283);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(108, 28);
-            this.checkBox4.TabIndex = 32;
-            this.checkBox4.Text = "Thursday";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(261, 317);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(81, 28);
-            this.checkBox5.TabIndex = 33;
-            this.checkBox5.Text = "Friday";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 358);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 25);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Working Hours";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 412);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 25);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Time Slot";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(261, 412);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 28);
-            this.radioButton1.TabIndex = 36;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "One Hour";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(261, 446);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(150, 28);
-            this.radioButton2.TabIndex = 37;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Thirty minutes ";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(261, 356);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
-            this.textBox1.TabIndex = 38;
+            this.addBtn.BackColor = System.Drawing.Color.White;
+            this.addBtn.BorderColor = System.Drawing.Color.Black;
+            this.addBtn.ButtonColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderSize = 0;
+            this.addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.Black;
+            this.addBtn.Location = new System.Drawing.Point(163, 506);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.addBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.addBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.addBtn.Size = new System.Drawing.Size(124, 54);
+            this.addBtn.TabIndex = 39;
+            this.addBtn.Text = "Add";
+            this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addBtn.UseVisualStyleBackColor = false;
             // 
             // AddWeekDayUC
             // 
@@ -272,5 +325,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private ePOSOne.btnProduct.Button_WOC resetBtn;
+        private ePOSOne.btnProduct.Button_WOC addBtn;
     }
 }

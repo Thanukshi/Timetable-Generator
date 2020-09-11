@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkingDaysAndHoursUC));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.endBtn = new NewTimeApp.CircularButton();
+            this.dayBtn = new NewTimeApp.CircularButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grpIdBtn = new NewTimeApp.CircularButton();
-            this.accBtn = new NewTimeApp.CircularButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -40,14 +40,52 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.grpIdBtn);
-            this.panel1.Controls.Add(this.accBtn);
+            this.panel1.Controls.Add(this.endBtn);
+            this.panel1.Controls.Add(this.dayBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 642);
             this.panel1.TabIndex = 0;
+            // 
+            // endBtn
+            // 
+            this.endBtn.BackColor = System.Drawing.Color.Plum;
+            this.endBtn.FlatAppearance.BorderSize = 0;
+            this.endBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.endBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.endBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endBtn.ForeColor = System.Drawing.Color.White;
+            this.endBtn.Image = global::NewTimeApp.Properties.Resources.calendar_64;
+            this.endBtn.Location = new System.Drawing.Point(428, 210);
+            this.endBtn.Name = "endBtn";
+            this.endBtn.Size = new System.Drawing.Size(170, 170);
+            this.endBtn.TabIndex = 33;
+            this.endBtn.Text = "WeekEnd TimeTable";
+            this.endBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.endBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.endBtn.UseVisualStyleBackColor = false;
+            this.endBtn.Click += new System.EventHandler(this.endBtn_Click);
+            // 
+            // dayBtn
+            // 
+            this.dayBtn.BackColor = System.Drawing.Color.Plum;
+            this.dayBtn.FlatAppearance.BorderSize = 0;
+            this.dayBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.dayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dayBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayBtn.ForeColor = System.Drawing.Color.White;
+            this.dayBtn.Image = global::NewTimeApp.Properties.Resources.calendar_64;
+            this.dayBtn.Location = new System.Drawing.Point(153, 210);
+            this.dayBtn.Name = "dayBtn";
+            this.dayBtn.Size = new System.Drawing.Size(170, 170);
+            this.dayBtn.TabIndex = 32;
+            this.dayBtn.Text = "WeekDay TimeTable";
+            this.dayBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.dayBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.dayBtn.UseVisualStyleBackColor = false;
+            this.dayBtn.Click += new System.EventHandler(this.dayBtn_Click);
             // 
             // pictureBox1
             // 
@@ -59,42 +97,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // grpIdBtn
-            // 
-            this.grpIdBtn.BackColor = System.Drawing.Color.Plum;
-            this.grpIdBtn.FlatAppearance.BorderSize = 0;
-            this.grpIdBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.grpIdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpIdBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpIdBtn.ForeColor = System.Drawing.Color.White;
-            this.grpIdBtn.Image = ((System.Drawing.Image)(resources.GetObject("grpIdBtn.Image")));
-            this.grpIdBtn.Location = new System.Drawing.Point(428, 210);
-            this.grpIdBtn.Name = "grpIdBtn";
-            this.grpIdBtn.Size = new System.Drawing.Size(170, 170);
-            this.grpIdBtn.TabIndex = 33;
-            this.grpIdBtn.Text = "WeekEnd TimeTable";
-            this.grpIdBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.grpIdBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.grpIdBtn.UseVisualStyleBackColor = false;
-            // 
-            // accBtn
-            // 
-            this.accBtn.BackColor = System.Drawing.Color.Plum;
-            this.accBtn.FlatAppearance.BorderSize = 0;
-            this.accBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.accBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.accBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accBtn.ForeColor = System.Drawing.Color.White;
-            this.accBtn.Image = ((System.Drawing.Image)(resources.GetObject("accBtn.Image")));
-            this.accBtn.Location = new System.Drawing.Point(153, 210);
-            this.accBtn.Name = "accBtn";
-            this.accBtn.Size = new System.Drawing.Size(170, 170);
-            this.accBtn.TabIndex = 32;
-            this.accBtn.Text = "WeekDay TimeTable";
-            this.accBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.accBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.accBtn.UseVisualStyleBackColor = false;
             // 
             // WorkingDaysAndHoursUC
             // 
@@ -113,7 +115,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private CircularButton grpIdBtn;
-        private CircularButton accBtn;
+        private CircularButton endBtn;
+        private CircularButton dayBtn;
+        private System.Windows.Forms.Label titleOfPages;
     }
 }

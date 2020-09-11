@@ -253,6 +253,12 @@
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\WeekdayDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\WeekdayDetails.Designer.cs">
+      <DependentUpon>WeekdayDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -276,6 +282,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControlers\academicDetails.resx">
       <DependentUpon>academicDetails.cs</DependentUpon>
@@ -297,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\WeekdayDetails.resx">
+      <DependentUpon>WeekdayDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
       <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
@@ -326,6 +336,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-view-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-list-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
