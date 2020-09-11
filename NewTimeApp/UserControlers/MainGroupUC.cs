@@ -108,7 +108,7 @@ namespace NewTimeApp.UserControlers
             {
                 try
                 {
-                    SqlDataAdapter YearAd = new SqlDataAdapter("SELECT AcademicDetails FROM MainGroup WHERE AcademicDetails = '" + acDetails.Text + "'", sqlCon);
+/*                    SqlDataAdapter YearAd = new SqlDataAdapter("SELECT AcademicDetails FROM MainGroup WHERE AcademicDetails = '" + acDetails.Text + "'", sqlCon);
                     SqlDataAdapter DegreeAd = new SqlDataAdapter("SELECT ShortDegreeName FROM DegreeDetails WHERE ShortDegreeName = '" + degreeDetailsCombo.Text + "'", sqlCon);
                     SqlDataAdapter GroupAD = new SqlDataAdapter("SELECT ShortDegreeName FROM DegreeDetails WHERE ShortDegreeName = '" + mainGropNo.Text + "'", sqlCon);
 
@@ -133,7 +133,7 @@ namespace NewTimeApp.UserControlers
                         MessageBox.Show("Main Group is already exist...", "MAin Group", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
-                    {
+                    {*/
                         if (sqlCon.State == ConnectionState.Closed)
                         {
                             sqlCon.Open();
@@ -155,7 +155,7 @@ namespace NewTimeApp.UserControlers
                         else
                             MessageBox.Show("Please Try Again !!!");
                     }
-                }
+               // }
 
                 catch (Exception ex)
                 {
