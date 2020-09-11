@@ -30,13 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsUC));
             this.studentPanel = new System.Windows.Forms.Panel();
-            this.circularButton1 = new NewTimeApp.CircularButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.viewBtn = new NewTimeApp.CircularButton();
             this.subGroupBrn = new NewTimeApp.CircularButton();
             this.mainGrpBtn = new NewTimeApp.CircularButton();
             this.degreeBtn = new NewTimeApp.CircularButton();
             this.accBtn = new NewTimeApp.CircularButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.studentBtn = new NewTimeApp.CircularButton();
             this.studentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,7 +44,6 @@
             // studentPanel
             // 
             this.studentPanel.BackColor = System.Drawing.Color.White;
-            this.studentPanel.Controls.Add(this.circularButton1);
             this.studentPanel.Controls.Add(this.viewBtn);
             this.studentPanel.Controls.Add(this.subGroupBrn);
             this.studentPanel.Controls.Add(this.mainGrpBtn);
@@ -59,23 +57,15 @@
             this.studentPanel.Size = new System.Drawing.Size(772, 720);
             this.studentPanel.TabIndex = 0;
             // 
-            // circularButton1
+            // pictureBox1
             // 
-            this.circularButton1.BackColor = System.Drawing.Color.Plum;
-            this.circularButton1.FlatAppearance.BorderSize = 0;
-            this.circularButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton1.ForeColor = System.Drawing.Color.White;
-            this.circularButton1.Image = ((System.Drawing.Image)(resources.GetObject("circularButton1.Image")));
-            this.circularButton1.Location = new System.Drawing.Point(500, 535);
-            this.circularButton1.Name = "circularButton1";
-            this.circularButton1.Size = new System.Drawing.Size(170, 170);
-            this.circularButton1.TabIndex = 32;
-            this.circularButton1.Text = "Generate Group ID";
-            this.circularButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton1.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // viewBtn
             // 
@@ -86,7 +76,7 @@
             this.viewBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewBtn.ForeColor = System.Drawing.Color.White;
             this.viewBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewBtn.Image")));
-            this.viewBtn.Location = new System.Drawing.Point(72, 535);
+            this.viewBtn.Location = new System.Drawing.Point(300, 531);
             this.viewBtn.Name = "viewBtn";
             this.viewBtn.Size = new System.Drawing.Size(170, 170);
             this.viewBtn.TabIndex = 31;
@@ -171,16 +161,6 @@
             this.accBtn.UseVisualStyleBackColor = false;
             this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            // 
             // studentBtn
             // 
             this.studentBtn.BackColor = System.Drawing.Color.Plum;
@@ -222,6 +202,5 @@
         private CircularButton mainGrpBtn;
         private CircularButton degreeBtn;
         private CircularButton viewBtn;
-        private CircularButton circularButton1;
     }
 }
