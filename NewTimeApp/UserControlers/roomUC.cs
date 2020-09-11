@@ -22,7 +22,7 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
             fillbuildingDetail();
-            sqlCon = new SqlConnection(con);
+            
             sqlCon.Open();
         }
 
@@ -48,6 +48,7 @@ namespace NewTimeApp.UserControlers
         {
             string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
             sqlCon = new SqlConnection(con);
+            sqlCon.Open();
             string qry = "SELECT * FROM buildingDetails";
             sqlCom = new SqlCommand(qry, sqlCon);
             SqlDataReader sqlDataReader;
