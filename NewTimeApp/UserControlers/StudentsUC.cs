@@ -47,5 +47,11 @@ namespace NewTimeApp.UserControlers
             SubGroupUC subGroupUC = new SubGroupUC();
             MainControler.showControl(subGroupUC, studentPanel);
         }
+
+        private void viewBtn_Click(object sender, EventArgs e)
+        {
+            DataViewUC dataViewUC = new DataViewUC();
+            MainControler.showControl(dataViewUC, studentPanel);
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NewTimeApp.Helpers;
 
 namespace NewTimeApp.UserControlers
 {
@@ -15,6 +16,13 @@ namespace NewTimeApp.UserControlers
         public DataViewUC()
         {
             InitializeComponent();
+        }
+
+        private void backBtnS_Click(object sender, EventArgs e)
+        {
+
+            StudentsUC studentsUC = new StudentsUC();
+            MainControler.showControl(studentsUC, viewPanel);
         }
     }
 }

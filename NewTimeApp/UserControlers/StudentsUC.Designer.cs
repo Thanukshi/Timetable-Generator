@@ -84,6 +84,7 @@
             this.viewBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.viewBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.viewBtn.UseVisualStyleBackColor = false;
+            this.viewBtn.Click += new System.EventHandler(this.viewBtn_Click);
             // 
             // subGroupBrn
             // 
