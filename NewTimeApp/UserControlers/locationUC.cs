@@ -42,8 +42,8 @@ namespace NewTimeApp.UserControlers
 
         private void viewroomBrn_Click(object sender, EventArgs e)
         {
-           /* showroomUC locatUC = new showroomUC();
-            MainControler.showControl(locatUC, locationpanel);*/
+            showroomUC locatUC = new showroomUC();
+            MainControler.showControl(locatUC, locationpanel);
 
         }
     }

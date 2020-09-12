@@ -217,6 +217,12 @@
     <Compile Include="UserControlers\ShowBuildingUC.Designer.cs">
       <DependentUpon>ShowBuildingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\showroomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\showroomUC.Designer.cs">
+      <DependentUpon>showroomUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\statisticsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ShowBuildingUC.resx">
       <DependentUpon>ShowBuildingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\showroomUC.resx">
+      <DependentUpon>showroomUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\statisticsUC.resx">
       <DependentUpon>statisticsUC.cs</DependentUpon>

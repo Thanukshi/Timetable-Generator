@@ -1,6 +1,6 @@
 ﻿namespace NewTimeApp.UserControlers
 {
-    partial class ShowBuildingUC
+    partial class showroomUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,34 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowBuildingUC));
-            this.showBuildingPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(showroomUC));
             this.backBtn = new System.Windows.Forms.Button();
-            this.showBuildingPanel.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.showRoomPanel = new System.Windows.Forms.Panel();
+            this.showRoomPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // showBuildingPanel
-            // 
-            this.showBuildingPanel.BackColor = System.Drawing.Color.White;
-            this.showBuildingPanel.Controls.Add(this.backBtn);
-            this.showBuildingPanel.Controls.Add(this.label1);
-            this.showBuildingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showBuildingPanel.Location = new System.Drawing.Point(0, 0);
-            this.showBuildingPanel.Name = "showBuildingPanel";
-            this.showBuildingPanel.Size = new System.Drawing.Size(772, 720);
-            this.showBuildingPanel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(72, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Buildings";
             // 
             // backBtn
             // 
@@ -70,23 +48,45 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // ShowBuildingUC
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(72, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Rooms";
+            // 
+            // showRoomPanel
+            // 
+            this.showRoomPanel.BackColor = System.Drawing.Color.White;
+            this.showRoomPanel.Controls.Add(this.backBtn);
+            this.showRoomPanel.Controls.Add(this.label1);
+            this.showRoomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showRoomPanel.Location = new System.Drawing.Point(0, 0);
+            this.showRoomPanel.Name = "showRoomPanel";
+            this.showRoomPanel.Size = new System.Drawing.Size(772, 720);
+            this.showRoomPanel.TabIndex = 2;
+            // 
+            // showroomUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.showBuildingPanel);
-            this.Name = "ShowBuildingUC";
+            this.Controls.Add(this.showRoomPanel);
+            this.Name = "showroomUC";
             this.Size = new System.Drawing.Size(772, 720);
-            this.showBuildingPanel.ResumeLayout(false);
-            this.showBuildingPanel.PerformLayout();
+            this.showRoomPanel.ResumeLayout(false);
+            this.showRoomPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel showBuildingPanel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel showRoomPanel;
     }
 }
