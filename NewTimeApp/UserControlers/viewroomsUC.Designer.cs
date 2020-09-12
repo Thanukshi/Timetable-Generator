@@ -28,18 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewroomsUC));
             this.viewroomspanel = new System.Windows.Forms.Panel();
-            this.showroompanel = new System.Windows.Forms.Panel();
-            this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.viewroomspanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewroomspanel
             // 
-            this.viewroomspanel.Controls.Add(this.showroompanel);
-            this.viewroomspanel.Controls.Add(this.backBtn);
             this.viewroomspanel.Controls.Add(this.label1);
             this.viewroomspanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewroomspanel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -47,27 +42,6 @@
             this.viewroomspanel.Name = "viewroomspanel";
             this.viewroomspanel.Size = new System.Drawing.Size(772, 720);
             this.viewroomspanel.TabIndex = 0;
-            // 
-            // showroompanel
-            // 
-            this.showroompanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.showroompanel.Location = new System.Drawing.Point(18, 101);
-            this.showroompanel.Name = "showroompanel";
-            this.showroompanel.Size = new System.Drawing.Size(720, 598);
-            this.showroompanel.TabIndex = 31;
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(18, 25);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 30;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // label1
             // 
@@ -99,7 +73,5 @@
 
         private System.Windows.Forms.Panel viewroomspanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.Panel showroompanel;
     }
 }

@@ -18,11 +18,7 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            locationUC locatUC = new locationUC();
-            MainControler.showControl(locatUC, viewroomspanel);
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
