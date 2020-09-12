@@ -241,11 +241,11 @@
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlers\viewbuildingsUC.cs">
+    <Compile Include="UserControlers\viewbuildingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlers\viewbuildingsUC.Designer.cs">
-      <DependentUpon>viewbuildingsUC.cs</DependentUpon>
+    <Compile Include="UserControlers\viewbuildingUC.Designer.cs">
+      <DependentUpon>viewbuildingUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\viewroomsUC.cs">
       <SubType>UserControl</SubType>
@@ -304,8 +304,8 @@
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\viewbuildingsUC.resx">
-      <DependentUpon>viewbuildingsUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlers\viewbuildingUC.resx">
+      <DependentUpon>viewbuildingUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\viewroomsUC.resx">
       <DependentUpon>viewroomsUC.cs</DependentUpon>
