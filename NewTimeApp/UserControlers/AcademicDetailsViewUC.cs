@@ -26,8 +26,8 @@ namespace NewTimeApp.UserControlers
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
 
-            /*academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();*/
+            academicDataGrid.AutoGenerateColumns = false;
+            academicDataGrid.DataSource = FetchAcademicDetails();
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace NewTimeApp.UserControlers
         private void AcademicDetailsViewUC_Load(object sender, EventArgs e)
         {
             //academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();
+            //academicDataGrid.DataSource = FetchAcademicDetails();
 
         }
 

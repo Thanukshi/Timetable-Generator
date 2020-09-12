@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DegreeDetailsView));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DegreeDetailsView));
             this.mainGroupDetailsPanel = new System.Windows.Forms.Panel();
-            this.backBtnS = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.academicDataGrid = new System.Windows.Forms.DataGridView();
             this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
             this.viewBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.backBtnS = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainGroupDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.academicDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -56,29 +59,6 @@
             this.mainGroupDetailsPanel.Size = new System.Drawing.Size(1000, 790);
             this.mainGroupDetailsPanel.TabIndex = 0;
             // 
-            // backBtnS
-            // 
-            this.backBtnS.FlatAppearance.BorderSize = 0;
-            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
-            this.backBtnS.Location = new System.Drawing.Point(38, 30);
-            this.backBtnS.Name = "backBtnS";
-            this.backBtnS.Size = new System.Drawing.Size(66, 56);
-            this.backBtnS.TabIndex = 202;
-            this.backBtnS.UseVisualStyleBackColor = true;
-            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(126, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 41);
-            this.label1.TabIndex = 201;
-            this.label1.Text = "Degree Program Details";
-            // 
             // academicDataGrid
             // 
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,6 +76,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.academicDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.academicDataGrid.ColumnHeadersHeight = 80;
+            this.academicDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +93,7 @@
             this.academicDataGrid.Name = "academicDataGrid";
             this.academicDataGrid.RowHeadersWidth = 50;
             this.academicDataGrid.RowTemplate.Height = 24;
+            this.academicDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.academicDataGrid.Size = new System.Drawing.Size(925, 465);
             this.academicDataGrid.TabIndex = 205;
             // 
@@ -159,6 +144,52 @@
             this.viewBtn.UseVisualStyleBackColor = false;
             this.viewBtn.Click += new System.EventHandler(this.viewBtn_Click);
             // 
+            // backBtnS
+            // 
+            this.backBtnS.FlatAppearance.BorderSize = 0;
+            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
+            this.backBtnS.Location = new System.Drawing.Point(38, 30);
+            this.backBtnS.Name = "backBtnS";
+            this.backBtnS.Size = new System.Drawing.Size(66, 56);
+            this.backBtnS.TabIndex = 202;
+            this.backBtnS.UseVisualStyleBackColor = true;
+            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(126, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(364, 41);
+            this.label1.TabIndex = 201;
+            this.label1.Text = "Degree Program Details";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DegreeId";
+            this.Column1.HeaderText = "Index";
+            this.Column1.MinimumWidth = 15;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "DegreeName";
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.MinimumWidth = 15;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ShortDegreeName";
+            this.Column3.HeaderText = "Short Name";
+            this.Column3.MinimumWidth = 15;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 250;
+            // 
             // DegreeDetailsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,5 +212,8 @@
         private System.Windows.Forms.Button backBtnS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView academicDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

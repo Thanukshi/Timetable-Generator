@@ -39,12 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.academicDataGrid = new System.Windows.Forms.DataGridView();
-            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.deleteBtn = new ePOSOne.btnProduct.Button_WOC();
             this.backBtnS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.newTimeAppDataSet = new NewTimeApp.NewTimeAppDataSet();
             this.newTimeAppDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.deleteBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.academicViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.academicDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newTimeAppDataSet)).BeginInit();
@@ -134,7 +137,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.academicDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.academicDataGrid.ColumnHeadersHeight = 80;
+            this.academicDataGrid.ColumnHeadersHeight = 90;
+            this.academicDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3,
+            this.Column1,
+            this.Column2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,6 +159,39 @@
             this.academicDataGrid.Size = new System.Drawing.Size(925, 319);
             this.academicDataGrid.TabIndex = 200;
             this.academicDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.academicDataGrid_CellClick);
+            // 
+            // backBtnS
+            // 
+            this.backBtnS.FlatAppearance.BorderSize = 0;
+            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
+            this.backBtnS.Location = new System.Drawing.Point(33, 26);
+            this.backBtnS.Name = "backBtnS";
+            this.backBtnS.Size = new System.Drawing.Size(66, 56);
+            this.backBtnS.TabIndex = 48;
+            this.backBtnS.UseVisualStyleBackColor = true;
+            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(121, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 41);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Academic Details";
+            // 
+            // newTimeAppDataSet
+            // 
+            this.newTimeAppDataSet.DataSetName = "NewTimeAppDataSet";
+            this.newTimeAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // newTimeAppDataSetBindingSource
+            // 
+            this.newTimeAppDataSetBindingSource.DataSource = this.newTimeAppDataSet;
+            this.newTimeAppDataSetBindingSource.Position = 0;
             // 
             // updateDetailsBtn
             // 
@@ -201,38 +241,29 @@
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.viewBtn_Click);
             // 
-            // backBtnS
+            // Column3
             // 
-            this.backBtnS.FlatAppearance.BorderSize = 0;
-            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
-            this.backBtnS.Location = new System.Drawing.Point(33, 26);
-            this.backBtnS.Name = "backBtnS";
-            this.backBtnS.Size = new System.Drawing.Size(66, 56);
-            this.backBtnS.TabIndex = 48;
-            this.backBtnS.UseVisualStyleBackColor = true;
-            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
+            this.Column3.DataPropertyName = "acID";
+            this.Column3.HeaderText = "Index";
+            this.Column3.MinimumWidth = 15;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
-            // label1
+            // Column1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(121, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 41);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Academic Details";
+            this.Column1.DataPropertyName = "acYear";
+            this.Column1.HeaderText = "Academic Year";
+            this.Column1.MinimumWidth = 15;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 250;
             // 
-            // newTimeAppDataSet
+            // Column2
             // 
-            this.newTimeAppDataSet.DataSetName = "NewTimeAppDataSet";
-            this.newTimeAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // newTimeAppDataSetBindingSource
-            // 
-            this.newTimeAppDataSetBindingSource.DataSource = this.newTimeAppDataSet;
-            this.newTimeAppDataSetBindingSource.Position = 0;
+            this.Column2.DataPropertyName = "acSem";
+            this.Column2.HeaderText = "Academic Semester";
+            this.Column2.MinimumWidth = 15;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
             // 
             // AcademicDetailsViewUC
             // 
@@ -265,5 +296,8 @@
         private System.Windows.Forms.TextBox acUpYear;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

@@ -16,6 +16,7 @@ namespace NewTimeApp.UserControlers
     {
         string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
+        SqlCommand sqlCom;
 
         public MainGroupDetaisUC()
         {
@@ -23,8 +24,25 @@ namespace NewTimeApp.UserControlers
             StyleDataGrid();
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
+
+            academicDataGrid.AutoGenerateColumns = false;
+            academicDataGrid.DataSource = FetchAcademicDetails();
         }
 
+        private DataTable FetchAcademicDetails()
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            DataTable dtData = new DataTable();
+            sqlCom = new SqlCommand("abcmainGroup", sqlCon);
+            sqlCom.CommandType = CommandType.StoredProcedure;
+            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
+            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
+            sqlSda.Fill(dtData);
+            return dtData;
+        }
 
         private void backBtnS_Click(object sender, EventArgs e)
         {
@@ -52,7 +70,7 @@ namespace NewTimeApp.UserControlers
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(con))
+         /*   using (SqlConnection sqlCon = new SqlConnection(con))
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM MainGroup", sqlCon);
@@ -63,7 +81,27 @@ namespace NewTimeApp.UserControlers
                 //academicDataGrid.AutoGenerateColumns = false;
                 academicDataGrid.DataSource = dtbl;
 
-            }
+            }*/
+        }
+
+        private void academicDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void mGDetailsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateDetailsBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

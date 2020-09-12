@@ -12,19 +12,20 @@ using System.Data.SqlClient;
 
 namespace NewTimeApp.UserControlers
 {
-    public partial class DegreeDetailsView : UserControl
+    public partial class SubGroupDetailsUC : UserControl
     {
         string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
 
-        public DegreeDetailsView()
+        public SubGroupDetailsUC()
         {
+
             InitializeComponent();
+
             StyleDataGrid();
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
-
 
             academicDataGrid.AutoGenerateColumns = false;
             academicDataGrid.DataSource = FetchAcademicDetails();
@@ -37,7 +38,7 @@ namespace NewTimeApp.UserControlers
                 sqlCon.Open();
             }
             DataTable dtData = new DataTable();
-            sqlCom = new SqlCommand("abcDegreeProgram", sqlCon);
+            sqlCom = new SqlCommand("abcSubGroupDetails", sqlCon);
             sqlCom.CommandType = CommandType.StoredProcedure;
             sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
             SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
@@ -48,7 +49,7 @@ namespace NewTimeApp.UserControlers
         private void backBtnS_Click(object sender, EventArgs e)
         {
             DataViewUC dataViewUC = new DataViewUC();
-            MainControler.showControl(dataViewUC, mainGroupDetailsPanel);
+            MainControler.showControl(dataViewUC, SGDetailsPanel);
         }
 
         void StyleDataGrid()
@@ -67,22 +68,6 @@ namespace NewTimeApp.UserControlers
 
 
 
-        }
-
-        private void viewBtn_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection sqlCon = new SqlConnection(con))
-            {
-                /*sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM DegreeDetails", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                //method 1 - direct method
-                //academicDataGrid.AutoGenerateColumns = false;
-                academicDataGrid.DataSource = dtbl;*/
-
-            }
         }
     }
 }

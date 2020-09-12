@@ -74,6 +74,7 @@
             this.subGroupBrn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.subGroupBrn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.subGroupBrn.UseVisualStyleBackColor = false;
+            this.subGroupBrn.Click += new System.EventHandler(this.subGroupBrn_Click);
             // 
             // mainGrpBtn
             // 

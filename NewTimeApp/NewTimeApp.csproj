@@ -273,6 +273,12 @@
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\SubGroupDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\SubGroupDetailsUC.Designer.cs">
+      <DependentUpon>SubGroupDetailsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\SubGroupUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\SubGroupDetailsUC.resx">
+      <DependentUpon>SubGroupDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\SubGroupUC.resx">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
