@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(showroomUC));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.showroompanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.showroompanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // showroompanel
             // 
-            this.panel1.Controls.Add(this.backBtn);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 720);
-            this.panel1.TabIndex = 0;
+            this.showroompanel.Controls.Add(this.backBtn);
+            this.showroompanel.Controls.Add(this.label1);
+            this.showroompanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showroompanel.Location = new System.Drawing.Point(0, 0);
+            this.showroompanel.Name = "showroompanel";
+            this.showroompanel.Size = new System.Drawing.Size(772, 720);
+            this.showroompanel.TabIndex = 0;
             // 
             // label1
             // 
@@ -67,24 +67,25 @@
             this.backBtn.Size = new System.Drawing.Size(50, 46);
             this.backBtn.TabIndex = 26;
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // showroomUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.showroompanel);
             this.Name = "showroomUC";
             this.Size = new System.Drawing.Size(772, 720);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.showroompanel.ResumeLayout(false);
+            this.showroompanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel showroompanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBtn;
     }
