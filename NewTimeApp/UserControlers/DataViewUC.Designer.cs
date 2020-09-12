@@ -92,6 +92,7 @@
             this.mainGrpBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.mainGrpBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.mainGrpBtn.UseVisualStyleBackColor = false;
+            this.mainGrpBtn.Click += new System.EventHandler(this.mainGrpBtn_Click);
             // 
             // degreeBtn
             // 
@@ -110,6 +111,7 @@
             this.degreeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.degreeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.degreeBtn.UseVisualStyleBackColor = false;
+            this.degreeBtn.Click += new System.EventHandler(this.degreeBtn_Click);
             // 
             // accBtn
             // 

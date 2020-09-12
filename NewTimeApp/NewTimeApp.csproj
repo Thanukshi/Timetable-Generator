@@ -181,11 +181,17 @@
     <Compile Include="Helpers\AcademicDetails.cs" />
     <Compile Include="Helpers\DegreeProgram.cs" />
     <Compile Include="Helpers\MainControler.cs" />
+    <Compile Include="Helpers\StyleDataGrid.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewTimeAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -213,6 +219,12 @@
     <Compile Include="UserControlers\DataViewUC.Designer.cs">
       <DependentUpon>DataViewUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\DegreeDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\DegreeDetailsView.Designer.cs">
+      <DependentUpon>DegreeDetailsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\DegreeProgramUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +236,12 @@
     </Compile>
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\MainGroupDetaisUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\MainGroupDetaisUC.Designer.cs">
+      <DependentUpon>MainGroupDetaisUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\MainGroupUC.cs">
       <SubType>UserControl</SubType>
@@ -282,11 +300,17 @@
     <EmbeddedResource Include="UserControlers\DataViewUC.resx">
       <DependentUpon>DataViewUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\DegreeDetailsView.resx">
+      <DependentUpon>DegreeDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\DegreeProgramUC.resx">
       <DependentUpon>DegreeProgramUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\MainGroupDetaisUC.resx">
+      <DependentUpon>MainGroupDetaisUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\MainGroupUC.resx">
       <DependentUpon>MainGroupUC.cs</DependentUpon>
@@ -303,6 +327,17 @@
     <EmbeddedResource Include="UserControlers\SubGroupUC.resx">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="NewTimeAppDataSet.xsc">
+      <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewTimeAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewTimeAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewTimeAppDataSet.xss">
+      <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

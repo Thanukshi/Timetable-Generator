@@ -12,33 +12,24 @@ using System.Data.SqlClient;
 
 namespace NewTimeApp.UserControlers
 {
-    public partial class AcademicDetailsViewUC : UserControl
+    public partial class DegreeDetailsView : UserControl
     {
         string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
-        //string acedemicID = "";
 
-        public AcademicDetailsViewUC()
+        public DegreeDetailsView()
         {
             InitializeComponent();
             StyleDataGrid();
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
-
-            /*academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();*/
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
         {
             DataViewUC dataViewUC = new DataViewUC();
-            MainControler.showControl(dataViewUC, academicViewPanel);
-        }
-
-        private void academicViewPanel_Paint(object sender, PaintEventArgs e)
-        {
-
+            MainControler.showControl(dataViewUC, mainGroupDetailsPanel);
         }
 
         void StyleDataGrid()
@@ -46,7 +37,7 @@ namespace NewTimeApp.UserControlers
             academicDataGrid.BorderStyle = BorderStyle.None;
             academicDataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 190, 247);
             academicDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-           // academicDataGrid.DefaultCellStyle.SelectionBackColor = Color.Plum;
+            // academicDataGrid.DefaultCellStyle.SelectionBackColor = Color.Plum;
             academicDataGrid.DefaultCellStyle.ForeColor = Color.Black;
             academicDataGrid.BackgroundColor = Color.White;
 
@@ -55,30 +46,8 @@ namespace NewTimeApp.UserControlers
             academicDataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(50, 4, 45);
             academicDataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-       
 
-        }
 
-        private void AcademicDetailsViewUC_Load(object sender, EventArgs e)
-        {
-            /*academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();*/
-
-        }
-
-        private DataTable FetchAcademicDetails()
-        {
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            DataTable dtData = new DataTable();
-            sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
-            sqlCom.CommandType = CommandType.StoredProcedure;
-            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-            sqlSda.Fill(dtData);
-            return dtData;
         }
 
         private void viewBtn_Click(object sender, EventArgs e)
@@ -86,7 +55,7 @@ namespace NewTimeApp.UserControlers
             using (SqlConnection sqlCon = new SqlConnection(con))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM AcademicDetails", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM DegreeDetails", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -94,11 +63,7 @@ namespace NewTimeApp.UserControlers
                 //academicDataGrid.AutoGenerateColumns = false;
                 academicDataGrid.DataSource = dtbl;
 
-                //method 2 : DG Columns
-               /* dgv2.AutoGenerateColumns = false;
-                dgv2.DataSource = dtbl;*/
-
-                }
             }
         }
+    }
 }

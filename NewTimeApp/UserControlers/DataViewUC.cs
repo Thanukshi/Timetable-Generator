@@ -35,5 +35,17 @@ namespace NewTimeApp.UserControlers
             AcademicDetailsViewUC academicDetailsViewUC = new AcademicDetailsViewUC();
             MainControler.showControl(academicDetailsViewUC, viewPanel);
         }
+
+        private void degreeBtn_Click(object sender, EventArgs e)
+        {
+            DegreeDetailsView degreeDetailsView = new DegreeDetailsView();
+            MainControler.showControl(degreeDetailsView, viewPanel);
+        }
+
+        private void mainGrpBtn_Click(object sender, EventArgs e)
+        {
+            MainGroupDetaisUC mainGroupDetaisUC = new MainGroupDetaisUC();
+            MainControler.showControl(mainGroupDetaisUC, viewPanel);
+        }
     }
 }
