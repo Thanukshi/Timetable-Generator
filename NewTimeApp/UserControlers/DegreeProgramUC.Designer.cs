@@ -77,6 +77,7 @@
             this.programNameD.Name = "programNameD";
             this.programNameD.Size = new System.Drawing.Size(470, 45);
             this.programNameD.TabIndex = 33;
+            this.programNameD.TextChanged += new System.EventHandler(this.programNameD_TextChanged);
             // 
             // label3
             // 

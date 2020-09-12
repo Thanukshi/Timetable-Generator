@@ -97,6 +97,11 @@ namespace NewTimeApp.UserControlers
         {
 
         }
+
+        private void acYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

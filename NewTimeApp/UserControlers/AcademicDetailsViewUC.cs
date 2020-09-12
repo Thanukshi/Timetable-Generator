@@ -17,7 +17,9 @@ namespace NewTimeApp.UserControlers
         string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
+        SqlConnection cons = new SqlConnection("Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True");
         string acedemicID = "";
+        int ID = 0;
 
         public AcademicDetailsViewUC()
         {
@@ -25,6 +27,7 @@ namespace NewTimeApp.UserControlers
             StyleDataGrid();
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
+            FetchAcademicDetails();
 
             academicDataGrid.AutoGenerateColumns = false;
             academicDataGrid.DataSource = FetchAcademicDetails();
@@ -75,17 +78,24 @@ namespace NewTimeApp.UserControlers
 
         private void updateDetailsBtn_Click(object sender, EventArgs e)
         {
- 
-            sqlCom = new SqlCommand("UPDATE AcademicDetails SET acYear = @AcademicYear, acSem = @AcademicSemester)", sqlCon);
-            sqlCom.CommandType = CommandType.Text;
-            sqlCom.Parameters.AddWithValue("@AcademicYear", acUpYear.Text);
-            sqlCom.Parameters.AddWithValue("@AcademicSemester", acUpSem.Text);
 
-            sqlCon.Open();
-            sqlCom.ExecuteNonQuery();
-            sqlCon.Close();
-
-            FetchAcademicDetails();
+            if (acUpYear.Text != "" && acUpSem.Text != "")
+            {
+                sqlCom = new SqlCommand("update AcademicDetails set acYear=@AcademicYear, acSem=@AcademicSemester where acID=@AcademicId", cons);
+                cons.Open();
+                sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
+                sqlCom.Parameters.AddWithValue("@AcademicYear", acUpYear.Text);
+                sqlCom.Parameters.AddWithValue("@AcademicSemester", acUpSem.Text);
+                sqlCom.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                cons.Close();
+                FetchAcademicDetails();
+                ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
         }
 
         private DataTable FetchAcademicDetails()
@@ -103,16 +113,26 @@ namespace NewTimeApp.UserControlers
             return dtData;
         }
 
+        private void ClearData()
+        {
+            acUpYear.Text = "";
+            acUpSem.Text = "";
+            ID = 0;
+        }
+
         private void academicDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /* acedemicID = academicDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-             acUpYear.Text = academicDataGrid.Rows[e.RowIndex].Cells[1].ToString();
-             acUpSem.Text = academicDataGrid.Rows[e.RowIndex].Cells[2].ToString();*/
+            ID = Convert.ToInt32(academicDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+            acUpYear.Text = academicDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            acUpSem.Text = academicDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+        }
 
-
+/*        private void academicDataGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
             if (e.RowIndex >= 0)
             {
-                //updateDetailsBtn.Text = "Update";
+                updateDetailsBtn.Text = "Update";
                 acedemicID = academicDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 DataTable dtData = FetchAllRecords(acedemicID);
                 if (dtData.Rows.Count > 0)
@@ -125,66 +145,8 @@ namespace NewTimeApp.UserControlers
                 else
                 {
                     //ClearAllData(); // For clear all control and refresh DataGridView data.  
-
-
-
-
-
                 }
             }
-        }
-
-        private DataTable FetchAllRecords(string acID)
-                {
-                    if (sqlCon.State == ConnectionState.Closed)
-                    {
-                        sqlCon.Open();
-                    }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "FetchRecord");
-                    sqlCom.Parameters.AddWithValue("@AcademicId", acID);
-                    SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-                    sqlSda.Fill(dtData);
-                    return dtData;
-                }
-                /*private void academicDataGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-                {
-                    if (e.RowIndex >= 0)
-                    {
-                        updateDetailsBtn.Text = "Update";
-                        acedemicID = academicDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        DataTable dtData = FetchAllRecords(acedemicID);
-                        if (dtData.Rows.Count > 0)
-                        {
-                            acedemicID = dtData.Rows[0][0].ToString();
-                            acUpYear.Text = dtData.Rows[0][1].ToString();
-                            acUpSem.Text = dtData.Rows[0][2].ToString();
-
-                        }
-                        else
-                        {
-                            //ClearAllData(); // For clear all control and refresh DataGridView data.  
-                        }
-                    }
-                }
-
-                private DataTable FetchAllRecords(string acID)
-                {
-                    if (sqlCon.State == ConnectionState.Closed)
-                    {
-                        sqlCon.Open();
-                    }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "FetchRecord");
-                    sqlCom.Parameters.AddWithValue("@AcademicId", acID);
-                    SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-                    sqlSda.Fill(dtData);
-                    return dtData;
-                }*/
-
-            }
+        }*/
+    
 }

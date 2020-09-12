@@ -93,6 +93,7 @@
             this.acYear.Name = "acYear";
             this.acYear.Size = new System.Drawing.Size(417, 46);
             this.acYear.TabIndex = 4;
+            this.acYear.SelectedIndexChanged += new System.EventHandler(this.acYear_SelectedIndexChanged);
             // 
             // saveAcc
             // 

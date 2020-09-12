@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,16 @@ namespace NewTimeApp
 {
     public partial class Login : Form
     {
+        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
+        SqlConnection sqlCon;
+        SqlDataAdapter sqlDataAdapter;
+        SqlCommand sqlCom;
+
         public Login()
         {
             InitializeComponent();
+            sqlCon = new SqlConnection(con);
+            sqlCon.Open();
         }
 
         private void jTextBox1_Load(object sender, EventArgs e)
@@ -102,9 +110,39 @@ namespace NewTimeApp
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            Hide();
-            DashBoard dash = new DashBoard();
-            dash.ShowDialog();
+
+            if (string.IsNullOrWhiteSpace(un_Text.Text))
+            {
+                MessageBox.Show("Please enter valid username.", "User Name", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (string.IsNullOrWhiteSpace(pw_Text.Text))
+            {
+                MessageBox.Show("Please enter valid password.", "Password", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                sqlDataAdapter = new SqlDataAdapter("select count(*) from login where userName = '" + un_Text.Text + "'and password = '" + pw_Text.Text + "'", sqlCon);
+                DataTable dt = new DataTable();
+                sqlDataAdapter.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    Hide();
+                    DashBoard dash = new DashBoard();
+                    dash.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Username or Password is incorrect... Please try again...!", "Username Password", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+            }
+
+        }
+
+        private void un_Text_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

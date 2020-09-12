@@ -90,6 +90,9 @@ namespace NewTimeApp.UserControlers
             }
             }
 
-   
+        private void programNameD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

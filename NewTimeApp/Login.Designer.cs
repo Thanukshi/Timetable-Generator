@@ -116,6 +116,7 @@
             this.un_Text.Size = new System.Drawing.Size(300, 44);
             this.un_Text.TabIndex = 10;
             this.un_Text.Text = "Username";
+            this.un_Text.TextChanged += new System.EventHandler(this.un_Text_TextChanged);
             this.un_Text.Enter += new System.EventHandler(this.UN_Text_Enter);
             this.un_Text.Leave += new System.EventHandler(this.un_Text_Leave);
             // 
