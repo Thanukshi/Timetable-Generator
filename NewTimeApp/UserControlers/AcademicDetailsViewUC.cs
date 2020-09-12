@@ -61,31 +61,35 @@ namespace NewTimeApp.UserControlers
 
         private void AcademicDetailsViewUC_Load(object sender, EventArgs e)
         {
-            /*academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();*/
+            //academicDataGrid.AutoGenerateColumns = false;
+            academicDataGrid.DataSource = FetchAcademicDetails();
 
         }
 
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(con))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM AcademicDetails", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
+            /*            using (SqlConnection sqlCon = new SqlConnection(con))
+                        {
+                            sqlCon.Open();
+                            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM AcademicDetails", sqlCon);
+                            DataTable dtbl = new DataTable();
+                            sqlDa.Fill(dtbl);
 
-                //method 1 - direct method
-                //academicDataGrid.AutoGenerateColumns = false;
-                academicDataGrid.DataSource = dtbl;
+                            //method 1 - direct method
+                            //academicDataGrid.AutoGenerateColumns = false;
+                            academicDataGrid.DataSource = dtbl;
 
-                //method 2 : DG Columns
-               /* dgv2.AutoGenerateColumns = false;
-                dgv2.DataSource = dtbl;*/
+                            //method 2 : DG Columns
+                           *//* dgv2.AutoGenerateColumns = false;
+                            dgv2.DataSource = dtbl;*//*
 
-                }
-            }
+                            }*/
+/*
+            academicDataGrid.AutoGenerateColumns = false;
+            academicDataGrid.DataSource = FetchAcademicDetails();*/
+
+        }
 
         private void updateDetailsBtn_Click(object sender, EventArgs e)
         {
@@ -93,6 +97,20 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(academicDetails, academicViewPanel);
         }
 
-       
+        private DataTable FetchAcademicDetails()
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            DataTable dtData = new DataTable();
+            sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
+            sqlCom.CommandType = CommandType.StoredProcedure;
+            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
+            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
+            sqlSda.Fill(dtData);
+            return dtData;
+        }
+
     }
 }
