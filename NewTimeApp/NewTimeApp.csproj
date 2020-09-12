@@ -211,17 +211,11 @@
     <Compile Include="UserControlers\SettingsUC.Designer.cs">
       <DependentUpon>SettingsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlers\showbuildingUC.cs">
+    <Compile Include="UserControlers\ShowBuildingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlers\showbuildingUC.Designer.cs">
-      <DependentUpon>showbuildingUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlers\showroomUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\showroomUC.Designer.cs">
-      <DependentUpon>showroomUC.cs</DependentUpon>
+    <Compile Include="UserControlers\ShowBuildingUC.Designer.cs">
+      <DependentUpon>ShowBuildingUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\statisticsUC.cs">
       <SubType>UserControl</SubType>
@@ -289,11 +283,8 @@
     <EmbeddedResource Include="UserControlers\SettingsUC.resx">
       <DependentUpon>SettingsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\showbuildingUC.resx">
-      <DependentUpon>showbuildingUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\showroomUC.resx">
-      <DependentUpon>showroomUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlers\ShowBuildingUC.resx">
+      <DependentUpon>ShowBuildingUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\statisticsUC.resx">
       <DependentUpon>statisticsUC.cs</DependentUpon>

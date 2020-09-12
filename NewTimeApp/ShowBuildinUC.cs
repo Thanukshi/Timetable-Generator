@@ -7,21 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NewTimeApp.UserControlers;
 using NewTimeApp.Helpers;
 
-namespace NewTimeApp.UserControlers
+namespace NewTimeApp
 {
-    public partial class showroomUC : UserControl
+    public partial class ShowBuildinUC : UserControl
     {
-        public showroomUC()
+        public ShowBuildinUC()
         {
             InitializeComponent();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            locationUC locatUC = new locationUC();
-            MainControler.showControl(locatUC, showroompanel);
+            locationUC locate = new locationUC();
+            MainControler.showControl(locate, showBuldingPanel);
         }
     }
 }

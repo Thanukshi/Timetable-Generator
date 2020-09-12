@@ -8,21 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
+using NewTimeApp.UserControlers;
 
-namespace NewTimeApp.UserControlers
+namespace NewTimeApp
 {
-    public partial class ShowBuildingUC : UserControl
+    public partial class RoomUC : UserControl
     {
-        public ShowBuildingUC()
+        public RoomUC()
         {
             InitializeComponent();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
+
             locationUC locate = new locationUC();
-            MainControler.showControl(locate, showBuildingPanel);
-                
+            MainControler.showControl(locate, roomPanel);
         }
     }
 }

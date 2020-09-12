@@ -35,15 +35,15 @@ namespace NewTimeApp.UserControlers
 
         private void viewbuldBtn_Click(object sender, EventArgs e)
         {
-            showbuildingUC locatUC = new showbuildingUC();
+            ShowBuildingUC locatUC = new ShowBuildingUC();
             MainControler.showControl(locatUC, locationpanel);
 
         }
 
         private void viewroomBrn_Click(object sender, EventArgs e)
         {
-            showroomUC locatUC = new showroomUC();
-            MainControler.showControl(locatUC, locationpanel);
+           /* showroomUC locatUC = new showroomUC();
+            MainControler.showControl(locatUC, locationpanel);*/
 
         }
     }
