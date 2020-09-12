@@ -26,7 +26,8 @@ namespace NewTimeApp.UserControlers
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
 
-            buildingDGV.DataSource = FetchBuildingDetails();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = FetchBuildingDetails();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -38,17 +39,17 @@ namespace NewTimeApp.UserControlers
 
         void StyleDataGrid()
         {
-            buildingDGV.BorderStyle = BorderStyle.None;
-            buildingDGV.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 190, 247);
-            buildingDGV.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 190, 247);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             // buildingDGV.DefaultCellStyle.SelectionBackColor = Color.Plum;
-            buildingDGV.DefaultCellStyle.ForeColor = Color.Black;
-            buildingDGV.BackgroundColor = Color.White;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.BackgroundColor = Color.White;
 
-            buildingDGV.EnableHeadersVisualStyles = false;
-            buildingDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            buildingDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(50, 4, 45);
-            buildingDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(50, 4, 45);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
 
 
@@ -69,5 +70,14 @@ namespace NewTimeApp.UserControlers
             return dtData;
         }
 
+        private void showbuildingBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showBuildingPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
