@@ -32,13 +32,13 @@ namespace NewTimeApp.UserControlers
 
         private void jFlatButton2_Click(object sender, EventArgs e)
         {
-            ViewWeekdayDetailsUC viewWeekdayDetailsUC = new ViewWeekdayDetailsUC();
+            WorkingDaysAndHoursUC viewWeekdayDetailsUC = new WorkingDaysAndHoursUC();
             MainControler.showControl(viewWeekdayDetailsUC, panel1);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            WorkingDaysAndHoursUC weekdayDetails = new WorkingDaysAndHoursUC();
+            WeekdayDetails weekdayDetails = new WeekdayDetails();
             MainControler.showControl(weekdayDetails, panel1);
         }
     }

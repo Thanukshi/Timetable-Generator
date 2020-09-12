@@ -28,5 +28,10 @@ namespace NewTimeApp.UserControlers
             StudentsUC studentsUC = new StudentsUC();
             MainControler.showControl(studentsUC, acPanel);
         }
+
+        private void acPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

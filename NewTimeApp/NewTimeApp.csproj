@@ -203,6 +203,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewTimeAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,12 +227,6 @@
     </Compile>
     <Compile Include="UserControlers\AddWeekDayUC.Designer.cs">
       <DependentUpon>AddWeekDayUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlers\AddWeekEndUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\AddWeekEndUC.Designer.cs">
-      <DependentUpon>AddWeekEndUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\DegreeProgramUC.cs">
       <SubType>UserControl</SubType>
@@ -289,12 +288,6 @@
     <Compile Include="UserControlers\WeekdayDetails.Designer.cs">
       <DependentUpon>WeekdayDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlers\WeekendDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\WeekendDetails.Designer.cs">
-      <DependentUpon>WeekendDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,9 +319,6 @@
     <EmbeddedResource Include="UserControlers\AddWeekDayUC.resx">
       <DependentUpon>AddWeekDayUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\AddWeekEndUC.resx">
-      <DependentUpon>AddWeekEndUC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\DegreeProgramUC.resx">
       <DependentUpon>DegreeProgramUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,12 +349,20 @@
     <EmbeddedResource Include="UserControlers\WeekdayDetails.resx">
       <DependentUpon>WeekdayDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\WeekendDetails.resx">
-      <DependentUpon>WeekendDetails.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
       <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="NewTimeAppDataSet.xsc">
+      <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewTimeAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewTimeAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewTimeAppDataSet.xss">
+      <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -21,14 +21,14 @@ namespace NewTimeApp.UserControlers
 
         private void dayBtn_Click(object sender, EventArgs e)
         {
-            WeekdayDetails weekdayDetails = new WeekdayDetails();
+            ViewWeekdayDetailsUC weekdayDetails = new ViewWeekdayDetailsUC();
             MainControler.showControl(weekdayDetails, panel1);
            
         }
 
         private void endBtn_Click(object sender, EventArgs e)
         {
-            WeekendDetails weekdayDetails = new WeekendDetails();
+            ViewWeekendDetailsUC weekdayDetails = new ViewWeekendDetailsUC();
             MainControler.showControl(weekdayDetails, panel1);
         }
 
