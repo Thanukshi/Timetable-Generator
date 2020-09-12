@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewroomsUC));
             this.viewroomspanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
             this.viewroomspanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewroomspanel
             // 
+            this.viewroomspanel.Controls.Add(this.backBtn);
             this.viewroomspanel.Controls.Add(this.label1);
             this.viewroomspanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewroomspanel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -55,6 +58,19 @@
             this.label1.Text = "Rooms ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(20, 25);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 26;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click_1);
+            // 
             // viewroomsUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -73,5 +89,6 @@
 
         private System.Windows.Forms.Panel viewroomspanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button backBtn;
     }
 }
