@@ -16,6 +16,7 @@ namespace NewTimeApp.UserControlers
         public DataViewUC()
         {
             InitializeComponent();
+
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
