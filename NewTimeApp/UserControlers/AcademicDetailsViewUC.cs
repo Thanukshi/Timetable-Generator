@@ -17,7 +17,7 @@ namespace NewTimeApp.UserControlers
         string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
-        //string acedemicID = "";
+        string acedemicID = "";
 
         public AcademicDetailsViewUC()
         {
@@ -66,20 +66,6 @@ namespace NewTimeApp.UserControlers
 
         }
 
-        private DataTable FetchAcademicDetails()
-        {
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            DataTable dtData = new DataTable();
-            sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
-            sqlCom.CommandType = CommandType.StoredProcedure;
-            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-            sqlSda.Fill(dtData);
-            return dtData;
-        }
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
@@ -100,5 +86,13 @@ namespace NewTimeApp.UserControlers
 
                 }
             }
+
+        private void updateDetailsBtn_Click(object sender, EventArgs e)
+        {
+            academicDetailsUpdate academicDetails = new academicDetailsUpdate();
+            MainControler.showControl(academicDetails, academicViewPanel);
         }
+
+       
+    }
 }
