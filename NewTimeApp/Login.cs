@@ -92,17 +92,6 @@ namespace NewTimeApp
             }
         }
 
-
-        private void jFlatButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_WOC2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cancleBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
