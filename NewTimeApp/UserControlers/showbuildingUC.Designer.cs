@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomAddBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.showBuildingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +43,8 @@
             // showBuildingPanel
             // 
             this.showBuildingPanel.BackColor = System.Drawing.Color.White;
+            this.showBuildingPanel.Controls.Add(this.button_WOC1);
+            this.showBuildingPanel.Controls.Add(this.roomAddBtn);
             this.showBuildingPanel.Controls.Add(this.dataGridView1);
             this.showBuildingPanel.Controls.Add(this.backBtn);
             this.showBuildingPanel.Controls.Add(this.label1);
@@ -91,6 +95,54 @@
             this.Column2.HeaderText = "Building Name";
             this.Column2.Name = "Column2";
             // 
+            // roomAddBtn
+            // 
+            this.roomAddBtn.BackColor = System.Drawing.Color.White;
+            this.roomAddBtn.BorderColor = System.Drawing.Color.Black;
+            this.roomAddBtn.ButtonColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.BorderSize = 0;
+            this.roomAddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.roomAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomAddBtn.ForeColor = System.Drawing.Color.Black;
+            this.roomAddBtn.Location = new System.Drawing.Point(111, 564);
+            this.roomAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.roomAddBtn.Name = "roomAddBtn";
+            this.roomAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.roomAddBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.roomAddBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.roomAddBtn.Size = new System.Drawing.Size(161, 54);
+            this.roomAddBtn.TabIndex = 29;
+            this.roomAddBtn.Text = "UPDATE";
+            this.roomAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.roomAddBtn.UseVisualStyleBackColor = false;
+            // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BackColor = System.Drawing.Color.White;
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.ForeColor = System.Drawing.Color.Black;
+            this.button_WOC1.Location = new System.Drawing.Point(501, 564);
+            this.button_WOC1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(161, 54);
+            this.button_WOC1.TabIndex = 30;
+            this.button_WOC1.Text = "DELETE";
+            this.button_WOC1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_WOC1.UseVisualStyleBackColor = false;
+            // 
             // ShowBuildingUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,5 +164,7 @@
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private ePOSOne.btnProduct.Button_WOC roomAddBtn;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
     }
 }
