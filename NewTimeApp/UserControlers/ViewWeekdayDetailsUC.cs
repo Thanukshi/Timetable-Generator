@@ -136,7 +136,7 @@ namespace NewTimeApp.UserControlers
             textBox1.Visible = true;
             textBox2.Visible = true;
             textBox3.Visible = true;
-            textBox4.Visible = true;
+            richTextBox1.Visible = true;
             textBox5.Visible = true;
             editBtn.Visible = true;
             deleteBtn.Visible = true;
@@ -184,7 +184,7 @@ namespace NewTimeApp.UserControlers
                 
                 comando4.CommandText = "Select s.SelectedDays from SelectedDays s, DaysAndHours d Where d.TableType='WeekDay' AND d.TableID =s.TableID";
                 conn.Open();
-                textBox4.Text = comando4.ExecuteScalar().ToString();
+                richTextBox1.Text = comando4.ExecuteScalar().ToString();
                 conn.Close();
             }
             catch (Exception ex)

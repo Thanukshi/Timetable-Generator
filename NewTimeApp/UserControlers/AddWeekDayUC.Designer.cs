@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWeekDayUC));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.addBtn = new ePOSOne.btnProduct.Button_WOC();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -45,12 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.addBtn = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,101 @@
             this.panel1.Size = new System.Drawing.Size(750, 642);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "WeekDay",
+            "WeekEnd"});
+            this.comboBox2.Location = new System.Drawing.Point(261, 75);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 32);
+            this.comboBox2.TabIndex = 54;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox7.Location = new System.Drawing.Point(261, 380);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(93, 28);
+            this.checkBox7.TabIndex = 53;
+            this.checkBox7.Text = "Sunday";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox6.Location = new System.Drawing.Point(261, 346);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(102, 28);
+            this.checkBox6.TabIndex = 52;
+            this.checkBox6.Text = "Saturday";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(52, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 25);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Time Table Type";
+            // 
+            // resetBtn
+            // 
+            this.resetBtn.BackColor = System.Drawing.Color.White;
+            this.resetBtn.BorderColor = System.Drawing.Color.Black;
+            this.resetBtn.ButtonColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.BorderSize = 0;
+            this.resetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetBtn.ForeColor = System.Drawing.Color.Black;
+            this.resetBtn.Location = new System.Drawing.Point(321, 570);
+            this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.resetBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.resetBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.resetBtn.Size = new System.Drawing.Size(124, 54);
+            this.resetBtn.TabIndex = 40;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.BackColor = System.Drawing.Color.White;
+            this.addBtn.BorderColor = System.Drawing.Color.Black;
+            this.addBtn.ButtonColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderSize = 0;
+            this.addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.Black;
+            this.addBtn.Location = new System.Drawing.Point(114, 570);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.addBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.addBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.addBtn.Size = new System.Drawing.Size(124, 54);
+            this.addBtn.TabIndex = 39;
+            this.addBtn.Text = "Add";
+            this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // textBox1
             // 
@@ -263,101 +358,6 @@
             this.label1.Text = "TimeTable-Add";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 25);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Time Table Type";
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(261, 346);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(102, 28);
-            this.checkBox6.TabIndex = 52;
-            this.checkBox6.Text = "Saturday";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(261, 380);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(93, 28);
-            this.checkBox7.TabIndex = 53;
-            this.checkBox7.Text = "Sunday";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "WeekDay",
-            "WeekEnd"});
-            this.comboBox2.Location = new System.Drawing.Point(261, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
-            this.comboBox2.TabIndex = 54;
-            // 
-            // resetBtn
-            // 
-            this.resetBtn.BackColor = System.Drawing.Color.White;
-            this.resetBtn.BorderColor = System.Drawing.Color.Black;
-            this.resetBtn.ButtonColor = System.Drawing.Color.White;
-            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.resetBtn.FlatAppearance.BorderSize = 0;
-            this.resetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.resetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetBtn.ForeColor = System.Drawing.Color.Black;
-            this.resetBtn.Location = new System.Drawing.Point(321, 570);
-            this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.resetBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.resetBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.resetBtn.Size = new System.Drawing.Size(124, 54);
-            this.resetBtn.TabIndex = 40;
-            this.resetBtn.Text = "Reset";
-            this.resetBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.resetBtn.UseVisualStyleBackColor = false;
-            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
-            // 
-            // addBtn
-            // 
-            this.addBtn.BackColor = System.Drawing.Color.White;
-            this.addBtn.BorderColor = System.Drawing.Color.Black;
-            this.addBtn.ButtonColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.BorderSize = 0;
-            this.addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.Black;
-            this.addBtn.Location = new System.Drawing.Point(114, 570);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.addBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.addBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addBtn.Size = new System.Drawing.Size(124, 54);
-            this.addBtn.TabIndex = 39;
-            this.addBtn.Text = "Add";
-            this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addBtn.UseVisualStyleBackColor = false;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
             // AddWeekDayUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +365,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddWeekDayUC";
             this.Size = new System.Drawing.Size(750, 642);
+            this.Load += new System.EventHandler(this.AddWeekDayUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
