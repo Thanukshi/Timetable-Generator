@@ -17,6 +17,7 @@ namespace NewTimeApp.UserControlers
         public WorkingDaysAndHoursUC()
         {
             InitializeComponent();
+            //commit
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
