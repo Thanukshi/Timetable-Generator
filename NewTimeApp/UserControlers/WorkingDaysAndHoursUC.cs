@@ -19,22 +19,16 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
         }
 
-        private void dayBtn_Click(object sender, EventArgs e)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
-            ViewWeekdayDetailsUC weekdayDetails = new ViewWeekdayDetailsUC();
-            MainControler.showControl(weekdayDetails, panel1);
-           
+            Add_WorkingDaysAndHoursUC add_workingDaysAndHoursUC = new Add_WorkingDaysAndHoursUC();
+            MainControler.showControl(add_workingDaysAndHoursUC, panel1);
         }
 
-        private void endBtn_Click(object sender, EventArgs e)
+        private void ViewBtn_Click(object sender, EventArgs e)
         {
-            ViewWeekendDetailsUC weekdayDetails = new ViewWeekendDetailsUC();
-            MainControler.showControl(weekdayDetails, panel1);
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            View_WorkingDaysAndHoursUC view_workingDaysAndHoursUC = new View_WorkingDaysAndHoursUC();
+            MainControler.showControl(view_workingDaysAndHoursUC, panel1);
         }
     }
 }

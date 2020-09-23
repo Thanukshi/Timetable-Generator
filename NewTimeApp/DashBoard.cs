@@ -87,7 +87,7 @@ namespace NewTimeApp
 
         private void workBtn_Click(object sender, EventArgs e)
         {
-            WeekdayDetails workingDaysAndHoursUC = new WeekdayDetails();
+            WorkingDaysAndHoursUC workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
             MainControler.showControl(workingDaysAndHoursUC, panelContainer);
             titleOfPages.Text = "Working Days And Hours";
         }
