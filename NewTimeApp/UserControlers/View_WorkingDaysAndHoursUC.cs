@@ -88,5 +88,11 @@ namespace NewTimeApp.UserControlers
         {
 
         }
+
+        private void editBtn_Click_1(object sender, EventArgs e)
+        {
+           Edit_WorkingDaysAndHoursUC edit_workingDaysAndHoursUC = new Edit_WorkingDaysAndHoursUC();
+            MainControler.showControl(edit_workingDaysAndHoursUC, panel1);
+        }
     }
 }

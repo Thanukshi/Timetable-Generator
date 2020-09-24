@@ -205,6 +205,7 @@
             this.editBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Visible = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click_1);
             // 
             // label5
             // 
