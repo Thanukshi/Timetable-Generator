@@ -36,7 +36,19 @@ namespace NewTimeApp
         };
 
         IFirebaseClient client;
-        
+        private void Login_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                client = new FireSharp.FirebaseClient(config);
+            }
+            catch
+            {
+                CustomMessageBox.Show("No Internet.", "There was problem in the internet...!");
+
+            }
+        }
+
         private void jTextBox1_Load(object sender, EventArgs e)
         {
 
@@ -125,6 +137,9 @@ namespace NewTimeApp
                 FirebaseResponse response = client.Get("loginDB/");
                 Dictionary<string, loginClass> result = response.ResultAs<Dictionary<string, loginClass>>();
 
+/*                FirebaseResponse response = client.Get("loginDB/");
+                Dictionary<string, loginClass> result = response.ResultAs<Dictionary<string, loginClass>>();*/
+
                 foreach (var get in result)
                 {
                     string userR = get.Value.userName;
@@ -183,18 +198,7 @@ namespace NewTimeApp
 
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                CustomMessageBox.Show("No Internet.", "There was problem in the internet...!");
 
-            }
-        }
     }
     }
 
