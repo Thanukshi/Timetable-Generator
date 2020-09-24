@@ -15,6 +15,8 @@ namespace NewTimeApp.UserControlers
     public partial class academicDetails : UserControl
     {
 
+        //FiresharpConnection con = new FiresharpConnection();
+
         string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
@@ -25,11 +27,20 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
             sqlCon = new SqlConnection(con);
             sqlCon.Open();
+           
         }
+
 
         private void academicDetails_Load(object sender, EventArgs e)
         {
+            try
+            {
+                //con = new FireSharp.FirebaseClient();
+            }
+            catch
+            {
 
+            }
 
         }
 

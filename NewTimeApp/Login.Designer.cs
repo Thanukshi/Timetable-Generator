@@ -32,19 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.jTextBox2 = new JTextBox.JTextBox();
+            this.jUn = new JTextBox.JTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.un_Text = new System.Windows.Forms.TextBox();
-            this.jTextBox1 = new JTextBox.JTextBox();
+            this.unT = new System.Windows.Forms.TextBox();
+            this.jPw = new JTextBox.JTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pw_Text = new System.Windows.Forms.TextBox();
+            this.pwT = new System.Windows.Forms.TextBox();
             this.visiblePW = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.loginBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.cancleBtn = new ePOSOne.btnProduct.Button_WOC();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.checkRemember = new System.Windows.Forms.CheckBox();
+            this.cancleBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.loginBtn = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,23 +75,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Login Here";
             // 
-            // jTextBox2
+            // jUn
             // 
-            this.jTextBox2.AutoSize = true;
-            this.jTextBox2.BorderColor = System.Drawing.Color.Black;
-            this.jTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.jTextBox2.Hint = "";
-            this.jTextBox2.IsPassword = false;
-            this.jTextBox2.Length = 0;
-            this.jTextBox2.Location = new System.Drawing.Point(566, 239);
-            this.jTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jTextBox2.Name = "jTextBox2";
-            this.jTextBox2.OnFocus = System.Drawing.Color.Black;
-            this.jTextBox2.OnlyChar = false;
-            this.jTextBox2.OnlyNumber = false;
-            this.jTextBox2.Size = new System.Drawing.Size(412, 70);
-            this.jTextBox2.TabIndex = 4;
-            this.jTextBox2.TextValue = "";
+            this.jUn.AutoSize = true;
+            this.jUn.BorderColor = System.Drawing.Color.Black;
+            this.jUn.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.jUn.Hint = "";
+            this.jUn.IsPassword = false;
+            this.jUn.Length = 0;
+            this.jUn.Location = new System.Drawing.Point(566, 239);
+            this.jUn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jUn.Name = "jUn";
+            this.jUn.OnFocus = System.Drawing.Color.Black;
+            this.jUn.OnlyChar = false;
+            this.jUn.OnlyNumber = false;
+            this.jUn.Size = new System.Drawing.Size(412, 70);
+            this.jUn.TabIndex = 4;
+            this.jUn.TextValue = "";
             // 
             // pictureBox2
             // 
@@ -105,39 +105,38 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // un_Text
+            // unT
             // 
-            this.un_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.un_Text.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.un_Text.ForeColor = System.Drawing.Color.Silver;
-            this.un_Text.Location = new System.Drawing.Point(665, 252);
-            this.un_Text.Multiline = true;
-            this.un_Text.Name = "un_Text";
-            this.un_Text.Size = new System.Drawing.Size(300, 44);
-            this.un_Text.TabIndex = 10;
-            this.un_Text.Text = "Username";
-            this.un_Text.TextChanged += new System.EventHandler(this.un_Text_TextChanged);
-            this.un_Text.Enter += new System.EventHandler(this.UN_Text_Enter);
-            this.un_Text.Leave += new System.EventHandler(this.un_Text_Leave);
+            this.unT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unT.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unT.ForeColor = System.Drawing.Color.Silver;
+            this.unT.Location = new System.Drawing.Point(665, 252);
+            this.unT.Multiline = true;
+            this.unT.Name = "unT";
+            this.unT.Size = new System.Drawing.Size(300, 44);
+            this.unT.TabIndex = 10;
+            this.unT.Text = "Username";
+            this.unT.Enter += new System.EventHandler(this.UN_Text_Enter);
+            this.unT.Leave += new System.EventHandler(this.un_Text_Leave);
             // 
-            // jTextBox1
+            // jPw
             // 
-            this.jTextBox1.AutoSize = true;
-            this.jTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.jTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.jTextBox1.Hint = "";
-            this.jTextBox1.IsPassword = false;
-            this.jTextBox1.Length = 0;
-            this.jTextBox1.Location = new System.Drawing.Point(566, 357);
-            this.jTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jTextBox1.Name = "jTextBox1";
-            this.jTextBox1.OnFocus = System.Drawing.Color.Black;
-            this.jTextBox1.OnlyChar = false;
-            this.jTextBox1.OnlyNumber = false;
-            this.jTextBox1.Size = new System.Drawing.Size(412, 70);
-            this.jTextBox1.TabIndex = 12;
-            this.jTextBox1.TextValue = "";
-            this.jTextBox1.Load += new System.EventHandler(this.jTextBox1_Load);
+            this.jPw.AutoSize = true;
+            this.jPw.BorderColor = System.Drawing.Color.Black;
+            this.jPw.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.jPw.Hint = "";
+            this.jPw.IsPassword = false;
+            this.jPw.Length = 0;
+            this.jPw.Location = new System.Drawing.Point(566, 357);
+            this.jPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jPw.Name = "jPw";
+            this.jPw.OnFocus = System.Drawing.Color.Black;
+            this.jPw.OnlyChar = false;
+            this.jPw.OnlyNumber = false;
+            this.jPw.Size = new System.Drawing.Size(412, 70);
+            this.jPw.TabIndex = 12;
+            this.jPw.TextValue = "";
+            this.jPw.Load += new System.EventHandler(this.jTextBox1_Load);
             // 
             // pictureBox3
             // 
@@ -151,21 +150,21 @@
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
-            // pw_Text
+            // pwT
             // 
-            this.pw_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pw_Text.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pw_Text.ForeColor = System.Drawing.Color.Silver;
-            this.pw_Text.Location = new System.Drawing.Point(665, 371);
-            this.pw_Text.Multiline = true;
-            this.pw_Text.Name = "pw_Text";
-            this.pw_Text.PasswordChar = '*';
-            this.pw_Text.Size = new System.Drawing.Size(240, 44);
-            this.pw_Text.TabIndex = 14;
-            this.pw_Text.Text = "Password";
-            this.pw_Text.TextChanged += new System.EventHandler(this.pw_Text_TextChanged);
-            this.pw_Text.Enter += new System.EventHandler(this.pw_Text_Enter);
-            this.pw_Text.Leave += new System.EventHandler(this.pw_Text_Leave);
+            this.pwT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pwT.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwT.ForeColor = System.Drawing.Color.Silver;
+            this.pwT.Location = new System.Drawing.Point(665, 371);
+            this.pwT.Multiline = true;
+            this.pwT.Name = "pwT";
+            this.pwT.PasswordChar = '*';
+            this.pwT.Size = new System.Drawing.Size(240, 44);
+            this.pwT.TabIndex = 14;
+            this.pwT.Text = "Password";
+            this.pwT.TextChanged += new System.EventHandler(this.pw_Text_TextChanged);
+            this.pwT.Enter += new System.EventHandler(this.pw_Text_Enter);
+            this.pwT.Leave += new System.EventHandler(this.pw_Text_Leave);
             // 
             // visiblePW
             // 
@@ -186,54 +185,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 25;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // loginBtn
-            // 
-            this.loginBtn.BackColor = System.Drawing.Color.White;
-            this.loginBtn.BorderColor = System.Drawing.Color.Black;
-            this.loginBtn.ButtonColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.Color.Black;
-            this.loginBtn.Location = new System.Drawing.Point(581, 478);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.loginBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.loginBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.loginBtn.Size = new System.Drawing.Size(166, 67);
-            this.loginBtn.TabIndex = 20;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
-            // 
-            // cancleBtn
-            // 
-            this.cancleBtn.BackColor = System.Drawing.Color.White;
-            this.cancleBtn.BorderColor = System.Drawing.Color.Black;
-            this.cancleBtn.ButtonColor = System.Drawing.Color.White;
-            this.cancleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cancleBtn.FlatAppearance.BorderSize = 0;
-            this.cancleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.cancleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.cancleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancleBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancleBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancleBtn.Location = new System.Drawing.Point(787, 478);
-            this.cancleBtn.Name = "cancleBtn";
-            this.cancleBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.cancleBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.cancleBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.cancleBtn.Size = new System.Drawing.Size(166, 67);
-            this.cancleBtn.TabIndex = 21;
-            this.cancleBtn.Text = "Cancle";
-            this.cancleBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.cancleBtn.UseVisualStyleBackColor = false;
-            this.cancleBtn.Click += new System.EventHandler(this.cancleBtn_Click);
             // 
             // label2
             // 
@@ -274,6 +225,54 @@
             this.checkRemember.Text = "Remember Your Login";
             this.checkRemember.UseVisualStyleBackColor = false;
             // 
+            // cancleBtn
+            // 
+            this.cancleBtn.BackColor = System.Drawing.Color.White;
+            this.cancleBtn.BorderColor = System.Drawing.Color.Black;
+            this.cancleBtn.ButtonColor = System.Drawing.Color.White;
+            this.cancleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cancleBtn.FlatAppearance.BorderSize = 0;
+            this.cancleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cancleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.cancleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancleBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancleBtn.ForeColor = System.Drawing.Color.Black;
+            this.cancleBtn.Location = new System.Drawing.Point(787, 478);
+            this.cancleBtn.Name = "cancleBtn";
+            this.cancleBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.cancleBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.cancleBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.cancleBtn.Size = new System.Drawing.Size(166, 67);
+            this.cancleBtn.TabIndex = 21;
+            this.cancleBtn.Text = "Cancle";
+            this.cancleBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.cancleBtn.UseVisualStyleBackColor = false;
+            this.cancleBtn.Click += new System.EventHandler(this.cancleBtn_Click);
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.BackColor = System.Drawing.Color.White;
+            this.loginBtn.BorderColor = System.Drawing.Color.Black;
+            this.loginBtn.ButtonColor = System.Drawing.Color.White;
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.ForeColor = System.Drawing.Color.Black;
+            this.loginBtn.Location = new System.Drawing.Point(581, 478);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.loginBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.loginBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.loginBtn.Size = new System.Drawing.Size(166, 67);
+            this.loginBtn.TabIndex = 20;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,12 +284,12 @@
             this.Controls.Add(this.cancleBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.visiblePW);
-            this.Controls.Add(this.pw_Text);
+            this.Controls.Add(this.pwT);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.jTextBox1);
+            this.Controls.Add(this.jPw);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.un_Text);
-            this.Controls.Add(this.jTextBox2);
+            this.Controls.Add(this.unT);
+            this.Controls.Add(this.jUn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -299,6 +298,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -312,12 +312,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private JTextBox.JTextBox jTextBox2;
+        private JTextBox.JTextBox jUn;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox un_Text;
-        private JTextBox.JTextBox jTextBox1;
+        private System.Windows.Forms.TextBox unT;
+        private JTextBox.JTextBox jPw;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox pw_Text;
+        private System.Windows.Forms.TextBox pwT;
         private System.Windows.Forms.Button visiblePW;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private ePOSOne.btnProduct.Button_WOC loginBtn;

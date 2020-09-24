@@ -10,12 +10,18 @@ namespace NewTimeApp.Helpers
 {
     class FiresharpConnection
     {
+       
+        public FiresharpConnection()
+        {
+
+        }
+
         public static void fireConnection()
         {
-            IFirebaseConfig config = new FirebaseConfig
+            IFirebaseConfig config = new FirebaseConfig()
             {
-                AuthSecret = "U858DiOG8S2ueYcHd44m4sbY3ctr9XJqmLt2yRRY",
-                BasePath = "https://newtimeapp-9c458.firebaseio.com/"
+                AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
+                BasePath = "https://timetableapp-12161.firebaseio.com/"
             };
         }
     }

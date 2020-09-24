@@ -83,5 +83,10 @@ namespace NewTimeApp
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void panelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -210,6 +210,12 @@
     <Compile Include="CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,7 @@
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\FiresharpConnection.cs" />
+    <Compile Include="Helpers\loginClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -317,6 +324,9 @@
     </Compile>
     <EmbeddedResource Include="academicDetailsUpdate.resx">
       <DependentUpon>academicDetailsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
