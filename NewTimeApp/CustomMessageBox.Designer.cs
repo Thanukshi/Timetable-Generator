@@ -130,10 +130,11 @@
             this.msgLable.BackColor = System.Drawing.Color.Transparent;
             this.msgLable.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msgLable.ForeColor = System.Drawing.Color.Black;
-            this.msgLable.Location = new System.Drawing.Point(114, 90);
+            this.msgLable.Location = new System.Drawing.Point(40, 102);
             this.msgLable.Name = "msgLable";
             this.msgLable.Size = new System.Drawing.Size(0, 33);
             this.msgLable.TabIndex = 11;
+            this.msgLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CustomMessageBox
             // 

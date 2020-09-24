@@ -222,7 +222,7 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\loginClass.cs" />
+    <Compile Include="Helpers\AcademicDetailsClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -384,6 +384,9 @@
     <EmbeddedResource Include="UserControlers\SubGroupUC.resx">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="NewTimeAppDataSet.xsc">
       <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
     </None>

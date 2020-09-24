@@ -9,37 +9,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using FireSharp.Interfaces;
+using FireSharp.Config;
+using FireSharp;
+using FireSharp.Response;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class academicDetails : UserControl
     {
-
-        //FiresharpConnection con = new FiresharpConnection();
-
-        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
-        string acedemicID = "";
-
         public academicDetails()
         {
             InitializeComponent();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
-           
         }
 
+        IFirebaseConfig config = new FirebaseConfig()
+        {
+            AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
+            BasePath = "https://timetableapp-12161.firebaseio.com/"
+        };
+
+        IFirebaseClient client;
 
         private void academicDetails_Load(object sender, EventArgs e)
         {
             try
             {
-                //con = new FireSharp.FirebaseClient();
+                client = new FireSharp.FirebaseClient(config);
             }
             catch
             {
-
+                CustomMessageBox.Show("Interrupt", "There was problem in the internet..");
             }
 
         }
@@ -50,69 +50,66 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(studentsUC, acPanel);
         }
 
-        private void saveAcc_Click(object sender, EventArgs e)
+        private async void saveAcademic_Click(object sender, EventArgs e)
         {
             if (acYear.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please select academic Year.", "Academic Year", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessageBox.Show("Academic Year", "Please select academic year.");
             }
             else if (acSem.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please select Academic Semester.", "Academic Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessageBox.Show("Academic Semester", "Please select academic semester.");
+            }
+
+            else
+            {
+                AcademicDetailsClass academic = new AcademicDetailsClass();
+
+                academic.AcYear = acYear.Text;
+                academic.AcSEM = acSem.Text;
+
+
+                /* var setter = client.Set("AcademicDetails/", academic);*/
+
+                for (int i )
+                PushResponse response = await client.PushAsync("AcademicDetails", academic);
+                if (response.Body != null)
+                {
+                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is generated.");
+                }
+                else
+                {
+                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is already saved.");
+                }
+
+            }
+        }
+
+        /*private void saveAcc_ClickAsync(object sender, EventArgs e)
+        {
+            if (acYear.SelectedIndex <= -1)
+            {
+                CustomMessageBox.Show("Academic Year", "Please select academic year.");
+            }
+            else if (acSem.SelectedIndex <= -1)
+            {
+                CustomMessageBox.Show("Academic Semester", "Please select academic semester.");
             }
             else
             {
-                try
+                AcademicDetailsClass academic = new AcademicDetailsClass()
                 {
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT acYear, acSem FROM AcademicDetails WHERE acYear = '" + acYear.Text + "'AND acSem = '" + acSem.Text + "'", sqlCon);
-                    DataTable dataTable = new DataTable();
-                    sqlDataAdapter.Fill(dataTable);
-                    if (dataTable.Rows.Count >= 1)
-                    {
-                        MessageBox.Show("Academic Year and Semester is already exist...", "Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
+                    AcYear = acYear.Text,
+                    AcSEM = acSem.Text
+                };
 
-                        if (sqlCon.State == ConnectionState.Closed)
-                        {
-                            sqlCon.Open();
-                        }
-                        DataTable dtData = new DataTable();
-                        sqlCom = new SqlCommand("abcAcademicDetails", sqlCon);
-                        sqlCom.CommandType = CommandType.StoredProcedure;
-                        sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                        sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
-                        sqlCom.Parameters.AddWithValue("@AcademicYear", acYear.Text);
-                        sqlCom.Parameters.AddWithValue("@AcademicSemester", acSem.Text);
+                var setter = client.Set("AcademicDetails/", academic);
+                CustomMessageBox.Show("Academic Details", "" + acYear.Text + ". " + acSem.Text + " is generated.");
+            }
 
-                        int numRes = sqlCom.ExecuteNonQuery();
-                        if (numRes > 0)
-                        {
-                            MessageBox.Show("Academic Year and Semester is " + " " + acYear.Text + "." + " " + acSem.Text);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please Try Again !!!");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error:- " + ex.Message);
-                }
-                    }
-                }
 
-        private void acPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void acYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        }*/
     }
-    }
+}
+
 

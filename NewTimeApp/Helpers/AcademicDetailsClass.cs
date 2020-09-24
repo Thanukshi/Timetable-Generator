@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace NewTimeApp.Helpers
 {
-    class loginClass
+    class AcademicDetailsClass
     {
-        public string userName { get; set; }
-        public string password { get; set; }
+
+        public string AcYear { get; set; }
+        public string AcSEM { get; set; }
     }
 }
