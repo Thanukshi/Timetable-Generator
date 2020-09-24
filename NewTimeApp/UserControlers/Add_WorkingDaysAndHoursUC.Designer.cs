@@ -45,10 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.backBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -66,7 +62,7 @@
             this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.ForeColor = System.Drawing.Color.Black;
-            this.resetBtn.Location = new System.Drawing.Point(321, 570);
+            this.resetBtn.Location = new System.Drawing.Point(313, 497);
             this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -105,7 +101,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(261, 425);
+            this.textBox1.Location = new System.Drawing.Point(261, 352);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 29);
             this.textBox1.TabIndex = 38;
@@ -114,7 +110,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(261, 509);
+            this.radioButton2.Location = new System.Drawing.Point(261, 436);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(150, 28);
             this.radioButton2.TabIndex = 37;
@@ -126,7 +122,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(261, 475);
+            this.radioButton1.Location = new System.Drawing.Point(261, 402);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(112, 28);
             this.radioButton1.TabIndex = 36;
@@ -138,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(60, 475);
+            this.label5.Location = new System.Drawing.Point(52, 402);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 35;
@@ -148,7 +144,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(60, 427);
+            this.label4.Location = new System.Drawing.Point(52, 354);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 25);
             this.label4.TabIndex = 34;
@@ -245,10 +241,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.resetBtn);
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.textBox1);
@@ -271,50 +263,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 642);
             this.panel1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "WeekDay",
-            "WeekEnd"});
-            this.comboBox2.Location = new System.Drawing.Point(261, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
-            this.comboBox2.TabIndex = 54;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(261, 380);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(93, 28);
-            this.checkBox7.TabIndex = 53;
-            this.checkBox7.Text = "Sunday";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(261, 346);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(102, 28);
-            this.checkBox6.TabIndex = 52;
-            this.checkBox6.Text = "Saturday";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 25);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Time Table Type";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox1
             // 
@@ -343,12 +292,12 @@
             this.backBtn.TabIndex = 25;
             this.backBtn.UseVisualStyleBackColor = true;
             // 
-            // Add_WorkingDaysAndHours
+            // Add_WorkingDaysAndHoursUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "Add_WorkingDaysAndHours";
+            this.Name = "Add_WorkingDaysAndHoursUC";
             this.Size = new System.Drawing.Size(750, 642);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -374,10 +323,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button backBtn;
     }

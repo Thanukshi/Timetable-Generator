@@ -336,6 +336,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
       <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="NewTimeAppDataSet.xsc">
       <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>

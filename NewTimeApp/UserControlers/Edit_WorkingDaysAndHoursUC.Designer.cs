@@ -75,6 +75,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 642);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // resetBtn
             // 
@@ -290,12 +291,12 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "TimeTable-WeekDay-Edit";
             // 
-            // Edit_WorkingDaysAndHours
+            // Edit_WorkingDaysAndHoursUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Name = "Edit_WorkingDaysAndHours";
+            this.Name = "Edit_WorkingDaysAndHoursUC";
             this.Size = new System.Drawing.Size(750, 642);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
