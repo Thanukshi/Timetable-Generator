@@ -222,7 +222,6 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\FiresharpConnection.cs" />
     <Compile Include="Helpers\loginClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
     <Compile Include="Login.cs">
