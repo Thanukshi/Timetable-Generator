@@ -209,6 +209,7 @@
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\MainControler.cs" />
+    <Compile Include="Helpers\WorkingDaysAndHours.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

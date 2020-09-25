@@ -47,6 +47,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.backBtn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.ForeColor = System.Drawing.Color.Black;
-            this.resetBtn.Location = new System.Drawing.Point(313, 497);
+            this.resetBtn.Location = new System.Drawing.Point(287, 532);
             this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -86,7 +88,7 @@
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.Black;
-            this.addBtn.Location = new System.Drawing.Point(114, 570);
+            this.addBtn.Location = new System.Drawing.Point(114, 532);
             this.addBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addBtn.Name = "addBtn";
             this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -97,6 +99,7 @@
             this.addBtn.Text = "Add";
             this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // textBox1
             // 
@@ -241,6 +244,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.resetBtn);
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.textBox1);
@@ -292,6 +297,25 @@
             this.backBtn.TabIndex = 25;
             this.backBtn.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label6.Location = new System.Drawing.Point(52, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 25);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Time Table Type";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox2.Location = new System.Drawing.Point(261, 85);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(121, 29);
+            this.textBox2.TabIndex = 42;
+            this.textBox2.Text = "Week Day";
+            // 
             // Add_WorkingDaysAndHoursUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +323,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Add_WorkingDaysAndHoursUC";
             this.Size = new System.Drawing.Size(750, 642);
+            this.Load += new System.EventHandler(this.Add_WorkingDaysAndHoursUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -325,5 +350,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
     }
 }

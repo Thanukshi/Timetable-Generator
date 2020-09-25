@@ -1,14 +1,19 @@
-﻿using NewTimeApp.Helpers;
-using NewTimeApp.UserControlers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
+using System.Linq.Expressions;
+using NewTimeApp.Helpers;
+using System.Collections;
+
 namespace NewTimeApp.UserControlers
 {
     public partial class View_WorkingDaysAndHoursUC : UserControl
@@ -18,6 +23,12 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
         }
 
+        IFirebaseConfig firebaseConfig = new FirebaseConfig()
+        {
+            AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
+            BasePath = "https://timetableapp-12161.firebaseio.com/"
+        };
+        IFirebaseClient firebaseClient;
         private void editBtn_Click(object sender, EventArgs e)
         {
             Edit_WorkingDaysAndHoursUC edit_workingDaysAndHoursUC = new Edit_WorkingDaysAndHoursUC();
@@ -26,7 +37,15 @@ namespace NewTimeApp.UserControlers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            try
+            {
+                firebaseClient = new FireSharp.FirebaseClient(firebaseConfig);
+                MessageBox.Show("connected ");
+            }
+            catch
+            {
+                MessageBox.Show("connect to the internet ");
+            }
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -125,9 +144,76 @@ namespace NewTimeApp.UserControlers
             editBtn.Visible = true;
             deleteBtn.Visible = true;
 
+            /*String timeSlot = "";
+
+
+            WorkingDaysAndHours getworkingDaysAndHourstype = new WorkingDaysAndHours();
+
+
+            FirebaseResponse firebaseResponse = await firebaseClient.GetTaskAsync("WorkingDaysAndHours/"+ getworkingDaysAndHourstype.TableType);
+             WorkingDaysAndHours getworkingDaysAndHours = firebaseResponse.ResultAs<WorkingDaysAndHours>();
+
+             if (getworkingDaysAndHours.TimeSlot == "One Hour")
+             {
+                 radioButton1.Checked = true;
+             }
+
+             if (getworkingDaysAndHours.TimeSlot == "Thirty minutes")
+             {
+                 radioButton2.Checked = true;
+             }
+
+
+
+             textBox1.Text = getworkingDaysAndHours.WorkingDays;
+             textBox2.Text = getworkingDaysAndHours.WorkingHours;
+
+
+             MessageBox.Show("done");*/
+
+
+            if (textBox3.Text == null) {
+                MessageBox.Show("null");
+            }
+            if (textBox3.Text != null)
+            {
+                
+                var result = firebaseClient.Get("WorkingDaysAndHours/" + textBox3.Text);
+                WorkingDaysAndHours getworkingDaysAndHours = result.ResultAs<WorkingDaysAndHours>();
+
+                if (getworkingDaysAndHours.TimeSlot == "One Hour")
+                {
+                    radioButton1.Checked = true;
+
+                }
+
+                if (getworkingDaysAndHours.TimeSlot == "Thirty minutes")
+                {
+                    radioButton2.Checked = true;
+                }
+
+
+                textBox1.Text = getworkingDaysAndHours.WorkingDays;
+                textBox2.Text = getworkingDaysAndHours.WorkingHours;
+
+                //SelectedDays = terms
+
+
+
+                //var set = firebaseClient.Set("WorkingDaysAndHours/" + timeSlot, workingDaysAndHours);
+                MessageBox.Show("done");
+            }
+
+
+
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
