@@ -13,27 +13,35 @@ using FireSharp.Interfaces;
 using FireSharp.Config;
 using FireSharp;
 using FireSharp.Response;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class academicDetails : UserControl
     {
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        private DataSet ds = new DataSet();
+        private SQLiteDataAdapter DB;
+
         public academicDetails()
         {
             InitializeComponent();
         }
 
-        IFirebaseConfig config = new FirebaseConfig()
+
+        /*IFirebaseConfig config = new FirebaseConfig()
         {
             AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
             BasePath = "https://timetableapp-12161.firebaseio.com/"
         };
 
         IFirebaseClient client;
-
+*/
         private void academicDetails_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 client = new FireSharp.FirebaseClient(config);
             }
@@ -41,7 +49,7 @@ namespace NewTimeApp.UserControlers
             {
                 CustomMessageBox.Show("Interrupt", "There was problem in the internet..");
             }
-
+*/
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -71,44 +79,22 @@ namespace NewTimeApp.UserControlers
 
                 /* var setter = client.Set("AcademicDetails/", academic);*/
 
-                for (int i )
-                PushResponse response = await client.PushAsync("AcademicDetails", academic);
-                if (response.Body != null)
+                /*if (academic.AcYear == acYear.Text && academic.AcSEM == acSem.Text)
                 {
-                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is generated.");
+                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is already saved.");
+
                 }
                 else
                 {
-                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is already saved.");
-                }
+                    PushResponse response = await client.PushAsync("AcademicDetails", academic);
+                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is generated.");
+                }*/
+
+
 
             }
         }
 
-        /*private void saveAcc_ClickAsync(object sender, EventArgs e)
-        {
-            if (acYear.SelectedIndex <= -1)
-            {
-                CustomMessageBox.Show("Academic Year", "Please select academic year.");
-            }
-            else if (acSem.SelectedIndex <= -1)
-            {
-                CustomMessageBox.Show("Academic Semester", "Please select academic semester.");
-            }
-            else
-            {
-                AcademicDetailsClass academic = new AcademicDetailsClass()
-                {
-                    AcYear = acYear.Text,
-                    AcSEM = acSem.Text
-                };
-
-                var setter = client.Set("AcademicDetails/", academic);
-                CustomMessageBox.Show("Academic Details", "" + acYear.Text + ". " + acSem.Text + " is generated.");
-            }
-
-
-        }*/
     }
 }
 
