@@ -91,12 +91,6 @@ namespace NewTimeApp.UserControlers
             }
         }
 
-
-        private void viewBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void updateDetailsBtn_Click(object sender, EventArgs e)
         {
 
@@ -104,35 +98,58 @@ namespace NewTimeApp.UserControlers
             {
                 if (isDoubleClick)
                 {
-                    try
+                    AcademicDetailsClass academic = new AcademicDetailsClass();
+                    academic.AcYear = acUpYear.Text;
+                    academic.AcSEM = acUpSem.Text;
+
+                    DB = new SQLiteDataAdapter("SELECT * FROM academicDetails WHERE acYear='" + academic.AcYear + "' AND acSem='" + academic.AcSEM + "'", sqlCon);
+                    dt = new DataTable();
+                    DB.Fill(dt);
+
+                    if (dt.Rows.Count >= 1)
                     {
-                        sqlCon.Open();
-                        sqlCom = new SQLiteCommand();
-                        sqlCom.CommandText = @"UPDATE member set firstname=@firstname, lastname=@lastname, address=@address WHERE ID='" + id + "'";
-                        sqlCom.Connection = sqlCon;
-                        sqlCom.Parameters.AddWithValue("@firstname", txt_firstname.Text);
-                        sqlCom.Parameters.AddWithValue("@lastname", txt_lastname.Text);
-
-                        int i = cmd.ExecuteNonQuery();
-
-                        if (i == 1)
-                        {
-                            MessageBox.Show("Successfully Updated!");
-                            txt_firstname.Text = "";
-                            txt_lastname.Text = "";
-                            txt_address.Text = "";
-                            ReadData();
-                            id = 0;
-                            dataGridView1.ClearSelection();
-                            dataGridView1.CurrentCell = null;
-                            isDoubleClick = false;
-                        }
-
-                        conn.Close();
+                        CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is already saved. Can not be updated.");
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+
+                        try
+                        {
+                            if ((academic.AcYear == "Y1" || academic.AcYear == "Y2" || academic.AcYear == "Y3" || academic.AcYear == "Y4") && (academic.AcSEM == "S1" || academic.AcSEM == "S2"))
+                            {
+                                sqlCon.Open();
+                                sqlCom = new SQLiteCommand();
+                                sqlCom.CommandText = @"UPDATE academicDetails set acYear=@acyear, acSem=@acsem WHERE acID ='" + id + "'";
+                                sqlCom.Connection = sqlCon;
+                                sqlCom.Parameters.AddWithValue("@acyear", academic.AcYear);
+                                sqlCom.Parameters.AddWithValue("@acsem", academic.AcSEM);
+                            }
+
+                            else
+                            {
+                                CustomMessageBox.Show("Error!", "Academic Year or Semester not in valid range.");
+                            }
+
+                            int i = sqlCom.ExecuteNonQuery();
+
+                            if (i == 1)
+                            {
+                                CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is updated successfully.");
+                                academic.AcYear = "";
+                                academic.AcSEM = "";
+                                ReadData();
+                                id = 0;
+                                academicDataGrid.ClearSelection();
+                                academicDataGrid.CurrentCell = null;
+                                isDoubleClick = false;
+                            }
+
+                            sqlCon.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            CustomMessageBox.Show("Error!", "" + ex.Message);
+                        }
                     }
                 }
             }
@@ -152,6 +169,48 @@ namespace NewTimeApp.UserControlers
             acUpYear.Text = academicDataGrid.SelectedRows[0].Cells[1].Value.ToString();
             acUpSem.Text = academicDataGrid.SelectedRows[0].Cells[2].Value.ToString();
             isDoubleClick = true;
+        }
+
+        private void dltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you to delete this record?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+
+                    AcademicDetailsClass academic = new AcademicDetailsClass();
+                    academic.AcYear = acUpYear.Text;
+                    academic.AcSEM = acUpSem.Text;
+
+                    sqlCon = new SQLiteConnection(connectString);
+                    sqlCon.Open();
+                    sqlCom = new SQLiteCommand();
+                    //id = Convert.ToInt32(academicDataGrid.SelectedRows[0].Cells[0].Value);
+                    sqlCom.CommandText = @"DELETE FROM academicDetails WHERE acID ='" + id + "'";
+                    sqlCom.Connection = sqlCon;
+                    int i = sqlCom.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        CustomMessageBox.Show("Delete Data", "" + academic.AcYear + "." + academic.AcSEM + " is deleted successfully.");
+                        id = 0;
+                        academicDataGrid.ClearSelection();
+                        academicDataGrid.CurrentCell = null;
+                        ReadData();
+                        academicDataGrid.ClearSelection();
+                        academicDataGrid.CurrentCell = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox.Show("Error!", "" + ex.Message);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
         }
     }
 }
