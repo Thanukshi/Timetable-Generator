@@ -14,6 +14,7 @@ using FireSharp.Config;
 using FireSharp;
 using FireSharp.Response;
 using System.Data.SQLite;
+using System.IO;
 
 namespace NewTimeApp.UserControlers
 {
@@ -22,34 +23,34 @@ namespace NewTimeApp.UserControlers
         private SQLiteConnection sqlCon;
         private SQLiteCommand sqlCom;
         private DataTable dt = new DataTable();
-        private DataSet ds = new DataSet();
         private SQLiteDataAdapter DB;
+        String connectString;
 
         public academicDetails()
         {
             InitializeComponent();
+            connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
+            GenerateDatabase();
         }
 
-
-        /*IFirebaseConfig config = new FirebaseConfig()
+        private void GenerateDatabase()
         {
-            AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
-            BasePath = "https://timetableapp-12161.firebaseio.com/"
-        };
+            String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            if (!File.Exists(path))
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                string sql = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
+                sqlCom = new SQLiteCommand(sql, sqlCon);
+                sqlCom.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+        }
 
-        IFirebaseClient client;
-*/
         private void academicDetails_Load(object sender, EventArgs e)
         {
-            /*try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                CustomMessageBox.Show("Interrupt", "There was problem in the internet..");
-            }
-*/
+
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(studentsUC, acPanel);
         }
 
-        private async void saveAcademic_Click(object sender, EventArgs e)
+        private void saveAcademic_Click(object sender, EventArgs e)
         {
             if (acYear.SelectedIndex <= -1)
             {
@@ -72,30 +73,50 @@ namespace NewTimeApp.UserControlers
             else
             {
                 AcademicDetailsClass academic = new AcademicDetailsClass();
-
                 academic.AcYear = acYear.Text;
                 academic.AcSEM = acSem.Text;
 
+                DB = new SQLiteDataAdapter("SELECT * FROM academicDetails WHERE acYear='" + academic.AcYear + "' AND acSem='" + academic.AcSEM + "'", sqlCon);
+                dt = new DataTable();
+                DB.Fill(dt);
 
-                /* var setter = client.Set("AcademicDetails/", academic);*/
-
-                /*if (academic.AcYear == acYear.Text && academic.AcSEM == acSem.Text)
+                if (dt.Rows.Count >= 1)
                 {
-                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is already saved.");
-
+                    CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is already saved.");
                 }
                 else
                 {
-                    PushResponse response = await client.PushAsync("AcademicDetails", academic);
-                    CustomMessageBox.Show("Academic Details", "" + acYear.Text + "." + acSem.Text + " is generated.");
-                }*/
 
+                    try
+                    {
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"INSERT INTO academicDetails (acYear, acSem) VALUES(@acyear, @acsem)";
+                        sqlCom.Connection = sqlCon;
+                        sqlCom.Parameters.Add(new SQLiteParameter("@acyear", academic.AcYear));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@acsem", academic.AcSEM));
 
+                        sqlCon.Open();
 
+                        int i = sqlCom.ExecuteNonQuery();
+
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is generated.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        CustomMessageBox.Show("Error!", " " + ex.Message);
+                    }
+                }
             }
-        }
 
+        }
     }
 }
+
+
+
 
 
