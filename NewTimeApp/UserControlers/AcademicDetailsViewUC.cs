@@ -59,6 +59,36 @@ namespace NewTimeApp.UserControlers
 
         private void AcademicDetailsViewUC_Load(object sender, EventArgs e)
         {
+            ReadData();
+        }
+
+        private void ReadData()
+        {
+            try
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                sqlCom = new SQLiteCommand();
+                String sql = "SELECT * FROM academicDetails";
+                DB = new SQLiteDataAdapter(sql, sqlCon);
+                ds.Reset();
+                DB.Fill(ds);
+                dt = ds.Tables[0];
+                academicDataGrid.DataSource = dt;
+                sqlCon.Close();
+                /*academicDataGrid.Columns[1].HeaderText = "Firstname";
+                academicDataGrid.Columns[2].HeaderText = "Lastname";
+                academicDataGrid.Columns[3].HeaderText = "Address";*/
+                academicDataGrid.Columns[0].Visible = false;
+                academicDataGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                academicDataGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                /*academicDataGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
+                academicDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -72,28 +102,56 @@ namespace NewTimeApp.UserControlers
 
             if (acUpYear.Text != "" && acUpSem.Text != "")
             {
-                /*                sqlCom = new SqlCommand("update AcademicDetails set acYear=@AcademicYear, acSem=@AcademicSemester where acID=@AcademicId", cons);
-                                cons.Open();
-                                sqlCom.Parameters.AddWithValue("@AcademicId", acedemicID);
-                                sqlCom.Parameters.AddWithValue("@AcademicYear", acUpYear.Text);
-                                sqlCom.Parameters.AddWithValue("@AcademicSemester", acUpSem.Text);
-                                sqlCom.ExecuteNonQuery();
-                                MessageBox.Show("Record Updated Successfully");
-                                cons.Close();
-                                FetchAcademicDetails();
-                                ClearData();*/
+                if (isDoubleClick)
+                {
+                    try
+                    {
+                        sqlCon.Open();
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"UPDATE member set firstname=@firstname, lastname=@lastname, address=@address WHERE ID='" + id + "'";
+                        sqlCom.Connection = sqlCon;
+                        sqlCom.Parameters.AddWithValue("@firstname", txt_firstname.Text);
+                        sqlCom.Parameters.AddWithValue("@lastname", txt_lastname.Text);
+
+                        int i = cmd.ExecuteNonQuery();
+
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Successfully Updated!");
+                            txt_firstname.Text = "";
+                            txt_lastname.Text = "";
+                            txt_address.Text = "";
+                            ReadData();
+                            id = 0;
+                            dataGridView1.ClearSelection();
+                            dataGridView1.CurrentCell = null;
+                            isDoubleClick = false;
+                        }
+
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Please Select Record to Update");
+                CustomMessageBox.Show("Error!", "Please Select Record to Update");
             }
         }
 
         private void academicDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*ID = Convert.ToInt32(academicDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
-            acUpYear.Text = academicDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-            acUpSem.Text = academicDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();*/
+            AcademicDetailsClass academic = new AcademicDetailsClass();
+            academic.AcYear = acUpYear.Text;
+            academic.AcSEM = acUpSem.Text;
+
+            id = Convert.ToInt32(academicDataGrid.SelectedRows[0].Cells[0].Value);
+            acUpYear.Text = academicDataGrid.SelectedRows[0].Cells[1].Value.ToString();
+            acUpSem.Text = academicDataGrid.SelectedRows[0].Cells[2].Value.ToString();
+            isDoubleClick = true;
         }
     }
 }
