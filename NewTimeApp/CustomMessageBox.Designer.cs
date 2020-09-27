@@ -45,9 +45,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.okBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 199);
+            this.panel1.Location = new System.Drawing.Point(0, 233);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 78);
+            this.panel1.Size = new System.Drawing.Size(677, 78);
             this.panel1.TabIndex = 0;
             // 
             // okBtn
@@ -62,7 +62,7 @@
             this.okBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okBtn.ForeColor = System.Drawing.Color.Black;
-            this.okBtn.Location = new System.Drawing.Point(189, 8);
+            this.okBtn.Location = new System.Drawing.Point(256, 8);
             this.okBtn.Name = "okBtn";
             this.okBtn.OnHoverBorderColor = System.Drawing.Color.White;
             this.okBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -83,7 +83,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(537, 30);
+            this.panelHeader.Size = new System.Drawing.Size(677, 30);
             this.panelHeader.TabIndex = 3;
             // 
             // titleOfPages
@@ -116,7 +116,7 @@
             this.closeBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(497, 1);
+            this.closeBtn.Location = new System.Drawing.Point(637, 1);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(30, 30);
             this.closeBtn.TabIndex = 9;
@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(537, 277);
+            this.ClientSize = new System.Drawing.Size(677, 311);
             this.Controls.Add(this.msgLable);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panel1);
