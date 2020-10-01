@@ -14,17 +14,17 @@ namespace NewTimeApp.UserControlers
 {
     public partial class roomUC : UserControl
     {
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
-        string roomID = "";
+        //SqlConnection sqlCon;
+        //SqlCommand sqlCom;
+        //string roomID = "";
 
         public roomUC()
         {
             InitializeComponent();
-            fillbuildingDetail();
-            string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
+            //fillbuildingDetail();
+            //string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
+            //sqlCon = new SqlConnection(con);
+            //sqlCon.Open();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(locatUC, roompanel);
         }
 
-        public void fillbuildingDetail()
+        /*public void fillbuildingDetail()
         {
             string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
             sqlCon = new SqlConnection(con);
@@ -67,12 +67,12 @@ namespace NewTimeApp.UserControlers
             {
                 MessageBox.Show(x.Message);
             }
-        }
+        }*/
 
 
         private void roomAddBtn_Click(object sender, EventArgs e)
         {
-            if (buildingNameCB.SelectedIndex <= -1)
+            /*if (buildingNameCB.SelectedIndex <= -1)
             {
                 MessageBox.Show("Select Building Name !!!");
                 buildingNameCB.Select();
@@ -122,7 +122,7 @@ namespace NewTimeApp.UserControlers
                 {
                     MessageBox.Show("Error:- " + ex.Message);
                 }
-            }
+            }*/
         }
 
         private void buildingNameCB_SelectedIndexChanged(object sender, EventArgs e)
