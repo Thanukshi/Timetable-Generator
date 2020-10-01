@@ -38,22 +38,23 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                /*string sql1 = "CREATE TABLE WorkingDays (" +
+                string sql1 = "CREATE TABLE WorkingDays (" +
                     "TableType VARCHAR PRIMARY KEY ," +
                     "WorkingDays VARCHAR (20) NOT NULL," +
                     "WorkingHours VARCHAR (50) NOT NULL," +
-                    "TimeSlot VARCHAR (20) NOT NULL)" ;*/
+                    "TimeSlot VARCHAR (20) NOT NULL)" ;
 
-                string sql1 = "CREATE TABLE WorkingDays(TableType VARCHAR PRIMARY KEY,WorkingDays VARCHAR (20) NOT NULL, WorkingHours VARCHAR (50) NOT NULL,TimeSlot VARCHAR (20) NOT NULL)";
+                string sql2 = "CREATE TABLE SelectedDays (" +
+                    "TableType VARCHAR,"+
+                    "SelectedDays VARCHAR (20) NOT NULL)";
 
-                /*string sql2 = "CREATE TABLE SelectedDays (" +
-                    "TableType VARCHAR PRIMARY KEY ,"+
-                    "SelectedDays VARCHAR (20) NOT NULL)";*/
+              
+
 
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
-               /* sqlCom = new SQLiteCommand(sql2, sqlCon);
-                sqlCom.ExecuteNonQuery();*/
+                sqlCom = new SQLiteCommand(sql2, sqlCon);
+                sqlCom.ExecuteNonQuery();
 
                 sqlCon.Close();
 
@@ -89,7 +90,8 @@ namespace NewTimeApp.UserControlers
             }
 
 
-            string[] SelectedDays = new string[7];
+            string[] SelectedDays = new string[5];
+
             //string[] SelectedDayslist = new string[7];
 
             if (checkBox1.Checked)
@@ -125,6 +127,8 @@ namespace NewTimeApp.UserControlers
 
 
             }
+
+            MessageBox.Show("done1");
             string[] terms = SelectedDayslist.ToArray();
             //MessageBox.Show();
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
@@ -132,7 +136,8 @@ namespace NewTimeApp.UserControlers
             workingDaysAndHours.WorkingDays = comboBox1.Text;
             workingDaysAndHours.WorkingHours = textBox1.Text;
             workingDaysAndHours.TimeSlot = timeSlot;
-
+            workingDaysAndHours.SelectedDays = terms;
+            MessageBox.Show("done2");
             //SelectedDays = terms
             int ti = 2;
             if (ti==1)
@@ -145,13 +150,33 @@ namespace NewTimeApp.UserControlers
                 {
                     sqlCon = new SQLiteConnection(connectString);
                     sqlCom = new SQLiteCommand();
-                    sqlCom.CommandText = @"INSERT INTO  WorkingDays(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@textBox2, @comboBox1,@textBox1,@timeSlot)";
+
+                    sqlCom.CommandText = @"INSERT INTO SelectedDays(TableType, SelectedDays) VALUES(@textBox2, @terms)";
+                    sqlCom.Connection = sqlCon;
+                    for (int x = 0; x < terms.Length; x++)
+                    {
+                        //MessageBox.Show("done4");
+                        if (SelectedDays != null)
+                        {
+                            //sqlCom.CommandText = @"INSERT INTO SelectedDays(TableType, SelectedDays) VALUES(@textBox2, @terms)";
+                            // sqlCom.Connection = sqlCon;
+                            sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
+                            sqlCom.Parameters.Add(new SQLiteParameter("@terms", workingDaysAndHours.SelectedDays[x]));
+                            MessageBox.Show("done4", workingDaysAndHours.SelectedDays[x]);
+                            sqlCom.ExecuteNonQuery();
+
+
+
+                        }
+                    }
+
+                    sqlCom.CommandText = @"INSERT INTO WorkingDays(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@textBox2, @comboBox1,@textBox1,@timeSlot)";
                     sqlCom.Connection = sqlCon;
                     sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
                     sqlCom.Parameters.Add(new SQLiteParameter("@comboBox1", workingDaysAndHours.WorkingDays));
                     sqlCom.Parameters.Add(new SQLiteParameter("@textBox1", workingDaysAndHours.WorkingHours));
                     sqlCom.Parameters.Add(new SQLiteParameter("@timeSlot", workingDaysAndHours.TimeSlot));
-
+                    
                     sqlCon.Open();
 
                     int i = sqlCom.ExecuteNonQuery();
