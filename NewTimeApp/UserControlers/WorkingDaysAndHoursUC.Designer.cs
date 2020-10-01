@@ -40,8 +40,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.ViewBtn);
-            this.panel1.Controls.Add(this.AddBtn);
+           // this.panel1.Controls.Add(this.ViewBtn);
+//            this.panel1.Controls.Add(this.AddBtn);
             this.panel1.Controls.Add(this.backBtn);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;

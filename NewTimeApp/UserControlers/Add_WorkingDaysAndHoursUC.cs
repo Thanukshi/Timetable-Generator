@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Response;
-using FireSharp.Interfaces;
 using System.Linq.Expressions;
 using NewTimeApp.Helpers;
 using System.Collections;
@@ -24,22 +21,10 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();      
         }
 
-        IFirebaseConfig firebaseConfig = new FirebaseConfig()
-        {
-            AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
-            BasePath = "https://timetableapp-12161.firebaseio.com/"
-        };
-        IFirebaseClient firebaseClient;
-
+       
         private void Add_WorkingDaysAndHoursUC_Load(object sender, EventArgs e)
         {
-           try{
-                firebaseClient = new FireSharp.FirebaseClient(firebaseConfig);
-            }
-            catch
-            {
-                MessageBox.Show("connect to the internet ");
-            }
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -113,8 +98,7 @@ namespace NewTimeApp.UserControlers
 
             };
 
-            var setter = firebaseClient.Set("WorkingDaysAndHours/"+ textBox2.Text, workingDaysAndHours);
-            MessageBox.Show("data inserted");
+           
 
             WorkingDaysAndHoursUC workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
             MainControler.showControl(workingDaysAndHoursUC, panel1);
