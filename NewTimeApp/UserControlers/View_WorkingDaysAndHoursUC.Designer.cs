@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_WorkingDaysAndHoursUC));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -51,8 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -92,11 +92,34 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.backBtn);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(698, 642);
+            this.panel1.Size = new System.Drawing.Size(750, 642);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Thistle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox3.Location = new System.Drawing.Point(275, 96);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(136, 29);
+            this.textBox3.TabIndex = 63;
+            this.textBox3.Text = "Week Day";
+            this.textBox3.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(75, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 25);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "Time Table Type";
+            this.label6.Visible = false;
             // 
             // radioButton2
             // 
@@ -269,7 +292,7 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.Black;
-            this.deleteBtn.Location = new System.Drawing.Point(312, 549);
+            this.deleteBtn.Location = new System.Drawing.Point(397, 549);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -294,7 +317,7 @@
             this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.Black;
-            this.editBtn.Location = new System.Drawing.Point(90, 549);
+            this.editBtn.Location = new System.Drawing.Point(171, 549);
             this.editBtn.Margin = new System.Windows.Forms.Padding(2);
             this.editBtn.Name = "editBtn";
             this.editBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -375,28 +398,6 @@
             this.label1.Size = new System.Drawing.Size(324, 35);
             this.label1.TabIndex = 26;
             this.label1.Text = "TimeTable-WeekDay-View";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 25);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "Time Table Type";
-            this.label6.Visible = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.Thistle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox3.Location = new System.Drawing.Point(275, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 29);
-            this.textBox3.TabIndex = 63;
-            this.textBox3.Text = "Week Day";
-            this.textBox3.Visible = false;
             // 
             // View_WorkingDaysAndHoursUC
             // 
