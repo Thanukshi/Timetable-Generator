@@ -163,9 +163,9 @@ namespace NewTimeApp.UserControlers
                             sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
                             sqlCom.Parameters.Add(new SQLiteParameter("@terms", workingDaysAndHours.SelectedDays[x]));
                             MessageBox.Show("done4", workingDaysAndHours.SelectedDays[x]);
+                            sqlCon.Open();
                             sqlCom.ExecuteNonQuery();
-
-
+                            sqlCon.Close();
 
                         }
                     }
