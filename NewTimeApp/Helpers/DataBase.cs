@@ -11,14 +11,14 @@ namespace NewTimeApp
 {
     class DataBase
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             SQLiteConnection connection;
             connection = CreateConnection();
             CreateTable(connection);
            // InsertData(connection);
             //ReadData(connection);
-        }
+        }*/
 
         static SQLiteConnection CreateConnection()
         {

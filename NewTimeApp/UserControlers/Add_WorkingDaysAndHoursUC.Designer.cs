@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_WorkingDaysAndHoursUC));
-            this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.addBtn = new ePOSOne.btnProduct.Button_WOC();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -45,61 +43,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.backBtn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.addBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // resetBtn
-            // 
-            this.resetBtn.BackColor = System.Drawing.Color.White;
-            this.resetBtn.BorderColor = System.Drawing.Color.Black;
-            this.resetBtn.ButtonColor = System.Drawing.Color.White;
-            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.resetBtn.FlatAppearance.BorderSize = 0;
-            this.resetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.resetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetBtn.ForeColor = System.Drawing.Color.Black;
-            this.resetBtn.Location = new System.Drawing.Point(287, 532);
-            this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.resetBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.resetBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.resetBtn.Size = new System.Drawing.Size(124, 54);
-            this.resetBtn.TabIndex = 40;
-            this.resetBtn.Text = "Reset";
-            this.resetBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.resetBtn.UseVisualStyleBackColor = false;
-            // 
-            // addBtn
-            // 
-            this.addBtn.BackColor = System.Drawing.Color.White;
-            this.addBtn.BorderColor = System.Drawing.Color.Black;
-            this.addBtn.ButtonColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.BorderSize = 0;
-            this.addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.Black;
-            this.addBtn.Location = new System.Drawing.Point(114, 532);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.addBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.addBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addBtn.Size = new System.Drawing.Size(124, 54);
-            this.addBtn.TabIndex = 39;
-            this.addBtn.Text = "Add";
-            this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addBtn.UseVisualStyleBackColor = false;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // textBox1
             // 
@@ -246,8 +197,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.resetBtn);
-            this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
@@ -262,6 +211,8 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.backBtn);
+            this.panel1.Controls.Add(this.addBtn);
+            this.panel1.Controls.Add(this.resetBtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -269,6 +220,25 @@
             this.panel1.Size = new System.Drawing.Size(750, 642);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox2.Location = new System.Drawing.Point(261, 85);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(121, 29);
+            this.textBox2.TabIndex = 42;
+            this.textBox2.Text = "Week Day";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label6.Location = new System.Drawing.Point(52, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 25);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Time Table Type";
             // 
             // comboBox1
             // 
@@ -296,25 +266,57 @@
             this.backBtn.Size = new System.Drawing.Size(64, 46);
             this.backBtn.TabIndex = 25;
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // label6
+            // addBtn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(52, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 25);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Time Table Type";
+            this.addBtn.BackColor = System.Drawing.Color.White;
+            this.addBtn.BorderColor = System.Drawing.Color.Black;
+            this.addBtn.ButtonColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderSize = 0;
+            this.addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.Black;
+            this.addBtn.Location = new System.Drawing.Point(131, 482);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.addBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.addBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.addBtn.Size = new System.Drawing.Size(161, 42);
+            this.addBtn.TabIndex = 26;
+            this.addBtn.Text = "Add";
+            this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // textBox2
+            // resetBtn
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox2.Location = new System.Drawing.Point(261, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 29);
-            this.textBox2.TabIndex = 42;
-            this.textBox2.Text = "Week Day";
+            this.resetBtn.BackColor = System.Drawing.Color.White;
+            this.resetBtn.BorderColor = System.Drawing.Color.Black;
+            this.resetBtn.ButtonColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.BorderSize = 0;
+            this.resetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.resetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetBtn.ForeColor = System.Drawing.Color.Black;
+            this.resetBtn.Location = new System.Drawing.Point(358, 482);
+            this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.resetBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.resetBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.resetBtn.Size = new System.Drawing.Size(159, 42);
+            this.resetBtn.TabIndex = 26;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // Add_WorkingDaysAndHoursUC
             // 

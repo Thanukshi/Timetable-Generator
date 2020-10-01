@@ -105,6 +105,19 @@ namespace NewTimeApp.UserControlers
 
         }
 
-        
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }

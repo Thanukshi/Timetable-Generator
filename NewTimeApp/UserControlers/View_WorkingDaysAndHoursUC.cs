@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Response;
-using FireSharp.Interfaces;
+
 using System.Linq.Expressions;
 using NewTimeApp.Helpers;
 using System.Collections;
@@ -23,12 +21,7 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
         }
 
-        IFirebaseConfig firebaseConfig = new FirebaseConfig()
-        {
-            AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
-            BasePath = "https://timetableapp-12161.firebaseio.com/"
-        };
-        IFirebaseClient firebaseClient;
+        
         private void editBtn_Click(object sender, EventArgs e)
         {
             Edit_WorkingDaysAndHoursUC edit_workingDaysAndHoursUC = new Edit_WorkingDaysAndHoursUC();
@@ -37,15 +30,7 @@ namespace NewTimeApp.UserControlers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            try
-            {
-                firebaseClient = new FireSharp.FirebaseClient(firebaseConfig);
-                MessageBox.Show("connected ");
-            }
-            catch
-            {
-                MessageBox.Show("connect to the internet ");
-            }
+           
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -178,8 +163,8 @@ namespace NewTimeApp.UserControlers
             if (textBox3.Text != null)
             {
                 
-                var result = firebaseClient.Get("WorkingDaysAndHours/" + textBox3.Text);
-                WorkingDaysAndHours getworkingDaysAndHours = result.ResultAs<WorkingDaysAndHours>();
+               
+                WorkingDaysAndHours getworkingDaysAndHours = new WorkingDaysAndHours();
 
                 if (getworkingDaysAndHours.TimeSlot == "One Hour")
                 {

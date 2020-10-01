@@ -31,5 +31,10 @@ namespace NewTimeApp.UserControlers
             View_WorkingDaysAndHoursUC view_workingDaysAndHoursUC = new View_WorkingDaysAndHoursUC();
             MainControler.showControl(view_workingDaysAndHoursUC, panel1);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
