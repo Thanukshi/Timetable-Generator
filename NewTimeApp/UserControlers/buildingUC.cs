@@ -9,22 +9,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using FireSharp.Interfaces;
+using FireSharp.Config;
+using FireSharp;
+using FireSharp.Response;
+using System.Data.SQLite;
+using System.IO;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class buildingUC : UserControl
     {
 
-        /*string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
-        string buildingID = "";*/
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        private SQLiteDataAdapter DB;
+        String connectString;
 
         public buildingUC()
         {
             InitializeComponent();
-            //sqlCon = new SqlConnection(con);
-            //sqlCon.Open();
+            //connectString = @"Data Source=" + Application.StartupPath + @"\NewTimeApp\bin\Debug\TimeAppDB.db; version=3";
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
+            GenerateDatabase();
         }
 
         private void label1_Click(object sender, EventArgs e)
