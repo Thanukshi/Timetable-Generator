@@ -79,9 +79,9 @@ namespace NewTimeApp.UserControlers
                 {
                     MessageBox.Show("Error:- " + ex.Message);
                 }
-            }
+            }*/
 
-        }*/
+        }
 
         private void buildingNameTB_TextChanged(object sender, EventArgs e)
         {
