@@ -29,14 +29,17 @@ namespace NewTimeApp.UserControlers
         public academicDetails()
         {
             InitializeComponent();
-            connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            //connectString = @"Data Source=" + Application.StartupPath + @"\NewTimeApp\bin\Debug\TimeAppDB.db; version=3";
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             sqlCon = new SQLiteConnection(connectString);
             GenerateDatabase();
         }
 
         private void GenerateDatabase()
         {
-            String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             if (!File.Exists(path))
             {
                 sqlCon = new SQLiteConnection(connectString);
@@ -111,6 +114,11 @@ namespace NewTimeApp.UserControlers
                     }
                 }
             }
+
+        }
+
+        private void acPanel_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

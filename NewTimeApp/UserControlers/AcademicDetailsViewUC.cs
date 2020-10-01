@@ -28,7 +28,8 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
             StyleDataGrid();
-            connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             sqlCon = new SQLiteConnection(connectString);
         }
 
@@ -173,43 +174,51 @@ namespace NewTimeApp.UserControlers
 
         private void dltBtn_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you to delete this record?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dialogResult == DialogResult.Yes)
+            if (acUpYear.Text != "" && acUpSem.Text != "")
             {
-                try
+                DialogResult dialogResult = MessageBox.Show("Do you to delete this record?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                //DialogResult dialogResult = CustomMessageBox.Show("Warning", "Do you to delete this record?", MessageBoxButtons.OK);
+
+                if (dialogResult == DialogResult.Yes)
                 {
-
-                    AcademicDetailsClass academic = new AcademicDetailsClass();
-                    academic.AcYear = acUpYear.Text;
-                    academic.AcSEM = acUpSem.Text;
-
-                    sqlCon = new SQLiteConnection(connectString);
-                    sqlCon.Open();
-                    sqlCom = new SQLiteCommand();
-                    //id = Convert.ToInt32(academicDataGrid.SelectedRows[0].Cells[0].Value);
-                    sqlCom.CommandText = @"DELETE FROM academicDetails WHERE acID ='" + id + "'";
-                    sqlCom.Connection = sqlCon;
-                    int i = sqlCom.ExecuteNonQuery();
-                    if (i == 1)
+                    try
                     {
-                        CustomMessageBox.Show("Delete Data", "" + academic.AcYear + "." + academic.AcSEM + " is deleted successfully.");
-                        id = 0;
-                        academicDataGrid.ClearSelection();
-                        academicDataGrid.CurrentCell = null;
-                        ReadData();
-                        academicDataGrid.ClearSelection();
-                        academicDataGrid.CurrentCell = null;
+
+                        AcademicDetailsClass academic = new AcademicDetailsClass();
+                        academic.AcYear = acUpYear.Text;
+                        academic.AcSEM = acUpSem.Text;
+
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCon.Open();
+                        sqlCom = new SQLiteCommand();
+                        //id = Convert.ToInt32(academicDataGrid.SelectedRows[0].Cells[0].Value);
+                        sqlCom.CommandText = @"DELETE FROM academicDetails WHERE acID ='" + id + "'";
+                        sqlCom.Connection = sqlCon;
+                        int i = sqlCom.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Delete Data", "" + academic.AcYear + "." + academic.AcSEM + " is deleted successfully.");
+                            id = 0;
+                            academicDataGrid.ClearSelection();
+                            academicDataGrid.CurrentCell = null;
+                            ReadData();
+                            academicDataGrid.ClearSelection();
+                            academicDataGrid.CurrentCell = null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        CustomMessageBox.Show("Error!", "" + ex.Message);
                     }
                 }
-                catch (Exception ex)
+                else if (dialogResult == DialogResult.No)
                 {
-                    CustomMessageBox.Show("Error!", "" + ex.Message);
+
                 }
             }
-            else if (dialogResult == DialogResult.No)
+            else
             {
-
+                CustomMessageBox.Show("Error!", "Please Select Record to Delete");
             }
         }
     }

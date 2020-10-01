@@ -42,5 +42,10 @@ namespace NewTimeApp
         {
             this.Close();
         }
+
+        private void CustomMessageBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

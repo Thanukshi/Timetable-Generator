@@ -45,9 +45,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.okBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 233);
+            this.panel1.Location = new System.Drawing.Point(0, 190);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(677, 78);
+            this.panel1.Size = new System.Drawing.Size(508, 63);
             this.panel1.TabIndex = 0;
             // 
             // okBtn
@@ -60,14 +61,15 @@
             this.okBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.okBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.okBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.okBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.okBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okBtn.ForeColor = System.Drawing.Color.Black;
-            this.okBtn.Location = new System.Drawing.Point(256, 8);
+            this.okBtn.Location = new System.Drawing.Point(192, 6);
+            this.okBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.okBtn.Name = "okBtn";
             this.okBtn.OnHoverBorderColor = System.Drawing.Color.White;
             this.okBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.okBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.okBtn.Size = new System.Drawing.Size(147, 58);
+            this.okBtn.Size = new System.Drawing.Size(110, 47);
             this.okBtn.TabIndex = 21;
             this.okBtn.Text = "OK";
             this.okBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -82,8 +84,9 @@
             this.panelHeader.Controls.Add(this.closeBtn);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(677, 30);
+            this.panelHeader.Size = new System.Drawing.Size(508, 24);
             this.panelHeader.TabIndex = 3;
             // 
             // titleOfPages
@@ -92,9 +95,10 @@
             this.titleOfPages.BackColor = System.Drawing.Color.Transparent;
             this.titleOfPages.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleOfPages.ForeColor = System.Drawing.Color.White;
-            this.titleOfPages.Location = new System.Drawing.Point(40, 1);
+            this.titleOfPages.Location = new System.Drawing.Point(30, 1);
+            this.titleOfPages.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleOfPages.Name = "titleOfPages";
-            this.titleOfPages.Size = new System.Drawing.Size(0, 28);
+            this.titleOfPages.Size = new System.Drawing.Size(0, 23);
             this.titleOfPages.TabIndex = 12;
             // 
             // msgTitle
@@ -103,9 +107,10 @@
             this.msgTitle.BackColor = System.Drawing.Color.Transparent;
             this.msgTitle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msgTitle.ForeColor = System.Drawing.Color.White;
-            this.msgTitle.Location = new System.Drawing.Point(216, 2);
+            this.msgTitle.Location = new System.Drawing.Point(162, 2);
+            this.msgTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.msgTitle.Name = "msgTitle";
-            this.msgTitle.Size = new System.Drawing.Size(0, 28);
+            this.msgTitle.Size = new System.Drawing.Size(0, 23);
             this.msgTitle.TabIndex = 10;
             // 
             // closeBtn
@@ -116,9 +121,10 @@
             this.closeBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
             this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(637, 1);
+            this.closeBtn.Location = new System.Drawing.Point(478, 1);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(30, 30);
+            this.closeBtn.Size = new System.Drawing.Size(22, 24);
             this.closeBtn.TabIndex = 9;
             this.closeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -130,27 +136,30 @@
             this.msgLable.BackColor = System.Drawing.Color.Transparent;
             this.msgLable.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msgLable.ForeColor = System.Drawing.Color.Black;
-            this.msgLable.Location = new System.Drawing.Point(40, 102);
+            this.msgLable.Location = new System.Drawing.Point(30, 83);
+            this.msgLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.msgLable.Name = "msgLable";
-            this.msgLable.Size = new System.Drawing.Size(0, 33);
+            this.msgLable.Size = new System.Drawing.Size(0, 26);
             this.msgLable.TabIndex = 11;
             this.msgLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CustomMessageBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(677, 311);
+            this.ClientSize = new System.Drawing.Size(508, 253);
             this.Controls.Add(this.msgLable);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CustomMessageBox";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomMessageBox";
+            this.Load += new System.EventHandler(this.CustomMessageBox_Load);
             this.panel1.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
