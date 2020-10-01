@@ -41,7 +41,7 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE buildingDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL)";
+                string sql = "CREATE TABLE buildingDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL)";
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
@@ -68,15 +68,15 @@ namespace NewTimeApp.UserControlers
 
         private void buldingAddBtn_Click(object sender, EventArgs e)
         {
-            if (buildingName.SelectedIndex <= -1)
+            if (string.IsNullOrWhiteSpace(buildingNameTB.Text))
             {
-                CustomMessageBox.Show("Building Name", "Please  enter the Building Name.");
+                CustomMessageBox.Show("Building Name", "Please  enter valid Building Name.");
                 
             }
             else
                 {
                 BuildingClass building = new BuildingClass();
-                building.buildingName = buildingName.Text;
+                building.buildingName = buildingNameTB.Text;
                 
 
                 DB = new SQLiteDataAdapter("SELECT * FROM buildingDetails WHERE buildingName='" + building.buildingName + "' ", sqlCon);
@@ -105,7 +105,7 @@ namespace NewTimeApp.UserControlers
 
                         if (i == 1)
                         {
-                            CustomMessageBox.Show("Building Details", "" + building.buildingName + " is generated.");
+                            CustomMessageBox.Show("Building Details", "" + building.buildingName + " is saved.");
                         }
                     }
                     catch (Exception ex)
