@@ -9,10 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
-using FireSharp.Interfaces;
-using FireSharp.Config;
-using FireSharp;
-using FireSharp.Response;
 using System.Data.SQLite;
 using System.IO;
 
@@ -45,7 +41,7 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
+                string sql = "CREATE TABLE buildingDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL)";
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
@@ -72,39 +68,52 @@ namespace NewTimeApp.UserControlers
 
         private void buldingAddBtn_Click(object sender, EventArgs e)
         {
-            /*if (string.IsNullOrWhiteSpace(buildingNameTB.Text))
+            if (buildingName.SelectedIndex <= -1)
             {
-                MessageBox.Show("Enter Building Name !!!");
-                buildingNameTB.Select();
+                CustomMessageBox.Show("Building Name", "Please  enter the Building Name.");
+                
             }
             else
-            {
-                try
                 {
-                    if (sqlCon.State == ConnectionState.Closed)
+                BuildingClass building = new BuildingClass();
+                building.buildingName = buildingName.Text;
+                
+
+                DB = new SQLiteDataAdapter("SELECT * FROM buildingDetails WHERE buildingName='" + building.buildingName + "' ", sqlCon);
+                dt = new DataTable();
+                DB.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    CustomMessageBox.Show("Building Details", "" + building.buildingName + " is already saved.");
+                }
+                else
+                {
+
+                    try
                     {
-                        sqlCon.Open();
-                    }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("buildDetail", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@buildingID", buildingID);
-                    sqlCom.Parameters.AddWithValue("@buildingName", buildingNameTB.Text);
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
-                    {
-                        MessageBox.Show("Record Added Successfully !!!");
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"INSERT INTO buildingDetails (buildingName) VALUES(@buildingName)";
+                        sqlCom.Connection = sqlCon;
+                        sqlCom.Parameters.Add(new SQLiteParameter("@buildingName", building.buildingName));
                         
+
+                        sqlCon.Open();
+
+                        int i = sqlCom.ExecuteNonQuery();
+
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Building Details", "" + building.buildingName + " is generated.");
+                        }
                     }
-                    else
-                        MessageBox.Show("Please Try Again !!!");
+                    catch (Exception ex)
+                    {
+                        CustomMessageBox.Show("Error!", " " + ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error:- " + ex.Message);
-                }
-            }*/
+            }
 
         }
 
