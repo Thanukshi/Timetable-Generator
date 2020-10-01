@@ -10,18 +10,55 @@ using System.Windows.Forms;
 using System.Linq.Expressions;
 using NewTimeApp.Helpers;
 using System.Collections;
-
+using System.Data.SQLite;
+using System.IO;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class Add_WorkingDaysAndHoursUC : UserControl
     {
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        private SQLiteDataAdapter DB;
+        String connectString;
+
         public Add_WorkingDaysAndHoursUC()
         {
-            InitializeComponent();      
+            InitializeComponent();
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            sqlCon = new SQLiteConnection(connectString);
+            GenerateDatabase();
         }
 
-       
+        private void GenerateDatabase()
+        {
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            if (!File.Exists(path))
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                string sql1 = "CREATE TABLE WorkingDays (" +
+                    "TableType VARCHAR PRIMARY KEY ," +
+                    "WorkingDays VARCHAR (20) NOT NULL," +
+                    "WorkingHours VARCHAR (50) NOT NULL," +
+                    "TimeSlot VARCHAR (20) NOT NULL)" ;
+
+                string sql2 = "CREATE TABLE SelectedDays (" +
+                    "TableType VARCHAR PRIMARY KEY ,"+
+                    "SelectedDays VARCHAR (20) NOT NULL)";
+
+                sqlCom = new SQLiteCommand(sql1, sqlCon);
+                sqlCom.ExecuteNonQuery();
+                sqlCom = new SQLiteCommand(sql2, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCon.Close();
+
+                
+            }
+        }
+
         private void Add_WorkingDaysAndHoursUC_Load(object sender, EventArgs e)
         {
            
@@ -88,15 +125,46 @@ namespace NewTimeApp.UserControlers
             }
             string[] terms = SelectedDayslist.ToArray();
             //MessageBox.Show();
-            WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours()
-            {
-                TableType = textBox2.Text,
-                WorkingDays = comboBox1.Text,
-                WorkingHours = textBox1.Text,
-                TimeSlot = timeSlot,
-                SelectedDays = terms
+            WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
+            workingDaysAndHours.TableType = textBox2.Text;
+            workingDaysAndHours.WorkingDays = comboBox1.Text;
+            workingDaysAndHours.WorkingHours = textBox1.Text;
+            workingDaysAndHours.TimeSlot = timeSlot;
 
-            };
+            //SelectedDays = terms
+            int ti = 2;
+            if (ti==1)
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    sqlCon = new SQLiteConnection(connectString);
+                    sqlCom = new SQLiteCommand();
+                    sqlCom.CommandText = @"INSERT INTO academicDetails(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@textBox2, @comboBox1,@textBox1,@timeSlot)";
+                    sqlCom.Connection = sqlCon;
+                    sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
+                    sqlCom.Parameters.Add(new SQLiteParameter("@comboBox1", workingDaysAndHours.WorkingDays));
+                    sqlCom.Parameters.Add(new SQLiteParameter("@textBox1", workingDaysAndHours.WorkingHours));
+                    sqlCom.Parameters.Add(new SQLiteParameter("@timeSlot", workingDaysAndHours.TimeSlot));
+
+                    sqlCon.Open();
+
+                    int i = sqlCom.ExecuteNonQuery();
+
+                    if (i == 1)
+                    {
+                        CustomMessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +"is saved!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox.Show("Error!", " " + ex.Message);
+                }
+            }
+            
 
            
 
