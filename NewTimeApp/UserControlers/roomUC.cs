@@ -9,22 +9,43 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using System.Data.SQLite;
+using System.IO;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class roomUC : UserControl
     {
-        //SqlConnection sqlCon;
-        //SqlCommand sqlCom;
-        //string roomID = "";
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        private SQLiteDataAdapter DB;
+        String connectString;
 
         public roomUC()
         {
             InitializeComponent();
             //fillbuildingDetail();
-            //string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
-            //sqlCon = new SqlConnection(con);
-            //sqlCon.Open();
+            //connectString = @"Data Source=" + Application.StartupPath + @"\NewTimeApp\bin\Debug\TimeAppDB.db; version=3";
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
+            GenerateDatabase();
+        }
+
+        private void GenerateDatabase()
+        {
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            if (!File.Exists(path))
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity INT NOT NULL )";
+                sqlCom = new SQLiteCommand(sql, sqlCon);
+                sqlCom.ExecuteNonQuery();
+                sqlCon.Close();
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,8 +68,8 @@ namespace NewTimeApp.UserControlers
 
         /*public void fillbuildingDetail()
         {
-            string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True"; 
-            sqlCon = new SqlConnection(con);
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3"; 
+            sqlCon = new SqlConnection(sqlCon);
             string qry = "SELECT * FROM buildingDetails";
             sqlCom = new SqlCommand(qry, sqlCon);
             SqlDataReader sqlDataReader;
@@ -65,64 +86,76 @@ namespace NewTimeApp.UserControlers
             }
             catch (SqlException x)
             {
-                MessageBox.Show(x.Message);
+                CustomMessageBox.Show(x.Message);
             }
         }*/
 
 
         private void roomAddBtn_Click(object sender, EventArgs e)
         {
-            /*if (buildingNameCB.SelectedIndex <= -1)
+            if (buildingNameCB.SelectedIndex <= -1)
             {
-                MessageBox.Show("Select Building Name !!!");
-                buildingNameCB.Select();
+                CustomMessageBox.Show("Building Name", "Please select Building name.");
             }
             else if (string.IsNullOrWhiteSpace(RoomNameTB.Text))
             {
-                MessageBox.Show("Enter Room Name !!!");
-                RoomNameTB.Select();
+                 CustomMessageBox.Show("Room Name", "Please  enter valid Room Name.");
             }
             else if (RoomTypeTB.SelectedIndex <= -1)
             {
-                MessageBox.Show("Select Room Type !!!");
-                RoomTypeTB.Select();
+                CustomMessageBox.Show("Room Type", "Please select Room Type.");
+                
             }
             else if (capacityCB.SelectedIndex <= -1)
             {
-                MessageBox.Show("Select Room Capacity !!!");
-                capacityCB.Select();
+                CustomMessageBox.Show("Capacity", "Please select capasity.");
+                
             }
             else
             {
-                try
+                RoomClass room = new RoomClass();
+                    room.buildingName = buildingNameCB.Text;
+                    room.roomName = RoomNameTB.Text;
+                    room.roomType = RoomTypeTB.Text;
+                    room.capasity = capacityCB.Text;
+
+                DB = new SQLiteDataAdapter("SELECT * FROM roomDetails WHERE buildingName='" + room.buildingName + "' AND roomName='" + room.roomName + "' AND roomType='" + room.roomType + "'AND capasity='" + room.capasity + "'", sqlCon);
+                dt = new DataTable();
+                DB.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
                 {
-                    if (sqlCon.State == ConnectionState.Closed)
+                    CustomMessageBox.Show("Room Details", "" + room.roomName + " is already saved.");
+                }
+                else
+                {
+
+                    try
                     {
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"INSERT INTO roomDetails (buildingName, roomName,roomType, capasity) VALUES(@buildingName, @roomName, @roomType, @capasity)";
+                        sqlCom.Connection = sqlCon;
+                        sqlCom.Parameters.Add(new SQLiteParameter("@buildingName", room.buildingName));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@roomName", room.roomName));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@roomType", room.roomType));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@capasity", room.capasity));
+
                         sqlCon.Open();
+
+                        int i = sqlCom.ExecuteNonQuery();
+
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Room Details", "" + room.roomName + " is saved.");
+                        }
                     }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("spRoomDetail", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@roomID", roomID);
-                    sqlCom.Parameters.AddWithValue("@buildingName", buildingNameCB.Text);
-                    sqlCom.Parameters.AddWithValue("@roomName", RoomNameTB.Text);
-                    sqlCom.Parameters.AddWithValue("@roomType", RoomNameTB.Text);
-                    sqlCom.Parameters.AddWithValue("@capacity", capacityCB.Text);
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Record Saved Successfully !!!");
-                   
+                        CustomMessageBox.Show("Error!", " " + ex.Message);
                     }
-                    else
-                        MessageBox.Show("Please Try Again !!!");
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error:- " + ex.Message);
-                }
-            }*/
+            }
         }
 
         private void buildingNameCB_SelectedIndexChanged(object sender, EventArgs e)
