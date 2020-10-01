@@ -162,6 +162,7 @@
     </Compile>
     <Compile Include="Helpers\BuildingClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
+    <Compile Include="Helpers\RoomClass.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

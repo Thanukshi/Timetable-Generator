@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace NewTimeApp.Helpers
 {
-    class BuildingClass
+    class RoomClass
     {
         public string buildingName { get; set; }
+
+        public string roomName { get; set; }
+
+        public string roomType { get; set; }
+
+        public int capasity { get; set; }
     }
 }
