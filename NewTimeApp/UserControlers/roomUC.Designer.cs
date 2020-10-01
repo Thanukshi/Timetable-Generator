@@ -43,12 +43,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.roompanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // roompanel
             // 
             this.roompanel.BackColor = System.Drawing.Color.White;
+            this.roompanel.Controls.Add(this.button_WOC1);
             this.roompanel.Controls.Add(this.roomAddBtn);
             this.roompanel.Controls.Add(this.backBtn);
             this.roompanel.Controls.Add(this.capacityCB);
@@ -210,6 +212,21 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BorderColor = System.Drawing.Color.Silver;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
+            this.button_WOC1.Location = new System.Drawing.Point(0, 0);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.button_WOC1.Size = new System.Drawing.Size(75, 23);
+            this.button_WOC1.TabIndex = 27;
+            this.button_WOC1.Text = "button_WOC1";
+            this.button_WOC1.TextColor = System.Drawing.Color.White;
+            this.button_WOC1.UseVisualStyleBackColor = true;
+            // 
             // roomUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,5 +255,6 @@
         private System.Windows.Forms.ComboBox capacityCB;
         private System.Windows.Forms.Button backBtn;
         private ePOSOne.btnProduct.Button_WOC roomAddBtn;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
     }
 }
