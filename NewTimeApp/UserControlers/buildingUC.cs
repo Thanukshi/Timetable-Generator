@@ -47,7 +47,7 @@ namespace NewTimeApp.UserControlers
 
         private void buldingAddBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(buildingNameTB.Text))
+            /*if (string.IsNullOrWhiteSpace(buildingNameTB.Text))
             {
                 MessageBox.Show("Enter Building Name !!!");
                 buildingNameTB.Select();
@@ -81,7 +81,7 @@ namespace NewTimeApp.UserControlers
                 }
             }
 
-        }
+        }*/
 
         private void buildingNameTB_TextChanged(object sender, EventArgs e)
         {
