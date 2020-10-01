@@ -53,6 +53,11 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(studentsUC, degreePanel);
         }
 
+        private void degreePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void saveDe_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(programNameD.Text))
