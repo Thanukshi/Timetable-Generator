@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AcademicDetailsViewUC));
             this.academicViewPanel = new System.Windows.Forms.Panel();
+            this.acUpSem = new System.Windows.Forms.TextBox();
+            this.dltBtn = new ePOSOne.btnProduct.Button_WOC();
             this.acUpYear = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.academicDataGrid = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
             this.backBtnS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.newTimeAppDataSet = new NewTimeApp.NewTimeAppDataSet();
             this.newTimeAppDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dltBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.acUpSem = new System.Windows.Forms.TextBox();
             this.academicViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.academicDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newTimeAppDataSet)).BeginInit();
@@ -72,6 +72,41 @@
             this.academicViewPanel.Size = new System.Drawing.Size(1000, 790);
             this.academicViewPanel.TabIndex = 0;
             this.academicViewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.academicViewPanel_Paint);
+            // 
+            // acUpSem
+            // 
+            this.acUpSem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.acUpSem.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acUpSem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.acUpSem.Location = new System.Drawing.Point(475, 260);
+            this.acUpSem.Multiline = true;
+            this.acUpSem.Name = "acUpSem";
+            this.acUpSem.Size = new System.Drawing.Size(417, 45);
+            this.acUpSem.TabIndex = 206;
+            // 
+            // dltBtn
+            // 
+            this.dltBtn.BackColor = System.Drawing.Color.White;
+            this.dltBtn.BorderColor = System.Drawing.Color.Black;
+            this.dltBtn.ButtonColor = System.Drawing.Color.White;
+            this.dltBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.dltBtn.FlatAppearance.BorderSize = 0;
+            this.dltBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.dltBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.dltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dltBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dltBtn.ForeColor = System.Drawing.Color.Black;
+            this.dltBtn.Location = new System.Drawing.Point(725, 334);
+            this.dltBtn.Name = "dltBtn";
+            this.dltBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.dltBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.dltBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.dltBtn.Size = new System.Drawing.Size(167, 67);
+            this.dltBtn.TabIndex = 205;
+            this.dltBtn.Text = "Delete";
+            this.dltBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dltBtn.UseVisualStyleBackColor = false;
+            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
             // 
             // acUpYear
             // 
@@ -112,21 +147,21 @@
             // 
             // academicDataGrid
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.academicDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.academicDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.academicDataGrid.BackgroundColor = System.Drawing.Color.White;
             this.academicDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.academicDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.academicDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.academicDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.academicDataGrid.ColumnHeadersHeight = 90;
             this.academicDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.academicDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -134,14 +169,14 @@
             this.Column1,
             this.Column2});
             this.academicDataGrid.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Plum;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.academicDataGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Plum;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.academicDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.academicDataGrid.GridColor = System.Drawing.Color.White;
             this.academicDataGrid.Location = new System.Drawing.Point(33, 437);
             this.academicDataGrid.Name = "academicDataGrid";
@@ -153,6 +188,61 @@
             this.academicDataGrid.Size = new System.Drawing.Size(925, 319);
             this.academicDataGrid.TabIndex = 200;
             this.academicDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.academicDataGrid_CellClick);
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "acID";
+            this.Column3.HeaderText = "Index";
+            this.Column3.MinimumWidth = 15;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Visible = false;
+            this.Column3.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "acYear";
+            this.Column1.HeaderText = "Academic Year";
+            this.Column1.MinimumWidth = 15;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 400;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "acSem";
+            this.Column2.HeaderText = "Academic Semester";
+            this.Column2.MinimumWidth = 15;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 250;
+            // 
+            // updateDetailsBtn
+            // 
+            this.updateDetailsBtn.BackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.BorderColor = System.Drawing.Color.Black;
+            this.updateDetailsBtn.ButtonColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.BorderSize = 0;
+            this.updateDetailsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateDetailsBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateDetailsBtn.ForeColor = System.Drawing.Color.Black;
+            this.updateDetailsBtn.Location = new System.Drawing.Point(475, 334);
+            this.updateDetailsBtn.Name = "updateDetailsBtn";
+            this.updateDetailsBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateDetailsBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.Size = new System.Drawing.Size(167, 67);
+            this.updateDetailsBtn.TabIndex = 51;
+            this.updateDetailsBtn.Text = "Update";
+            this.updateDetailsBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.updateDetailsBtn.UseVisualStyleBackColor = false;
+            this.updateDetailsBtn.Click += new System.EventHandler(this.updateDetailsBtn_Click);
             // 
             // backBtnS
             // 
@@ -186,96 +276,6 @@
             // 
             this.newTimeAppDataSetBindingSource.DataSource = this.newTimeAppDataSet;
             this.newTimeAppDataSetBindingSource.Position = 0;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "acID";
-            this.Column3.HeaderText = "Index";
-            this.Column3.MinimumWidth = 15;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Visible = false;
-            this.Column3.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "acYear";
-            this.Column1.HeaderText = "Academic Year";
-            this.Column1.MinimumWidth = 15;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 400;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "acSem";
-            this.Column2.HeaderText = "Academic Semester";
-            this.Column2.MinimumWidth = 15;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 250;
-            // 
-            // dltBtn
-            // 
-            this.dltBtn.BackColor = System.Drawing.Color.White;
-            this.dltBtn.BorderColor = System.Drawing.Color.Black;
-            this.dltBtn.ButtonColor = System.Drawing.Color.White;
-            this.dltBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.dltBtn.FlatAppearance.BorderSize = 0;
-            this.dltBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.dltBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.dltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dltBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dltBtn.ForeColor = System.Drawing.Color.Black;
-            this.dltBtn.Location = new System.Drawing.Point(725, 343);
-            this.dltBtn.Name = "dltBtn";
-            this.dltBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.dltBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.dltBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.dltBtn.Size = new System.Drawing.Size(167, 67);
-            this.dltBtn.TabIndex = 205;
-            this.dltBtn.Text = "Delete";
-            this.dltBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dltBtn.UseVisualStyleBackColor = false;
-            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
-            // 
-            // updateDetailsBtn
-            // 
-            this.updateDetailsBtn.BackColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.BorderColor = System.Drawing.Color.Black;
-            this.updateDetailsBtn.ButtonColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatAppearance.BorderSize = 0;
-            this.updateDetailsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateDetailsBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateDetailsBtn.ForeColor = System.Drawing.Color.Black;
-            this.updateDetailsBtn.Location = new System.Drawing.Point(475, 334);
-            this.updateDetailsBtn.Name = "updateDetailsBtn";
-            this.updateDetailsBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updateDetailsBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.Size = new System.Drawing.Size(167, 67);
-            this.updateDetailsBtn.TabIndex = 51;
-            this.updateDetailsBtn.Text = "Update";
-            this.updateDetailsBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.updateDetailsBtn.UseVisualStyleBackColor = false;
-            this.updateDetailsBtn.Click += new System.EventHandler(this.updateDetailsBtn_Click);
-            // 
-            // acUpSem
-            // 
-            this.acUpSem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.acUpSem.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acUpSem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.acUpSem.Location = new System.Drawing.Point(475, 260);
-            this.acUpSem.Multiline = true;
-            this.acUpSem.Name = "acUpSem";
-            this.acUpSem.Size = new System.Drawing.Size(417, 45);
-            this.acUpSem.TabIndex = 206;
             // 
             // AcademicDetailsViewUC
             // 

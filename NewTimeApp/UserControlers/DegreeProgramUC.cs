@@ -22,20 +22,23 @@ namespace NewTimeApp.UserControlers
         private SQLiteDataAdapter DBM;
         private SQLiteDataAdapter DBF;
         private SQLiteDataAdapter DBS;
-        String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+        //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+        String path = Application.StartupPath + @"\Database\TimeAppDB.db";
         String connectString;
 
         public DegreeProgramUC()
         {
             InitializeComponent();
-            connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
             sqlCon = new SQLiteConnection(connectString);
             GenerateDatabase();
         }
 
         private void GenerateDatabase()
         {
-            String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
             if (!File.Exists(path))
             {
                 sqlCon = new SQLiteConnection(connectString);
@@ -113,7 +116,7 @@ namespace NewTimeApp.UserControlers
 
                         if (i == 1)
                         {
-                            CustomMessageBox.Show("Academic Details", "" + dpc.DegreeFullName + "." + dpc.DegreeShortName + " is generated.");
+                            CustomMessageBox.Show("Academic Details", "" + dpc.DegreeFullName + " " + dpc.DegreeShortName + " is generated.");
                         }
                     }
                     catch (Exception ex)

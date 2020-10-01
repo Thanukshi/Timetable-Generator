@@ -9,40 +9,34 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class DegreeDetailsView : UserControl
     {
-        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        private SQLiteDataAdapter DB;
+        int id;
+        bool isDoubleClick = false;
+        String connectString;
 
         public DegreeDetailsView()
         {
             InitializeComponent();
             StyleDataGrid();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
 
-
-            academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();
         }
 
-        private DataTable FetchAcademicDetails()
+        private void DegreeDetailsView_Load(object sender, EventArgs e)
         {
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            DataTable dtData = new DataTable();
-            sqlCom = new SqlCommand("abcDegreeProgram", sqlCon);
-            sqlCom.CommandType = CommandType.StoredProcedure;
-            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-            sqlSda.Fill(dtData);
-            return dtData;
+
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
@@ -71,18 +65,8 @@ namespace NewTimeApp.UserControlers
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(con))
-            {
-                /*sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM DegreeDetails", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
 
-                //method 1 - direct method
-                //academicDataGrid.AutoGenerateColumns = false;
-                academicDataGrid.DataSource = dtbl;*/
-
-            }
         }
+
     }
 }
