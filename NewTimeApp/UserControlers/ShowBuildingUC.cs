@@ -27,7 +27,7 @@ namespace NewTimeApp.UserControlers
             //sqlCon.Open();
 
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = FetchBuildingDetails();
+            //dataGridView1.DataSource = FetchBuildingDetails();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -55,9 +55,9 @@ namespace NewTimeApp.UserControlers
 
         }
 
-        private DataTable FetchBuildingDetails()
+        /*private DataTable FetchBuildingDetails()
         {
-            /*if (sqlCon.State == ConnectionState.Closed)
+            if (sqlCon.State == ConnectionState.Closed)
             {
                 sqlCon.Open();
             }
@@ -67,8 +67,8 @@ namespace NewTimeApp.UserControlers
             sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
             SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
             sqlSda.Fill(dtData);
-            return dtData;*/
-        }
+            return dtData;
+        }*/
 
         private void showbuildingBtn_Click(object sender, EventArgs e)
         {
