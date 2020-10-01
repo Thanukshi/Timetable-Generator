@@ -160,6 +160,7 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BuildingClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
