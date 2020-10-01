@@ -38,20 +38,22 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql1 = "CREATE TABLE WorkingDays (" +
+                /*string sql1 = "CREATE TABLE WorkingDays (" +
                     "TableType VARCHAR PRIMARY KEY ," +
                     "WorkingDays VARCHAR (20) NOT NULL," +
                     "WorkingHours VARCHAR (50) NOT NULL," +
-                    "TimeSlot VARCHAR (20) NOT NULL)" ;
+                    "TimeSlot VARCHAR (20) NOT NULL)" ;*/
 
-                string sql2 = "CREATE TABLE SelectedDays (" +
+                string sql1 = "CREATE TABLE WorkingDays(TableType VARCHAR PRIMARY KEY,WorkingDays VARCHAR (20) NOT NULL, WorkingHours VARCHAR (50) NOT NULL,TimeSlot VARCHAR (20) NOT NULL)";
+
+                /*string sql2 = "CREATE TABLE SelectedDays (" +
                     "TableType VARCHAR PRIMARY KEY ,"+
-                    "SelectedDays VARCHAR (20) NOT NULL)";
+                    "SelectedDays VARCHAR (20) NOT NULL)";*/
 
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
-                sqlCom = new SQLiteCommand(sql2, sqlCon);
-                sqlCom.ExecuteNonQuery();
+               /* sqlCom = new SQLiteCommand(sql2, sqlCon);
+                sqlCom.ExecuteNonQuery();*/
 
                 sqlCon.Close();
 
@@ -143,7 +145,7 @@ namespace NewTimeApp.UserControlers
                 {
                     sqlCon = new SQLiteConnection(connectString);
                     sqlCom = new SQLiteCommand();
-                    sqlCom.CommandText = @"INSERT INTO academicDetails(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@textBox2, @comboBox1,@textBox1,@timeSlot)";
+                    sqlCom.CommandText = @"INSERT INTO  WorkingDays(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@textBox2, @comboBox1,@textBox1,@timeSlot)";
                     sqlCom.Connection = sqlCon;
                     sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
                     sqlCom.Parameters.Add(new SQLiteParameter("@comboBox1", workingDaysAndHours.WorkingDays));
@@ -156,12 +158,12 @@ namespace NewTimeApp.UserControlers
 
                     if (i == 1)
                     {
-                        CustomMessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +"is saved!");
+                        MessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +"is saved!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Error!", " " + ex.Message);
+                    MessageBox.Show("Error!", " " + ex.Message);
                 }
             }
             
