@@ -15,16 +15,16 @@ namespace NewTimeApp.UserControlers
     public partial class buildingUC : UserControl
     {
 
-        string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
+        /*string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
-        string buildingID = "";
+        string buildingID = "";*/
 
         public buildingUC()
         {
             InitializeComponent();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
+            //sqlCon = new SqlConnection(con);
+            //sqlCon.Open();
         }
 
         private void label1_Click(object sender, EventArgs e)
