@@ -14,17 +14,17 @@ namespace NewTimeApp.UserControlers
 {
     public partial class ShowBuildingUC : UserControl
     {
-        string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
-        string buildingId = "";
+        //string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
+        //SqlConnection sqlCon;
+        //SqlCommand sqlCom;
+        //string buildingId = "";
 
         public ShowBuildingUC()
         {
             InitializeComponent();
             StyleDataGrid();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
+            //sqlCon = new SqlConnection(con);
+            //sqlCon.Open();
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = FetchBuildingDetails();
@@ -57,7 +57,7 @@ namespace NewTimeApp.UserControlers
 
         private DataTable FetchBuildingDetails()
         {
-            if (sqlCon.State == ConnectionState.Closed)
+            /*if (sqlCon.State == ConnectionState.Closed)
             {
                 sqlCon.Open();
             }
@@ -67,7 +67,7 @@ namespace NewTimeApp.UserControlers
             sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
             SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
             sqlSda.Fill(dtData);
-            return dtData;
+            return dtData;*/
         }
 
         private void showbuildingBtn_Click(object sender, EventArgs e)
