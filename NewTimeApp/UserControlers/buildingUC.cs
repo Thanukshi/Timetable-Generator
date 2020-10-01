@@ -37,7 +37,22 @@ namespace NewTimeApp.UserControlers
             GenerateDatabase();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void GenerateDatabase()
+        {
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            if (!File.Exists(path))
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                string sql = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
+                sqlCom = new SQLiteCommand(sql, sqlCon);
+                sqlCom.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+        }
+
+         private void label1_Click(object sender, EventArgs e)
         {
 
         }
