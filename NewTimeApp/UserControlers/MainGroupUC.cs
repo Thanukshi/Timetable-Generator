@@ -36,6 +36,8 @@ namespace NewTimeApp.UserControlers
             connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
             sqlCon = new SQLiteConnection(connectString);
             GenerateDatabase();
+            fillAcDetails();
+            fillDegreeDetails();
 
         }
 
@@ -66,16 +68,16 @@ namespace NewTimeApp.UserControlers
 
         public void fillAcDetails()
         {
-            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            /*String path = Application.StartupPath + @"\Database\TimeAppDB.db";
             //string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-            sqlCon = new SQLiteConnection(path);
+            SQLiteConnection con = new SQLiteConnection(path);
             string qry = "SELECT * FROM academicDetails";
-            sqlCom = new SQLiteCommand(qry, sqlCon);
+            sqlCom = new SQLiteCommand(qry, con);
             SQLiteDataReader sqlDataReader;
-
+            con.Open();
             try
             {
-                sqlCon.Open();
+                // sqlCon.Open();
                 sqlDataReader = sqlCom.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
@@ -83,17 +85,25 @@ namespace NewTimeApp.UserControlers
                     string semester = sqlDataReader.GetString(2);
                     acDetails.Items.Add(year + "." + semester);
                 }
+                *//*sqlCon.Open();
+                sqlDataReader = sqlCom.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    string year = sqlDataReader.GetString(1);
+                    string semester = sqlDataReader.GetString(2);
+                    acDetails.Items.Add(year + "." + semester);
+                }*//*
             }
             catch (SqlException x)
             {
                 MessageBox.Show(x.Message);
-            }
+            }*/
         }
 
 
         public void fillDegreeDetails()
         {
-            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            /*String path = Application.StartupPath + @"\Database\TimeAppDB.db";
             //string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
             sqlCon = new SQLiteConnection(path);
             string qry = "SELECT * FROM degreeProgram";
@@ -113,7 +123,7 @@ namespace NewTimeApp.UserControlers
             catch (SqlException x)
             {
                 MessageBox.Show(x.Message);
-            }
+            }*/
         }
 
         private void saveMG_Click(object sender, EventArgs e)
@@ -165,7 +175,7 @@ namespace NewTimeApp.UserControlers
                 }
             }
         }*/
-                try
+                /*try
                 {
 
                     sqlCon = new SQLiteConnection(connectString);
@@ -187,7 +197,7 @@ namespace NewTimeApp.UserControlers
                 catch (Exception ex)
                 {
                     CustomMessageBox.Show("Error!", " " + ex.Message);
-                }
+                }*/
             }
         }
 
