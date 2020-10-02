@@ -9,25 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class ShowBuildingUC : UserControl
     {
-        //string con = "Data Source=LAPTOP-7RKTBVG9;Initial Catalog=NewTimeApp;Integrated Security=True";
-        //SqlConnection sqlCon;
-        //SqlCommand sqlCom;
-        //string buildingId = "";
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        private SQLiteDataAdapter DB;
+        int id;
+        bool isDoubleClick = false;
+        String connectString;
 
         public ShowBuildingUC()
         {
             InitializeComponent();
             StyleDataGrid();
-            //sqlCon = new SqlConnection(con);
-            //sqlCon.Open();
-
-            dataGridView1.AutoGenerateColumns = false;
-            //dataGridView1.DataSource = FetchBuildingDetails();
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -54,6 +57,41 @@ namespace NewTimeApp.UserControlers
 
 
         }
+
+        private void ShowBuildingUC_Load(object sender, EventArgs e)
+        {
+            ReadData();
+
+        }
+        private void ReadData()
+        {
+            try
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                sqlCom = new SQLiteCommand();
+                String sql = "SELECT * FROM buildingDetails";
+                DB = new SQLiteDataAdapter(sql, sqlCon);
+                ds.Reset();
+                DB.Fill(ds);
+                dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
+                sqlCon.Close();
+                /*academicDataGrid.Columns[1].HeaderText = "Firstname";
+                academicDataGrid.Columns[2].HeaderText = "Lastname";
+                academicDataGrid.Columns[3].HeaderText = "Address";*/
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                /*academicDataGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
 
         /*private DataTable FetchBuildingDetails()
         {
@@ -84,5 +122,7 @@ namespace NewTimeApp.UserControlers
         {
 
         }
+
+       
     }
 }

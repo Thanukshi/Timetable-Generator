@@ -151,6 +151,7 @@
             this.Controls.Add(this.showBuildingPanel);
             this.Name = "ShowBuildingUC";
             this.Size = new System.Drawing.Size(772, 720);
+            this.Load += new System.EventHandler(this.ShowBuildingUC_Load);
             this.showBuildingPanel.ResumeLayout(false);
             this.showBuildingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
