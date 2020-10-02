@@ -42,7 +42,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.checkRemember = new System.Windows.Forms.CheckBox();
             this.cancleBtn = new ePOSOne.btnProduct.Button_WOC();
             this.loginBtn = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,20 +210,6 @@
             this.pictureBox4.TabIndex = 23;
             this.pictureBox4.TabStop = false;
             // 
-            // checkRemember
-            // 
-            this.checkRemember.AutoSize = true;
-            this.checkRemember.BackColor = System.Drawing.Color.White;
-            this.checkRemember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkRemember.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkRemember.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.checkRemember.Location = new System.Drawing.Point(581, 434);
-            this.checkRemember.Name = "checkRemember";
-            this.checkRemember.Size = new System.Drawing.Size(219, 24);
-            this.checkRemember.TabIndex = 24;
-            this.checkRemember.Text = "Remember Your Login";
-            this.checkRemember.UseVisualStyleBackColor = false;
-            // 
             // cancleBtn
             // 
             this.cancleBtn.BackColor = System.Drawing.Color.White;
@@ -280,7 +265,6 @@
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkRemember);
             this.Controls.Add(this.cancleBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.visiblePW);
@@ -324,6 +308,5 @@
         private ePOSOne.btnProduct.Button_WOC cancleBtn;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkRemember;
     }
 }

@@ -342,6 +342,12 @@
     <Compile Include="UserControlers\SubGroupUC.Designer.cs">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\TagUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\TagUC.Designer.cs">
+      <DependentUpon>TagUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="academicDetailsUpdate.resx">
       <DependentUpon>academicDetailsUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\SubGroupUC.resx">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\TagUC.resx">
+      <DependentUpon>TagUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
