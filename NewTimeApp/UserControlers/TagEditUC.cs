@@ -8,15 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class TagEditUC : UserControl
     {
+
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt;
+        DataSet ds = new DataSet();
+        private SQLiteDataAdapter DB;
+        int id;
+        bool isDoubleClick = false;
+        String connectString;
         public TagEditUC()
         {
             InitializeComponent();
             StyleDataGrid();
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            sqlCon = new SQLiteConnection(connectString);
         }
 
         void StyleDataGrid()
@@ -50,7 +62,30 @@ namespace NewTimeApp.UserControlers
 
         private void TagEditUC_Load(object sender, EventArgs e)
         {
-
+            ReadData();
+        }
+        private void ReadData()
+        {
+            try
+            {
+                sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                sqlCom = new SQLiteCommand();
+                String sql = "SELECT * FROM tags";
+                DB = new SQLiteDataAdapter(sql, sqlCon);
+                ds.Reset();
+                DB.Fill(ds);
+                dt = ds.Tables[0];
+                academicDataGrid.DataSource = dt;
+                sqlCon.Close();
+                academicDataGrid.Columns[0].Visible = false;
+                academicDataGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                academicDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show("Error!", "" + ex.Message);
+            }
         }
     }
 }

@@ -29,7 +29,6 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
             StyleDataGrid();
             connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
-            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             sqlCon = new SQLiteConnection(connectString);
 
         }
