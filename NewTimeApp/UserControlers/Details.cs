@@ -16,5 +16,19 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
         }
+
+        private void backBtnS_Click(object sender, EventArgs e)
+        {
+            DashBoard db = new DashBoard();
+            db.ShowDialog();
+            this.Hide();
+        }
+
+        private void backBtnS_Click_1(object sender, EventArgs e)
+        {
+            DashBoard dash = new DashBoard();
+            dash.ShowDialog();
+            this.Hide();
+        }
     }
 }
