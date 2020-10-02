@@ -86,10 +86,7 @@ namespace NewTimeApp.UserControlers
                 timeSlot = radioButton2.Text;
             }
 
-
             string[] SelectedDays = new string[5];
-
-            //string[] SelectedDayslist = new string[7];
 
             if (checkBox1.Checked)
             {
@@ -125,17 +122,16 @@ namespace NewTimeApp.UserControlers
 
             }
 
-            MessageBox.Show("done1");
+           
             string[] terms = SelectedDayslist.ToArray();
-            //MessageBox.Show();
+            
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
             workingDaysAndHours.TableType = label7.Text;
             workingDaysAndHours.WorkingDays = comboBox1.Text;
             workingDaysAndHours.WorkingHours = textBox1.Text;
             workingDaysAndHours.TimeSlot = timeSlot;
             workingDaysAndHours.SelectedDays = terms;
-            MessageBox.Show("done2");
-            //SelectedDays = terms
+
             int ti = 2;
             if (ti==1)
             {
@@ -170,15 +166,13 @@ namespace NewTimeApp.UserControlers
                     sqlCom.Connection = sqlCon;
                     for (int x = 0; x < terms.Length; x++)
                     {
-                        //MessageBox.Show("done4");
+                        
                         if (SelectedDays != null)
                         {
-                            //sqlCom.CommandText = @"INSERT INTO SelectedDays(TableType, SelectedDays) VALUES(@textBox2, @terms)";
-                            // sqlCom.Connection = sqlCon;
-                            //sqlCom.Parameters.Add(new SQLiteParameter("@label7", workingDaysAndHours.TableType));
+                          
                             sqlCom.Parameters.Add(new SQLiteParameter("@label7", workingDaysAndHours.TableType));
                             sqlCom.Parameters.Add(new SQLiteParameter("@terms", workingDaysAndHours.SelectedDays[x]));
-                            MessageBox.Show("done4", workingDaysAndHours.SelectedDays[x]);
+                            
                             sqlCon.Open();
                             sqlCom.ExecuteNonQuery();
                             sqlCon.Close();
@@ -188,7 +182,7 @@ namespace NewTimeApp.UserControlers
 
 
                     
-                        CustomMessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +" is saved!");
+                    CustomMessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +" is saved!");
                     
                 }
                 catch (Exception ex)
@@ -197,11 +191,6 @@ namespace NewTimeApp.UserControlers
                 }
             }
             
-
-           
-
-            /*WorkingDaysAndHoursUC workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
-            MainControler.showControl(workingDaysAndHoursUC, panel1);*/
 
         }
 
@@ -212,8 +201,6 @@ namespace NewTimeApp.UserControlers
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
-
-
 
             textBox1.Clear();
             comboBox1.SelectedIndex = -1;
@@ -250,9 +237,10 @@ namespace NewTimeApp.UserControlers
                 sqlCon.Open();
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
-            }catch
+            }
+            catch (Exception ex)
             {
-
+                CustomMessageBox.Show("Error!", " " + ex.Message);
             }
 
             try
@@ -262,16 +250,16 @@ namespace NewTimeApp.UserControlers
                 sqlCon.Open();
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
-            }catch
-            {
-
             }
-            
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show("Error!", " " + ex.Message);
+            }
 
-            
+
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
-            CustomMessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + " is Deleted!");
-            
+            CustomMessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + "Deleted!");
+
         }
     }
 }

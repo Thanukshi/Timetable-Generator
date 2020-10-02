@@ -266,12 +266,6 @@
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlers\Edit_WorkingDaysAndHoursUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\Edit_WorkingDaysAndHoursUC.Designer.cs">
-      <DependentUpon>Edit_WorkingDaysAndHoursUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,18 +283,6 @@
     </Compile>
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlers\View_WorkingDaysAndHoursUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\View_WorkingDaysAndHoursUC.Designer.cs">
-      <DependentUpon>View_WorkingDaysAndHoursUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\WorkingDaysAndHoursUC.Designer.cs">
-      <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CustomMessageBox.resx" />
     <EmbeddedResource Include="DashBoard.resx">
@@ -334,9 +316,6 @@
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\Edit_WorkingDaysAndHoursUC.resx">
-      <DependentUpon>Edit_WorkingDaysAndHoursUC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,13 +324,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\View_WorkingDaysAndHoursUC.resx">
-      <DependentUpon>View_WorkingDaysAndHoursUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
-      <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="NewTimeAppDataSet.xsc">
       <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
