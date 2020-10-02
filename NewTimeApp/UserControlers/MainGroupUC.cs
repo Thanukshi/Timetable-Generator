@@ -52,7 +52,7 @@ namespace NewTimeApp.UserControlers
                     string year = sldr.GetString(1);
                     string sem = sldr.GetString(2);
                     acDetails.Items.Add(year + "." + sem);
-                    string maID = "SELECT ID FROM academicDetails WHERE acYear ='" + year + "'And acSem ='" + sem + "'";
+                    //string maID = "SELECT ID FROM academicDetails WHERE acYear ='" + year + "'And acSem ='" + sem + "'";
                 }
             }
             catch (SQLiteException x)
