@@ -208,6 +208,19 @@ namespace NewTimeApp.UserControlers
         private void resetBtn_Click(object sender, EventArgs e)
         {
 
+
+
+            textBox1.Clear();
+            comboBox1.SelectedIndex = -1;
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+
         }
 
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
