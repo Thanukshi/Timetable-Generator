@@ -35,6 +35,7 @@
             this.addroomBtn = new NewTimeApp.CircularButton();
             this.addBuldBtn = new NewTimeApp.CircularButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.circularButton1 = new NewTimeApp.CircularButton();
             this.locationpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             // locationpanel
             // 
             this.locationpanel.BackColor = System.Drawing.Color.White;
+            this.locationpanel.Controls.Add(this.circularButton1);
             this.locationpanel.Controls.Add(this.viewroomBrn);
             this.locationpanel.Controls.Add(this.viewbuldBtn);
             this.locationpanel.Controls.Add(this.addroomBtn);
@@ -140,6 +142,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // circularButton1
+            // 
+            this.circularButton1.BackColor = System.Drawing.Color.Plum;
+            this.circularButton1.FlatAppearance.BorderSize = 0;
+            this.circularButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton1.ForeColor = System.Drawing.Color.White;
+            this.circularButton1.Image = ((System.Drawing.Image)(resources.GetObject("circularButton1.Image")));
+            this.circularButton1.Location = new System.Drawing.Point(301, 275);
+            this.circularButton1.Name = "circularButton1";
+            this.circularButton1.Size = new System.Drawing.Size(170, 170);
+            this.circularButton1.TabIndex = 36;
+            this.circularButton1.Text = "Room Allocations";
+            this.circularButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.circularButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.circularButton1.UseVisualStyleBackColor = false;
+            this.circularButton1.Click += new System.EventHandler(this.circularButton1_Click);
+            // 
             // locationUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +182,6 @@
         private CircularButton viewbuldBtn;
         private CircularButton addroomBtn;
         private CircularButton addBuldBtn;
+        private CircularButton circularButton1;
     }
 }

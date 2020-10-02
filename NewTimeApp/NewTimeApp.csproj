@@ -250,6 +250,12 @@
     <Compile Include="UserControlers\ReservedRoomUC.Designer.cs">
       <DependentUpon>ReservedRoomUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\RoomAllocationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\RoomAllocationUC.Designer.cs">
+      <DependentUpon>RoomAllocationUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\roomUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,6 +336,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControlers\AddRoomSessionsUC.resx">
       <DependentUpon>AddRoomSessionsUC.cs</DependentUpon>
@@ -354,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReservedRoomUC.resx">
       <DependentUpon>ReservedRoomUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\RoomAllocationUC.resx">
+      <DependentUpon>RoomAllocationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\roomUC.resx">
       <DependentUpon>roomUC.cs</DependentUpon>
@@ -398,6 +408,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

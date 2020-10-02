@@ -46,5 +46,11 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(locatUC, locationpanel);
 
         }
+
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+            RoomAllocationUC locatUC = new RoomAllocationUC();
+            MainControler.showControl(locatUC, locationpanel);
+        }
     }
 }

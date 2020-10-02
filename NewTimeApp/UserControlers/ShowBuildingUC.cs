@@ -77,12 +77,10 @@ namespace NewTimeApp.UserControlers
                 dt = ds.Tables[0];
                 dataGridView1.DataSource = dt;
                 sqlCon.Close();
-                /*academicDataGrid.Columns[1].HeaderText = "Firstname";
-                academicDataGrid.Columns[2].HeaderText = "Lastname";
-                academicDataGrid.Columns[3].HeaderText = "Address";*/
+       
                 dataGridView1.Columns[0].Visible = false;
                 dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                /*academicDataGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
+                
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
             catch (Exception ex)
