@@ -25,12 +25,10 @@ namespace NewTimeApp.UserControlers
         public roomUC()
         {
             InitializeComponent();
-            //fillbuildingDetail();
-            //connectString = @"Data Source=" + Application.StartupPath + @"\NewTimeApp\bin\Debug\TimeAppDB.db; version=3";
             connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
-            //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             sqlCon = new SQLiteConnection(connectString);
             GenerateDatabase();
+            fillbuildingDetail();
         }
 
         private void GenerateDatabase()
@@ -69,24 +67,25 @@ namespace NewTimeApp.UserControlers
         public void fillbuildingDetail()
         {
             String path = Application.StartupPath + @"\Database\TimeAppDB.db";
-            sqlCon = new SQLiteConnection(path); 
-            string sql = "SELECT * FROM buildingDetails";
-            sqlCom = new SQLiteCommand(sql, sqlCon);
-            SQLiteDataReader sqliteDataReader;
+            sqlCon = new SQLiteConnection(connectString);
+            string qry = "SELECT * FROM buildingDetails";
+            sqlCom = new SQLiteCommand(qry, sqlCon);
+            SQLiteDataReader sldr;
 
             try
             {
                 sqlCon.Open();
-                sqliteDataReader = sqlCom.ExecuteReader();
-                while (sqliteDataReader.Read())
+                sldr = sqlCom.ExecuteReader();
+                while (sldr.Read())
                 {
-                    string buildingName = sqliteDataReader.GetString(1);
+                    string buildingName = sldr.GetString(1);
                     buildingNameCB.Items.Add(buildingName);
+                    
                 }
             }
-            catch (Exception ex)
+            catch (SQLiteException x)
             {
-                CustomMessageBox.Show("There is not already added buildings", " " + ex.Message);
+                CustomMessageBox.Show("Error!", "" + x.Message);
             }
         }
 
