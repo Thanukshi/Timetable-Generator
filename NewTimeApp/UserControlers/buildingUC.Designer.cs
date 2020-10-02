@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buildingUC));
             this.buildingpanel = new System.Windows.Forms.Panel();
+            this.buldingAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.backBtn = new System.Windows.Forms.Button();
             this.buildingNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.buldingAddBtn = new ePOSOne.btnProduct.Button_WOC();
             this.buildingpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,58 +54,6 @@
             this.buildingpanel.Size = new System.Drawing.Size(772, 720);
             this.buildingpanel.TabIndex = 0;
             // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(23, 42);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 24;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
-            // buildingNameTB
-            // 
-            this.buildingNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingNameTB.Location = new System.Drawing.Point(371, 247);
-            this.buildingNameTB.Multiline = true;
-            this.buildingNameTB.Name = "buildingNameTB";
-            this.buildingNameTB.Size = new System.Drawing.Size(337, 44);
-            this.buildingNameTB.TabIndex = 3;
-            this.buildingNameTB.TextChanged += new System.EventHandler(this.buildingNameTB_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(124, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 31);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Building Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(78, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add Buildings";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // buldingAddBtn
             // 
             this.buldingAddBtn.BackColor = System.Drawing.Color.White;
@@ -118,7 +66,7 @@
             this.buldingAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buldingAddBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buldingAddBtn.ForeColor = System.Drawing.Color.Black;
-            this.buldingAddBtn.Location = new System.Drawing.Point(328, 398);
+            this.buldingAddBtn.Location = new System.Drawing.Point(302, 461);
             this.buldingAddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.buldingAddBtn.Name = "buldingAddBtn";
             this.buldingAddBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -130,6 +78,58 @@
             this.buldingAddBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buldingAddBtn.UseVisualStyleBackColor = false;
             this.buldingAddBtn.Click += new System.EventHandler(this.buldingAddBtn_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(25, 34);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 24;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // buildingNameTB
+            // 
+            this.buildingNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingNameTB.Location = new System.Drawing.Point(360, 242);
+            this.buildingNameTB.Multiline = true;
+            this.buildingNameTB.Name = "buildingNameTB";
+            this.buildingNameTB.Size = new System.Drawing.Size(337, 44);
+            this.buildingNameTB.TabIndex = 3;
+            this.buildingNameTB.TextChanged += new System.EventHandler(this.buildingNameTB_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label2.Location = new System.Drawing.Point(129, 245);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 31);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Building Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(89, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Add Buildings";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // buildingUC
             // 
