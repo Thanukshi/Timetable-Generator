@@ -9,41 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class SubGroupDetailsUC : UserControl
     {
-        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt;
+        DataSet ds = new DataSet();
+        private SQLiteDataAdapter DB;
+        int id;
+        bool isDoubleClick = false;
+        String connectString;
 
         public SubGroupDetailsUC()
         {
 
             InitializeComponent();
-
             StyleDataGrid();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
 
-            academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();
-        }
-
-        private DataTable FetchAcademicDetails()
-        {
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            DataTable dtData = new DataTable();
-            sqlCom = new SqlCommand("abcSubGroupDetails", sqlCon);
-            sqlCom.CommandType = CommandType.StoredProcedure;
-            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-            sqlSda.Fill(dtData);
-            return dtData;
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            sqlCon = new SQLiteConnection(connectString);
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
@@ -67,6 +55,11 @@ namespace NewTimeApp.UserControlers
             academicDataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
 
+
+        }
+
+        private void SubGroupDetailsUC_Load(object sender, EventArgs e)
+        {
 
         }
     }

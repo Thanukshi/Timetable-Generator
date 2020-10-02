@@ -115,7 +115,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label4.Location = new System.Drawing.Point(54, 300);
+            this.label4.Location = new System.Drawing.Point(108, 300);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(199, 38);
             this.label4.TabIndex = 46;
@@ -140,7 +140,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(54, 195);
+            this.label2.Location = new System.Drawing.Point(108, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 38);
             this.label2.TabIndex = 43;
