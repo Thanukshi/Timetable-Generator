@@ -212,8 +212,6 @@
     <Compile Include="CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomMessageBox.cs" />
-    <Compile Include="CustomMessageBox.Designer.cs" />
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +264,30 @@
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\Genarate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\Genarate.Designer.cs">
+      <DependentUpon>Genarate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableHall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableHall.Designer.cs">
+      <DependentUpon>GenarateTableHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableLecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableLecturer.Designer.cs">
+      <DependentUpon>GenarateTableLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableStudent.Designer.cs">
+      <DependentUpon>GenarateTableStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -284,7 +306,18 @@
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomMessageBox.resx" />
+    <Compile Include="UserControlers\TimeTableHtml.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\TimeTableHtml.Designer.cs">
+      <DependentUpon>TimeTableHtml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\WorkingDaysAndHoursUC.Designer.cs">
+      <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +349,18 @@
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\Genarate.resx">
+      <DependentUpon>Genarate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\GenarateTableHall.resx">
+      <DependentUpon>GenarateTableHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\GenarateTableLecturer.resx">
+      <DependentUpon>GenarateTableLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\GenarateTableStudent.resx">
+      <DependentUpon>GenarateTableStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +369,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\TimeTableHtml.resx">
+      <DependentUpon>TimeTableHtml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx">
+      <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="NewTimeAppDataSet.xsc">
       <DependentUpon>NewTimeAppDataSet.xsd</DependentUpon>
@@ -373,6 +424,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building-64 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

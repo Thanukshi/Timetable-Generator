@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using System.Data.Entity.Core.Mapping;
 using System.Collections;
 using NewTimeApp.UserControlers;
-
- 
+using System.Reflection;
 
 namespace NewTimeApp.Helpers
 {
@@ -22,7 +21,7 @@ namespace NewTimeApp.Helpers
         SQLiteCommand sqlCom;
         SQLiteDataAdapter DB;
         String connectString;
-        SQLiteDataReader sqlite_datareader;
+        SQLiteDataReader sqlite_datareader1, sqlite_datareader2;
 
         Add_WorkingDaysAndHoursUC Add_WorkingDaysAndHoursUC = new Add_WorkingDaysAndHoursUC();
 
@@ -50,52 +49,67 @@ namespace NewTimeApp.Helpers
             
             //sqlite_cmd = sqlCon.CreateCommand();
             string sql = "SELECT * FROM WorkingDays";
+            string sql2 = "SELECT * FROM SelectedDays";
 
-            SQLiteCommand command = new SQLiteCommand(sql,sqlCon);
+            SQLiteCommand command1 = new SQLiteCommand(sql,sqlCon);
+            SQLiteCommand command = new SQLiteCommand(sql2, sqlCon);
 
-           // command.ExecuteNonQuery();
+
+            // command.ExecuteNonQuery();
             MessageBox.Show("done");
-            sqlite_datareader = command.ExecuteReader();
+            sqlite_datareader1 = command1.ExecuteReader();
+            sqlite_datareader2 = command.ExecuteReader();
 
-            while (sqlite_datareader.Read())
+            while (sqlite_datareader1.Read())
             {
                 //int WorkingDays = (int)sqlite_datareader["WorkingDays"];
-                string WorkingHours = (string)sqlite_datareader["WorkingHours"];
-                int WorkingHours1= Int32.Parse(WorkingHours);
-                string TimeSlot = (string)sqlite_datareader["TimeSlot"];
-                int TimeSlot1 = Int32.Parse(TimeSlot);
+                string WorkingHours = (string)sqlite_datareader1["WorkingHours"];
+                int WorkingHours1= Int16.Parse(WorkingHours);
+                string TimeSlot = (string)sqlite_datareader1["TimeSlot"];
+                //int TimeSlot1 = Int16.Parse(TimeSlot);
+
+                //string SelectedDays = (string)sqlite_datareader2["SelectedDays"];
+
+                string [] terms = new string[5];
+                List<string> SelectedDayslist = new List<string>();
+                for (int i = 0; i < 5; i++)
+                {
+                    while (sqlite_datareader2.Read())
+                    {
+                        terms[i] = (string)sqlite_datareader2["SelectedDays"];
+                        SelectedDayslist.Add(terms[i]);
+                    }
+
+                }
+                string[] SelectedDays = SelectedDayslist.ToArray();
 
 
-                //string[] SelectedDays = (string[])sqlite_datareader["selectedDays"];
 
-                string[] SelectedDays = new string[5];
-                SelectedDays = (string[])sqlite_datareader["selectedDays"];
-                //int WorkingDays = 5;
-                //  int WorkingHours = 8;
+               
                 int startTime = 8;
                 int slotCount = 0;
                 int timeSlot;
 
-                /*if(TimeSlot == "One Hour")
+                if(TimeSlot == "One Hour")
                 {
                     timeSlot = 1;
                 }
                 else
                 {
                     timeSlot = 2;
-                }*/
+                }
 
 
-                if(TimeSlot1 == 1)
+                if(timeSlot == 1)
                 {
-                    //int workingHours = Convert.ToInt32("WorkingHours");
+                    
                     slotCount = WorkingHours1;
                 }
                 else
                 {
-                   // int workingHours = int.Parse("WorkingHours");
+                   
                     timeSlot = 2;
-                    slotCount = (WorkingHours1 * 60)/TimeSlot1;
+                    slotCount = (WorkingHours1 * 2)/timeSlot;
                 }
 
                 string Topic = "";
@@ -104,25 +118,41 @@ namespace NewTimeApp.Helpers
                 for (int i = 0; i < SelectedDays.Length; i++)
                 {
                     Topic += "<th>" + SelectedDays[i] + "</th>\n";
-                    /*Topic += "<th>" + SelectedDays[1] + "</th>\n";
-                    Topic += "<th>" + SelectedDays[2] + "</th>\n";
-                    Topic += "<th>" + SelectedDays[3] + "</th>\n";
-                    Topic += "<th>" + SelectedDays[4] + "</th>\n";*/
-                }
-                for (int i = 0; i < slotCount; i++)
-                {
                     
-                    Data += "<tr>";
-                    Data += "<td>" + (startTime) + ".00</td>";
-
-                    for (int j = 0; j < SelectedDays.Length; j++)
-                    {
-                        Data+= "<td>--X--</td>";
-                    }
-                    Data += "</tr>";
-                    startTime = startTime + TimeSlot1;
                 }
+                if (timeSlot == 1)
+                {
+                    for (int i = 0; i < slotCount; i++)
+                    {
 
+                        Data += "<tr>";
+                        Data += "<td>" + (startTime) + ".00</td>";
+
+                        for (int j = 0; j < SelectedDays.Length; j++)
+                        {
+                            Data += "<td>--X--</td>";
+                        }
+                        Data += "</tr>";
+                        startTime = startTime + timeSlot;
+                    }
+                }
+                else
+                {
+
+                    for (int i = 0; i < slotCount; i++)
+                    {
+
+                        Data += "<tr>";
+                        Data += "<td>" + (startTime) + ".30</td>";
+
+                        for (int j = 0; j < SelectedDays.Length; j++)
+                        {
+                            Data += "<td>--X--</td>";
+                        }
+                        Data += "</tr>";
+                        startTime = startTime + timeSlot;
+                    }
+                }
                 string HEAD = "<html>"
                 + "<head> "
                 + "<style>"
@@ -138,34 +168,18 @@ namespace NewTimeApp.Helpers
                   + "</body></html>";
 
                 string code = HEAD + "" + Topic + "" + Data + "" + BODY;
-                File.WriteAllText(@"C:\Users\Mishane\source\repos\Timetable-Generator\TimeTable\timeTable.html", code);
-                MessageBox.Show("html");
+                File.WriteAllText(Application.StartupPath + @"\TimeTable\TimeTable.html", code);
+                
+
+                
+
 
             }
-            MessageBox.Show("done2");
-            
+  
             sqlCon.Close();
-            /* using(command = new SQLiteCommand("SELECT * FROM WorkingDays"))
-             {
-                 using(var reader = command.ExecuteReader())
-                 {
-                     if (reader.HasRows)
-                     {
-                         while (reader.NextResult())
-                         {
-                             var WorkingDays = reader["WorkingDays"];
-                             var WorkingHours = reader["WorkingHours"];
-                             var TimeSlot = reader["TimeSlot"];
-
-                         }
-                     }
-                 }
-             }*/
-
-            /*Console.WriteLine(workingDays);
-            sqlCon.Close();*/
-
 
         }
+
+
     }
 }

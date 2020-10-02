@@ -87,7 +87,7 @@ namespace NewTimeApp
 
         private void workBtn_Click(object sender, EventArgs e)
         {
-            Add_WorkingDaysAndHoursUC add_workingDaysAndHoursUC = new Add_WorkingDaysAndHoursUC();
+            WorkingDaysAndHoursUC add_workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
             MainControler.showControl(add_workingDaysAndHoursUC, panelContainer);
         }
     }

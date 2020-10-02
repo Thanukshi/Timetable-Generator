@@ -125,7 +125,28 @@ namespace NewTimeApp.UserControlers
 
            
             string[] terms = SelectedDayslist.ToArray();
-            
+
+            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                MessageBox.Show("Enter Working Days !!!");
+                comboBox1.Select();
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Enter Working Hours !!!");
+                textBox1.Select();
+            }
+
+            else if ((comboBox1.SelectedIndex <= -1))
+            {
+                MessageBox.Show("Enter Working Days !!!");
+                comboBox1.Select();
+            }
+
+            else
+            {
+
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
             workingDaysAndHours.TableType = label7.Text;
             workingDaysAndHours.WorkingDays = comboBox1.Text;
@@ -183,15 +204,16 @@ namespace NewTimeApp.UserControlers
 
 
                     
-                    CustomMessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +" is saved!");
+                    MessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +" is saved!");
                     
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Error!", " " + ex.Message);
+                    MessageBox.Show("Error!", " " + ex.Message);
                 }
             }
-            
+
+            }
 
         }
 
@@ -241,7 +263,7 @@ namespace NewTimeApp.UserControlers
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Error!", " " + ex.Message);
+                MessageBox.Show("Error!", " " + ex.Message);
             }
 
             try
@@ -254,12 +276,21 @@ namespace NewTimeApp.UserControlers
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Error!", " " + ex.Message);
+                MessageBox.Show("Error!", " " + ex.Message);
             }
 
+            textBox1.Clear();
+            comboBox1.SelectedIndex = -1;
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
 
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
-            CustomMessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + "Deleted!");
+            MessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + "Deleted!");
 
         }
 
@@ -267,6 +298,9 @@ namespace NewTimeApp.UserControlers
         {
             TimeTableGenarate timeTableGenarate = new TimeTableGenarate();
             timeTableGenarate.LoadData();
+
+            TimeTableHtml timeTableHtml = new TimeTableHtml();
+            MainControler.showControl(timeTableHtml, panel1);
         }
     }
 }

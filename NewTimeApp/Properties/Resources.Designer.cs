@@ -83,6 +83,16 @@ namespace NewTimeApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap building_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("building-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_64 {
             get {
                 object obj = ResourceManager.GetObject("calendar-64", resourceCulture);
@@ -96,6 +106,26 @@ namespace NewTimeApp.Properties {
         internal static System.Drawing.Bitmap list_view_64 {
             get {
                 object obj = ResourceManager.GetObject("list-view-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("student-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teacher_64 {
+            get {
+                object obj = ResourceManager.GetObject("teacher-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

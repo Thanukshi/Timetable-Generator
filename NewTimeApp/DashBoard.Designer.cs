@@ -31,17 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.panelSider = new System.Windows.Forms.Panel();
-            this.logOutBtn = new System.Windows.Forms.Button();
-            this.settingBtn = new System.Windows.Forms.Button();
-            this.reportBtn = new System.Windows.Forms.Button();
-            this.detailsBtn = new System.Windows.Forms.Button();
-            this.homeBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.minBtn = new System.Windows.Forms.Button();
             this.titleOfPages = new System.Windows.Forms.Label();
-            this.closeBtn = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
             this.statBtn = new NewTimeApp.CircularButton();
@@ -54,12 +46,20 @@
             this.studentBtn = new NewTimeApp.CircularButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.minBtn = new System.Windows.Forms.Button();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.logOutBtn = new System.Windows.Forms.Button();
+            this.settingBtn = new System.Windows.Forms.Button();
+            this.reportBtn = new System.Windows.Forms.Button();
+            this.detailsBtn = new System.Windows.Forms.Button();
+            this.homeBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSider.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSider
@@ -76,96 +76,6 @@
             this.panelSider.Name = "panelSider";
             this.panelSider.Size = new System.Drawing.Size(252, 768);
             this.panelSider.TabIndex = 0;
-            // 
-            // logOutBtn
-            // 
-            this.logOutBtn.FlatAppearance.BorderSize = 0;
-            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOutBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
-            this.logOutBtn.Location = new System.Drawing.Point(5, 580);
-            this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(242, 59);
-            this.logOutBtn.TabIndex = 6;
-            this.logOutBtn.Text = "   Log Out";
-            this.logOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.logOutBtn.UseVisualStyleBackColor = true;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
-            // 
-            // settingBtn
-            // 
-            this.settingBtn.FlatAppearance.BorderSize = 0;
-            this.settingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingBtn.ForeColor = System.Drawing.Color.White;
-            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
-            this.settingBtn.Location = new System.Drawing.Point(5, 494);
-            this.settingBtn.Name = "settingBtn";
-            this.settingBtn.Size = new System.Drawing.Size(242, 59);
-            this.settingBtn.TabIndex = 5;
-            this.settingBtn.Text = "   Settings";
-            this.settingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.settingBtn.UseVisualStyleBackColor = true;
-            this.settingBtn.Click += new System.EventHandler(this.settingBtn_Click);
-            // 
-            // reportBtn
-            // 
-            this.reportBtn.FlatAppearance.BorderSize = 0;
-            this.reportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportBtn.ForeColor = System.Drawing.Color.White;
-            this.reportBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportBtn.Image")));
-            this.reportBtn.Location = new System.Drawing.Point(5, 408);
-            this.reportBtn.Name = "reportBtn";
-            this.reportBtn.Size = new System.Drawing.Size(242, 59);
-            this.reportBtn.TabIndex = 4;
-            this.reportBtn.Text = "   Reports";
-            this.reportBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.reportBtn.UseVisualStyleBackColor = true;
-            this.reportBtn.Click += new System.EventHandler(this.reportBtn_Click);
-            // 
-            // detailsBtn
-            // 
-            this.detailsBtn.FlatAppearance.BorderSize = 0;
-            this.detailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.detailsBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailsBtn.ForeColor = System.Drawing.Color.White;
-            this.detailsBtn.Image = ((System.Drawing.Image)(resources.GetObject("detailsBtn.Image")));
-            this.detailsBtn.Location = new System.Drawing.Point(5, 322);
-            this.detailsBtn.Name = "detailsBtn";
-            this.detailsBtn.Size = new System.Drawing.Size(242, 59);
-            this.detailsBtn.TabIndex = 3;
-            this.detailsBtn.Text = "   Details";
-            this.detailsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.detailsBtn.UseVisualStyleBackColor = true;
-            this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);
-            // 
-            // homeBtn
-            // 
-            this.homeBtn.FlatAppearance.BorderSize = 0;
-            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeBtn.Image")));
-            this.homeBtn.Location = new System.Drawing.Point(5, 236);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(242, 59);
-            this.homeBtn.TabIndex = 2;
-            this.homeBtn.Text = "   Home";
-            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.homeBtn.UseVisualStyleBackColor = true;
-            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 158);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -184,22 +94,6 @@
             this.panelHeader.Size = new System.Drawing.Size(772, 49);
             this.panelHeader.TabIndex = 2;
             // 
-            // minBtn
-            // 
-            this.minBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minBtn.FlatAppearance.BorderSize = 0;
-            this.minBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minBtn.ForeColor = System.Drawing.Color.White;
-            this.minBtn.Image = ((System.Drawing.Image)(resources.GetObject("minBtn.Image")));
-            this.minBtn.Location = new System.Drawing.Point(701, 8);
-            this.minBtn.Name = "minBtn";
-            this.minBtn.Size = new System.Drawing.Size(30, 30);
-            this.minBtn.TabIndex = 12;
-            this.minBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.minBtn.UseVisualStyleBackColor = true;
-            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
-            // 
             // titleOfPages
             // 
             this.titleOfPages.AutoSize = true;
@@ -211,22 +105,6 @@
             this.titleOfPages.Size = new System.Drawing.Size(88, 38);
             this.titleOfPages.TabIndex = 10;
             this.titleOfPages.Text = "Home";
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(732, 8);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(30, 30);
-            this.closeBtn.TabIndex = 9;
-            this.closeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.closeBtn.UseVisualStyleBackColor = true;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // bunifuDragControl1
             // 
@@ -418,6 +296,128 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // minBtn
+            // 
+            this.minBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minBtn.FlatAppearance.BorderSize = 0;
+            this.minBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minBtn.ForeColor = System.Drawing.Color.White;
+            this.minBtn.Image = ((System.Drawing.Image)(resources.GetObject("minBtn.Image")));
+            this.minBtn.Location = new System.Drawing.Point(701, 8);
+            this.minBtn.Name = "minBtn";
+            this.minBtn.Size = new System.Drawing.Size(30, 30);
+            this.minBtn.TabIndex = 12;
+            this.minBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.minBtn.UseVisualStyleBackColor = true;
+            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(732, 8);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(30, 30);
+            this.closeBtn.TabIndex = 9;
+            this.closeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.FlatAppearance.BorderSize = 0;
+            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutBtn.ForeColor = System.Drawing.Color.White;
+            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
+            this.logOutBtn.Location = new System.Drawing.Point(5, 580);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(242, 59);
+            this.logOutBtn.TabIndex = 6;
+            this.logOutBtn.Text = "   Log Out";
+            this.logOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logOutBtn.UseVisualStyleBackColor = true;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
+            // settingBtn
+            // 
+            this.settingBtn.FlatAppearance.BorderSize = 0;
+            this.settingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingBtn.ForeColor = System.Drawing.Color.White;
+            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
+            this.settingBtn.Location = new System.Drawing.Point(5, 494);
+            this.settingBtn.Name = "settingBtn";
+            this.settingBtn.Size = new System.Drawing.Size(242, 59);
+            this.settingBtn.TabIndex = 5;
+            this.settingBtn.Text = "   Settings";
+            this.settingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.settingBtn.UseVisualStyleBackColor = true;
+            this.settingBtn.Click += new System.EventHandler(this.settingBtn_Click);
+            // 
+            // reportBtn
+            // 
+            this.reportBtn.FlatAppearance.BorderSize = 0;
+            this.reportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportBtn.ForeColor = System.Drawing.Color.White;
+            this.reportBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportBtn.Image")));
+            this.reportBtn.Location = new System.Drawing.Point(5, 408);
+            this.reportBtn.Name = "reportBtn";
+            this.reportBtn.Size = new System.Drawing.Size(242, 59);
+            this.reportBtn.TabIndex = 4;
+            this.reportBtn.Text = "   Reports";
+            this.reportBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reportBtn.UseVisualStyleBackColor = true;
+            this.reportBtn.Click += new System.EventHandler(this.reportBtn_Click);
+            // 
+            // detailsBtn
+            // 
+            this.detailsBtn.FlatAppearance.BorderSize = 0;
+            this.detailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.detailsBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsBtn.ForeColor = System.Drawing.Color.White;
+            this.detailsBtn.Image = ((System.Drawing.Image)(resources.GetObject("detailsBtn.Image")));
+            this.detailsBtn.Location = new System.Drawing.Point(5, 322);
+            this.detailsBtn.Name = "detailsBtn";
+            this.detailsBtn.Size = new System.Drawing.Size(242, 59);
+            this.detailsBtn.TabIndex = 3;
+            this.detailsBtn.Text = "   Details";
+            this.detailsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.detailsBtn.UseVisualStyleBackColor = true;
+            this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.FlatAppearance.BorderSize = 0;
+            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBtn.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBtn.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeBtn.Image")));
+            this.homeBtn.Location = new System.Drawing.Point(5, 236);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(242, 59);
+            this.homeBtn.TabIndex = 2;
+            this.homeBtn.Text = "   Home";
+            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.homeBtn.UseVisualStyleBackColor = true;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(27, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 158);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // DashBoard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -431,12 +431,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dash Board";
             this.panelSider.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.panelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
