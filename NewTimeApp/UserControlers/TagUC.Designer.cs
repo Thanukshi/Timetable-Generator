@@ -35,11 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.ebtn = new ePOSOne.btnProduct.Button_WOC();
             this.tagpanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tagpanel1
             // 
+            this.tagpanel1.Controls.Add(this.ebtn);
             this.tagpanel1.Controls.Add(this.tagname);
             this.tagpanel1.Controls.Add(this.saveAcademic);
             this.tagpanel1.Controls.Add(this.label2);
@@ -122,6 +124,30 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Academic Details";
             // 
+            // ebtn
+            // 
+            this.ebtn.BackColor = System.Drawing.Color.White;
+            this.ebtn.BorderColor = System.Drawing.Color.Black;
+            this.ebtn.ButtonColor = System.Drawing.Color.White;
+            this.ebtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ebtn.FlatAppearance.BorderSize = 0;
+            this.ebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.ebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.ebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ebtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ebtn.ForeColor = System.Drawing.Color.Black;
+            this.ebtn.Location = new System.Drawing.Point(476, 567);
+            this.ebtn.Name = "ebtn";
+            this.ebtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.ebtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ebtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ebtn.Size = new System.Drawing.Size(417, 67);
+            this.ebtn.TabIndex = 35;
+            this.ebtn.Text = "Edit";
+            this.ebtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ebtn.UseVisualStyleBackColor = false;
+            this.ebtn.Click += new System.EventHandler(this.ebtn_Click);
+            // 
             // TagUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,5 +170,6 @@
         private ePOSOne.btnProduct.Button_WOC saveAcademic;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tagname;
+        private ePOSOne.btnProduct.Button_WOC ebtn;
     }
 }

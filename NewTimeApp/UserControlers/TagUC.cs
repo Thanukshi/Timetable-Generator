@@ -95,5 +95,12 @@ namespace NewTimeApp.UserControlers
             db.ShowDialog();
             this.Hide();
         }
+
+        private void ebtn_Click(object sender, EventArgs e)
+        {
+            TagEditUC dataViewUC = new TagEditUC();
+            MainControler.showControl(dataViewUC, tagpanel1);
+
+        }
     }
 }
