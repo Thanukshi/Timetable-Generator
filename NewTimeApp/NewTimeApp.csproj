@@ -243,6 +243,7 @@
     <Compile Include="Helpers\AcademicDetailsClass.cs" />
     <Compile Include="Helpers\DegreeProgramClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
+    <Compile Include="Helpers\MainGroupClass.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
