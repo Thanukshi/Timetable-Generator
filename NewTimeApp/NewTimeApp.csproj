@@ -220,6 +220,12 @@
     <Compile Include="UserControlers\locationUC.Designer.cs">
       <DependentUpon>locationUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\PreferredRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\PreferredRoomUC.Designer.cs">
+      <DependentUpon>PreferredRoomUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\locationUC.resx">
       <DependentUpon>locationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\PreferredRoomUC.resx">
+      <DependentUpon>PreferredRoomUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>

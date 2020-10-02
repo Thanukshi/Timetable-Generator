@@ -44,6 +44,7 @@
             // 
             // SuitableRoomPanel
             // 
+            this.SuitableRoomPanel.BackColor = System.Drawing.Color.White;
             this.SuitableRoomPanel.Controls.Add(this.AddSutRoomBtn);
             this.SuitableRoomPanel.Controls.Add(this.roomNameTB);
             this.SuitableRoomPanel.Controls.Add(this.RoomTyCB);
