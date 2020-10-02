@@ -20,8 +20,8 @@ namespace NewTimeApp.UserControlers
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            RoomAllocationUC roomallocationUC = new RoomAllocationUC();
-            MainControler.showControl(roomallocationUC, PreferredRoomPanel);
+           /* RoomAllocationUC roomallocationUC = new RoomAllocationUC();
+            MainControler.showControl(roomallocationUC, PreferredRoomPanel);*/
         }
     }
 }
