@@ -70,21 +70,20 @@ namespace NewTimeApp.UserControlers
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
                 sqlCom = new SQLiteCommand();
-                String sql = "SELECT * FROM academicDetails";
+                String sql = "SELECT * FROM buildingDetails";
                 DB = new SQLiteDataAdapter(sql, sqlCon);
                 ds.Reset();
                 DB.Fill(ds);
                 dt = ds.Tables[0];
-                academicDataGrid.DataSource = dt;
+                dataGridView1.DataSource = dt;
                 sqlCon.Close();
                 /*academicDataGrid.Columns[1].HeaderText = "Firstname";
                 academicDataGrid.Columns[2].HeaderText = "Lastname";
                 academicDataGrid.Columns[3].HeaderText = "Address";*/
-                academicDataGrid.Columns[0].Visible = false;
-                academicDataGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                academicDataGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 /*academicDataGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
-                academicDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
             catch (Exception ex)
             {
