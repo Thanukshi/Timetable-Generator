@@ -273,6 +273,10 @@
     <Compile Include="UserControlers\AcademicDetailsViewUC.designer.cs">
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\AddRoomSessionsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\AddRoomSessionsUC.Designer.cs" />
     <Compile Include="UserControlers\buildingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +305,14 @@
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\LecturerAndGroupsRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\LecturerAndGroupsRoomUC.Designer.cs" />
+    <Compile Include="UserControlers\lectureUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\lectureUC.Designer.cs" />
     <Compile Include="UserControlers\locationUC.cs" />
     <Compile Include="UserControlers\locationUC.Designer.cs" />
     <Compile Include="UserControlers\MainGroupDetaisUC.cs">
@@ -321,12 +333,24 @@
     <Compile Include="UserControlers\NotAvailableUC.Designer.cs">
       <DependentUpon>NotAvailableUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\PreferredRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\PreferredRoomUC.Designer.cs" />
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\ReportsUC.Designer.cs">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\ReservedRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\ReservedRoomUC.Designer.cs" />
+    <Compile Include="UserControlers\RoomAllocationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\RoomAllocationUC.Designer.cs" />
     <Compile Include="UserControlers\roomUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -377,6 +401,14 @@
     <Compile Include="UserControlers\SubGroupUC.Designer.cs">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\subject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\subject.Designer.cs" />
+    <Compile Include="UserControlers\SuitableRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\SuitableRoomUC.Designer.cs" />
     <Compile Include="UserControlers\TagEditUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -417,6 +449,7 @@
     <EmbeddedResource Include="UserControlers\AcademicDetailsViewUC.resx">
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\AddRoomSessionsUC.resx" />
     <EmbeddedResource Include="UserControlers\buildingUC.resx" />
     <EmbeddedResource Include="UserControlers\DataViewUC.resx">
       <DependentUpon>DataViewUC.cs</DependentUpon>
@@ -430,6 +463,8 @@
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\LecturerAndGroupsRoomUC.resx" />
+    <EmbeddedResource Include="UserControlers\lectureUC.resx" />
     <EmbeddedResource Include="UserControlers\locationUC.resx" />
     <EmbeddedResource Include="UserControlers\MainGroupDetaisUC.resx">
       <DependentUpon>MainGroupDetaisUC.cs</DependentUpon>
@@ -440,9 +475,12 @@
     <EmbeddedResource Include="UserControlers\NotAvailableUC.resx">
       <DependentUpon>NotAvailableUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\PreferredRoomUC.resx" />
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\ReservedRoomUC.resx" />
+    <EmbeddedResource Include="UserControlers\RoomAllocationUC.resx" />
     <EmbeddedResource Include="UserControlers\roomUC.resx" />
     <EmbeddedResource Include="UserControlers\SettingsUC.resx">
       <DependentUpon>SettingsUC.cs</DependentUpon>
@@ -462,6 +500,8 @@
     <EmbeddedResource Include="UserControlers\SubGroupUC.resx">
       <DependentUpon>SubGroupUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\subject.resx" />
+    <EmbeddedResource Include="UserControlers\SuitableRoomUC.resx" />
     <EmbeddedResource Include="UserControlers\TagEditUC.resx">
       <DependentUpon>TagEditUC.cs</DependentUpon>
     </EmbeddedResource>
