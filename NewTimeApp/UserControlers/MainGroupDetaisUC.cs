@@ -67,13 +67,15 @@ namespace NewTimeApp.UserControlers
         private void academicDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            DegreeProgramClass dp = new DegreeProgramClass();
-            dp.DegreeFullName = dFullName.Text;
-            dp.DegreeShortName = dShortName.Text;
+            MainGroupClass mgc = new MainGroupClass();
+            mgc.MAcDetails = acsem.Text;
+            mgc.MDegreeDetails = dname.Text;
+            mgc.MDegreeDetails = gNo.Text;
 
             id = Convert.ToInt32(academicDataGrid.SelectedRows[0].Cells[0].Value);
-            dFullName.Text = academicDataGrid.SelectedRows[0].Cells[1].Value.ToString();
-            dShortName.Text = academicDataGrid.SelectedRows[0].Cells[2].Value.ToString();
+            acsem.Text = academicDataGrid.SelectedRows[0].Cells[1].Value.ToString();
+            dname.Text = academicDataGrid.SelectedRows[0].Cells[2].Value.ToString();
+            gNo.Text = academicDataGrid.SelectedRows[0].Cells[3].Value.ToString();
             isDoubleClick = true;
 
         }
