@@ -289,6 +289,7 @@
             this.tagBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tagBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tagBtn.UseVisualStyleBackColor = false;
+            this.tagBtn.Click += new System.EventHandler(this.tagBtn_Click);
             // 
             // locationBtn
             // 

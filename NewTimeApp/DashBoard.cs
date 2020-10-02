@@ -24,15 +24,13 @@ namespace NewTimeApp
         private void closeBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        } 
-
+        }
         private void homeBtn_Click(object sender, EventArgs e)
         {
             Hide();
             DashBoard dashBoard = new DashBoard();
             dashBoard.ShowDialog();
             titleOfPages.Text = "Home";
-            
         }
 
         private void detailsBtn_Click(object sender, EventArgs e)
@@ -64,7 +62,6 @@ namespace NewTimeApp
             Hide();
             Login login = new Login();
             login.ShowDialog();
-           
         }
 
         private void studentBtn_Click_1(object sender, EventArgs e)
@@ -85,6 +82,11 @@ namespace NewTimeApp
         }
 
         private void panelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tagBtn_Click(object sender, EventArgs e)
         {
 
         }
