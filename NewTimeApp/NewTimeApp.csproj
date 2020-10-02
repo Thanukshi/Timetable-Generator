@@ -264,16 +264,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControlers\academicDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\academicDetails.Designer.cs">
-      <DependentUpon>academicDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlers\AcademicDetailsViewUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlers\AcademicDetailsViewUC.Designer.cs">
+    <Compile Include="UserControlers\academicDetails.cs" />
+    <Compile Include="UserControlers\academicDetails.Designer.cs" />
+    <Compile Include="UserControlers\AcademicDetailsViewUC.cs" />
+    <Compile Include="UserControlers\AcademicDetailsViewUC.designer.cs">
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\DataViewUC.cs">
@@ -372,9 +366,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControlers\academicDetails.resx">
-      <DependentUpon>academicDetails.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\academicDetails.resx" />
     <EmbeddedResource Include="UserControlers\AcademicDetailsViewUC.resx">
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </EmbeddedResource>

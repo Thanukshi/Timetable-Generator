@@ -38,36 +38,30 @@ namespace NewTimeApp.UserControlers
 
         private void GenerateDatabase()
         {
-            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
-            //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
-            if (!File.Exists(path))
-            {
-                sqlCon = new SQLiteConnection(connectString);
-                sqlCon.Open();
-                string sql1 = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
+            sqlCon = new SQLiteConnection(connectString);
+            sqlCon.Open();
+            string sql1 = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
 
-                string sql2 = "CREATE TABLE degreeProgram (degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName  VARCHAR (100) NOT NULL)";
-                //string sql = "CREATE TABLE degreeProgram(degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName VARCHAR (100) NOT NULL)";
+            string sql2 = "CREATE TABLE degreeProgram (degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName  VARCHAR (100) NOT NULL)";
+            //string sql = "CREATE TABLE degreeProgram(degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName VARCHAR (100) NOT NULL)";
 
-                string sql3 = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
+            string sql3 = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
 
-                string sql4 = "CREATE TABLE subGroupsDetails (SID INTEGER PRIMARY KEY ASC AUTOINCREMENT, MID VARCHAR (20) NOT NULL, SNO  VARCHAR (20) NOT NULL)";
+            string sql4 = "CREATE TABLE subGroupsDetails (SID INTEGER PRIMARY KEY ASC AUTOINCREMENT, MID VARCHAR (20) NOT NULL, SNO  VARCHAR (20) NOT NULL)";
 
-                sqlCom = new SQLiteCommand(sql1, sqlCon);
-                sqlCom.ExecuteNonQuery();
+            sqlCom = new SQLiteCommand(sql1, sqlCon);
+            sqlCom.ExecuteNonQuery();
 
-                sqlCom = new SQLiteCommand(sql2, sqlCon);
-                sqlCom.ExecuteNonQuery();
+            sqlCom = new SQLiteCommand(sql2, sqlCon);
+            sqlCom.ExecuteNonQuery();
 
-                sqlCom = new SQLiteCommand(sql3, sqlCon);
-                sqlCom.ExecuteNonQuery();
+            sqlCom = new SQLiteCommand(sql3, sqlCon);
+            sqlCom.ExecuteNonQuery();
 
-                sqlCom = new SQLiteCommand(sql4, sqlCon);
-                sqlCom.ExecuteNonQuery();
+            sqlCom = new SQLiteCommand(sql4, sqlCon);
+            sqlCom.ExecuteNonQuery();
 
-                sqlCon.Close();
-
-            }
+            sqlCon.Close();
         }
 
         private void academicDetails_Load(object sender, EventArgs e)

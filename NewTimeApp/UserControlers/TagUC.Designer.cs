@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TagUC));
             this.tagpanel1 = new System.Windows.Forms.Panel();
+            this.tagname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.saveAcademic = new ePOSOne.btnProduct.Button_WOC();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tagname = new System.Windows.Forms.TextBox();
             this.tagpanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,30 @@
             this.tagpanel1.Name = "tagpanel1";
             this.tagpanel1.Size = new System.Drawing.Size(1000, 790);
             this.tagpanel1.TabIndex = 0;
+            // 
+            // tagname
+            // 
+            this.tagname.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tagname.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tagname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.tagname.Location = new System.Drawing.Point(423, 254);
+            this.tagname.Multiline = true;
+            this.tagname.Name = "tagname";
+            this.tagname.Size = new System.Drawing.Size(470, 45);
+            this.tagname.TabIndex = 34;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label2.Location = new System.Drawing.Point(107, 254);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 38);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Tag";
             // 
             // backBtn
             // 
@@ -95,30 +119,7 @@
             this.saveAcademic.Text = "Save";
             this.saveAcademic.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveAcademic.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(107, 254);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 38);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Tag";
-            // 
-            // tagname
-            // 
-            this.tagname.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tagname.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tagname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.tagname.Location = new System.Drawing.Point(423, 254);
-            this.tagname.Multiline = true;
-            this.tagname.Name = "tagname";
-            this.tagname.Size = new System.Drawing.Size(470, 45);
-            this.tagname.TabIndex = 34;
+            this.saveAcademic.Click += new System.EventHandler(this.saveAcademic_Click);
             // 
             // TagUC
             // 

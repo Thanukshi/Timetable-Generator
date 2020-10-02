@@ -31,6 +31,7 @@ namespace NewTimeApp.UserControlers
             connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
             //connectString = @"Data Source = E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             sqlCon = new SQLiteConnection(connectString);
+            academicDataGrid.AutoGenerateColumns = false;
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
@@ -120,7 +121,7 @@ namespace NewTimeApp.UserControlers
                             {
                                 sqlCon.Open();
                                 sqlCom = new SQLiteCommand();
-                                sqlCom.CommandText = @"UPDATE academicDetails set acYear=@acyear, acSem=@acsem WHERE acID ='" + id + "'";
+                                sqlCom.CommandText = @"UPDATE academicDetails set acYear=@acyear, acSem=@acsem WHERE ID ='" + id + "'";
                                 sqlCom.Connection = sqlCon;
                                 sqlCom.Parameters.AddWithValue("@acyear", academic.AcYear);
                                 sqlCom.Parameters.AddWithValue("@acsem", academic.AcSEM);
@@ -192,7 +193,7 @@ namespace NewTimeApp.UserControlers
                         sqlCon.Open();
                         sqlCom = new SQLiteCommand();
                         //id = Convert.ToInt32(academicDataGrid.SelectedRows[0].Cells[0].Value);
-                        sqlCom.CommandText = @"DELETE FROM academicDetails WHERE acID ='" + id + "'";
+                        sqlCom.CommandText = @"DELETE FROM academicDetails WHERE ID ='" + id + "'";
                         sqlCom.Connection = sqlCon;
                         int i = sqlCom.ExecuteNonQuery();
                         if (i == 1)

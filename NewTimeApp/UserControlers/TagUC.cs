@@ -16,5 +16,10 @@ namespace NewTimeApp.UserControlers
         {
             InitializeComponent();
         }
+
+        private void saveAcademic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
