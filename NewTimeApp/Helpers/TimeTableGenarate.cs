@@ -56,7 +56,7 @@ namespace NewTimeApp.Helpers
 
 
             // command.ExecuteNonQuery();
-            MessageBox.Show("done");
+            
             sqlite_datareader1 = command1.ExecuteReader();
             sqlite_datareader2 = command.ExecuteReader();
 
