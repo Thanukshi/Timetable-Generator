@@ -202,6 +202,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlers\AddRoomSessionsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\AddRoomSessionsUC.Designer.cs">
+      <DependentUpon>AddRoomSessionsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\buildingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -319,6 +325,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlers\AddRoomSessionsUC.resx">
+      <DependentUpon>AddRoomSessionsUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\buildingUC.resx">
       <DependentUpon>buildingUC.cs</DependentUpon>
     </EmbeddedResource>
