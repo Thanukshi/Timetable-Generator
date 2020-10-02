@@ -88,7 +88,9 @@ namespace NewTimeApp
 
         private void tagBtn_Click(object sender, EventArgs e)
         {
-
+            TagUC studentsUC = new TagUC();
+            MainControler.showControl(studentsUC, panelContainer);
+            titleOfPages.Text = "Tags";
         }
     }
 }
