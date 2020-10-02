@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuitableRoomUC));
             this.SuitableRoomPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TagCB = new System.Windows.Forms.ComboBox();
-            this.RoomTyCB = new System.Windows.Forms.ComboBox();
-            this.roomNameTB = new System.Windows.Forms.TextBox();
             this.AddSutRoomBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.roomNameTB = new System.Windows.Forms.TextBox();
+            this.RoomTyCB = new System.Windows.Forms.ComboBox();
+            this.TagCB = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuitableRoomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,99 +60,6 @@
             this.SuitableRoomPanel.Name = "SuitableRoomPanel";
             this.SuitableRoomPanel.Size = new System.Drawing.Size(772, 720);
             this.SuitableRoomPanel.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(75, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 35);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Add Suitable Room";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(20, 31);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 26;
-            this.backBtn.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(116, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 30);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Tag\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label3.Location = new System.Drawing.Point(116, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 30);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Room Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label4.Location = new System.Drawing.Point(116, 257);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 30);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Room Type\r\n";
-            // 
-            // TagCB
-            // 
-            this.TagCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TagCB.FormattingEnabled = true;
-            this.TagCB.Items.AddRange(new object[] {
-            "Lecture",
-            "Tute",
-            "Practical"});
-            this.TagCB.Location = new System.Drawing.Point(317, 193);
-            this.TagCB.Name = "TagCB";
-            this.TagCB.Size = new System.Drawing.Size(310, 38);
-            this.TagCB.TabIndex = 30;
-            // 
-            // RoomTyCB
-            // 
-            this.RoomTyCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoomTyCB.FormattingEnabled = true;
-            this.RoomTyCB.Items.AddRange(new object[] {
-            "Lecture Hall",
-            "Lab"});
-            this.RoomTyCB.Location = new System.Drawing.Point(317, 257);
-            this.RoomTyCB.Name = "RoomTyCB";
-            this.RoomTyCB.Size = new System.Drawing.Size(310, 38);
-            this.RoomTyCB.TabIndex = 31;
-            // 
-            // roomNameTB
-            // 
-            this.roomNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomNameTB.Location = new System.Drawing.Point(317, 325);
-            this.roomNameTB.Multiline = true;
-            this.roomNameTB.Name = "roomNameTB";
-            this.roomNameTB.Size = new System.Drawing.Size(310, 40);
-            this.roomNameTB.TabIndex = 32;
             // 
             // AddSutRoomBtn
             // 
@@ -178,13 +85,107 @@
             this.AddSutRoomBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.AddSutRoomBtn.UseVisualStyleBackColor = false;
             // 
+            // roomNameTB
+            // 
+            this.roomNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomNameTB.Location = new System.Drawing.Point(317, 325);
+            this.roomNameTB.Multiline = true;
+            this.roomNameTB.Name = "roomNameTB";
+            this.roomNameTB.Size = new System.Drawing.Size(310, 40);
+            this.roomNameTB.TabIndex = 32;
+            // 
+            // RoomTyCB
+            // 
+            this.RoomTyCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomTyCB.FormattingEnabled = true;
+            this.RoomTyCB.Items.AddRange(new object[] {
+            "Lecture Hall",
+            "Lab"});
+            this.RoomTyCB.Location = new System.Drawing.Point(317, 257);
+            this.RoomTyCB.Name = "RoomTyCB";
+            this.RoomTyCB.Size = new System.Drawing.Size(310, 38);
+            this.RoomTyCB.TabIndex = 31;
+            // 
+            // TagCB
+            // 
+            this.TagCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TagCB.FormattingEnabled = true;
+            this.TagCB.Items.AddRange(new object[] {
+            "Lecture",
+            "Tute",
+            "Practical"});
+            this.TagCB.Location = new System.Drawing.Point(317, 193);
+            this.TagCB.Name = "TagCB";
+            this.TagCB.Size = new System.Drawing.Size(310, 38);
+            this.TagCB.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label4.Location = new System.Drawing.Point(116, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 30);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Room Type\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label3.Location = new System.Drawing.Point(116, 325);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 30);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Room Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label2.Location = new System.Drawing.Point(116, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 30);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Tag\r\n";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(20, 31);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 26;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(75, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 35);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Add Suitable Room";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // SuitableRoomUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.SuitableRoomPanel);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SuitableRoomUC";
             this.Size = new System.Drawing.Size(772, 720);
             this.SuitableRoomPanel.ResumeLayout(false);
