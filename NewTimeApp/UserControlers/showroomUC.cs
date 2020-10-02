@@ -103,71 +103,9 @@ namespace NewTimeApp.UserControlers
 
         private void roomUpdatebtn_Click(object sender, EventArgs e)
         {
-            /*if (UpbuildingName.Text != "")
-            {
-                if (isDoubleClick)
-                {
-                    AcademicDetailsClass academic = new AcademicDetailsClass();
-                    academic.AcYear = acUpYear.Text;
-                    academic.AcSEM = acUpSem.Text;
+         
 
-                    DB = new SQLiteDataAdapter("SELECT * FROM academicDetails WHERE acYear='" + academic.AcYear + "' AND acSem='" + academic.AcSEM + "'", sqlCon);
-                    dt = new DataTable();
-                    DB.Fill(dt);
-
-                    if (dt.Rows.Count >= 1)
-                    {
-                        CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is already saved. Can not be updated.");
-                    }
-                    else
-                    {
-
-                        try
-                        {
-                            if ((academic.AcYear == "Y1" || academic.AcYear == "Y2" || academic.AcYear == "Y3" || academic.AcYear == "Y4") && (academic.AcSEM == "S1" || academic.AcSEM == "S2"))
-                            {
-                                sqlCon.Open();
-                                sqlCom = new SQLiteCommand();
-                                sqlCom.CommandText = @"UPDATE academicDetails set acYear=@acyear, acSem=@acsem WHERE acID ='" + id + "'";
-                                sqlCom.Connection = sqlCon;
-                                sqlCom.Parameters.AddWithValue("@acyear", academic.AcYear);
-                                sqlCom.Parameters.AddWithValue("@acsem", academic.AcSEM);
-                            }
-
-                            else
-                            {
-                                CustomMessageBox.Show("Error!", "Academic Year or Semester not in valid range.");
-                            }
-
-                            int i = sqlCom.ExecuteNonQuery();
-
-                            if (i == 1)
-                            {
-                                CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is updated successfully.");
-                                academic.AcYear = "";
-                                academic.AcSEM = "";
-                                ReadData();
-                                id = 0;
-                                academicDataGrid.ClearSelection();
-                                academicDataGrid.CurrentCell = null;
-                                isDoubleClick = false;
-                            }
-
-                            sqlCon.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            CustomMessageBox.Show("Error!", "" + ex.Message);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                CustomMessageBox.Show("Error!", "Please Select Record to Update");
-            }*/
-        
-    }
+        }
 
         /*private DataTable FetchRoomDetails()
         {
