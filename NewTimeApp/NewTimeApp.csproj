@@ -242,6 +242,9 @@
     </Compile>
     <Compile Include="Helpers\AcademicDetailsClass.cs" />
     <Compile Include="Helpers\BuildingClass.cs" />
+    <Compile Include="Helpers\ClassLec.cs" />
+    <Compile Include="Helpers\Classsession.cs" />
+    <Compile Include="Helpers\Classsub.cs" />
     <Compile Include="Helpers\DegreeProgramClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
     <Compile Include="Helpers\MainGroupClass.cs" />
@@ -277,6 +280,10 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\AddRoomSessionsUC.Designer.cs" />
+    <Compile Include="UserControlers\addsubjec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\addsubjec.Designer.cs" />
     <Compile Include="UserControlers\buildingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -309,6 +316,10 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\LecturerAndGroupsRoomUC.Designer.cs" />
+    <Compile Include="UserControlers\LecturerIN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\LecturerIN.Designer.cs" />
     <Compile Include="UserControlers\lectureUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -421,6 +432,14 @@
     <Compile Include="UserControlers\TagUC.Designer.cs">
       <DependentUpon>TagUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\veiwlecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\veiwlecturer.Designer.cs" />
+    <Compile Include="UserControlers\viewsubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\viewsubject.Designer.cs" />
     <EmbeddedResource Include="academicDetailsUpdate.resx">
       <DependentUpon>academicDetailsUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -450,6 +469,7 @@
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\AddRoomSessionsUC.resx" />
+    <EmbeddedResource Include="UserControlers\addsubjec.resx" />
     <EmbeddedResource Include="UserControlers\buildingUC.resx" />
     <EmbeddedResource Include="UserControlers\DataViewUC.resx">
       <DependentUpon>DataViewUC.cs</DependentUpon>
@@ -464,6 +484,7 @@
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\LecturerAndGroupsRoomUC.resx" />
+    <EmbeddedResource Include="UserControlers\LecturerIN.resx" />
     <EmbeddedResource Include="UserControlers\lectureUC.resx" />
     <EmbeddedResource Include="UserControlers\locationUC.resx" />
     <EmbeddedResource Include="UserControlers\MainGroupDetaisUC.resx">
@@ -508,6 +529,8 @@
     <EmbeddedResource Include="UserControlers\TagUC.resx">
       <DependentUpon>TagUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\veiwlecturer.resx" />
+    <EmbeddedResource Include="UserControlers\viewsubject.resx" />
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>

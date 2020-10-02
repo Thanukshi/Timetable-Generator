@@ -31,5 +31,4 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(lec, lecPanel);
         }
     }
-    
 }

@@ -21,7 +21,7 @@ namespace NewTimeApp.UserControlers
         private void buttonaddsub_Click(object sender, EventArgs e)
         {
             addsubjec sub = new addsubjec();
-            MainControler.showControl(sub,panelsubb);
+            MainControler.showControl(sub, panelsubb);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

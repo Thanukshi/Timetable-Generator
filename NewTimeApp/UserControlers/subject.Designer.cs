@@ -49,7 +49,7 @@
             // buttonaddsub
             // 
             this.buttonaddsub.BackColor = System.Drawing.Color.Purple;
-            this.buttonaddsub.BackgroundImage = global::NewTimeApp.Properties.Resources.book_stack_64;
+            //this.buttonaddsub.BackgroundImage = global::NewTimeApp.Properties.Resources.book_stack_64;
             this.buttonaddsub.Location = new System.Drawing.Point(87, 165);
             this.buttonaddsub.Name = "buttonaddsub";
             this.buttonaddsub.Size = new System.Drawing.Size(136, 125);
@@ -60,7 +60,7 @@
             // buttonviewsub
             // 
             this.buttonviewsub.BackColor = System.Drawing.Color.Purple;
-            this.buttonviewsub.BackgroundImage = global::NewTimeApp.Properties.Resources.view_details_64;
+            //this.buttonviewsub.BackgroundImage = global::NewTimeApp.Properties.Resources.view_details_64;
             this.buttonviewsub.Location = new System.Drawing.Point(492, 165);
             this.buttonviewsub.Name = "buttonviewsub";
             this.buttonviewsub.Size = new System.Drawing.Size(136, 125);

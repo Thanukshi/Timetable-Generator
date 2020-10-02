@@ -38,7 +38,7 @@
             // addLec
             // 
             this.addLec.BackColor = System.Drawing.Color.Purple;
-            this.addLec.Image = global::NewTimeApp.Properties.Resources.add_user_2_64;
+            //this.addLec.Image = global::NewTimeApp.Properties.Resources.add_user_2_64;
             this.addLec.Location = new System.Drawing.Point(114, 266);
             this.addLec.Name = "addLec";
             this.addLec.Size = new System.Drawing.Size(119, 111);
@@ -49,7 +49,7 @@
             // viewLec
             // 
             this.viewLec.BackColor = System.Drawing.Color.Purple;
-            this.viewLec.Image = global::NewTimeApp.Properties.Resources.conference_64;
+            //this.viewLec.Image = global::NewTimeApp.Properties.Resources.conference_64;
             this.viewLec.Location = new System.Drawing.Point(510, 266);
             this.viewLec.Name = "viewLec";
             this.viewLec.Size = new System.Drawing.Size(119, 111);
@@ -60,7 +60,7 @@
             // update
             // 
             this.update.BackColor = System.Drawing.Color.Purple;
-            this.update.Image = global::NewTimeApp.Properties.Resources.add_user_2_64;
+            //this.update.Image = global::NewTimeApp.Properties.Resources.add_user_2_64;
             this.update.Location = new System.Drawing.Point(317, 467);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(119, 111);
