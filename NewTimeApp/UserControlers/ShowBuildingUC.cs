@@ -125,6 +125,55 @@ namespace NewTimeApp.UserControlers
 
         private void BuildingUpBtn_Click(object sender, EventArgs e)
         {
+            if (buildingNameUpTB.Text != "" )
+            {
+                if (isDoubleClick)
+                {
+                    BuildingClass building = new BuildingClass();
+                    building.buildingName = buildingNameUpTB.Text;
+                    
+
+                    DB = new SQLiteDataAdapter("SELECT * FROM buildingDetails WHERE buildingName='" + building.buildingName + "' ", sqlCon);
+                    dt = new DataTable();
+                    DB.Fill(dt);
+
+                    if (dt.Rows.Count >= 1)
+                    {
+                        CustomMessageBox.Show("Building Details", "" + building.buildingName + " is already saved. Can not be updated.");
+                    }
+                    else
+                    {
+
+                        try
+                        {
+                           
+
+                            int i = sqlCom.ExecuteNonQuery();
+
+                            if (i == 1)
+                            {
+                                CustomMessageBox.Show("Building Details", "" + building.buildingName +  " is updated successfully.");
+                                building.buildingName = "";
+                                ReadData();
+                                id = 0;
+                                dataGridView1.ClearSelection();
+                                dataGridView1.CurrentCell = null;
+                                isDoubleClick = false;
+                            }
+
+                            sqlCon.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            CustomMessageBox.Show("Error!", "" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                CustomMessageBox.Show("Error!", "Please Select Record to Update");
+            }
         }
 
     }

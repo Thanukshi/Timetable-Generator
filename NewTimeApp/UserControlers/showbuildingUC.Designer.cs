@@ -38,6 +38,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buildingNameUpTB = new System.Windows.Forms.TextBox();
             this.showBuildingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +47,8 @@
             // showBuildingPanel
             // 
             this.showBuildingPanel.BackColor = System.Drawing.Color.White;
+            this.showBuildingPanel.Controls.Add(this.buildingNameUpTB);
+            this.showBuildingPanel.Controls.Add(this.label2);
             this.showBuildingPanel.Controls.Add(this.BuildingDeleteBtn);
             this.showBuildingPanel.Controls.Add(this.BuildingUpBtn);
             this.showBuildingPanel.Controls.Add(this.dataGridView1);
@@ -163,6 +167,26 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Buildings";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label2.Location = new System.Drawing.Point(135, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 31);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Building Name";
+            // 
+            // buildingNameUpTB
+            // 
+            this.buildingNameUpTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingNameUpTB.Location = new System.Drawing.Point(325, 130);
+            this.buildingNameUpTB.Multiline = true;
+            this.buildingNameUpTB.Name = "buildingNameUpTB";
+            this.buildingNameUpTB.Size = new System.Drawing.Size(337, 44);
+            this.buildingNameUpTB.TabIndex = 32;
+            // 
             // ShowBuildingUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,5 +211,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private ePOSOne.btnProduct.Button_WOC BuildingUpBtn;
         private ePOSOne.btnProduct.Button_WOC BuildingDeleteBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox buildingNameUpTB;
     }
 }
