@@ -188,12 +188,12 @@ namespace NewTimeApp.UserControlers
 
 
                     
-                        MessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +"is saved!");
+                        CustomMessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +" is saved!");
                     
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error!", " " + ex.Message);
+                    CustomMessageBox.Show("Error!", " " + ex.Message);
                 }
             }
             
@@ -269,8 +269,8 @@ namespace NewTimeApp.UserControlers
             
 
             
-                WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
-                MessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + "is Deleted!");
+            WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
+            CustomMessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + " is Deleted!");
             
         }
     }

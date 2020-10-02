@@ -12,14 +12,35 @@ namespace NewTimeApp
 {
     public partial class CustomMessageBox : Form
     {
+        static string msgT;
+        static string msgLb;
+
         public CustomMessageBox()
         {
             InitializeComponent();
+            titleOfPages.Text = msgT; ;
+            msgLable.Text = msgLb;
+
         }
 
-        private void CustomMessageBox_Load(object sender, EventArgs e)
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        internal static void Show(string vt, string vm)
         {
 
+            msgT = vt;
+            msgLb = vm;
+            CustomMessageBox cmb = new CustomMessageBox();
+            cmb.Show();
+
+        }
+
+        private void okBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

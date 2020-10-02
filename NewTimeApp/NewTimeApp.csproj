@@ -212,12 +212,8 @@
     <Compile Include="CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomMessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomMessageBox.Designer.cs">
-      <DependentUpon>CustomMessageBox.cs</DependentUpon>
-    </Compile>
+    <Compile Include="CustomMessageBox.cs" />
+    <Compile Include="CustomMessageBox.Designer.cs" />
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,9 +302,7 @@
     <Compile Include="UserControlers\WorkingDaysAndHoursUC.Designer.cs">
       <DependentUpon>WorkingDaysAndHoursUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomMessageBox.resx">
-      <DependentUpon>CustomMessageBox.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx" />
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
