@@ -28,11 +28,6 @@ namespace NewTimeApp.UserControlers
         public MainGroupUC()
         {
             InitializeComponent();
-            /* fillAcDetails();
-             fillDegreeDetails();
-             string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-             sqlCon = new SqlConnection(con);
-             sqlCon.Open();*/
             connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
             sqlCon = new SQLiteConnection(connectString);
             GenerateDatabase();

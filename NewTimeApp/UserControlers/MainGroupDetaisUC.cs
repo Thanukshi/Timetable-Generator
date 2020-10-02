@@ -9,39 +9,64 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewTimeApp.Helpers;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class MainGroupDetaisUC : UserControl
     {
-        string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt, dtm, dtf, dts;
+        DataSet ds = new DataSet();
+        private SQLiteDataAdapter DB, DBM, DBF, DBS;
+        int id;
+        bool isDoubleClick = false;
+        String connectString;
 
         public MainGroupDetaisUC()
         {
             InitializeComponent();
             StyleDataGrid();
-            sqlCon = new SqlConnection(con);
-            sqlCon.Open();
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            sqlCon = new SQLiteConnection(connectString);
 
-            academicDataGrid.AutoGenerateColumns = false;
-            academicDataGrid.DataSource = FetchAcademicDetails();
         }
 
-        private DataTable FetchAcademicDetails()
+        private void MainGroupDetaisUC_Load(object sender, EventArgs e)
         {
-            if (sqlCon.State == ConnectionState.Closed)
+            ReadData();
+        }
+
+        private void ReadData()
+        {
+            try
             {
+                sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
+                sqlCom = new SQLiteCommand();
+                String sql = "SELECT * FROM mainGroupsDetails";
+                DB = new SQLiteDataAdapter(sql, sqlCon);
+                ds.Reset();
+                DB.Fill(ds);
+                dt = ds.Tables[0];
+                academicDataGrid.DataSource = dt;
+                sqlCon.Close();
+                academicDataGrid.Columns[0].Visible = false;
+                academicDataGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                academicDataGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                academicDataGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                academicDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
-            DataTable dtData = new DataTable();
-            sqlCom = new SqlCommand("abcmainGroup", sqlCon);
-            sqlCom.CommandType = CommandType.StoredProcedure;
-            sqlCom.Parameters.AddWithValue("@ActionType", "FetchData");
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCom);
-            sqlSda.Fill(dtData);
-            return dtData;
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show("Error!", "" + ex.Message);
+            }
+        }
+
+        private void academicDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void backBtnS_Click(object sender, EventArgs e)
@@ -67,23 +92,6 @@ namespace NewTimeApp.UserControlers
 
 
         }
-
-        private void viewBtn_Click(object sender, EventArgs e)
-        {
-            /*   using (SqlConnection sqlCon = new SqlConnection(con))
-               {
-                   sqlCon.Open();
-                   SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM MainGroup", sqlCon);
-                   DataTable dtbl = new DataTable();
-                   sqlDa.Fill(dtbl);
-
-                   //method 1 - direct method
-                   //academicDataGrid.AutoGenerateColumns = false;
-                   academicDataGrid.DataSource = dtbl;
-
-               }*/
-        }
-
         private void academicDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -99,7 +107,7 @@ namespace NewTimeApp.UserControlers
 
         }
 
-        private void updateDetailsBtn_Click(object sender, EventArgs e)
+        private void updateDetailsBtn_Click_1(object sender, EventArgs e)
         {
 
         }
