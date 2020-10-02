@@ -123,6 +123,10 @@
             // 
             this.TagCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TagCB.FormattingEnabled = true;
+            this.TagCB.Items.AddRange(new object[] {
+            "Lecture",
+            "Tute",
+            "Practical"});
             this.TagCB.Location = new System.Drawing.Point(317, 193);
             this.TagCB.Name = "TagCB";
             this.TagCB.Size = new System.Drawing.Size(310, 38);
@@ -132,6 +136,9 @@
             // 
             this.RoomTyCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoomTyCB.FormattingEnabled = true;
+            this.RoomTyCB.Items.AddRange(new object[] {
+            "Lecture Hall",
+            "Lab"});
             this.RoomTyCB.Location = new System.Drawing.Point(317, 257);
             this.RoomTyCB.Name = "RoomTyCB";
             this.RoomTyCB.Size = new System.Drawing.Size(310, 38);
