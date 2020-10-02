@@ -30,15 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRoomSessionsUC));
             this.RoomSessionAndConsecutivePanel = new System.Windows.Forms.Panel();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.AddSessionRoomPanel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.SessionRoomCB = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.SessionRoomNameTB = new System.Windows.Forms.TextBox();
-            this.SessionRoomBtn = new ePOSOne.btnProduct.Button_WOC();
             this.AddConSessionRoomPanel = new System.Windows.Forms.Panel();
             this.ConSessionRoomBtn = new ePOSOne.btnProduct.Button_WOC();
             this.ConSessionRoomTB = new System.Windows.Forms.TextBox();
@@ -46,9 +37,18 @@
             this.ConSessionRoomCB = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.AddSessionRoomPanel = new System.Windows.Forms.Panel();
+            this.SessionRoomBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.SessionRoomNameTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SessionRoomCB = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
             this.RoomSessionAndConsecutivePanel.SuspendLayout();
-            this.AddSessionRoomPanel.SuspendLayout();
             this.AddConSessionRoomPanel.SuspendLayout();
+            this.AddSessionRoomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // RoomSessionAndConsecutivePanel
@@ -62,118 +62,6 @@
             this.RoomSessionAndConsecutivePanel.Name = "RoomSessionAndConsecutivePanel";
             this.RoomSessionAndConsecutivePanel.Size = new System.Drawing.Size(772, 720);
             this.RoomSessionAndConsecutivePanel.TabIndex = 0;
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
-            this.backBtn.Location = new System.Drawing.Point(20, 18);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 46);
-            this.backBtn.TabIndex = 28;
-            this.backBtn.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(93, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(594, 35);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Add Rooms for Session And Consecutive Sessions";
-            // 
-            // AddSessionRoomPanel
-            // 
-            this.AddSessionRoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AddSessionRoomPanel.Controls.Add(this.SessionRoomBtn);
-            this.AddSessionRoomPanel.Controls.Add(this.SessionRoomNameTB);
-            this.AddSessionRoomPanel.Controls.Add(this.label3);
-            this.AddSessionRoomPanel.Controls.Add(this.SessionRoomCB);
-            this.AddSessionRoomPanel.Controls.Add(this.label7);
-            this.AddSessionRoomPanel.Controls.Add(this.label6);
-            this.AddSessionRoomPanel.Location = new System.Drawing.Point(30, 81);
-            this.AddSessionRoomPanel.Name = "AddSessionRoomPanel";
-            this.AddSessionRoomPanel.Size = new System.Drawing.Size(713, 255);
-            this.AddSessionRoomPanel.TabIndex = 37;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(257, 30);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Add Rooms for Sessions";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label7.Location = new System.Drawing.Point(134, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 30);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Session";
-            // 
-            // SessionRoomCB
-            // 
-            this.SessionRoomCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SessionRoomCB.FormattingEnabled = true;
-            this.SessionRoomCB.Location = new System.Drawing.Point(272, 54);
-            this.SessionRoomCB.Name = "SessionRoomCB";
-            this.SessionRoomCB.Size = new System.Drawing.Size(310, 38);
-            this.SessionRoomCB.TabIndex = 37;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label3.Location = new System.Drawing.Point(134, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 30);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Room Name";
-            // 
-            // SessionRoomNameTB
-            // 
-            this.SessionRoomNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SessionRoomNameTB.Location = new System.Drawing.Point(270, 108);
-            this.SessionRoomNameTB.Multiline = true;
-            this.SessionRoomNameTB.Name = "SessionRoomNameTB";
-            this.SessionRoomNameTB.Size = new System.Drawing.Size(310, 40);
-            this.SessionRoomNameTB.TabIndex = 38;
-            // 
-            // SessionRoomBtn
-            // 
-            this.SessionRoomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.SessionRoomBtn.BorderColor = System.Drawing.Color.Black;
-            this.SessionRoomBtn.ButtonColor = System.Drawing.Color.White;
-            this.SessionRoomBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.SessionRoomBtn.FlatAppearance.BorderSize = 0;
-            this.SessionRoomBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.SessionRoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.SessionRoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SessionRoomBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SessionRoomBtn.ForeColor = System.Drawing.Color.Black;
-            this.SessionRoomBtn.Location = new System.Drawing.Point(272, 172);
-            this.SessionRoomBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.SessionRoomBtn.Name = "SessionRoomBtn";
-            this.SessionRoomBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.SessionRoomBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.SessionRoomBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.SessionRoomBtn.Size = new System.Drawing.Size(161, 54);
-            this.SessionRoomBtn.TabIndex = 39;
-            this.SessionRoomBtn.Text = "ADD ";
-            this.SessionRoomBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.SessionRoomBtn.UseVisualStyleBackColor = false;
             // 
             // AddConSessionRoomPanel
             // 
@@ -264,6 +152,119 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Add Same Room for Consecutive Sessions";
             // 
+            // AddSessionRoomPanel
+            // 
+            this.AddSessionRoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddSessionRoomPanel.Controls.Add(this.SessionRoomBtn);
+            this.AddSessionRoomPanel.Controls.Add(this.SessionRoomNameTB);
+            this.AddSessionRoomPanel.Controls.Add(this.label3);
+            this.AddSessionRoomPanel.Controls.Add(this.SessionRoomCB);
+            this.AddSessionRoomPanel.Controls.Add(this.label7);
+            this.AddSessionRoomPanel.Controls.Add(this.label6);
+            this.AddSessionRoomPanel.Location = new System.Drawing.Point(30, 81);
+            this.AddSessionRoomPanel.Name = "AddSessionRoomPanel";
+            this.AddSessionRoomPanel.Size = new System.Drawing.Size(713, 255);
+            this.AddSessionRoomPanel.TabIndex = 37;
+            // 
+            // SessionRoomBtn
+            // 
+            this.SessionRoomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SessionRoomBtn.BorderColor = System.Drawing.Color.Black;
+            this.SessionRoomBtn.ButtonColor = System.Drawing.Color.White;
+            this.SessionRoomBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SessionRoomBtn.FlatAppearance.BorderSize = 0;
+            this.SessionRoomBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.SessionRoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SessionRoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SessionRoomBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SessionRoomBtn.ForeColor = System.Drawing.Color.Black;
+            this.SessionRoomBtn.Location = new System.Drawing.Point(272, 172);
+            this.SessionRoomBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.SessionRoomBtn.Name = "SessionRoomBtn";
+            this.SessionRoomBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.SessionRoomBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SessionRoomBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.SessionRoomBtn.Size = new System.Drawing.Size(161, 54);
+            this.SessionRoomBtn.TabIndex = 39;
+            this.SessionRoomBtn.Text = "ADD ";
+            this.SessionRoomBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.SessionRoomBtn.UseVisualStyleBackColor = false;
+            // 
+            // SessionRoomNameTB
+            // 
+            this.SessionRoomNameTB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SessionRoomNameTB.Location = new System.Drawing.Point(270, 108);
+            this.SessionRoomNameTB.Multiline = true;
+            this.SessionRoomNameTB.Name = "SessionRoomNameTB";
+            this.SessionRoomNameTB.Size = new System.Drawing.Size(310, 40);
+            this.SessionRoomNameTB.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label3.Location = new System.Drawing.Point(134, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 30);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Room Name";
+            // 
+            // SessionRoomCB
+            // 
+            this.SessionRoomCB.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SessionRoomCB.FormattingEnabled = true;
+            this.SessionRoomCB.Location = new System.Drawing.Point(272, 54);
+            this.SessionRoomCB.Name = "SessionRoomCB";
+            this.SessionRoomCB.Size = new System.Drawing.Size(310, 38);
+            this.SessionRoomCB.TabIndex = 37;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label7.Location = new System.Drawing.Point(134, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 30);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Session";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(257, 30);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Add Rooms for Sessions";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(93, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(594, 35);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Add Rooms for Session And Consecutive Sessions";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.Location = new System.Drawing.Point(20, 18);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 46);
+            this.backBtn.TabIndex = 28;
+            this.backBtn.UseVisualStyleBackColor = true;
+            // 
             // AddRoomSessionsUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
@@ -271,15 +272,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.RoomSessionAndConsecutivePanel);
             this.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddRoomSessionsUC";
             this.Size = new System.Drawing.Size(772, 720);
             this.RoomSessionAndConsecutivePanel.ResumeLayout(false);
             this.RoomSessionAndConsecutivePanel.PerformLayout();
-            this.AddSessionRoomPanel.ResumeLayout(false);
-            this.AddSessionRoomPanel.PerformLayout();
             this.AddConSessionRoomPanel.ResumeLayout(false);
             this.AddConSessionRoomPanel.PerformLayout();
+            this.AddSessionRoomPanel.ResumeLayout(false);
+            this.AddSessionRoomPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

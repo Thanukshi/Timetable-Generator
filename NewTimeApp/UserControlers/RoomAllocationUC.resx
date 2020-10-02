@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="circularButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PreRoomBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAABBtJREFUeF7tm01IVFEUx0UkQkSihQtpERIhIhIhIREhIRIiLkQkJCQiQiQiJCQi
@@ -142,7 +142,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="circularButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="sutRoomBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAABBtJREFUeF7tm01IVFEUx0UkQkSihQtpERIhIhIhIREhIRIiLkQkJCQiQiQiJCQi
@@ -166,7 +166,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="circularButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="sessConRBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAABBtJREFUeF7tm01IVFEUx0UkQkSihQtpERIhIhIhIREhIRIiLkQkJCQiQiQiJCQi
@@ -190,7 +190,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="circularButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="LecGroupRBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAABBtJREFUeF7tm01IVFEUx0UkQkSihQtpERIhIhIhIREhIRIiLkQkJCQiQiQiJCQi
@@ -214,31 +214,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="circularButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAABBtJREFUeF7tm01IVFEUx0UkQkSihQtpERIhIhIhIREhIRIiLkQkJCQiQiQiJCQi
-        hAgJkWjholW0cCEtW0SrVi1cRLSKFi0iIiIiWkRERNjv/94ZSeflm3fnzrw3137wX3g/zj3n+ObO/ZjX
-        lAcbGxttaAzNmybRfqsOGwI9i76g7fxAN1CzNQ0PgrupSFNYQeElgaAqCb7EPRROEghGj3ZWwkgCQVyL
-        wnGjsT8OOH81CqM6GjMJOH0Z/VYEHriLGicJODuLfAVfYtnMFxscvYh8B19iyYYpJjh4DtUq+BKLNlyx
-        wLEp9CtysfYs2LDFAIe0lq9X8CWu2/D5giPj6GfkUv2ZNzfyAQe0o8sr+BJXzJ36wsCnkXZweaNJd9bc
-        qg8MOIS+a/SCoCRcMPdqCwMNoiIFX0KT8LS5WRsY4AT6ptEKipJwxtz1C4aPoa8apeBoUp4wt/2AwaMo
-        6RirqCgJo+Z+dWCoF32W1QZD31DDFoYbGOhGH2WtQdFkPWjhZIOOh9AHWWlwNGkft7Aqgw4H0Tv1DgRN
-        3v0W3s7Q8AB6o16BoUm8z8JMhgYd6JVaB8on1G3hboWKfeiFWgXOe9RlYcdQ0IqeqXaXoI94Zyn4FvRY
-        pbuMl6hdCdDtbK3RykyTkNYUegR3ktpo4VWPrfaqElDLz/1zpBOjtuhxywB99qJTqJZP51sNpEfBN9qf
-        6z6wxeKpCuzoSr0WT0SUAJeLyzTmzHdvYHMU+T54XZPhPWgV+TrPf2Q+ewfbS/EQXniKOsx0ZLwT6TM3
-        h1z3/Upij5n0DrbbkatvmogXkc4yt64DtkODGeTCupnYAuVHkDKu/YVWY5rl9a3wt1SmOn0TrKPErSzl
-        95ELK2YiHRqfjPtk5raZ2IQyrTBddpWa9MqWrZTpBsqFGTORDo11/OXCLTOxCWV9cZUTZUdblOkWyoXK
-        D0xprCMwF5ISoMffFZ8JmDIT6dDY9b+WlID+uMoJnwmo/LSYxj4T4PpxEj4TMGkm0qGxzwQMxFVOBJEA
-        Xaa4EkQCXL9SRRAJ0F2iK0EkQDfJrgSRAK29XQkiAdrGuhJEAibiKieCSMB0XOVEwyVAR+tbjsH4+05U
-        44bPBJTZ+ic0dk2AWEM9SJery6iakyafCRg3E+nQWAEUgf8JMJc2ocw1AWNmIh0aH4775E5uCeiK++RO
-        UgJcj8RGzEQ6NNYJcRHwmYAhM5EOjXVb7OueoBp8JmDATFQGHV7H/XIlKQG6JsuKfiyV7X6SDnrvJ2+S
-        EnA+rspE9veN6NSMHkbd86PscoSyS3FVxeiGutW6Z4OO+vGE7uPq/TaISHxzlDKtLivlCar+rXSMaFmr
-        bW2SRpD2/EkaRjoQ2S6dEm2Xjs50fij12tBlUKcfdDzYQbo6W0AV/DawqekPfWegWB3tOyoAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
-  <data name="circularButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TimeRoomBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAABBtJREFUeF7tm01IVFEUx0UkQkSihQtpERIhIhIhIREhIRIiLkQkJCQiQiQiJCQi

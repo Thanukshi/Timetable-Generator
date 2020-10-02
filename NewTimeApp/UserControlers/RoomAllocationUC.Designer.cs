@@ -31,24 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomAllocationUC));
             this.RoomAllocationPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.circularButton1 = new NewTimeApp.CircularButton();
-            this.circularButton2 = new NewTimeApp.CircularButton();
-            this.circularButton3 = new NewTimeApp.CircularButton();
-            this.circularButton4 = new NewTimeApp.CircularButton();
-            this.circularButton5 = new NewTimeApp.CircularButton();
-            this.circularButton6 = new NewTimeApp.CircularButton();
+            this.TimeRoomBtn = new NewTimeApp.CircularButton();
+            this.LecGroupRBtn = new NewTimeApp.CircularButton();
+            this.sessConRBtn = new NewTimeApp.CircularButton();
+            this.sutRoomBtn = new NewTimeApp.CircularButton();
+            this.PreRoomBtn = new NewTimeApp.CircularButton();
             this.RoomAllocationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // RoomAllocationPanel
             // 
-            this.RoomAllocationPanel.Controls.Add(this.circularButton6);
-            this.RoomAllocationPanel.Controls.Add(this.circularButton5);
-            this.RoomAllocationPanel.Controls.Add(this.circularButton4);
-            this.RoomAllocationPanel.Controls.Add(this.circularButton3);
-            this.RoomAllocationPanel.Controls.Add(this.circularButton2);
-            this.RoomAllocationPanel.Controls.Add(this.circularButton1);
+            this.RoomAllocationPanel.Controls.Add(this.PreRoomBtn);
+            this.RoomAllocationPanel.Controls.Add(this.sutRoomBtn);
+            this.RoomAllocationPanel.Controls.Add(this.sessConRBtn);
+            this.RoomAllocationPanel.Controls.Add(this.LecGroupRBtn);
+            this.RoomAllocationPanel.Controls.Add(this.TimeRoomBtn);
             this.RoomAllocationPanel.Controls.Add(this.pictureBox1);
             this.RoomAllocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RoomAllocationPanel.Location = new System.Drawing.Point(0, 0);
@@ -67,113 +65,95 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // circularButton1
+            // TimeRoomBtn
             // 
-            this.circularButton1.BackColor = System.Drawing.Color.Plum;
-            this.circularButton1.FlatAppearance.BorderSize = 0;
-            this.circularButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton1.ForeColor = System.Drawing.Color.White;
-            this.circularButton1.Image = ((System.Drawing.Image)(resources.GetObject("circularButton1.Image")));
-            this.circularButton1.Location = new System.Drawing.Point(66, 510);
-            this.circularButton1.Name = "circularButton1";
-            this.circularButton1.Size = new System.Drawing.Size(170, 170);
-            this.circularButton1.TabIndex = 37;
-            this.circularButton1.Text = "Room Allocations";
-            this.circularButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton1.UseVisualStyleBackColor = false;
+            this.TimeRoomBtn.BackColor = System.Drawing.Color.Plum;
+            this.TimeRoomBtn.FlatAppearance.BorderSize = 0;
+            this.TimeRoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.TimeRoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TimeRoomBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeRoomBtn.ForeColor = System.Drawing.Color.White;
+            this.TimeRoomBtn.Image = ((System.Drawing.Image)(resources.GetObject("TimeRoomBtn.Image")));
+            this.TimeRoomBtn.Location = new System.Drawing.Point(291, 254);
+            this.TimeRoomBtn.Name = "TimeRoomBtn";
+            this.TimeRoomBtn.Size = new System.Drawing.Size(170, 170);
+            this.TimeRoomBtn.TabIndex = 37;
+            this.TimeRoomBtn.Text = "Add Reserved Time For Room ";
+            this.TimeRoomBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.TimeRoomBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TimeRoomBtn.UseVisualStyleBackColor = false;
             // 
-            // circularButton2
+            // LecGroupRBtn
             // 
-            this.circularButton2.BackColor = System.Drawing.Color.Plum;
-            this.circularButton2.FlatAppearance.BorderSize = 0;
-            this.circularButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton2.ForeColor = System.Drawing.Color.White;
-            this.circularButton2.Image = ((System.Drawing.Image)(resources.GetObject("circularButton2.Image")));
-            this.circularButton2.Location = new System.Drawing.Point(518, 499);
-            this.circularButton2.Name = "circularButton2";
-            this.circularButton2.Size = new System.Drawing.Size(170, 170);
-            this.circularButton2.TabIndex = 38;
-            this.circularButton2.Text = "Room Allocations";
-            this.circularButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton2.UseVisualStyleBackColor = false;
+            this.LecGroupRBtn.BackColor = System.Drawing.Color.Plum;
+            this.LecGroupRBtn.FlatAppearance.BorderSize = 0;
+            this.LecGroupRBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.LecGroupRBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LecGroupRBtn.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LecGroupRBtn.ForeColor = System.Drawing.Color.White;
+            this.LecGroupRBtn.Image = ((System.Drawing.Image)(resources.GetObject("LecGroupRBtn.Image")));
+            this.LecGroupRBtn.Location = new System.Drawing.Point(59, 428);
+            this.LecGroupRBtn.Name = "LecGroupRBtn";
+            this.LecGroupRBtn.Size = new System.Drawing.Size(170, 170);
+            this.LecGroupRBtn.TabIndex = 39;
+            this.LecGroupRBtn.Text = "Add Rooms for Lecturers and Group or Sub Group ";
+            this.LecGroupRBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.LecGroupRBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.LecGroupRBtn.UseVisualStyleBackColor = false;
             // 
-            // circularButton3
+            // sessConRBtn
             // 
-            this.circularButton3.BackColor = System.Drawing.Color.Plum;
-            this.circularButton3.FlatAppearance.BorderSize = 0;
-            this.circularButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton3.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton3.ForeColor = System.Drawing.Color.White;
-            this.circularButton3.Image = ((System.Drawing.Image)(resources.GetObject("circularButton3.Image")));
-            this.circularButton3.Location = new System.Drawing.Point(66, 278);
-            this.circularButton3.Name = "circularButton3";
-            this.circularButton3.Size = new System.Drawing.Size(170, 170);
-            this.circularButton3.TabIndex = 39;
-            this.circularButton3.Text = "Room Allocations";
-            this.circularButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton3.UseVisualStyleBackColor = false;
+            this.sessConRBtn.BackColor = System.Drawing.Color.Plum;
+            this.sessConRBtn.FlatAppearance.BorderSize = 0;
+            this.sessConRBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.sessConRBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sessConRBtn.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessConRBtn.ForeColor = System.Drawing.Color.White;
+            this.sessConRBtn.Image = ((System.Drawing.Image)(resources.GetObject("sessConRBtn.Image")));
+            this.sessConRBtn.Location = new System.Drawing.Point(524, 428);
+            this.sessConRBtn.Name = "sessConRBtn";
+            this.sessConRBtn.Size = new System.Drawing.Size(170, 170);
+            this.sessConRBtn.TabIndex = 40;
+            this.sessConRBtn.Text = "Add Rooms for Session And Consecutive Sessions";
+            this.sessConRBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sessConRBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.sessConRBtn.UseVisualStyleBackColor = false;
             // 
-            // circularButton4
+            // sutRoomBtn
             // 
-            this.circularButton4.BackColor = System.Drawing.Color.Plum;
-            this.circularButton4.FlatAppearance.BorderSize = 0;
-            this.circularButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton4.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton4.ForeColor = System.Drawing.Color.White;
-            this.circularButton4.Image = ((System.Drawing.Image)(resources.GetObject("circularButton4.Image")));
-            this.circularButton4.Location = new System.Drawing.Point(531, 278);
-            this.circularButton4.Name = "circularButton4";
-            this.circularButton4.Size = new System.Drawing.Size(170, 170);
-            this.circularButton4.TabIndex = 40;
-            this.circularButton4.Text = "Room Allocations";
-            this.circularButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton4.UseVisualStyleBackColor = false;
+            this.sutRoomBtn.BackColor = System.Drawing.Color.Plum;
+            this.sutRoomBtn.FlatAppearance.BorderSize = 0;
+            this.sutRoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.sutRoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sutRoomBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sutRoomBtn.ForeColor = System.Drawing.Color.White;
+            this.sutRoomBtn.Image = ((System.Drawing.Image)(resources.GetObject("sutRoomBtn.Image")));
+            this.sutRoomBtn.Location = new System.Drawing.Point(59, 56);
+            this.sutRoomBtn.Name = "sutRoomBtn";
+            this.sutRoomBtn.Size = new System.Drawing.Size(170, 170);
+            this.sutRoomBtn.TabIndex = 41;
+            this.sutRoomBtn.Text = "Add Suitable Room";
+            this.sutRoomBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sutRoomBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.sutRoomBtn.UseVisualStyleBackColor = false;
             // 
-            // circularButton5
+            // PreRoomBtn
             // 
-            this.circularButton5.BackColor = System.Drawing.Color.Plum;
-            this.circularButton5.FlatAppearance.BorderSize = 0;
-            this.circularButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton5.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton5.ForeColor = System.Drawing.Color.White;
-            this.circularButton5.Image = ((System.Drawing.Image)(resources.GetObject("circularButton5.Image")));
-            this.circularButton5.Location = new System.Drawing.Point(43, 56);
-            this.circularButton5.Name = "circularButton5";
-            this.circularButton5.Size = new System.Drawing.Size(170, 170);
-            this.circularButton5.TabIndex = 41;
-            this.circularButton5.Text = "Room Allocations";
-            this.circularButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton5.UseVisualStyleBackColor = false;
-            // 
-            // circularButton6
-            // 
-            this.circularButton6.BackColor = System.Drawing.Color.Plum;
-            this.circularButton6.FlatAppearance.BorderSize = 0;
-            this.circularButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.circularButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton6.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton6.ForeColor = System.Drawing.Color.White;
-            this.circularButton6.Image = ((System.Drawing.Image)(resources.GetObject("circularButton6.Image")));
-            this.circularButton6.Location = new System.Drawing.Point(540, 56);
-            this.circularButton6.Name = "circularButton6";
-            this.circularButton6.Size = new System.Drawing.Size(170, 170);
-            this.circularButton6.TabIndex = 42;
-            this.circularButton6.Text = "Room Allocations";
-            this.circularButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.circularButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.circularButton6.UseVisualStyleBackColor = false;
+            this.PreRoomBtn.BackColor = System.Drawing.Color.Plum;
+            this.PreRoomBtn.FlatAppearance.BorderSize = 0;
+            this.PreRoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.PreRoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreRoomBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreRoomBtn.ForeColor = System.Drawing.Color.White;
+            this.PreRoomBtn.Image = ((System.Drawing.Image)(resources.GetObject("PreRoomBtn.Image")));
+            this.PreRoomBtn.Location = new System.Drawing.Point(524, 56);
+            this.PreRoomBtn.Name = "PreRoomBtn";
+            this.PreRoomBtn.Size = new System.Drawing.Size(170, 170);
+            this.PreRoomBtn.TabIndex = 42;
+            this.PreRoomBtn.Text = "Add Preferred Room ";
+            this.PreRoomBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.PreRoomBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.PreRoomBtn.UseVisualStyleBackColor = false;
             // 
             // RoomAllocationUC
             // 
@@ -193,11 +173,10 @@
 
         private System.Windows.Forms.Panel RoomAllocationPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private CircularButton circularButton6;
-        private CircularButton circularButton5;
-        private CircularButton circularButton4;
-        private CircularButton circularButton3;
-        private CircularButton circularButton2;
-        private CircularButton circularButton1;
+        private CircularButton PreRoomBtn;
+        private CircularButton sutRoomBtn;
+        private CircularButton sessConRBtn;
+        private CircularButton LecGroupRBtn;
+        private CircularButton TimeRoomBtn;
     }
 }
