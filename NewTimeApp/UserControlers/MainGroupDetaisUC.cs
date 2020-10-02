@@ -17,9 +17,9 @@ namespace NewTimeApp.UserControlers
     {
         private SQLiteConnection sqlCon;
         private SQLiteCommand sqlCom;
-        private DataTable dt, dtm, dtf, dts;
+        private DataTable dt;
         DataSet ds = new DataSet();
-        private SQLiteDataAdapter DB, DBM, DBF, DBS;
+        private SQLiteDataAdapter DB;
         int id;
         bool isDoubleClick = false;
         String connectString;
@@ -91,7 +91,6 @@ namespace NewTimeApp.UserControlers
             academicDataGrid.BorderStyle = BorderStyle.None;
             academicDataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 190, 247);
             academicDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            // academicDataGrid.DefaultCellStyle.SelectionBackColor = Color.Plum;
             academicDataGrid.DefaultCellStyle.ForeColor = Color.Black;
             academicDataGrid.BackgroundColor = Color.White;
 
@@ -120,7 +119,117 @@ namespace NewTimeApp.UserControlers
 
         private void updateDetailsBtn_Click_1(object sender, EventArgs e)
         {
+            if (acsem.Text != "" && dname.Text != "" && gNo.Text != "")
+            {
+                if (isDoubleClick)
+                {
+                    MainGroupClass mg = new MainGroupClass();
+                    mg.MAcDetails = acsem.Text;
+                    mg.MDegreeDetails = dname.Text;
+                    mg.MGroupNo = gNo.Text;
 
+                    DB = new SQLiteDataAdapter("SELECT * FROM mainGroupsDetails WHERE macademicDetails ='" + mg.MAcDetails + "' AND mDegereeName ='" + mg.MDegreeDetails + "' AND mGroupNo ='" + mg.MGroupNo + "' ", sqlCon);
+                    dt = new DataTable();
+                    DB.Fill(dt);
+
+                    if (dt.Rows.Count >= 1)
+                    {
+                        CustomMessageBox.Show("Maing Groups", " " + mg.MAcDetails + "." + mg.MDegreeDetails + "." + mg.MGroupNo + " is already saved.");
+                    }
+
+                    else
+                    {
+
+                        try
+                        {
+                            sqlCon.Open();
+                            sqlCom = new SQLiteCommand();
+                            sqlCom.CommandText = @"UPDATE mainGroupsDetails set macademicDetails = @acdetails, mDegereeName = @mdegree, mGroupNo = @gno WHERE MID ='" + id + "'";
+                            sqlCom.Connection = sqlCon;
+                            sqlCom.Parameters.AddWithValue("@acdetails", mg.MAcDetails);
+                            sqlCom.Parameters.AddWithValue("@mdegree", mg.MDegreeDetails);
+                            sqlCom.Parameters.AddWithValue("@gno", mg.MGroupNo);
+
+                            int i = sqlCom.ExecuteNonQuery();
+
+                            if (i == 1)
+                            {
+                                CustomMessageBox.Show("Main Group Details", "" + mg.MAcDetails + "." + mg.MDegreeDetails + "." + mg.MGroupNo + " is updated.");
+
+                                mg.MAcDetails = "";
+                                mg.MDegreeDetails = "";
+                                mg.MGroupNo = "";
+                                ReadData();
+                                id = 0;
+                                academicDataGrid.ClearSelection();
+                                academicDataGrid.CurrentCell = null;
+                                isDoubleClick = false;
+                            }
+
+                            sqlCon.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            CustomMessageBox.Show("Error!", "" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                CustomMessageBox.Show("Error!", "Please Select Record to Update");
+            }
+        }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            if (acsem.Text != "" && dname.Text != "" && gNo.Text != "")
+
+            {
+                DialogResult dialogResult = MessageBox.Show("Do you to delete this record?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    try
+                    {
+
+                        MainGroupClass mg = new MainGroupClass();
+                        mg.MAcDetails = acsem.Text;
+                        mg.MDegreeDetails = dname.Text;
+                        mg.MGroupNo = gNo.Text;
+
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCon.Open();
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"DELETE FROM mainGroupsDetails WHERE MID ='" + id + "'";
+                        sqlCom.Connection = sqlCon;
+                        int i = sqlCom.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Main Group Details", "" + mg.MAcDetails + "." + mg.MDegreeDetails + "." + mg.MGroupNo + " is deleted successfully.");
+
+                            id = 0;
+                            academicDataGrid.ClearSelection();
+                            academicDataGrid.CurrentCell = null;
+                            ReadData();
+                            academicDataGrid.ClearSelection();
+                            academicDataGrid.CurrentCell = null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        CustomMessageBox.Show("Error!", "" + ex.Message);
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+            }
+            else
+            {
+                CustomMessageBox.Show("Error!", "Please Select Record to Delete");
+            }
         }
     }
 }

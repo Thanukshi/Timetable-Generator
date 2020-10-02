@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGroupDetaisUC));
             this.mGDetailsPanel = new System.Windows.Forms.Panel();
+            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.deletebtn = new ePOSOne.btnProduct.Button_WOC();
             this.gNo = new System.Windows.Forms.TextBox();
             this.dname = new System.Windows.Forms.TextBox();
             this.acsem = new System.Windows.Forms.TextBox();
@@ -40,14 +42,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.academicDataGrid = new System.Windows.Forms.DataGridView();
-            this.backBtnS = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.deletebtn = new ePOSOne.btnProduct.Button_WOC();
+            this.backBtnS = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.mGDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.academicDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,54 @@
             this.mGDetailsPanel.Size = new System.Drawing.Size(1000, 790);
             this.mGDetailsPanel.TabIndex = 0;
             this.mGDetailsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mGDetailsPanel_Paint);
+            // 
+            // updateDetailsBtn
+            // 
+            this.updateDetailsBtn.BackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.BorderColor = System.Drawing.Color.Black;
+            this.updateDetailsBtn.ButtonColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.BorderSize = 0;
+            this.updateDetailsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateDetailsBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateDetailsBtn.ForeColor = System.Drawing.Color.Black;
+            this.updateDetailsBtn.Location = new System.Drawing.Point(567, 428);
+            this.updateDetailsBtn.Name = "updateDetailsBtn";
+            this.updateDetailsBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateDetailsBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.updateDetailsBtn.Size = new System.Drawing.Size(167, 67);
+            this.updateDetailsBtn.TabIndex = 218;
+            this.updateDetailsBtn.Text = "Update";
+            this.updateDetailsBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.updateDetailsBtn.UseVisualStyleBackColor = false;
+            this.updateDetailsBtn.Click += new System.EventHandler(this.updateDetailsBtn_Click_1);
+            // 
+            // deletebtn
+            // 
+            this.deletebtn.BackColor = System.Drawing.Color.White;
+            this.deletebtn.BorderColor = System.Drawing.Color.Black;
+            this.deletebtn.ButtonColor = System.Drawing.Color.White;
+            this.deletebtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.deletebtn.FlatAppearance.BorderSize = 0;
+            this.deletebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.deletebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletebtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletebtn.ForeColor = System.Drawing.Color.Black;
+            this.deletebtn.Location = new System.Drawing.Point(817, 428);
+            this.deletebtn.Name = "deletebtn";
+            this.deletebtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.deletebtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.deletebtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.deletebtn.Size = new System.Drawing.Size(167, 67);
+            this.deletebtn.TabIndex = 217;
+            this.deletebtn.Text = "Delete";
+            this.deletebtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // gNo
             // 
@@ -187,30 +235,6 @@
             this.academicDataGrid.TabIndex = 210;
             this.academicDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.academicDataGrid_CellClick);
             // 
-            // backBtnS
-            // 
-            this.backBtnS.FlatAppearance.BorderSize = 0;
-            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
-            this.backBtnS.Location = new System.Drawing.Point(38, 29);
-            this.backBtnS.Name = "backBtnS";
-            this.backBtnS.Size = new System.Drawing.Size(66, 56);
-            this.backBtnS.TabIndex = 207;
-            this.backBtnS.UseVisualStyleBackColor = true;
-            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(126, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 41);
-            this.label1.TabIndex = 206;
-            this.label1.Text = "Main Group Details";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MID";
@@ -248,52 +272,29 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
             // 
-            // updateDetailsBtn
+            // backBtnS
             // 
-            this.updateDetailsBtn.BackColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.BorderColor = System.Drawing.Color.Black;
-            this.updateDetailsBtn.ButtonColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatAppearance.BorderSize = 0;
-            this.updateDetailsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateDetailsBtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateDetailsBtn.ForeColor = System.Drawing.Color.Black;
-            this.updateDetailsBtn.Location = new System.Drawing.Point(567, 428);
-            this.updateDetailsBtn.Name = "updateDetailsBtn";
-            this.updateDetailsBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updateDetailsBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateDetailsBtn.Size = new System.Drawing.Size(167, 67);
-            this.updateDetailsBtn.TabIndex = 218;
-            this.updateDetailsBtn.Text = "Update";
-            this.updateDetailsBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.updateDetailsBtn.UseVisualStyleBackColor = false;
-            this.updateDetailsBtn.Click += new System.EventHandler(this.updateDetailsBtn_Click_1);
+            this.backBtnS.FlatAppearance.BorderSize = 0;
+            this.backBtnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnS.Image = ((System.Drawing.Image)(resources.GetObject("backBtnS.Image")));
+            this.backBtnS.Location = new System.Drawing.Point(38, 29);
+            this.backBtnS.Name = "backBtnS";
+            this.backBtnS.Size = new System.Drawing.Size(66, 56);
+            this.backBtnS.TabIndex = 207;
+            this.backBtnS.UseVisualStyleBackColor = true;
+            this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
             // 
-            // deletebtn
+            // label1
             // 
-            this.deletebtn.BackColor = System.Drawing.Color.White;
-            this.deletebtn.BorderColor = System.Drawing.Color.Black;
-            this.deletebtn.ButtonColor = System.Drawing.Color.White;
-            this.deletebtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.deletebtn.FlatAppearance.BorderSize = 0;
-            this.deletebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.deletebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deletebtn.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletebtn.ForeColor = System.Drawing.Color.Black;
-            this.deletebtn.Location = new System.Drawing.Point(817, 428);
-            this.deletebtn.Name = "deletebtn";
-            this.deletebtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.deletebtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.deletebtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.deletebtn.Size = new System.Drawing.Size(167, 67);
-            this.deletebtn.TabIndex = 217;
-            this.deletebtn.Text = "Delete";
-            this.deletebtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.deletebtn.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(126, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(294, 41);
+            this.label1.TabIndex = 206;
+            this.label1.Text = "Main Group Details";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainGroupDetaisUC
             // 

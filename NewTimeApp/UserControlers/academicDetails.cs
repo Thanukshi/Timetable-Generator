@@ -51,6 +51,8 @@ namespace NewTimeApp.UserControlers
 
                 string sql3 = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
 
+                string sql4 = "CREATE TABLE subGroupsDetails (SID INTEGER PRIMARY KEY ASC AUTOINCREMENT, MID VARCHAR (20) NOT NULL, SNO  VARCHAR (20) NOT NULL)";
+
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
 
@@ -58,6 +60,9 @@ namespace NewTimeApp.UserControlers
                 sqlCom.ExecuteNonQuery();
 
                 sqlCom = new SQLiteCommand(sql3, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql4, sqlCon);
                 sqlCom.ExecuteNonQuery();
 
                 sqlCon.Close();

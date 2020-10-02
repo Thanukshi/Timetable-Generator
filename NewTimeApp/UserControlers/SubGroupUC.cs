@@ -9,51 +9,62 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using NewTimeApp.Helpers;
+using System.Data.SQLite;
 
 namespace NewTimeApp.UserControlers
 {
     public partial class SubGroupUC : UserControl
     {
-        SqlConnection sqlCon;
-        SqlCommand sqlCom;
-        string subGroupID = "";
+
+        private SQLiteConnection sqlCon;
+        private SQLiteCommand sqlCom;
+        private DataTable dt = new DataTable();
+        private SQLiteDataAdapter DB;
+        String connectString;
 
         public SubGroupUC()
         {
             InitializeComponent();
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            sqlCon = new SQLiteConnection(connectString);
+            GenerateDatabase();
             fillMainGroup();
 
-            string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-            sqlCon = new SqlConnection(con);
+
+        }
+
+        public void GenerateDatabase()
+        {
+            sqlCon = new SQLiteConnection(connectString);
             sqlCon.Open();
         }
 
         public void fillMainGroup()
         {
-            string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-            sqlCon = new SqlConnection(con);
-            string qry = "SELECT * FROM MainGroup";
-            sqlCom = new SqlCommand(qry, sqlCon);
-            SqlDataReader sqlDataReader;
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
+            string qry = "SELECT * FROM mainGroupsDetails";
+            sqlCom = new SQLiteCommand(qry, sqlCon);
+            SQLiteDataReader sldr;
 
             try
             {
                 sqlCon.Open();
-                sqlDataReader = sqlCom.ExecuteReader();
-                while (sqlDataReader.Read())
+                sldr = sqlCom.ExecuteReader();
+                while (sldr.Read())
                 {
-
-                    string academic = sqlDataReader.GetString(1);
-                    string degree = sqlDataReader.GetString(2);
-                    string MainGroupNo = sqlDataReader.GetString(3);
-
-                    mainGroupCombo.Items.Add(academic + "." + degree + "." + MainGroupNo);
+                    string year = sldr.GetString(1);
+                    string dname = sldr.GetString(2);
+                    string gno = sldr.GetString(3);
+                    mainGroupCombo.Items.Add(year + "." + dname + "." + gno);
+                    //string maID = "SELECT ID FROM academicDetails WHERE acYear ='" + year + "'And acSem ='" + sem + "'";
                 }
             }
-            catch (SqlException x)
+            catch (SQLiteException x)
             {
-                MessageBox.Show(x.Message);
+                CustomMessageBox.Show("Error!", "" + x.Message);
             }
+
         }
 
         private void saveSG_Click(object sender, EventArgs e)
@@ -68,32 +79,44 @@ namespace NewTimeApp.UserControlers
             }
             else
             {
-                try
-                {
-                    if (sqlCon.State == ConnectionState.Closed)
-                    {
-                        sqlCon.Open();
-                    }
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SqlCommand("abcSubGroupDetails", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@SubID", subGroupID);
-                    sqlCom.Parameters.AddWithValue("@MainGroupID", mainGroupCombo.Text);
-                    sqlCom.Parameters.AddWithValue("@SubGroupNo", subGroupCombo.Text);
-                   
+                SubGroupClass sg = new SubGroupClass();
+                sg.mid = mainGroupCombo.Text;
+                sg.sno = subGroupCombo.Text;
 
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
-                    {
-                        MessageBox.Show("Sub Group  ID is " + " " + mainGroupCombo.Text + "." + "" + subGroupCombo.Text + " is created successfully..");
-                    }
-                    else
-                        MessageBox.Show("Please Try Again !!!");
-                }
-                catch (Exception ex)
+                DB = new SQLiteDataAdapter("SELECT * FROM subGroupsDetails WHERE MID ='" + sg.mid + "' AND SNO ='" + sg.sno + "' ", sqlCon);
+                dt = new DataTable();
+                DB.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
                 {
-                    MessageBox.Show("Error:- " + ex.Message);
+                    CustomMessageBox.Show("Sub Group", " " + sg.mid + "." + sg.sno + " is already saved.");
+                }
+
+                else
+                {
+
+                    try
+                    {
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"INSERT INTO subGroupsDetails (MID, SNO) VALUES(@mid, @sid)";
+                        sqlCom.Connection = sqlCon;
+                        sqlCom.Parameters.Add(new SQLiteParameter("@mid", sg.mid));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@sid", sg.sno));
+
+                        sqlCon.Open();
+
+                        int i = sqlCom.ExecuteNonQuery();
+
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Sub Group Details", "" + sg.mid + "." + sg.sno + " is generated.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        CustomMessageBox.Show("Error!", " " + ex.Message);
+                    }
                 }
             }
         }
