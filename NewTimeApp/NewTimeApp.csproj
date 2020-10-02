@@ -273,6 +273,10 @@
     <Compile Include="UserControlers\AcademicDetailsViewUC.designer.cs">
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\buildingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\buildingUC.Designer.cs" />
     <Compile Include="UserControlers\DataViewUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -297,6 +301,8 @@
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\locationUC.cs" />
+    <Compile Include="UserControlers\locationUC.Designer.cs" />
     <Compile Include="UserControlers\MainGroupDetaisUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,12 +327,38 @@
     <Compile Include="UserControlers\ReportsUC.Designer.cs">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\roomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\roomUC.Designer.cs" />
     <Compile Include="UserControlers\SettingsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\SettingsUC.Designer.cs">
       <DependentUpon>SettingsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\ShowBuildingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\ShowBuildingUC.Designer.cs" />
+    <Compile Include="UserControlers\showroomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\showroomUC.Designer.cs" />
+    <Compile Include="UserControlers\statisticsUC.cs" />
+    <Compile Include="UserControlers\statisticsUC.Designer.cs" />
+    <Compile Include="UserControlers\statLecturersUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\statLecturersUC.Designer.cs" />
+    <Compile Include="UserControlers\statStudentUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\statStudentUC.Designer.cs" />
+    <Compile Include="UserControlers\statSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\statSubjectUC.Designer.cs" />
     <Compile Include="UserControlers\StudentsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -385,6 +417,7 @@
     <EmbeddedResource Include="UserControlers\AcademicDetailsViewUC.resx">
       <DependentUpon>AcademicDetailsViewUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\buildingUC.resx" />
     <EmbeddedResource Include="UserControlers\DataViewUC.resx">
       <DependentUpon>DataViewUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +430,7 @@
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\locationUC.resx" />
     <EmbeddedResource Include="UserControlers\MainGroupDetaisUC.resx">
       <DependentUpon>MainGroupDetaisUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,9 +443,16 @@
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\roomUC.resx" />
     <EmbeddedResource Include="UserControlers\SettingsUC.resx">
       <DependentUpon>SettingsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\ShowBuildingUC.resx" />
+    <EmbeddedResource Include="UserControlers\showroomUC.resx" />
+    <EmbeddedResource Include="UserControlers\statisticsUC.resx" />
+    <EmbeddedResource Include="UserControlers\statLecturersUC.resx" />
+    <EmbeddedResource Include="UserControlers\statStudentUC.resx" />
+    <EmbeddedResource Include="UserControlers\statSubjectUC.resx" />
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </EmbeddedResource>

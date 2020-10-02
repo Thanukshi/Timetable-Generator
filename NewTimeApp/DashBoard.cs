@@ -92,5 +92,20 @@ namespace NewTimeApp
             MainControler.showControl(studentsUC, panelContainer);
             titleOfPages.Text = "Tags";
         }
+
+        private void locationBtn_Click(object sender, EventArgs e)
+        {
+            locationUC lc = new locationUC();
+            MainControler.showControl(lc, panelContainer);
+            titleOfPages.Text = "Location";
+
+        }
+
+        private void statBtn_Click(object sender, EventArgs e)
+        {
+            statisticsUC lc = new statisticsUC();
+            MainControler.showControl(lc, panelContainer);
+            titleOfPages.Text = "Statistics";
+        }
     }
 }
