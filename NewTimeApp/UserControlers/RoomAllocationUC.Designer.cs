@@ -71,6 +71,7 @@
             this.PreRoomBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.PreRoomBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.PreRoomBtn.UseVisualStyleBackColor = false;
+            this.PreRoomBtn.Click += new System.EventHandler(this.PreRoomBtn_Click);
             // 
             // sutRoomBtn
             // 
@@ -108,6 +109,7 @@
             this.sessConRBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.sessConRBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.sessConRBtn.UseVisualStyleBackColor = false;
+            this.sessConRBtn.Click += new System.EventHandler(this.sessConRBtn_Click);
             // 
             // LecGroupRBtn
             // 
@@ -126,6 +128,7 @@
             this.LecGroupRBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.LecGroupRBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.LecGroupRBtn.UseVisualStyleBackColor = false;
+            this.LecGroupRBtn.Click += new System.EventHandler(this.LecGroupRBtn_Click);
             // 
             // TimeRoomBtn
             // 
@@ -144,6 +147,7 @@
             this.TimeRoomBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.TimeRoomBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TimeRoomBtn.UseVisualStyleBackColor = false;
+            this.TimeRoomBtn.Click += new System.EventHandler(this.TimeRoomBtn_Click);
             // 
             // pictureBox1
             // 
