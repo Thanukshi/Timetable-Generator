@@ -49,10 +49,15 @@ namespace NewTimeApp.UserControlers
                 string sql2 = "CREATE TABLE degreeProgram (degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName  VARCHAR (100) NOT NULL)";
                 //string sql = "CREATE TABLE degreeProgram(degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName VARCHAR (100) NOT NULL)";
 
+                string sql3 = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
+
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
 
                 sqlCom = new SQLiteCommand(sql2, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql3, sqlCon);
                 sqlCom.ExecuteNonQuery();
 
                 sqlCon.Close();

@@ -57,6 +57,7 @@ namespace NewTimeApp.UserControlers
                     string year = sldr.GetString(1);
                     string sem = sldr.GetString(2);
                     acDetails.Items.Add(year + "." + sem);
+                    string maID = "SELECT ID FROM academicDetails WHERE acYear ='" + year + "'And acSem ='" + sem + "'";
                 }
             }
             catch (SQLiteException x)
@@ -105,12 +106,15 @@ namespace NewTimeApp.UserControlers
             //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             if (!File.Exists(path))
             {
+                /*sqlCon = new SQLiteConnection(connectString);
+                sqlCon.Open();
+                string sql = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
+                sqlCom = new SQLiteCommand(sql, sqlCon);*/
+                /*sqlCom.ExecuteNonQuery();
+                sqlCon.Close();*/
+
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, MACID INTEGER, mDegereeName  VARCHAR (20) NOT NULL, MDID INTEGER, mGroupNo VARCHAR (20) NOT NULL )";
-                sqlCom = new SQLiteCommand(sql, sqlCon);
-                sqlCom.ExecuteNonQuery();
-                sqlCon.Close();
             }
         }
 
@@ -142,7 +146,7 @@ namespace NewTimeApp.UserControlers
 
                 if (dt.Rows.Count >= 1)
                 {
-                    CustomMessageBox.Show("Maing Groups", " " + mg.MAcDetails + " And " + mg.MDegreeDetails + "And " + mg.MGroupNo + " is already saved.");
+                    CustomMessageBox.Show("Maing Groups", " " + mg.MAcDetails + "." + mg.MDegreeDetails + "." + mg.MGroupNo + " is already saved.");
                 }
 
                 else
@@ -152,13 +156,10 @@ namespace NewTimeApp.UserControlers
                     {
                         sqlCon = new SQLiteConnection(connectString);
                         sqlCom = new SQLiteCommand();
-                        sqlCom.CommandText = @"INSERT INTO mainGroupsDetails (macademicDetails, MACID, mDegereeName, MDID, mGroupNo) VALUES(@macac, @macid, @mdegree, @mdid, @mgno)";
+                        sqlCom.CommandText = @"INSERT INTO mainGroupsDetails (macademicDetails, mDegereeName, mGroupNo) VALUES(@macac, @mdegree, @mgno)";
                         sqlCom.Connection = sqlCon;
-                        string maID = "SELECT ID FROM academicDetails WHERE ";
                         sqlCom.Parameters.Add(new SQLiteParameter("@macac", mg.MAcDetails));
-                        sqlCom.Parameters.Add(new SQLiteParameter("@macid", maID));
                         sqlCom.Parameters.Add(new SQLiteParameter("@mdegree", mg.MDegreeDetails));
-                        sqlCom.Parameters.Add(new SQLiteParameter("@mdid", ));
                         sqlCom.Parameters.Add(new SQLiteParameter("@mgno", mg.MGroupNo));
 
                         sqlCon.Open();
@@ -167,7 +168,7 @@ namespace NewTimeApp.UserControlers
 
                         if (i == 1)
                         {
-                            CustomMessageBox.Show("Academic Details", "" + mg.MAcDetails + " " + dpc.DegreeShortName + " is generated.");
+                            CustomMessageBox.Show("Main Group Details", "" + mg.MAcDetails + "." + mg.MDegreeDetails + "." + mg.MGroupNo + " is generated.");
                         }
                     }
                     catch (Exception ex)
