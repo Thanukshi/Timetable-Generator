@@ -244,6 +244,12 @@
     <Compile Include="UserControlers\ReportsUC.Designer.cs">
       <DependentUpon>ReportsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\ReservedRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\ReservedRoomUC.Designer.cs">
+      <DependentUpon>ReservedRoomUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\roomUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -345,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\ReservedRoomUC.resx">
+      <DependentUpon>ReservedRoomUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\roomUC.resx">
       <DependentUpon>roomUC.cs</DependentUpon>
