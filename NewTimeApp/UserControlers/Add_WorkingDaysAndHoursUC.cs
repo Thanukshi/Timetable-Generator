@@ -12,6 +12,7 @@ using NewTimeApp.Helpers;
 using System.Collections;
 using System.Data.SQLite;
 using System.IO;
+using System.Windows.Forms.VisualStyles;
 
 namespace NewTimeApp.UserControlers
 {
@@ -260,6 +261,12 @@ namespace NewTimeApp.UserControlers
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
             CustomMessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + "Deleted!");
 
+        }
+
+        private void genarate_Click(object sender, EventArgs e)
+        {
+            TimeTableGenarate timeTableGenarate = new TimeTableGenarate();
+            timeTableGenarate.LoadData();
         }
     }
 }

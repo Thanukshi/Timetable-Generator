@@ -220,8 +220,8 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\DataBase.cs" />
     <Compile Include="Helpers\MainControler.cs" />
+    <Compile Include="Helpers\TimeTableGenarate.cs" />
     <Compile Include="Helpers\WorkingDaysAndHours.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>

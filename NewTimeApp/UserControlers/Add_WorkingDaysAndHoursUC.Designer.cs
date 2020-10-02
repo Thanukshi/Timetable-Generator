@@ -50,6 +50,7 @@
             this.Delete = new ePOSOne.btnProduct.Button_WOC();
             this.addBtn = new ePOSOne.btnProduct.Button_WOC();
             this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.genarate = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,6 +208,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.genarate);
             this.panel1.Controls.Add(this.Delete);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -360,6 +362,31 @@
             this.resetBtn.UseVisualStyleBackColor = false;
             this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
+            // genarate
+            // 
+            this.genarate.BackColor = System.Drawing.Color.White;
+            this.genarate.BorderColor = System.Drawing.Color.Black;
+            this.genarate.ButtonColor = System.Drawing.Color.White;
+            this.genarate.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.genarate.FlatAppearance.BorderSize = 0;
+            this.genarate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.genarate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.genarate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genarate.ForeColor = System.Drawing.Color.Black;
+            this.genarate.Location = new System.Drawing.Point(261, 553);
+            this.genarate.Margin = new System.Windows.Forms.Padding(2);
+            this.genarate.Name = "genarate";
+            this.genarate.OnHoverBorderColor = System.Drawing.Color.White;
+            this.genarate.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.genarate.OnHoverTextColor = System.Drawing.Color.White;
+            this.genarate.Size = new System.Drawing.Size(161, 42);
+            this.genarate.TabIndex = 44;
+            this.genarate.Text = "Show Table";
+            this.genarate.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.genarate.UseVisualStyleBackColor = false;
+            this.genarate.Click += new System.EventHandler(this.genarate_Click);
+            // 
             // Add_WorkingDaysAndHoursUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,5 +424,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private ePOSOne.btnProduct.Button_WOC Delete;
+        private ePOSOne.btnProduct.Button_WOC genarate;
     }
 }
