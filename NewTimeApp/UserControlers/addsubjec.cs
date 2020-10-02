@@ -35,16 +35,10 @@ namespace NewTimeApp.UserControlers
         private void GenerateDatabase()
         {
             String path = Application.StartupPath + @"\Database\TimeAppDB.db";
-            //String path = "E:\\3rdYear\\2ndSemester\\SPM\\Project\\NewTimeApp\\NewTimeApp\\bin\\Debug\\TimeAppDB.db";
             if (!File.Exists(path))
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE SubjectDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, year VARCHAR (50) NOT NULL, semester  VARCHAR (10) NOT NULL,subname VARCHAR (50) NOT NULL,code VARCHAR (50) NOT NULL,lech VARCHAR (50) NOT NULL," +
-                    "tute VARCHAR (50) NOT NULL,lab VARCHAR (50) NOT NULL,evaluation VARCHAR (50) NOT NULL)";
-                sqlCom = new SQLiteCommand(sql, sqlCon);
-                sqlCom.ExecuteNonQuery();
-                sqlCon.Close();
             }
         }
         //IFirebaseConfig fcon = new FirebaseConfig()

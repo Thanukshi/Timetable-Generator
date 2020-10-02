@@ -45,17 +45,71 @@ namespace NewTimeApp.UserControlers
 
                 string sql1 = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity VARCHAR (50) NOT NULL )";
 
+                string sql2 = "CREATE TABLE LecturerDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, nametb VARCHAR (50) NOT NULL, empidtb  VARCHAR (10) NOT NULL,facultycb VARCHAR (50) NOT NULL,deptb VARCHAR (50) NOT NULL,centercb VARCHAR (50) NOT NULL," +
+                "buildingcb VARCHAR (50) NOT NULL,categorycb VARCHAR (50) NOT NULL,levelcb VARCHAR (50) NOT NULL,ranktb VARCHAR (50) NOT NULL)";
+
+                string sql3 = "CREATE TABLE SubjectDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, year VARCHAR (50) NOT NULL, semester  VARCHAR (10) NOT NULL,subname VARCHAR (50) NOT NULL,code VARCHAR (50) NOT NULL,lech VARCHAR (50) NOT NULL," +
+                    "tute VARCHAR (50) NOT NULL,lab VARCHAR (50) NOT NULL,evaluation VARCHAR (50) NOT NULL)";
+
+                string sql5 = "CREATE TABLE tags (TID INTEGER PRIMARY KEY ASC AUTOINCREMENT, tags VARCHAR (20) NOT NULL)";
+
+                string sql6 = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
+
+                string sql7 = "CREATE TABLE degreeProgram (degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName  VARCHAR (100) NOT NULL)";
+                //string sql = "CREATE TABLE degreeProgram(degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName VARCHAR (100) NOT NULL)";
+
+                string sql8 = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
+
+                string sql9 = "CREATE TABLE subGroupsDetails (SID INTEGER PRIMARY KEY ASC AUTOINCREMENT, MID VARCHAR (20) NOT NULL, SNO  VARCHAR (20) NOT NULL)";
+
+                string sql10 = "CREATE TABLE WorkingDays (" +
+                   "TableType VARCHAR PRIMARY KEY ," +
+                   "WorkingDays VARCHAR (20) NOT NULL," +
+                   "WorkingHours VARCHAR (50) NOT NULL," +
+                   "TimeSlot VARCHAR (20) NOT NULL)";
+
+                string sql11 = "CREATE TABLE SelectedDays (" +
+                    "TableType VARCHAR ," +
+                    "SelectedDays VARCHAR (20) NOT NULL)";
 
                 sqlCom = new SQLiteCommand(sql, sqlCon);
-                sqlCom.ExecuteNonQuery(); 
-                
+                sqlCom.ExecuteNonQuery();
+
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql2, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql3, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql5, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql6, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql7, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql8, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql9, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql10, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql1, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
                 sqlCon.Close();
             }
         }
 
-         private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -64,8 +118,6 @@ namespace NewTimeApp.UserControlers
         {
 
         }
-
-        
 
         private void backBtn_Click(object sender, EventArgs e)
         {
@@ -78,14 +130,11 @@ namespace NewTimeApp.UserControlers
             if (string.IsNullOrWhiteSpace(buildingNameTB.Text))
             {
                 CustomMessageBox.Show("Building Name", "Please  enter valid Building Name.");
-                
             }
             else
-                {
+            {
                 BuildingClass building = new BuildingClass();
                 building.buildingName = buildingNameTB.Text;
-                
-
                 DB = new SQLiteDataAdapter("SELECT * FROM buildingDetails WHERE buildingName='" + building.buildingName + "' ", sqlCon);
                 dt = new DataTable();
                 DB.Fill(dt);
@@ -104,8 +153,6 @@ namespace NewTimeApp.UserControlers
                         sqlCom.CommandText = @"INSERT INTO buildingDetails (buildingName) VALUES(@buildingName)";
                         sqlCom.Connection = sqlCon;
                         sqlCom.Parameters.Add(new SQLiteParameter("@buildingName", building.buildingName));
-                        
-
                         sqlCon.Open();
 
                         int i = sqlCom.ExecuteNonQuery();

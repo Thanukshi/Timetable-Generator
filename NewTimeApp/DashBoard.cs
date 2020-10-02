@@ -121,5 +121,12 @@ namespace NewTimeApp
             MainControler.showControl(lc, panelContainer);
             titleOfPages.Text = "Subject Details";
         }
+
+        private void workBtn_Click(object sender, EventArgs e)
+        {
+            WorkingDaysAndHoursUC lc = new WorkingDaysAndHoursUC();
+            MainControler.showControl(lc, panelContainer);
+            titleOfPages.Text = "Working Days and Hours";
+        }
     }
 }

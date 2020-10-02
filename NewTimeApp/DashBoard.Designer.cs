@@ -384,6 +384,7 @@
             this.workBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.workBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.workBtn.UseVisualStyleBackColor = false;
+            this.workBtn.Click += new System.EventHandler(this.workBtn_Click);
             // 
             // studentBtn
             // 

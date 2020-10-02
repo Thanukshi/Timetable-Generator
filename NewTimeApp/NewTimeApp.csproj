@@ -251,6 +251,8 @@
     <Compile Include="Helpers\RoomClass.cs" />
     <Compile Include="Helpers\SubGroupClass.cs" />
     <Compile Include="Helpers\TagClass.cs" />
+    <Compile Include="Helpers\TimeTableGenarate.cs" />
+    <Compile Include="Helpers\WorkingDaysAndHours.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +286,10 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\addsubjec.Designer.cs" />
+    <Compile Include="UserControlers\Add_WorkingDaysAndHoursUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\Add_WorkingDaysAndHoursUC.Designer.cs" />
     <Compile Include="UserControlers\buildingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,6 +318,22 @@
     <Compile Include="UserControlers\Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\Genarate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\Genarate.Designer.cs" />
+    <Compile Include="UserControlers\GenarateTableHall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableHall.Designer.cs" />
+    <Compile Include="UserControlers\GenarateTableLecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableLecturer.Designer.cs" />
+    <Compile Include="UserControlers\GenarateTableStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\GenarateTableStudent.Designer.cs" />
     <Compile Include="UserControlers\LecturerAndGroupsRoomUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -432,6 +454,10 @@
     <Compile Include="UserControlers\TagUC.Designer.cs">
       <DependentUpon>TagUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\TimeTableHtml.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\TimeTableHtml.Designer.cs" />
     <Compile Include="UserControlers\veiwlecturer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -440,6 +466,10 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlers\viewsubject.Designer.cs" />
+    <Compile Include="UserControlers\WorkingDaysAndHoursUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\WorkingDaysAndHoursUC.Designer.cs" />
     <EmbeddedResource Include="academicDetailsUpdate.resx">
       <DependentUpon>academicDetailsUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,6 +500,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\AddRoomSessionsUC.resx" />
     <EmbeddedResource Include="UserControlers\addsubjec.resx" />
+    <EmbeddedResource Include="UserControlers\Add_WorkingDaysAndHoursUC.resx" />
     <EmbeddedResource Include="UserControlers\buildingUC.resx" />
     <EmbeddedResource Include="UserControlers\DataViewUC.resx">
       <DependentUpon>DataViewUC.cs</DependentUpon>
@@ -483,6 +514,10 @@
     <EmbeddedResource Include="UserControlers\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\Genarate.resx" />
+    <EmbeddedResource Include="UserControlers\GenarateTableHall.resx" />
+    <EmbeddedResource Include="UserControlers\GenarateTableLecturer.resx" />
+    <EmbeddedResource Include="UserControlers\GenarateTableStudent.resx" />
     <EmbeddedResource Include="UserControlers\LecturerAndGroupsRoomUC.resx" />
     <EmbeddedResource Include="UserControlers\LecturerIN.resx" />
     <EmbeddedResource Include="UserControlers\lectureUC.resx" />
@@ -529,8 +564,10 @@
     <EmbeddedResource Include="UserControlers\TagUC.resx">
       <DependentUpon>TagUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\TimeTableHtml.resx" />
     <EmbeddedResource Include="UserControlers\veiwlecturer.resx" />
     <EmbeddedResource Include="UserControlers\viewsubject.resx" />
+    <EmbeddedResource Include="UserControlers\WorkingDaysAndHoursUC.resx" />
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>

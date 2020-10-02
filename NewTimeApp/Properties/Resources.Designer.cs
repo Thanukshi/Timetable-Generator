@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Drawing;
+
 namespace NewTimeApp.Properties
 {
 
@@ -24,7 +26,11 @@ namespace NewTimeApp.Properties
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources
     {
-
+        internal static Image teacher_64;
+        internal static Image building_64__1_;
+        internal static Image student_64__1_;
+        internal static Image list_view_64;
+        internal static Image add_list_64;
         private static global::System.Resources.ResourceManager resourceMan;
 
         private static global::System.Globalization.CultureInfo resourceCulture;

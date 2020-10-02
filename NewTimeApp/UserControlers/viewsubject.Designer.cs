@@ -450,7 +450,7 @@
             // 
             this.btnback.FlatAppearance.BorderSize = 0;
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnback.Image = ((System.Drawing.Image)(resources.GetObject("btnback.Image")));
+            //this.btnback.Image = ((System.Drawing.Image)(resources.GetObject("btnback.Image")));
             this.btnback.Location = new System.Drawing.Point(12, 2);
             this.btnback.Margin = new System.Windows.Forms.Padding(2);
             this.btnback.Name = "btnback";

@@ -42,31 +42,74 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
+
                 string sql = "CREATE TABLE LecturerDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, nametb VARCHAR (50) NOT NULL, empidtb  VARCHAR (10) NOT NULL,facultycb VARCHAR (50) NOT NULL,deptb VARCHAR (50) NOT NULL,centercb VARCHAR (50) NOT NULL," +
                     "buildingcb VARCHAR (50) NOT NULL,categorycb VARCHAR (50) NOT NULL,levelcb VARCHAR (50) NOT NULL,ranktb VARCHAR (50) NOT NULL)";
+
+                string sql1 = "CREATE TABLE SubjectDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, year VARCHAR (50) NOT NULL, semester  VARCHAR (10) NOT NULL,subname VARCHAR (50) NOT NULL,code VARCHAR (50) NOT NULL,lech VARCHAR (50) NOT NULL," +
+                    "tute VARCHAR (50) NOT NULL,lab VARCHAR (50) NOT NULL,evaluation VARCHAR (50) NOT NULL)";
+
+                string sql3 = "CREATE TABLE buildingDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL)";
+
+                string sql4 = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity VARCHAR (50) NOT NULL )";
+
+                string sql5 = "CREATE TABLE tags (TID INTEGER PRIMARY KEY ASC AUTOINCREMENT, tags VARCHAR (20) NOT NULL)";
+
+                string sql6 = "CREATE TABLE academicDetails (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, acYear VARCHAR (10) NOT NULL, acSem  VARCHAR (10) NOT NULL)";
+
+                string sql7 = "CREATE TABLE degreeProgram (degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName  VARCHAR (100) NOT NULL)";
+                //string sql = "CREATE TABLE degreeProgram(degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName VARCHAR (100) NOT NULL)";
+
+                string sql8 = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL, mGroupNo VARCHAR (20) NOT NULL )";
+
+                string sql9 = "CREATE TABLE subGroupsDetails (SID INTEGER PRIMARY KEY ASC AUTOINCREMENT, MID VARCHAR (20) NOT NULL, SNO  VARCHAR (20) NOT NULL)";
+
+                string sql10 = "CREATE TABLE WorkingDays (" +
+                   "TableType VARCHAR PRIMARY KEY ," +
+                   "WorkingDays VARCHAR (20) NOT NULL," +
+                   "WorkingHours VARCHAR (50) NOT NULL," +
+                   "TimeSlot VARCHAR (20) NOT NULL)";
+
+                string sql11 = "CREATE TABLE SelectedDays (" +
+                    "TableType VARCHAR ," +
+                    "SelectedDays VARCHAR (20) NOT NULL)";
+
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql1, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql3, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql4, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql5, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql6, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql7, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql8, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql9, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql10, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
+                sqlCom = new SQLiteCommand(sql11, sqlCon);
+                sqlCom.ExecuteNonQuery();
+
                 sqlCon.Close();
             }
         }
-        //IFirebaseConfig fcon = new FirebaseConfig()
-        //{
-        //    AuthSecret = "Onj8rh37hQONO2YXC0YncZnUy6kbXHBtxK9uCoTx",
-        //    BasePath = "https://timetableapp-12161.firebaseio.com/"
-        //};
-        //IFirebaseClient client;
-        //private void Insertlecpanel_Paint(object sender, PaintEventArgs e)
-        //{
-        //   try
-        //    {
-        //        client = new FireSharp.FirebaseClient(fcon);
-
-        //    }
-        //    catch
-        //    {
-        //        MessageBox.Show("There was problem in Internet.");
-        //    }
-        //}
 
         private void buttonaddlec_Click(object sender, EventArgs e)
         {
