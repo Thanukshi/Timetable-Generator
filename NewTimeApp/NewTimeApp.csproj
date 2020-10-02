@@ -280,6 +280,12 @@
     <Compile Include="UserControlers\StudentsUC.Designer.cs">
       <DependentUpon>StudentsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\SuitableRoomUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\SuitableRoomUC.Designer.cs">
+      <DependentUpon>SuitableRoomUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\StudentsUC.resx">
       <DependentUpon>StudentsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\SuitableRoomUC.resx">
+      <DependentUpon>SuitableRoomUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

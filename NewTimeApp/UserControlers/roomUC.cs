@@ -41,7 +41,7 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity INT.Parse(Console.ReadLine()) NOT NULL )";
+                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity VARCHAR (50) NOT NULL )";
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
@@ -69,7 +69,7 @@ namespace NewTimeApp.UserControlers
         public void fillbuildingDetail()
         {
             String path = Application.StartupPath + @"\Database\TimeAppDB.db";
-            sqlCon = new SQLiteConnection(connectString); 
+            sqlCon = new SQLiteConnection(path); 
             string sql = "SELECT * FROM buildingDetails";
             sqlCom = new SQLiteCommand(sql, sqlCon);
             SQLiteDataReader sqliteDataReader;

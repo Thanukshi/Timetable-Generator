@@ -14,6 +14,6 @@ namespace NewTimeApp.Helpers
 
         public string roomType { get; set; }
 
-        public int capasity { get; set; }
+        public string capasity { get; set; }
     }
 }
