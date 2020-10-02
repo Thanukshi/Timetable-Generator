@@ -41,7 +41,7 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity VARCHAR (10) NOT NULL )";
+                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity INT.Parse(Console.ReadLine()) NOT NULL )";
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
@@ -66,29 +66,29 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(locatUC, roompanel);
         }
 
-        /*public void fillbuildingDetail()
+        public void fillbuildingDetail()
         {
-            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3"; 
-            sqlCon = new SqlConnection(sqlCon);
-            string qry = "SELECT * FROM buildingDetails";
-            sqlCom = new SqlCommand(qry, sqlCon);
-            SqlDataReader sqlDataReader;
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString); 
+            string sql = "SELECT * FROM buildingDetails";
+            sqlCom = new SQLiteCommand(sql, sqlCon);
+            SQLiteDataReader sqliteDataReader;
 
             try
             {
                 sqlCon.Open();
-                sqlDataReader = sqlCom.ExecuteReader();
-                while (sqlDataReader.Read())
+                sqliteDataReader = sqlCom.ExecuteReader();
+                while (sqliteDataReader.Read())
                 {
-                    string buildingName = sqlDataReader.GetString(1);
+                    string buildingName = sqliteDataReader.GetString(1);
                     buildingNameCB.Items.Add(buildingName);
                 }
             }
-            catch (SqlException x)
+            catch (Exception ex)
             {
-                CustomMessageBox.Show(x.Message);
+                CustomMessageBox.Show("There is not already added buildings", " " + ex.Message);
             }
-        }*/
+        }
 
 
         private void roomAddBtn_Click(object sender, EventArgs e)
