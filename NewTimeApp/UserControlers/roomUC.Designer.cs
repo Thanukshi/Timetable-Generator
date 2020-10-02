@@ -116,6 +116,7 @@
             this.capacityCB.Name = "capacityCB";
             this.capacityCB.Size = new System.Drawing.Size(310, 38);
             this.capacityCB.TabIndex = 9;
+            this.capacityCB.SelectedIndexChanged += new System.EventHandler(this.capacityCB_SelectedIndexChanged);
             // 
             // RoomNameTB
             // 

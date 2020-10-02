@@ -41,7 +41,7 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity INT NOT NULL )";
+                string sql = "CREATE TABLE roomDetails(ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, buildingName VARCHAR (50) NOT NULL, roomName VARCHAR (50) NOT NULL, roomType VARCHAR (20) NOT NULL, capasity VARCHAR (10) NOT NULL )";
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
@@ -164,6 +164,11 @@ namespace NewTimeApp.UserControlers
         }
 
         private void button_WOC1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void capacityCB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
