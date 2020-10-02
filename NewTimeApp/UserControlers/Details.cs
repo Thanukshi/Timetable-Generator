@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NewTimeApp.Helpers;
 
 namespace NewTimeApp.UserControlers
 {
@@ -29,6 +30,13 @@ namespace NewTimeApp.UserControlers
             DashBoard dash = new DashBoard();
             dash.ShowDialog();
             this.Hide();
+        }
+
+        private void accBtn_Click(object sender, EventArgs e)
+        {
+            NotAvailableUC not = new NotAvailableUC();
+            MainControler.showControl(not, viewPaneld);
+
         }
     }
 }

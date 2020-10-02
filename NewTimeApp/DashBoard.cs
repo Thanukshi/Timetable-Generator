@@ -38,7 +38,7 @@ namespace NewTimeApp
             //details1.BringToFront();
             Details details = new Details();
             MainControler.showControl(details, panelContainer);
-            titleOfPages.Text = "Details";
+            titleOfPages.Text = "Allocates Details";
         }
 
         private void reportBtn_Click(object sender, EventArgs e)

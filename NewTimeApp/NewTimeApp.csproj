@@ -241,9 +241,11 @@
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AcademicDetailsClass.cs" />
+    <Compile Include="Helpers\BuildingClass.cs" />
     <Compile Include="Helpers\DegreeProgramClass.cs" />
     <Compile Include="Helpers\MainControler.cs" />
     <Compile Include="Helpers\MainGroupClass.cs" />
+    <Compile Include="Helpers\RoomClass.cs" />
     <Compile Include="Helpers\SubGroupClass.cs" />
     <Compile Include="Helpers\TagClass.cs" />
     <Compile Include="Login.cs">
@@ -306,6 +308,12 @@
     </Compile>
     <Compile Include="UserControlers\MainGroupUC.Designer.cs">
       <DependentUpon>MainGroupUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\NotAvailableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\NotAvailableUC.Designer.cs">
+      <DependentUpon>NotAvailableUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlers\ReportsUC.cs">
       <SubType>UserControl</SubType>
@@ -394,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\MainGroupUC.resx">
       <DependentUpon>MainGroupUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\NotAvailableUC.resx">
+      <DependentUpon>NotAvailableUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
       <DependentUpon>ReportsUC.cs</DependentUpon>

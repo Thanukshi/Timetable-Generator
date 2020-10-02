@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Details));
-            this.viewPanel = new System.Windows.Forms.Panel();
+            this.viewPaneld = new System.Windows.Forms.Panel();
             this.subGroupBrn = new NewTimeApp.CircularButton();
             this.mainGrpBtn = new NewTimeApp.CircularButton();
             this.degreeBtn = new NewTimeApp.CircularButton();
@@ -37,25 +37,25 @@
             this.backBtnS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.viewPanel.SuspendLayout();
+            this.viewPaneld.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // viewPanel
+            // viewPaneld
             // 
-            this.viewPanel.BackColor = System.Drawing.Color.White;
-            this.viewPanel.Controls.Add(this.subGroupBrn);
-            this.viewPanel.Controls.Add(this.mainGrpBtn);
-            this.viewPanel.Controls.Add(this.degreeBtn);
-            this.viewPanel.Controls.Add(this.accBtn);
-            this.viewPanel.Controls.Add(this.backBtnS);
-            this.viewPanel.Controls.Add(this.label1);
-            this.viewPanel.Controls.Add(this.pictureBox1);
-            this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewPanel.Location = new System.Drawing.Point(0, 0);
-            this.viewPanel.Name = "viewPanel";
-            this.viewPanel.Size = new System.Drawing.Size(772, 720);
-            this.viewPanel.TabIndex = 1;
+            this.viewPaneld.BackColor = System.Drawing.Color.White;
+            this.viewPaneld.Controls.Add(this.subGroupBrn);
+            this.viewPaneld.Controls.Add(this.mainGrpBtn);
+            this.viewPaneld.Controls.Add(this.degreeBtn);
+            this.viewPaneld.Controls.Add(this.accBtn);
+            this.viewPaneld.Controls.Add(this.backBtnS);
+            this.viewPaneld.Controls.Add(this.label1);
+            this.viewPaneld.Controls.Add(this.pictureBox1);
+            this.viewPaneld.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewPaneld.Location = new System.Drawing.Point(0, 0);
+            this.viewPaneld.Name = "viewPaneld";
+            this.viewPaneld.Size = new System.Drawing.Size(772, 720);
+            this.viewPaneld.TabIndex = 1;
             // 
             // subGroupBrn
             // 
@@ -124,10 +124,11 @@
             this.accBtn.Name = "accBtn";
             this.accBtn.Size = new System.Drawing.Size(200, 200);
             this.accBtn.TabIndex = 47;
-            this.accBtn.Text = "Academic Details";
+            this.accBtn.Text = "Not Available";
             this.accBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.accBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.accBtn.UseVisualStyleBackColor = false;
+            this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
             // 
             // backBtnS
             // 
@@ -166,11 +167,11 @@
             // Details
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.viewPanel);
+            this.Controls.Add(this.viewPaneld);
             this.Name = "Details";
             this.Size = new System.Drawing.Size(772, 720);
-            this.viewPanel.ResumeLayout(false);
-            this.viewPanel.PerformLayout();
+            this.viewPaneld.ResumeLayout(false);
+            this.viewPaneld.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -178,7 +179,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel viewPanel;
+        private System.Windows.Forms.Panel viewPaneld;
         private CircularButton subGroupBrn;
         private CircularButton mainGrpBtn;
         private CircularButton degreeBtn;
