@@ -47,7 +47,7 @@ namespace NewTimeApp.UserControlers
                     string degree = sqlDataReader.GetString(2);
                     string MainGroupNo = sqlDataReader.GetString(3);
 
-                    mainGroupCombo.Items.Add(academic+"."+degree+"."+MainGroupNo);
+                    mainGroupCombo.Items.Add(academic + "." + degree + "." + MainGroupNo);
                 }
             }
             catch (SqlException x)

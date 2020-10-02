@@ -9,9 +9,13 @@ namespace NewTimeApp.Helpers
     class MainGroupClass
     {
         public string MAcDetails { get; set; }
+        public int MAID { get; set; }
 
         public string MDegreeDetails { get; set; }
 
-        public string MGroupName { get; set; }
+        private int MDID { get; set; }
+
+        public string MGroupNo { get; set; }
+
     }
 }

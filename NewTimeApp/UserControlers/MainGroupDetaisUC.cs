@@ -70,18 +70,18 @@ namespace NewTimeApp.UserControlers
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-         /*   using (SqlConnection sqlCon = new SqlConnection(con))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM MainGroup", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
+            /*   using (SqlConnection sqlCon = new SqlConnection(con))
+               {
+                   sqlCon.Open();
+                   SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM MainGroup", sqlCon);
+                   DataTable dtbl = new DataTable();
+                   sqlDa.Fill(dtbl);
 
-                //method 1 - direct method
-                //academicDataGrid.AutoGenerateColumns = false;
-                academicDataGrid.DataSource = dtbl;
+                   //method 1 - direct method
+                   //academicDataGrid.AutoGenerateColumns = false;
+                   academicDataGrid.DataSource = dtbl;
 
-            }*/
+               }*/
         }
 
         private void academicDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

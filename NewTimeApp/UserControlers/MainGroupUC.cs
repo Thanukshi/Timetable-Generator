@@ -38,7 +38,55 @@ namespace NewTimeApp.UserControlers
             GenerateDatabase();
             fillAcDetails();
             fillDegreeDetails();
+        }
 
+        public void fillAcDetails()
+        {
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
+            string qry = "SELECT * FROM academicDetails";
+            sqlCom = new SQLiteCommand(qry, sqlCon);
+            SQLiteDataReader sldr;
+
+            try
+            {
+                sqlCon.Open();
+                sldr = sqlCom.ExecuteReader();
+                while (sldr.Read())
+                {
+                    string year = sldr.GetString(1);
+                    string sem = sldr.GetString(2);
+                    acDetails.Items.Add(year + "." + sem);
+                }
+            }
+            catch (SQLiteException x)
+            {
+                CustomMessageBox.Show("Error!", "" + x.Message);
+            }
+        }
+
+        public void fillDegreeDetails()
+        {
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            sqlCon = new SQLiteConnection(connectString);
+            string qry = "SELECT * FROM degreeProgram";
+            sqlCom = new SQLiteCommand(qry, sqlCon);
+            SQLiteDataReader sldr;
+
+            try
+            {
+                sqlCon.Open();
+                sldr = sqlCom.ExecuteReader();
+                while (sldr.Read())
+                {
+                    string dn = sldr.GetString(2);
+                    degreeDetailsCombo.Items.Add(dn);
+                }
+            }
+            catch (SQLiteException x)
+            {
+                CustomMessageBox.Show("Error!", "" + x.Message);
+            }
         }
 
         private void backBtnD_Click(object sender, EventArgs e)
@@ -59,148 +107,76 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, mDegereeName  VARCHAR (20) NOT NULL)";
+                string sql = "CREATE TABLE mainGroupsDetails (MID INTEGER PRIMARY KEY ASC AUTOINCREMENT, macademicDetails VARCHAR (20) NOT NULL, MACID INTEGER, mDegereeName  VARCHAR (20) NOT NULL, MDID INTEGER, mGroupNo VARCHAR (20) NOT NULL )";
                 sqlCom = new SQLiteCommand(sql, sqlCon);
                 sqlCom.ExecuteNonQuery();
                 sqlCon.Close();
             }
         }
 
-        public void fillAcDetails()
-        {
-            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
-            //string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-            SQLiteConnection con = new SQLiteConnection(path);
-            string qry = "SELECT * FROM academicDetails";
-            sqlCom = new SQLiteCommand(qry, con);
-            SQLiteDataReader sqlDataReader;
-            con.Open();
-            try
-            {
-                con.Open();
-                sqlDataReader = sqlCom.ExecuteReader();
-                while (sqlDataReader.Read())
-                {
-                    string year = sqlDataReader.GetString(1);
-                    string semester = sqlDataReader.GetString(2);
-                    acDetails.Items.Add(year + "." + semester);
-                }
-                /*sqlCon.Open();
-                sqlDataReader = sqlCom.ExecuteReader();
-                while (sqlDataReader.Read())
-                {
-                    string year = sqlDataReader.GetString(1);
-                    string semester = sqlDataReader.GetString(2);
-                    acDetails.Items.Add(year + "." + semester);
-                }*/
-            }
-            catch (SqlException x)
-            {
-                MessageBox.Show(x.Message);
-            }
-        }
-
-
-        public void fillDegreeDetails()
-        {
-            /*String path = Application.StartupPath + @"\Database\TimeAppDB.db";
-            //string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
-            sqlCon = new SQLiteConnection(path);
-            string qry = "SELECT * FROM degreeProgram";
-            sqlCom = new SQLiteCommand(qry, sqlCon);
-            SQLiteDataReader sqlDataReader;
-
-            try
-            {
-                sqlCon.Open();
-                sqlDataReader = sqlCom.ExecuteReader();
-                while (sqlDataReader.Read())
-                {
-                    string degreedetails = sqlDataReader.GetString(2);
-                    degreeDetailsCombo.Items.Add(degreedetails);
-                }
-            }
-            catch (SqlException x)
-            {
-                MessageBox.Show(x.Message);
-            }*/
-        }
-
         private void saveMG_Click(object sender, EventArgs e)
         {
             if (acDetails.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please Select Aademic Year And Semester.", "Academic Year And Semester", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessageBox.Show("Academic Year And Semester", "Please Select Aademic Year And Semester.");
             }
             else if (degreeDetailsCombo.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please Select Degree Program .", "Degree Program", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessageBox.Show("Degree Program", "Please Select Degree Program .");
             }
             else if (mainGropNo.SelectedIndex <= -1)
             {
-                MessageBox.Show("Please Select Main Group Number.", "Main Group Number", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessageBox.Show("Main Group Number", "Please Select Main Group Number.");
 
             }
             else
             {
-                /*try
+                MainGroupClass mg = new MainGroupClass();
+                mg.MAcDetails = acDetails.Text;
+                mg.MDegreeDetails = degreeDetailsCombo.Text;
+                mg.MGroupNo = mainGropNo.Text;
+
+                DB = new SQLiteDataAdapter("SELECT * FROM mainGroupsDetails WHERE macademicDetails ='" + mg.MAcDetails + "' AND mDegereeName ='" + mg.MDegreeDetails + "' AND mGroupNo ='" + mg.MGroupNo + "' ", sqlCon);
+                dt = new DataTable();
+                DB.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
                 {
-                    if (sqlCon.State == ConnectionState.Closed)
+                    CustomMessageBox.Show("Maing Groups", " " + mg.MAcDetails + " And " + mg.MDegreeDetails + "And " + mg.MGroupNo + " is already saved.");
+                }
+
+                else
+                {
+
+                    try
                     {
+                        sqlCon = new SQLiteConnection(connectString);
+                        sqlCom = new SQLiteCommand();
+                        sqlCom.CommandText = @"INSERT INTO mainGroupsDetails (macademicDetails, MACID, mDegereeName, MDID, mGroupNo) VALUES(@macac, @macid, @mdegree, @mdid, @mgno)";
+                        sqlCom.Connection = sqlCon;
+                        string maID = "SELECT ID FROM academicDetails WHERE ";
+                        sqlCom.Parameters.Add(new SQLiteParameter("@macac", mg.MAcDetails));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@macid", maID));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@mdegree", mg.MDegreeDetails));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@mdid", ));
+                        sqlCom.Parameters.Add(new SQLiteParameter("@mgno", mg.MGroupNo));
+
                         sqlCon.Open();
+
+                        int i = sqlCom.ExecuteNonQuery();
+
+                        if (i == 1)
+                        {
+                            CustomMessageBox.Show("Academic Details", "" + mg.MAcDetails + " " + dpc.DegreeShortName + " is generated.");
+                        }
                     }
-
-                    DataTable dtData = new DataTable();
-                    sqlCom = new SQLiteCommand("abcmainGroup", sqlCon);
-                    sqlCom.CommandType = CommandType.StoredProcedure;
-                    sqlCom.Parameters.AddWithValue("@ActionType", "SaveData");
-                    sqlCom.Parameters.AddWithValue("@MainGroupID", mainGroupID);
-                    sqlCom.Parameters.AddWithValue("@AcademicD", acDetails.Text);
-                    sqlCom.Parameters.AddWithValue("@DegreeD", degreeDetailsCombo.Text);
-                    sqlCom.Parameters.AddWithValue("@MainGroupNu", mainGropNo.Text);
-
-                    int numRes = sqlCom.ExecuteNonQuery();
-                    if (numRes > 0)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Main Group  ID is " + " " + acDetails.Text + ". " + degreeDetailsCombo.Text + ". " + mainGropNo.Text + " is created successfully..");
-                    }
-                    else
-                        MessageBox.Show("Please Try Again !!!");
-                }
-                // }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error:- " + ex.Message);
-                }
-            }
-        }*/
-                /*try
-                {
-
-                    sqlCon = new SQLiteConnection(connectString);
-                    sqlCom = new SQLiteCommand();
-                    sqlCom.CommandText = @"INSERT INTO academicDetails (acYear, acSem) VALUES(@acyear, @acsem)";
-                    sqlCom.Connection = sqlCon;
-                    sqlCom.Parameters.Add(new SQLiteParameter("@acyear", academic.AcYear));
-                    sqlCom.Parameters.Add(new SQLiteParameter("@acsem", academic.AcSEM));
-
-                    sqlCon.Open();
-
-                    int i = sqlCom.ExecuteNonQuery();
-
-                    if (i == 1)
-                    {
-                        CustomMessageBox.Show("Academic Details", "" + academic.AcYear + "." + academic.AcSEM + " is generated.");
+                        CustomMessageBox.Show("Error!", " " + ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                    CustomMessageBox.Show("Error!", " " + ex.Message);
-                }*/
             }
         }
-
     }
 }
 
