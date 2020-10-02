@@ -43,10 +43,6 @@ namespace NewTimeApp.UserControlers
             {
                 sqlCon = new SQLiteConnection(connectString);
                 sqlCon.Open();
-                string sql = "CREATE TABLE degreeProgram (degreeID INTEGER PRIMARY KEY ASC AUTOINCREMENT, degreeName VARCHAR (100) NOT NULL, degreeShortName VARCHAR (100) NOT NULL)";
-                sqlCom = new SQLiteCommand(sql, sqlCon);
-                sqlCom.ExecuteNonQuery();
-                sqlCon.Close();
             }
         }
 

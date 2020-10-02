@@ -68,7 +68,7 @@ namespace NewTimeApp.UserControlers
 
         public void fillAcDetails()
         {
-            /*String path = Application.StartupPath + @"\Database\TimeAppDB.db";
+            String path = Application.StartupPath + @"\Database\TimeAppDB.db";
             //string con = "Data Source=DESKTOP-PHJQSJE;Initial Catalog=NewTimeApp;Integrated Security=True";
             SQLiteConnection con = new SQLiteConnection(path);
             string qry = "SELECT * FROM academicDetails";
@@ -77,7 +77,7 @@ namespace NewTimeApp.UserControlers
             con.Open();
             try
             {
-                // sqlCon.Open();
+                con.Open();
                 sqlDataReader = sqlCom.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
@@ -85,19 +85,19 @@ namespace NewTimeApp.UserControlers
                     string semester = sqlDataReader.GetString(2);
                     acDetails.Items.Add(year + "." + semester);
                 }
-                *//*sqlCon.Open();
+                /*sqlCon.Open();
                 sqlDataReader = sqlCom.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
                     string year = sqlDataReader.GetString(1);
                     string semester = sqlDataReader.GetString(2);
                     acDetails.Items.Add(year + "." + semester);
-                }*//*
+                }*/
             }
             catch (SqlException x)
             {
                 MessageBox.Show(x.Message);
-            }*/
+            }
         }
 
 
