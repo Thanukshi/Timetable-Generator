@@ -38,10 +38,10 @@
             this.academicDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.backBtnS = new System.Windows.Forms.Button();
-            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.deletebtn = new ePOSOne.btnProduct.Button_WOC();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updateDetailsBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.deletebtn = new ePOSOne.btnProduct.Button_WOC();
             this.tpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.academicDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -127,6 +127,7 @@
             this.academicDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.academicDataGrid.Size = new System.Drawing.Size(930, 254);
             this.academicDataGrid.TabIndex = 205;
+            this.academicDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.academicDataGrid_CellClick);
             // 
             // label1
             // 
@@ -150,6 +151,25 @@
             this.backBtnS.TabIndex = 202;
             this.backBtnS.UseVisualStyleBackColor = true;
             this.backBtnS.Click += new System.EventHandler(this.backBtnS_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TID";
+            this.Column1.HeaderText = "Index";
+            this.Column1.MinimumWidth = 15;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "tags";
+            this.Column2.HeaderText = "Tag Name";
+            this.Column2.MinimumWidth = 15;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // updateDetailsBtn
             // 
@@ -197,25 +217,7 @@
             this.deletebtn.Text = "Delete";
             this.deletebtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.deletebtn.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "TID";
-            this.Column1.HeaderText = "Index";
-            this.Column1.MinimumWidth = 15;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "tags";
-            this.Column2.HeaderText = "Tag Name";
-            this.Column2.MinimumWidth = 15;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // TagEditUC
             // 
