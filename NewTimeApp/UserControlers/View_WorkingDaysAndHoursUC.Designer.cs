@@ -39,20 +39,20 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.show = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.deleteBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.editBtn = new ePOSOne.btnProduct.Button_WOC();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.showbtn = new ePOSOne.btnProduct.Button_WOC();
+            this.deleteBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.editBtn = new ePOSOne.btnProduct.Button_WOC();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,9 +78,9 @@
             this.panel1.Controls.Add(this.checkBox4);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox6);
+            this.panel1.Controls.Add(this.show);
             this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.button_WOC1);
+            this.panel1.Controls.Add(this.showbtn);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label7);
@@ -107,8 +107,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(136, 29);
             this.textBox3.TabIndex = 63;
-            this.textBox3.Text = "Week Day";
-            this.textBox3.Visible = false;
             // 
             // label6
             // 
@@ -119,7 +117,6 @@
             this.label6.Size = new System.Drawing.Size(161, 25);
             this.label6.TabIndex = 62;
             this.label6.Text = "Time Table Type";
-            this.label6.Visible = false;
             // 
             // radioButton2
             // 
@@ -133,7 +130,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Thirty Minutes ";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Visible = false;
             // 
             // radioButton1
             // 
@@ -147,7 +143,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "One Hour";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Visible = false;
             // 
             // checkBox5
             // 
@@ -160,7 +155,6 @@
             this.checkBox5.TabIndex = 59;
             this.checkBox5.Text = "Friday";
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.Visible = false;
             // 
             // checkBox4
             // 
@@ -173,7 +167,6 @@
             this.checkBox4.TabIndex = 58;
             this.checkBox4.Text = "Thursday";
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.Visible = false;
             // 
             // checkBox1
             // 
@@ -186,7 +179,6 @@
             this.checkBox1.TabIndex = 57;
             this.checkBox1.Text = "Wednesday";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Visible = false;
             // 
             // checkBox2
             // 
@@ -199,20 +191,18 @@
             this.checkBox2.TabIndex = 56;
             this.checkBox2.Text = "Tuesday";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Visible = false;
             // 
-            // checkBox6
+            // show
             // 
-            this.checkBox6.AutoCheck = false;
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(275, 200);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(97, 28);
-            this.checkBox6.TabIndex = 55;
-            this.checkBox6.Text = "Monday";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.Visible = false;
+            this.show.AutoCheck = false;
+            this.show.AutoSize = true;
+            this.show.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show.Location = new System.Drawing.Point(275, 200);
+            this.show.Name = "show";
+            this.show.Size = new System.Drawing.Size(97, 28);
+            this.show.TabIndex = 55;
+            this.show.Text = "Monday";
+            this.show.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
@@ -224,31 +214,6 @@
             this.checkBox3.Text = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // button_WOC1
-            // 
-            this.button_WOC1.BackColor = System.Drawing.Color.White;
-            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.ForeColor = System.Drawing.Color.Black;
-            this.button_WOC1.Location = new System.Drawing.Point(436, 25);
-            this.button_WOC1.Margin = new System.Windows.Forms.Padding(2);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC1.Size = new System.Drawing.Size(124, 54);
-            this.button_WOC1.TabIndex = 51;
-            this.button_WOC1.Text = "Show";
-            this.button_WOC1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_WOC1.UseVisualStyleBackColor = false;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click_1);
-            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.Thistle;
@@ -257,7 +222,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(136, 29);
             this.textBox2.TabIndex = 49;
-            this.textBox2.Visible = false;
             // 
             // textBox1
             // 
@@ -267,7 +231,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 29);
             this.textBox1.TabIndex = 48;
-            this.textBox1.Visible = false;
             // 
             // label7
             // 
@@ -280,57 +243,6 @@
             this.label7.TabIndex = 47;
             this.label7.Visible = false;
             // 
-            // deleteBtn
-            // 
-            this.deleteBtn.BackColor = System.Drawing.Color.White;
-            this.deleteBtn.BorderColor = System.Drawing.Color.Black;
-            this.deleteBtn.ButtonColor = System.Drawing.Color.White;
-            this.deleteBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.deleteBtn.FlatAppearance.BorderSize = 0;
-            this.deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.ForeColor = System.Drawing.Color.Black;
-            this.deleteBtn.Location = new System.Drawing.Point(397, 549);
-            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.deleteBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.deleteBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.deleteBtn.Size = new System.Drawing.Size(124, 54);
-            this.deleteBtn.TabIndex = 45;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.deleteBtn.UseVisualStyleBackColor = false;
-            this.deleteBtn.Visible = false;
-            // 
-            // editBtn
-            // 
-            this.editBtn.BackColor = System.Drawing.Color.White;
-            this.editBtn.BorderColor = System.Drawing.Color.Black;
-            this.editBtn.ButtonColor = System.Drawing.Color.White;
-            this.editBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.editBtn.FlatAppearance.BorderSize = 0;
-            this.editBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.editBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editBtn.ForeColor = System.Drawing.Color.Black;
-            this.editBtn.Location = new System.Drawing.Point(171, 549);
-            this.editBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.editBtn.Name = "editBtn";
-            this.editBtn.OnHoverBorderColor = System.Drawing.Color.White;
-            this.editBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.editBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.editBtn.Size = new System.Drawing.Size(124, 54);
-            this.editBtn.TabIndex = 44;
-            this.editBtn.Text = "Edit";
-            this.editBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.editBtn.UseVisualStyleBackColor = false;
-            this.editBtn.Visible = false;
-            this.editBtn.Click += new System.EventHandler(this.editBtn_Click_2);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -340,7 +252,6 @@
             this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 39;
             this.label5.Text = "Time Slot";
-            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -351,7 +262,6 @@
             this.label4.Size = new System.Drawing.Size(142, 25);
             this.label4.TabIndex = 38;
             this.label4.Text = "Working Hours";
-            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -362,7 +272,6 @@
             this.label3.Size = new System.Drawing.Size(139, 25);
             this.label3.TabIndex = 37;
             this.label3.Text = "Selected Days";
-            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -373,7 +282,6 @@
             this.label2.Size = new System.Drawing.Size(191, 25);
             this.label2.TabIndex = 36;
             this.label2.Text = "No Of Wokring Days";
-            this.label2.Visible = false;
             // 
             // backBtn
             // 
@@ -399,6 +307,80 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "TimeTable-WeekDay-View";
             // 
+            // showbtn
+            // 
+            this.showbtn.BackColor = System.Drawing.Color.White;
+            this.showbtn.BorderColor = System.Drawing.Color.Black;
+            this.showbtn.ButtonColor = System.Drawing.Color.White;
+            this.showbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.showbtn.FlatAppearance.BorderSize = 0;
+            this.showbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.showbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.showbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showbtn.ForeColor = System.Drawing.Color.Black;
+            this.showbtn.Location = new System.Drawing.Point(436, 25);
+            this.showbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.showbtn.Name = "showbtn";
+            this.showbtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.showbtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.showbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.showbtn.Size = new System.Drawing.Size(124, 54);
+            this.showbtn.TabIndex = 51;
+            this.showbtn.Text = "Show";
+            this.showbtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.showbtn.UseVisualStyleBackColor = false;
+            this.showbtn.Click += new System.EventHandler(this.button_WOC1_Click_1);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.BackColor = System.Drawing.Color.White;
+            this.deleteBtn.BorderColor = System.Drawing.Color.Black;
+            this.deleteBtn.ButtonColor = System.Drawing.Color.White;
+            this.deleteBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.deleteBtn.FlatAppearance.BorderSize = 0;
+            this.deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.Black;
+            this.deleteBtn.Location = new System.Drawing.Point(397, 549);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.deleteBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.deleteBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.deleteBtn.Size = new System.Drawing.Size(124, 54);
+            this.deleteBtn.TabIndex = 45;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.deleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // editBtn
+            // 
+            this.editBtn.BackColor = System.Drawing.Color.White;
+            this.editBtn.BorderColor = System.Drawing.Color.Black;
+            this.editBtn.ButtonColor = System.Drawing.Color.White;
+            this.editBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.editBtn.FlatAppearance.BorderSize = 0;
+            this.editBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.editBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.ForeColor = System.Drawing.Color.Black;
+            this.editBtn.Location = new System.Drawing.Point(171, 549);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.editBtn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.editBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.editBtn.Size = new System.Drawing.Size(124, 54);
+            this.editBtn.TabIndex = 44;
+            this.editBtn.Text = "Edit";
+            this.editBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click_2);
+            // 
             // View_WorkingDaysAndHoursUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +399,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+        private ePOSOne.btnProduct.Button_WOC showbtn;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
@@ -434,7 +416,7 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox show;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label6;

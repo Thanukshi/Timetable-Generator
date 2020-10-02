@@ -12,6 +12,7 @@ using NewTimeApp.Helpers;
 using System.Collections;
 using System.Data.SQLite;
 using System.IO;
+using System.Windows.Forms.Layout;
 
 namespace NewTimeApp.UserControlers
 {
@@ -121,16 +122,18 @@ namespace NewTimeApp.UserControlers
             label4.Visible = true;
             label2.Visible = true;
             label3.Visible = true;
-            
+            label6.Visible = true;
+
             label7.Visible = true;
             textBox1.Visible = true;
             textBox2.Visible = true;
-            
+            textBox3.Visible = true;
+
             checkBox1.Visible = true;
             checkBox2.Visible = true;
             checkBox4.Visible = true;
             checkBox5.Visible = true;
-            checkBox6.Visible = true;
+            show.Visible = true;
 
             radioButton1.Visible = true;
             radioButton2.Visible = true;
@@ -138,6 +141,40 @@ namespace NewTimeApp.UserControlers
 
             editBtn.Visible = true;
             deleteBtn.Visible = true;
+
+            WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
+            WorkingDaysAndHours();
+            textBox3.Text = workingDaysAndHours.TableType; 
+
+            //            WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
+
+            /*List<WorkingDaysAndHours> workingDaysAndHours = new List<WorkingDaysAndHours>();
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(connectString))
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM WorkingDays";
+                    using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                WorkingDaysAndHours daysAndHours = new WorkingDaysAndHours();
+                                daysAndHours.TableType = reader["TableType"].ToString();
+                                
+                                workingDaysAndHours.Add(daysAndHours);
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch
+            {
+
+            }*/
 
             /*String timeSlot = "";
 
@@ -167,7 +204,7 @@ namespace NewTimeApp.UserControlers
              MessageBox.Show("done");*/
 
 
-            if (textBox3.Text == null) {
+            /*if (textBox3.Text == null) {
                 MessageBox.Show("null");
             }
             if (textBox3.Text != null)
@@ -185,74 +222,107 @@ namespace NewTimeApp.UserControlers
                 if (getworkingDaysAndHours.TimeSlot == "Thirty minutes")
                 {
                     radioButton2.Checked = true;
-                }
+                }*/
 
 
-                textBox1.Text = getworkingDaysAndHours.WorkingDays;
-                textBox2.Text = getworkingDaysAndHours.WorkingHours;
+            /*textBox1.Text = getworkingDaysAndHours.WorkingDays;
+            textBox2.Text = getworkingDaysAndHours.WorkingHours;*/
 
-                //SelectedDays = terms
-                sqlCon = new SQLiteConnection(connectString);
-                sqlCom = new SQLiteCommand();
+            //SelectedDays = terms
+            /*sqlCon = new SQLiteConnection(connectString);
+            sqlCom = new SQLiteCommand();*/
 
-                sqlCom.CommandText = @"select TimeSlot from WorkingDays where TableType = @textBox2";
-                sqlCom.Connection = sqlCon;
+            /*sqlCom.CommandText = @"select TimeSlot from WorkingDays where TableType = @textBox2";
+            sqlCom.Connection = sqlCon;*/
 
-                //textBox1.Text = getworkingDaysAndHours.WorkingDays;
-                // SqlConnection con1 = new SqlConnection("Data Source=USER-PC;Initial Catalog=webservice_database;Integrated Security=True");
-                //DataTable dt = new DataTable();
-                sqlCon.Open();
-                //SqlDataReader myReader = null;
-               // string sql1 = "select TimeSlot from WorkingDays where TableType = Week Day";
-               // sqlCom = new SQLiteCommand(sql1, sqlCon);
-               
-                string timeSlot = sqlCom.ExecuteScalar().ToString();
+            //textBox1.Text = getworkingDaysAndHours.WorkingDays;
+            // SqlConnection con1 = new SqlConnection("Data Source=USER-PC;Initial Catalog=webservice_database;Integrated Security=True");
+            //DataTable dt = new DataTable();
+            //sqlCon.Open();
+            //SqlDataReader myReader = null;
+            // string sql1 = "select TimeSlot from WorkingDays where TableType = Week Day";
+            // sqlCom = new SQLiteCommand(sql1, sqlCon);
 
-                if (timeSlot == "One Hour")
-                {
-                    radioButton1.Checked = true;
+            //string timeSlot = sqlCom.ExecuteScalar().ToString();
 
-                }
+            /*if (timeSlot == "One Hour")
+            {
+                radioButton1.Checked = true;
 
-                if (timeSlot == "Thirty minutes")
-                {
-                    radioButton2.Checked = true;
-                }
-
-
-                //myReader = myCommand.ExecuteReader();
-                /*SqlCommand comando2 = new SqlCommand();
-                comando2.Connection = conn;
-                comando2.CommandText = "Select HoursPerDay from DaysAndHours  Where TableType='WeekEnd'";
-                conn.Open();
-                textBox2.Text = comando2.ExecuteScalar().ToString();
-                conn.Close();
-                while (myReader.Read())
-                {
-                    TextBoxPassword.Text = (myReader["password"].ToString());
-                    TextBoxRPassword.Text = (myReader["retypepassword"].ToString());
-                    DropDownListGender.SelectedItem.Text = (myReader["gender"].ToString());
-                    DropDownListMonth.Text = (myReader["birth"].ToString());
-                    DropDownListYear.Text = (myReader["birth"].ToString());
-                    TextBoxAddress.Text = (myReader["address"].ToString());
-                    TextBoxCity.Text = (myReader["city"].ToString());
-                    DropDownListCountry.SelectedItem.Text = (myReader["country"].ToString());
-                    TextBoxPostcode.Text = (myReader["postcode"].ToString());
-                    TextBoxEmail.Text = (myReader["email"].ToString());
-                    TextBoxCarno.Text = (myReader["carno"].ToString());
-                }
-                con1.Close();*/
-
-
-                //var set = firebaseClient.Set("WorkingDaysAndHours/" + timeSlot, workingDaysAndHours);
-                MessageBox.Show("done");
             }
+
+            if (timeSlot == "Thirty minutes")
+            {
+                radioButton2.Checked = true;
+            }*/
+
+
+            //myReader = myCommand.ExecuteReader();
+            /*SqlCommand comando2 = new SqlCommand();
+            comando2.Connection = conn;
+            comando2.CommandText = "Select HoursPerDay from DaysAndHours  Where TableType='WeekEnd'";
+            conn.Open();
+            textBox2.Text = comando2.ExecuteScalar().ToString();
+            conn.Close();
+            while (myReader.Read())
+            {
+                TextBoxPassword.Text = (myReader["password"].ToString());
+                TextBoxRPassword.Text = (myReader["retypepassword"].ToString());
+                DropDownListGender.SelectedItem.Text = (myReader["gender"].ToString());
+                DropDownListMonth.Text = (myReader["birth"].ToString());
+                DropDownListYear.Text = (myReader["birth"].ToString());
+                TextBoxAddress.Text = (myReader["address"].ToString());
+                TextBoxCity.Text = (myReader["city"].ToString());
+                DropDownListCountry.SelectedItem.Text = (myReader["country"].ToString());
+                TextBoxPostcode.Text = (myReader["postcode"].ToString());
+                TextBoxEmail.Text = (myReader["email"].ToString());
+                TextBoxCarno.Text = (myReader["carno"].ToString());
+            }
+            con1.Close();*/
+
+
+            //var set = firebaseClient.Set("WorkingDaysAndHours/" + timeSlot, workingDaysAndHours);
+            MessageBox.Show("done");
+            /*}*/
 
 
 
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private List<WorkingDaysAndHours> WorkingDaysAndHours()
+        {
+            List<WorkingDaysAndHours> workingDaysAndHours = new List<WorkingDaysAndHours>();
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(connectString))
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM WorkingDays";
+                    using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                WorkingDaysAndHours daysAndHours = new WorkingDaysAndHours();
+                                daysAndHours.TableType = reader["TableType"].ToString();
+
+                                workingDaysAndHours.Add(daysAndHours);
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch
+            {
+
+            }
+            return workingDaysAndHours;
+        }
+
+
+            private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -26,7 +26,7 @@ namespace NewTimeApp.UserControlers
         public Add_WorkingDaysAndHoursUC()
         {
             InitializeComponent();
-            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
+            connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3;Foreign Keys=True;";
             sqlCon = new SQLiteConnection(connectString);
             GenerateDatabase();
         }
@@ -45,11 +45,8 @@ namespace NewTimeApp.UserControlers
                     "TimeSlot VARCHAR (20) NOT NULL)" ;
 
                 string sql2 = "CREATE TABLE SelectedDays (" +
-                    "TableType VARCHAR,"+
+                    "TableType VARCHAR ," +
                     "SelectedDays VARCHAR (20) NOT NULL)";
-
-              
-
 
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
@@ -132,7 +129,7 @@ namespace NewTimeApp.UserControlers
             string[] terms = SelectedDayslist.ToArray();
             //MessageBox.Show();
             WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
-            workingDaysAndHours.TableType = textBox2.Text;
+            workingDaysAndHours.TableType = label7.Text;
             workingDaysAndHours.WorkingDays = comboBox1.Text;
             workingDaysAndHours.WorkingHours = textBox1.Text;
             workingDaysAndHours.TimeSlot = timeSlot;
@@ -151,7 +148,25 @@ namespace NewTimeApp.UserControlers
                     sqlCon = new SQLiteConnection(connectString);
                     sqlCom = new SQLiteCommand();
 
-                    sqlCom.CommandText = @"INSERT INTO SelectedDays(TableType, SelectedDays) VALUES(@textBox2, @terms)";
+                    sqlCom.CommandText = @"INSERT OR REPLACE INTO WorkingDays(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@label7, @comboBox1,@textBox1,@timeSlot)";
+                    sqlCom.Connection = sqlCon;
+                    sqlCom.Parameters.Add(new SQLiteParameter("@label7", workingDaysAndHours.TableType));
+                    sqlCom.Parameters.Add(new SQLiteParameter("@comboBox1", workingDaysAndHours.WorkingDays));
+                    sqlCom.Parameters.Add(new SQLiteParameter("@textBox1", workingDaysAndHours.WorkingHours));
+                    sqlCom.Parameters.Add(new SQLiteParameter("@timeSlot", workingDaysAndHours.TimeSlot));
+
+                    sqlCon.Open();
+
+                    sqlCom.ExecuteNonQuery();
+                    sqlCon.Close();
+
+                    sqlCom.CommandText = @"delete from SelectedDays";
+                    sqlCom.Connection = sqlCon;
+                    sqlCon.Open();
+                    sqlCom.ExecuteNonQuery();
+                    sqlCon.Close();
+
+                    sqlCom.CommandText = @"INSERT OR REPLACE INTO SelectedDays(TableType, SelectedDays) VALUES(@label7, @terms)";
                     sqlCom.Connection = sqlCon;
                     for (int x = 0; x < terms.Length; x++)
                     {
@@ -160,7 +175,8 @@ namespace NewTimeApp.UserControlers
                         {
                             //sqlCom.CommandText = @"INSERT INTO SelectedDays(TableType, SelectedDays) VALUES(@textBox2, @terms)";
                             // sqlCom.Connection = sqlCon;
-                            sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
+                            //sqlCom.Parameters.Add(new SQLiteParameter("@label7", workingDaysAndHours.TableType));
+                            sqlCom.Parameters.Add(new SQLiteParameter("@label7", workingDaysAndHours.TableType));
                             sqlCom.Parameters.Add(new SQLiteParameter("@terms", workingDaysAndHours.SelectedDays[x]));
                             MessageBox.Show("done4", workingDaysAndHours.SelectedDays[x]);
                             sqlCon.Open();
@@ -170,21 +186,10 @@ namespace NewTimeApp.UserControlers
                         }
                     }
 
-                    sqlCom.CommandText = @"INSERT INTO WorkingDays(TableType, WorkingDays,WorkingHours,TimeSlot)VALUES(@textBox2, @comboBox1,@textBox1,@timeSlot)";
-                    sqlCom.Connection = sqlCon;
-                    sqlCom.Parameters.Add(new SQLiteParameter("@textBox2", workingDaysAndHours.TableType));
-                    sqlCom.Parameters.Add(new SQLiteParameter("@comboBox1", workingDaysAndHours.WorkingDays));
-                    sqlCom.Parameters.Add(new SQLiteParameter("@textBox1", workingDaysAndHours.WorkingHours));
-                    sqlCom.Parameters.Add(new SQLiteParameter("@timeSlot", workingDaysAndHours.TimeSlot));
+
                     
-                    sqlCon.Open();
-
-                    int i = sqlCom.ExecuteNonQuery();
-
-                    if (i == 1)
-                    {
                         MessageBox.Show("Working Days And Hours", "" +workingDaysAndHours.TableType +"is saved!");
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -195,8 +200,8 @@ namespace NewTimeApp.UserControlers
 
            
 
-            WorkingDaysAndHoursUC workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
-            MainControler.showControl(workingDaysAndHoursUC, panel1);
+            /*WorkingDaysAndHoursUC workingDaysAndHoursUC = new WorkingDaysAndHoursUC();
+            MainControler.showControl(workingDaysAndHoursUC, panel1);*/
 
         }
 
@@ -226,6 +231,47 @@ namespace NewTimeApp.UserControlers
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            sqlCon = new SQLiteConnection(connectString);
+            sqlCom = new SQLiteCommand();
+
+            try
+            {
+                sqlCom.CommandText = @"delete from WorkingDays";
+                sqlCom.Connection = sqlCon;
+                sqlCon.Open();
+                sqlCom.ExecuteNonQuery();
+                sqlCon.Close();
+            }catch
+            {
+
+            }
+
+            try
+            {
+                sqlCom.CommandText = @"delete from SelectedDays";
+                sqlCom.Connection = sqlCon;
+                sqlCon.Open();
+                sqlCom.ExecuteNonQuery();
+                sqlCon.Close();
+            }catch
+            {
+
+            }
+            
+
+            
+                WorkingDaysAndHours workingDaysAndHours = new WorkingDaysAndHours();
+                MessageBox.Show("Working Days And Hours", "" + workingDaysAndHours.TableType + "is Deleted!");
+            
         }
     }
 }

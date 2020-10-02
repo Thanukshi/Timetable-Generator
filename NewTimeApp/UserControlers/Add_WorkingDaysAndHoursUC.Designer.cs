@@ -43,10 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.backBtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Delete = new ePOSOne.btnProduct.Button_WOC();
             this.addBtn = new ePOSOne.btnProduct.Button_WOC();
             this.resetBtn = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
@@ -59,6 +60,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 29);
             this.textBox1.TabIndex = 38;
+            this.textBox1.Text = "8";
             // 
             // radioButton2
             // 
@@ -107,6 +109,8 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.Location = new System.Drawing.Point(261, 312);
             this.checkBox5.Name = "checkBox5";
@@ -118,6 +122,8 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.Location = new System.Drawing.Point(261, 278);
             this.checkBox4.Name = "checkBox4";
@@ -129,6 +135,8 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.Location = new System.Drawing.Point(261, 244);
             this.checkBox3.Name = "checkBox3";
@@ -140,6 +148,8 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.Location = new System.Drawing.Point(261, 210);
             this.checkBox2.Name = "checkBox2";
@@ -151,6 +161,8 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(261, 176);
             this.checkBox1.Name = "checkBox1";
@@ -195,7 +207,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.Delete);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.radioButton2);
@@ -221,15 +234,6 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox2.Location = new System.Drawing.Point(261, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 29);
-            this.textBox2.TabIndex = 42;
-            this.textBox2.Text = "Week Day";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -254,6 +258,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 32);
             this.comboBox1.TabIndex = 27;
+            this.comboBox1.Text = "5";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // backBtn
             // 
@@ -268,6 +274,42 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(261, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 26);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Week Day";
+            // 
+            // Delete
+            // 
+            this.Delete.BackColor = System.Drawing.Color.White;
+            this.Delete.BorderColor = System.Drawing.Color.Black;
+            this.Delete.ButtonColor = System.Drawing.Color.White;
+            this.Delete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Delete.FlatAppearance.BorderSize = 0;
+            this.Delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.ForeColor = System.Drawing.Color.Black;
+            this.Delete.Location = new System.Drawing.Point(261, 482);
+            this.Delete.Margin = new System.Windows.Forms.Padding(2);
+            this.Delete.Name = "Delete";
+            this.Delete.OnHoverBorderColor = System.Drawing.Color.White;
+            this.Delete.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Delete.OnHoverTextColor = System.Drawing.Color.White;
+            this.Delete.Size = new System.Drawing.Size(161, 42);
+            this.Delete.TabIndex = 43;
+            this.Delete.Text = "Delete";
+            this.Delete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.White;
@@ -280,7 +322,7 @@
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.Black;
-            this.addBtn.Location = new System.Drawing.Point(131, 482);
+            this.addBtn.Location = new System.Drawing.Point(77, 482);
             this.addBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addBtn.Name = "addBtn";
             this.addBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -288,7 +330,7 @@
             this.addBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.addBtn.Size = new System.Drawing.Size(161, 42);
             this.addBtn.TabIndex = 26;
-            this.addBtn.Text = "Add";
+            this.addBtn.Text = "Add/Update";
             this.addBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
@@ -305,7 +347,7 @@
             this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.ForeColor = System.Drawing.Color.Black;
-            this.resetBtn.Location = new System.Drawing.Point(358, 482);
+            this.resetBtn.Location = new System.Drawing.Point(439, 482);
             this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.OnHoverBorderColor = System.Drawing.Color.White;
@@ -352,7 +394,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private ePOSOne.btnProduct.Button_WOC Delete;
     }
 }
