@@ -26,11 +26,7 @@ namespace NewTimeApp.Properties
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources
     {
-        internal static Image teacher_64;
-        internal static Image building_64__1_;
-        internal static Image student_64__1_;
-        internal static Image list_view_64;
-        internal static Image add_list_64;
+        
         private static global::System.Resources.ResourceManager resourceMan;
 
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -39,6 +35,8 @@ namespace NewTimeApp.Properties
         internal Resources()
         {
         }
+
+        public static Image add_list_64 { get; internal set; }
 
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.

@@ -1,4 +1,6 @@
-﻿namespace NewTimeApp.UserControlers
+﻿using NewTimeApp.Properties;
+
+namespace NewTimeApp.UserControlers
 {
     partial class WorkingDaysAndHoursUC
     {
@@ -29,6 +31,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ViewBtn = new NewTimeApp.CircularButton();
             this.AddBtn = new NewTimeApp.CircularButton();
@@ -50,7 +53,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-           // this.pictureBox1.Image = global::NewTimeApp.Properties.Resources.back1;
+            //this.pictureBox1.Image = global::NewTimeApp.Properties.Resources.back1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(772, 720);
@@ -66,7 +69,7 @@
             this.ViewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewBtn.ForeColor = System.Drawing.Color.White;
-            this.ViewBtn.Image = global::NewTimeApp.Properties.Resources.list_view_64;
+            //this.ViewBtn.Image = global::NewTimeApp.Properties.Resources.list_view_64;
             this.ViewBtn.Location = new System.Drawing.Point(458, 185);
             this.ViewBtn.Name = "ViewBtn";
             this.ViewBtn.Size = new System.Drawing.Size(189, 184);
@@ -85,7 +88,7 @@
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Image = global::NewTimeApp.Properties.Resources.add_list_64;
+            //this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject(AddBtn.Image)));
             this.AddBtn.Location = new System.Drawing.Point(178, 185);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(189, 184);

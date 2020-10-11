@@ -58,7 +58,7 @@
             this.std.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.std.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.std.ForeColor = System.Drawing.Color.White;
-            this.std.Image = global::NewTimeApp.Properties.Resources.student_64__1_;
+            //this.std.Image = global::NewTimeApp.Properties.Resources.student_64__1_;
             this.std.Location = new System.Drawing.Point(326, 262);
             this.std.Name = "std";
             this.std.Size = new System.Drawing.Size(150, 150);
@@ -77,7 +77,7 @@
             this.lec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lec.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lec.ForeColor = System.Drawing.Color.White;
-            this.lec.Image = global::NewTimeApp.Properties.Resources.teacher_64;
+            //this.lec.Image = global::NewTimeApp.Properties.Resources.teacher_64;
             this.lec.Location = new System.Drawing.Point(92, 262);
             this.lec.Name = "lec";
             this.lec.Size = new System.Drawing.Size(150, 150);
@@ -96,7 +96,7 @@
             this.hall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hall.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hall.ForeColor = System.Drawing.Color.White;
-            this.hall.Image = global::NewTimeApp.Properties.Resources.building_64__1_;
+            //this.hall.Image = global::NewTimeApp.Properties.Resources.building_64__1_;
             this.hall.Location = new System.Drawing.Point(549, 262);
             this.hall.Name = "hall";
             this.hall.Size = new System.Drawing.Size(150, 150);
