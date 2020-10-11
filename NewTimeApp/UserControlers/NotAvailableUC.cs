@@ -27,6 +27,7 @@ namespace NewTimeApp.UserControlers
             InitializeComponent();
             connectString = @"Data Source=" + Application.StartupPath + @"\Database\TimeAppDB.db; version=3";
             sqlCon = new SQLiteConnection(connectString);
+            GenerateDatabase();
             FillLecDetails();
             FillSubDetails();
             FillTagDetails();
@@ -124,7 +125,7 @@ namespace NewTimeApp.UserControlers
         {
             String path = Application.StartupPath + @"\Database\TimeAppDB.db";
             sqlCon = new SQLiteConnection(connectString);
-            string qry = "SELECT * FROM subGroupsDetails";
+            string qry = "SELECT * FROM mainGroupsDetails";
             sqlCom = new SQLiteCommand(qry, sqlCon);
             SQLiteDataReader sldr;
 
@@ -134,8 +135,10 @@ namespace NewTimeApp.UserControlers
                 sldr = sqlCom.ExecuteReader();
                 while (sldr.Read())
                 {
-                    string mg = sldr.GetString(1);
-                    mainGNotA.Items.Add(mg);
+                    string year = sldr.GetString(1);
+                    string dname = sldr.GetString(2);
+                    string gno = sldr.GetString(3);
+                    mainGNotA.Items.Add(year + "." + dname + "." + gno);
                     //string maID = "SELECT ID FROM academicDetails WHERE acYear ='" + year + "'And acSem ='" + sem + "'";
                 }
             }

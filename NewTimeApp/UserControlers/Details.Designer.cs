@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Details));
             this.viewPaneld = new System.Windows.Forms.Panel();
-            this.subGroupBrn = new NewTimeApp.CircularButton();
-            this.mainGrpBtn = new NewTimeApp.CircularButton();
-            this.degreeBtn = new NewTimeApp.CircularButton();
-            this.accBtn = new NewTimeApp.CircularButton();
             this.backBtnS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.degreeBtn = new NewTimeApp.CircularButton();
+            this.accBtn = new NewTimeApp.CircularButton();
             this.viewPaneld.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,8 +42,6 @@
             // viewPaneld
             // 
             this.viewPaneld.BackColor = System.Drawing.Color.White;
-            this.viewPaneld.Controls.Add(this.subGroupBrn);
-            this.viewPaneld.Controls.Add(this.mainGrpBtn);
             this.viewPaneld.Controls.Add(this.degreeBtn);
             this.viewPaneld.Controls.Add(this.accBtn);
             this.viewPaneld.Controls.Add(this.backBtnS);
@@ -56,80 +52,6 @@
             this.viewPaneld.Name = "viewPaneld";
             this.viewPaneld.Size = new System.Drawing.Size(772, 720);
             this.viewPaneld.TabIndex = 1;
-            // 
-            // subGroupBrn
-            // 
-            this.subGroupBrn.BackColor = System.Drawing.Color.Plum;
-            this.subGroupBrn.FlatAppearance.BorderSize = 0;
-            this.subGroupBrn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.subGroupBrn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.subGroupBrn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subGroupBrn.ForeColor = System.Drawing.Color.White;
-            this.subGroupBrn.Image = ((System.Drawing.Image)(resources.GetObject("subGroupBrn.Image")));
-            this.subGroupBrn.Location = new System.Drawing.Point(511, 443);
-            this.subGroupBrn.Name = "subGroupBrn";
-            this.subGroupBrn.Size = new System.Drawing.Size(200, 200);
-            this.subGroupBrn.TabIndex = 50;
-            this.subGroupBrn.Text = "Sub Groups ID";
-            this.subGroupBrn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.subGroupBrn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.subGroupBrn.UseVisualStyleBackColor = false;
-            // 
-            // mainGrpBtn
-            // 
-            this.mainGrpBtn.BackColor = System.Drawing.Color.Plum;
-            this.mainGrpBtn.FlatAppearance.BorderSize = 0;
-            this.mainGrpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.mainGrpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mainGrpBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainGrpBtn.ForeColor = System.Drawing.Color.White;
-            this.mainGrpBtn.Image = ((System.Drawing.Image)(resources.GetObject("mainGrpBtn.Image")));
-            this.mainGrpBtn.Location = new System.Drawing.Point(109, 443);
-            this.mainGrpBtn.Name = "mainGrpBtn";
-            this.mainGrpBtn.Size = new System.Drawing.Size(200, 200);
-            this.mainGrpBtn.TabIndex = 49;
-            this.mainGrpBtn.Text = "Main Groups ID";
-            this.mainGrpBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mainGrpBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.mainGrpBtn.UseVisualStyleBackColor = false;
-            // 
-            // degreeBtn
-            // 
-            this.degreeBtn.BackColor = System.Drawing.Color.Plum;
-            this.degreeBtn.FlatAppearance.BorderSize = 0;
-            this.degreeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.degreeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.degreeBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.degreeBtn.ForeColor = System.Drawing.Color.White;
-            this.degreeBtn.Image = ((System.Drawing.Image)(resources.GetObject("degreeBtn.Image")));
-            this.degreeBtn.Location = new System.Drawing.Point(511, 159);
-            this.degreeBtn.Name = "degreeBtn";
-            this.degreeBtn.Size = new System.Drawing.Size(200, 200);
-            this.degreeBtn.TabIndex = 48;
-            this.degreeBtn.Text = "Add Sessions";
-            this.degreeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.degreeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.degreeBtn.UseVisualStyleBackColor = false;
-            this.degreeBtn.Click += new System.EventHandler(this.degreeBtn_Click);
-            // 
-            // accBtn
-            // 
-            this.accBtn.BackColor = System.Drawing.Color.Plum;
-            this.accBtn.FlatAppearance.BorderSize = 0;
-            this.accBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.accBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.accBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accBtn.ForeColor = System.Drawing.Color.White;
-            this.accBtn.Image = ((System.Drawing.Image)(resources.GetObject("accBtn.Image")));
-            this.accBtn.Location = new System.Drawing.Point(109, 159);
-            this.accBtn.Name = "accBtn";
-            this.accBtn.Size = new System.Drawing.Size(200, 200);
-            this.accBtn.TabIndex = 47;
-            this.accBtn.Text = "Not Available";
-            this.accBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.accBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.accBtn.UseVisualStyleBackColor = false;
-            this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
             // 
             // backBtnS
             // 
@@ -165,6 +87,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // degreeBtn
+            // 
+            this.degreeBtn.BackColor = System.Drawing.Color.Plum;
+            this.degreeBtn.FlatAppearance.BorderSize = 0;
+            this.degreeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.degreeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.degreeBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.degreeBtn.ForeColor = System.Drawing.Color.White;
+            this.degreeBtn.Image = ((System.Drawing.Image)(resources.GetObject("degreeBtn.Image")));
+            this.degreeBtn.Location = new System.Drawing.Point(489, 279);
+            this.degreeBtn.Name = "degreeBtn";
+            this.degreeBtn.Size = new System.Drawing.Size(200, 200);
+            this.degreeBtn.TabIndex = 48;
+            this.degreeBtn.Text = "Add Sessions";
+            this.degreeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.degreeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.degreeBtn.UseVisualStyleBackColor = false;
+            this.degreeBtn.Click += new System.EventHandler(this.degreeBtn_Click);
+            // 
+            // accBtn
+            // 
+            this.accBtn.BackColor = System.Drawing.Color.Plum;
+            this.accBtn.FlatAppearance.BorderSize = 0;
+            this.accBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.accBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accBtn.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accBtn.ForeColor = System.Drawing.Color.White;
+            this.accBtn.Image = ((System.Drawing.Image)(resources.GetObject("accBtn.Image")));
+            this.accBtn.Location = new System.Drawing.Point(117, 279);
+            this.accBtn.Name = "accBtn";
+            this.accBtn.Size = new System.Drawing.Size(200, 200);
+            this.accBtn.TabIndex = 47;
+            this.accBtn.Text = "Not Available";
+            this.accBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.accBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.accBtn.UseVisualStyleBackColor = false;
+            this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
+            // 
             // Details
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -181,8 +141,6 @@
         #endregion
 
         private System.Windows.Forms.Panel viewPaneld;
-        private CircularButton subGroupBrn;
-        private CircularButton mainGrpBtn;
         private CircularButton degreeBtn;
         private CircularButton accBtn;
         private System.Windows.Forms.Button backBtnS;

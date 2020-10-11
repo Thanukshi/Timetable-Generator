@@ -79,6 +79,9 @@ namespace NewTimeApp.UserControlers
                 string sql13 = "CREATE TABLE notAvailable (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, time VARCHAR (50) NOT NULL, lecName  VARCHAR (100) NOT NULL, subName VARCHAR (50) NOT NULL, tag VARCHAR (50) NOT NULL, mg VARCHAR (50) NOT NULL," +
                     "sg VARCHAR (50) NOT NULL)";
 
+                string sql14 = "CREATE TABLE parellelSession (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, time VARCHAR (50) NOT NULL, date  VARCHAR (10) NOT NULL,duration VARCHAR (50) NOT NULL,lec VARCHAR (100) NOT NULL,subj VARCHAR (50) NOT NULL," +
+                    "tag VARCHAR (50) NOT NULL,mg VARCHAR (50) NOT NULL,sg VARCHAR (50) NOT NULL)";
+
                 sqlCom = new SQLiteCommand(sql1, sqlCon);
                 sqlCom.ExecuteNonQuery();
 
@@ -116,7 +119,8 @@ namespace NewTimeApp.UserControlers
                 sqlCom = new SQLiteCommand(sql13, sqlCon);
                 sqlCom.ExecuteNonQuery();
 
-
+                sqlCom = new SQLiteCommand(sql14, sqlCon);
+                sqlCom.ExecuteNonQuery();
 
                 sqlCon.Close();
             }

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParallelSetionUC));
             this.parallelSetionPanel = new System.Windows.Forms.Panel();
-            this.timeNotA = new System.Windows.Forms.TextBox();
+            this.timeP = new System.Windows.Forms.TextBox();
             this.saveMG = new ePOSOne.btnProduct.Button_WOC();
             this.label2 = new System.Windows.Forms.Label();
             this.backBtnD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.durationP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.LecNotA = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,11 +65,11 @@
             this.parallelSetionPanel.Controls.Add(this.label5);
             this.parallelSetionPanel.Controls.Add(this.LecNotA);
             this.parallelSetionPanel.Controls.Add(this.label3);
-            this.parallelSetionPanel.Controls.Add(this.textBox2);
+            this.parallelSetionPanel.Controls.Add(this.durationP);
             this.parallelSetionPanel.Controls.Add(this.label4);
-            this.parallelSetionPanel.Controls.Add(this.textBox1);
+            this.parallelSetionPanel.Controls.Add(this.dateP);
             this.parallelSetionPanel.Controls.Add(this.label8);
-            this.parallelSetionPanel.Controls.Add(this.timeNotA);
+            this.parallelSetionPanel.Controls.Add(this.timeP);
             this.parallelSetionPanel.Controls.Add(this.saveMG);
             this.parallelSetionPanel.Controls.Add(this.label2);
             this.parallelSetionPanel.Controls.Add(this.backBtnD);
@@ -80,16 +80,16 @@
             this.parallelSetionPanel.Size = new System.Drawing.Size(1000, 790);
             this.parallelSetionPanel.TabIndex = 2;
             // 
-            // timeNotA
+            // timeP
             // 
-            this.timeNotA.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.timeNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.timeNotA.Location = new System.Drawing.Point(563, 116);
-            this.timeNotA.Multiline = true;
-            this.timeNotA.Name = "timeNotA";
-            this.timeNotA.Size = new System.Drawing.Size(417, 45);
-            this.timeNotA.TabIndex = 41;
+            this.timeP.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.timeP.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.timeP.Location = new System.Drawing.Point(563, 116);
+            this.timeP.Multiline = true;
+            this.timeP.Name = "timeP";
+            this.timeP.Size = new System.Drawing.Size(417, 45);
+            this.timeP.TabIndex = 41;
             // 
             // saveMG
             // 
@@ -113,6 +113,7 @@
             this.saveMG.Text = "Save";
             this.saveMG.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveMG.UseVisualStyleBackColor = false;
+            this.saveMG.Click += new System.EventHandler(this.saveMG_Click);
             // 
             // label2
             // 
@@ -150,16 +151,16 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Parellel Sessions";
             // 
-            // textBox1
+            // dateP
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.textBox1.Location = new System.Drawing.Point(563, 180);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(417, 45);
-            this.textBox1.TabIndex = 49;
+            this.dateP.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.dateP.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.dateP.Location = new System.Drawing.Point(563, 180);
+            this.dateP.Multiline = true;
+            this.dateP.Name = "dateP";
+            this.dateP.Size = new System.Drawing.Size(417, 45);
+            this.dateP.TabIndex = 49;
             // 
             // label8
             // 
@@ -174,16 +175,16 @@
             this.label8.TabIndex = 48;
             this.label8.Text = "Date";
             // 
-            // textBox2
+            // durationP
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.textBox2.Location = new System.Drawing.Point(563, 242);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(417, 45);
-            this.textBox2.TabIndex = 51;
+            this.durationP.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.durationP.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.durationP.Location = new System.Drawing.Point(563, 242);
+            this.durationP.Multiline = true;
+            this.durationP.Name = "durationP";
+            this.durationP.Size = new System.Drawing.Size(417, 45);
+            this.durationP.TabIndex = 51;
             // 
             // label4
             // 
@@ -332,14 +333,14 @@
         #endregion
 
         private System.Windows.Forms.Panel parallelSetionPanel;
-        private System.Windows.Forms.TextBox timeNotA;
+        private System.Windows.Forms.TextBox timeP;
         private ePOSOne.btnProduct.Button_WOC saveMG;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button backBtnD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox durationP;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox dateP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox LecNotA;
         private System.Windows.Forms.Label label3;
