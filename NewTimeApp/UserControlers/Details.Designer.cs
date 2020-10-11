@@ -106,10 +106,11 @@
             this.degreeBtn.Name = "degreeBtn";
             this.degreeBtn.Size = new System.Drawing.Size(200, 200);
             this.degreeBtn.TabIndex = 48;
-            this.degreeBtn.Text = "Degree Programs";
+            this.degreeBtn.Text = "Add Sessions";
             this.degreeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.degreeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.degreeBtn.UseVisualStyleBackColor = false;
+            this.degreeBtn.Click += new System.EventHandler(this.degreeBtn_Click);
             // 
             // accBtn
             // 

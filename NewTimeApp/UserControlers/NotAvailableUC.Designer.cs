@@ -33,18 +33,18 @@
             this.backBtnD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.notAvailablePanel = new System.Windows.Forms.Panel();
+            this.subgNota = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mainGNotA = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TagNotA = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.timeNotA = new System.Windows.Forms.TextBox();
+            this.saveMG = new ePOSOne.btnProduct.Button_WOC();
             this.SubNotA = new System.Windows.Forms.ComboBox();
             this.LecNotA = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timeNotA = new System.Windows.Forms.TextBox();
-            this.TagNotA = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.mainGNotA = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.subgNota = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.saveMG = new ePOSOne.btnProduct.Button_WOC();
             this.notAvailablePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@
             this.label2.Size = new System.Drawing.Size(80, 38);
             this.label2.TabIndex = 33;
             this.label2.Text = "Time";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // backBtnD
             // 
@@ -83,6 +84,7 @@
             this.label1.Size = new System.Drawing.Size(329, 41);
             this.label1.TabIndex = 31;
             this.label1.Text = "Not Available Details";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // notAvailablePanel
             // 
@@ -107,111 +109,7 @@
             this.notAvailablePanel.Name = "notAvailablePanel";
             this.notAvailablePanel.Size = new System.Drawing.Size(1000, 790);
             this.notAvailablePanel.TabIndex = 1;
-            // 
-            // SubNotA
-            // 
-            this.SubNotA.BackColor = System.Drawing.Color.White;
-            this.SubNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SubNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
-            this.SubNotA.FormattingEnabled = true;
-            this.SubNotA.Location = new System.Drawing.Point(563, 321);
-            this.SubNotA.Name = "SubNotA";
-            this.SubNotA.Size = new System.Drawing.Size(417, 46);
-            this.SubNotA.TabIndex = 39;
-            // 
-            // LecNotA
-            // 
-            this.LecNotA.BackColor = System.Drawing.Color.White;
-            this.LecNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LecNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LecNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
-            this.LecNotA.FormattingEnabled = true;
-            this.LecNotA.Location = new System.Drawing.Point(563, 239);
-            this.LecNotA.Name = "LecNotA";
-            this.LecNotA.Size = new System.Drawing.Size(417, 46);
-            this.LecNotA.TabIndex = 38;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label4.Location = new System.Drawing.Point(67, 239);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 38);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Lecturers";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label3.Location = new System.Drawing.Point(67, 321);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 38);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Subject";
-            // 
-            // timeNotA
-            // 
-            this.timeNotA.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.timeNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.timeNotA.Location = new System.Drawing.Point(563, 156);
-            this.timeNotA.Multiline = true;
-            this.timeNotA.Name = "timeNotA";
-            this.timeNotA.Size = new System.Drawing.Size(417, 45);
-            this.timeNotA.TabIndex = 41;
-            // 
-            // TagNotA
-            // 
-            this.TagNotA.BackColor = System.Drawing.Color.White;
-            this.TagNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TagNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TagNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
-            this.TagNotA.FormattingEnabled = true;
-            this.TagNotA.Location = new System.Drawing.Point(563, 398);
-            this.TagNotA.Name = "TagNotA";
-            this.TagNotA.Size = new System.Drawing.Size(417, 46);
-            this.TagNotA.TabIndex = 43;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label5.Location = new System.Drawing.Point(67, 398);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 38);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Tag";
-            // 
-            // mainGNotA
-            // 
-            this.mainGNotA.BackColor = System.Drawing.Color.White;
-            this.mainGNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mainGNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainGNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
-            this.mainGNotA.FormattingEnabled = true;
-            this.mainGNotA.Location = new System.Drawing.Point(563, 479);
-            this.mainGNotA.Name = "mainGNotA";
-            this.mainGNotA.Size = new System.Drawing.Size(417, 46);
-            this.mainGNotA.TabIndex = 45;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
-            this.label6.Location = new System.Drawing.Point(67, 479);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 38);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Main Group";
+            this.notAvailablePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.notAvailablePanel_Paint);
             // 
             // subgNota
             // 
@@ -224,6 +122,7 @@
             this.subgNota.Name = "subgNota";
             this.subgNota.Size = new System.Drawing.Size(417, 46);
             this.subgNota.TabIndex = 47;
+            this.subgNota.SelectedIndexChanged += new System.EventHandler(this.subgNota_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -235,6 +134,69 @@
             this.label7.Size = new System.Drawing.Size(151, 38);
             this.label7.TabIndex = 46;
             this.label7.Text = "Sub Group";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // mainGNotA
+            // 
+            this.mainGNotA.BackColor = System.Drawing.Color.White;
+            this.mainGNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mainGNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainGNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
+            this.mainGNotA.FormattingEnabled = true;
+            this.mainGNotA.Location = new System.Drawing.Point(563, 479);
+            this.mainGNotA.Name = "mainGNotA";
+            this.mainGNotA.Size = new System.Drawing.Size(417, 46);
+            this.mainGNotA.TabIndex = 45;
+            this.mainGNotA.SelectedIndexChanged += new System.EventHandler(this.mainGNotA_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label6.Location = new System.Drawing.Point(67, 479);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 38);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Main Group";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // TagNotA
+            // 
+            this.TagNotA.BackColor = System.Drawing.Color.White;
+            this.TagNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TagNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TagNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
+            this.TagNotA.FormattingEnabled = true;
+            this.TagNotA.Location = new System.Drawing.Point(563, 398);
+            this.TagNotA.Name = "TagNotA";
+            this.TagNotA.Size = new System.Drawing.Size(417, 46);
+            this.TagNotA.TabIndex = 43;
+            this.TagNotA.SelectedIndexChanged += new System.EventHandler(this.TagNotA_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label5.Location = new System.Drawing.Point(67, 398);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 38);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Tag";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // timeNotA
+            // 
+            this.timeNotA.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.timeNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.timeNotA.Location = new System.Drawing.Point(563, 156);
+            this.timeNotA.Multiline = true;
+            this.timeNotA.Name = "timeNotA";
+            this.timeNotA.Size = new System.Drawing.Size(417, 45);
+            this.timeNotA.TabIndex = 41;
+            this.timeNotA.TextChanged += new System.EventHandler(this.timeNotA_TextChanged);
             // 
             // saveMG
             // 
@@ -259,6 +221,58 @@
             this.saveMG.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.saveMG.UseVisualStyleBackColor = false;
             this.saveMG.Click += new System.EventHandler(this.saveMG_Click);
+            // 
+            // SubNotA
+            // 
+            this.SubNotA.BackColor = System.Drawing.Color.White;
+            this.SubNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SubNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
+            this.SubNotA.FormattingEnabled = true;
+            this.SubNotA.Location = new System.Drawing.Point(563, 321);
+            this.SubNotA.Name = "SubNotA";
+            this.SubNotA.Size = new System.Drawing.Size(417, 46);
+            this.SubNotA.TabIndex = 39;
+            this.SubNotA.SelectedIndexChanged += new System.EventHandler(this.SubNotA_SelectedIndexChanged);
+            // 
+            // LecNotA
+            // 
+            this.LecNotA.BackColor = System.Drawing.Color.White;
+            this.LecNotA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LecNotA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LecNotA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(54)))));
+            this.LecNotA.FormattingEnabled = true;
+            this.LecNotA.Location = new System.Drawing.Point(563, 239);
+            this.LecNotA.Name = "LecNotA";
+            this.LecNotA.Size = new System.Drawing.Size(417, 46);
+            this.LecNotA.TabIndex = 38;
+            this.LecNotA.SelectedIndexChanged += new System.EventHandler(this.LecNotA_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label4.Location = new System.Drawing.Point(67, 239);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 38);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Lecturers";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(4)))), ((int)(((byte)(45)))));
+            this.label3.Location = new System.Drawing.Point(67, 321);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 38);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Subject";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // NotAvailableUC
             // 

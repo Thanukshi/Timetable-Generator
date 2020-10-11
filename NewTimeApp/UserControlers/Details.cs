@@ -38,5 +38,11 @@ namespace NewTimeApp.UserControlers
             MainControler.showControl(not, viewPaneld);
 
         }
+
+        private void degreeBtn_Click(object sender, EventArgs e)
+        {
+            ParallelSetionUC not = new ParallelSetionUC();
+            MainControler.showControl(not, viewPaneld);
+        }
     }
 }

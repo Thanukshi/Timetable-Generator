@@ -373,6 +373,12 @@
     <Compile Include="UserControlers\NotAvailableUC.Designer.cs">
       <DependentUpon>NotAvailableUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlers\ParallelSetionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\ParallelSetionUC.Designer.cs">
+      <DependentUpon>ParallelSetionUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\PreferredRoomUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -539,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\NotAvailableUC.resx">
       <DependentUpon>NotAvailableUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\ParallelSetionUC.resx">
+      <DependentUpon>ParallelSetionUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\PreferredRoomUC.resx" />
     <EmbeddedResource Include="UserControlers\ReportsUC.resx">
